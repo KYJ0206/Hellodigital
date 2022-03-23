@@ -1,0 +1,22 @@
+.conWrap-body-popularity {
+	display: none;
+}
+.list-tech {
+	display: none;
+}
+.list-sustainability {
+	display: none;
+}
+.list-culture {
+	display: none;
+}
+.list-contentsWrap .list-conWrap-top .inner .inner2 ul li a {
+	cursor: pointer;
+}
+
+@media screen and (max-width: 425px) {
+  .list-contentsWrap .list-conWrap-top .inner .inner2 ul li a {
+    font-size : 15px;  
+  }
+}
+

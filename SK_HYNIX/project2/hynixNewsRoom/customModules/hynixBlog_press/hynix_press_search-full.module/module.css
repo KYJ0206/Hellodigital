@@ -1,0 +1,20 @@
+.clear-fix {
+  display : flex;
+  justify-content : flex-end;
+  padding-bottom: 20px;
+}
+
+.flexWrap-cal {
+  margin-bottom : 20px;
+}
+
+.input-search{
+  cursor: pointer;
+}
+
+.datepickerStartDate label {
+  display: flex;
+}
+.datepickerEndDate label {
+  display: flex;
+}

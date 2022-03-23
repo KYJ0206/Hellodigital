@@ -1,0 +1,21 @@
+* { box-sizing: border-box; }
+#result { width: 180px; height: 50px; margin: 5px; text-align: right; }
+#operator { width: 50px; height: 50px; margin: 5px; text-align: center; }
+button { width: 50px; height: 50px; margin: 5px; cursor: pointer; }
+
+body{
+    position: absolute;
+    top: 30%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    border: 1px solid;
+    padding: 15px;
+}
+
+h1 {
+    text-align: center;
+}
+
+input {
+    font-size: 20px;
+}

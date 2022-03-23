@@ -1,0 +1,121 @@
+
+{% set press_blog = module.press_blog  %}
+{% set press_recent_posts = blog_recent_posts(press_blog, 2) %}
+
+{% set media_library = module.media_library  %}
+{% set media_library_recent_posts = blog_recent_posts(media_library, 2) %}
+
+
+<section class="container media_module news_module home-pressContents">
+        <div class="ml_inner">
+
+            <div class="clear-fix">
+                <a class="btn-detail" href="#">
+                    프레스 센터
+                    <i class="arrow"></i>
+                </a>
+            </div>
+            <div class="conWrap">
+                <div class="conItem">
+									
+									 {% for post in press_recent_posts%} 
+									  {% if loop.index == 1 %}
+										<div class="col-l">
+											<div class="ml_con_info">
+												<div class="info">
+													<span class="date">
+														{{post.publish_date | datetimeformat ('%Y-%m-%d')}}
+													</span>
+													<span class="name">
+														<a href="#">#{{post.publish_date | datetimeformat ('%Y')}}년 보도자료</a>
+													</span>
+												</div>
+											</div>
+											<hr class="news-hr">
+											<a href="{{post.absolute_url}}" style='text-decoration: none;'>
+											  <div class="newsCon">
+													<h2>{{post.name}}</h2>
+													<div class='removePress1'>{{post.post_body}}</div>
+													<p class='showPress1'></p>
+												</div>
+											</a>
+										</div>
+									  {% endif %}
+									{% endfor %}
+
+									{% for post in media_library_recent_posts%} 
+									  {% if loop.index == 1 %}
+                    <div class="col-r">
+                        <div class="imgWrap">
+                            <img class="lazyload" src="{{post.featured_image ? post.featured_image : get_asset_url("/hynixNewsRoom/codeFiles/images/contentImage/img-home-pressThumbO2x.png")}}" alt="이미지">
+                        </div>
+                        <div class="btnWrap">
+                            <a href="{{post.absolute_url}}" class="btn-detail-read">자세히 읽기</a>
+                            
+                            {% if post.widgets.module_1631532455283101.body.choice_field == 'youtube'%}
+                          {% else %}
+                            <a class="media_downloadWrap">
+                                <div class="ml_download">
+                                    <i data-data="{{post.widgets.module_1631532455283101.body.choice_field}}" data-img="{{post.widgets.module_1631532455283101.body.image_file ? post.widgets.module_1631532455283101.body.image_file : null}}" data-video="{{post.widgets.module_1631532455283101.body.video_file ? post.widgets.module_1631532455283101.body.video_file : null}}" data-youtube="{{post.widgets.module_1631532455283101.body.youtubeId ? post.widgets.module_1631532455283101.body.youtubeId : null}}"></i>
+                                    <span style="cursor:pointer">미디어다운로드</span>
+                                </div>
+                            </a>
+                          {% endif %}
+                        </div>
+                    </div>
+									  {% endif %}
+									{% endfor%}
+									
+                </div>
+                <div class="conItem conItem-grey">
+                    {% for post in press_recent_posts%} 
+											{% if loop.index == 2 %}
+											<div class="col-l">
+													<div class="ml_con_info">
+															<div class="info">
+																	<span class="date">
+																			{{post.publish_date | datetimeformat ('%Y-%m-%d')}}
+																	</span>
+																	<span class="name">
+																			<a href="#">#{{post.publish_date | datetimeformat ('%Y')}}년 보도자료</a>
+																	</span>
+															</div>
+													</div>
+													<hr class="news-hr">
+													<a href="{{post.absolute_url}}" style='text-decoration: none;'>
+														<div class="newsCon">
+															<h2>{{post.name}}</h2>
+															<div class='removePress2'>{{post.post_body}}</div>
+															<p class='showPress2'></p>
+														</div>
+													</a>
+											</div>
+											{% endif %}
+										{% endfor %}
+                    
+									{% for post in media_library_recent_posts%} 
+									  {% if loop.index == 2 %}
+                    <div class="col-r">
+                        <div class="imgWrap">
+                            <img class="lazyload" src="{{post.featured_image ? post.featured_image : get_asset_url("/hynixNewsRoom/codeFiles/images/contentImage/img-home-pressThumbO2x.png")}}" alt="이미지">
+                        </div>
+                        <div class="btnWrap">
+                            <a href="{{post.absolute_url}}" class="btn-detail-read">자세히 읽기</a>
+                          {% if post.widgets.module_1631532455283101.body.choice_field == 'youtube'%}
+                          {% else %}
+                            <a class="media_downloadWrap">
+                                <div class="ml_download">
+                                    <i data-data="{{post.widgets.module_1631532455283101.body.choice_field}}" data-img="{{post.widgets.module_1631532455283101.body.image_file ? post.widgets.module_1631532455283101.body.image_file : null}}" data-video="{{post.widgets.module_1631532455283101.body.video_file ? post.widgets.module_1631532455283101.body.video_file : null}}" data-youtube="{{post.widgets.module_1631532455283101.body.youtubeId ? post.widgets.module_1631532455283101.body.youtubeId : null}}"></i>
+                                    <span style="cursor:pointer">미디어다운로드</span>
+                                </div>
+                            </a>
+                          {% endif %}
+                        </div>
+                    </div>
+									  {% endif %}
+									{% endfor%}
+                </div>
+
+            </div>
+        </div>
+    </section>

@@ -1,0 +1,95 @@
+<!DOCTYPE html>
+<html lang="ko">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Slide</title>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/bxslider/4.2.12/jquery.bxslider.css">
+    <script src="https://code.jquery.com/jquery-3.3.1.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/bxslider/4.2.12/jquery.bxslider.min.js"></script>
+    <script>
+        $(document).ready(function () {
+            $('.slider').bxSlider({
+                auto: true,
+                pause: 2000,
+                InfinityLoop: true,
+                speed: 1000,
+                autoHover: true,
+                minSlides: 4,
+                maxSlides: 4
+                // mode: 'horizontal' | (horizontal, vertical, fade) | 슬라이드 방향
+                // auto: false | (false, true) | 자동 슬라이드
+                // autoHover: false | (false, true) | 마우스 hover시 슬라이드 정지
+                // controls: false | (false, true) | prev / next 버튼 노출 여부
+                // speed: 1000 | 슬라이드 속도
+                // randomStart: false | (false, true) | 램덤 스타트
+                // infiniteLoop: true | (false, true) | true면 마지막에서 첫번째로 전환 그 반대도 동일,
+                // 무한루프
+                // pager: true | (false, true) | 블릿버튼
+                // minSlides: 1 | 최소 슬라이드 노출 개수
+                // maxSlides: 5 | 최대 슬라이드 노출 개수
+                // autoControls: false | (false, true) | 시작,
+                // 정지버튼 노출 여부
+            });
+        });
+    </script>
+    <style>
+        body {
+            margin: 3rem 1rem;
+            background-color: #f0f0f0;
+        }
+
+
+        img {
+
+            object-fit: cover;
+            cursor: pointer;
+        }
+
+        .bx-wrapper .bx-pager,
+        .bx-wrapper .bx-controls-auto {
+            bottom: -50px;
+        }
+
+        .nini {
+            width: 500px;
+        }
+
+        .bx-wrapper {
+            width: 500px;
+            margin: 0 auto;
+        }
+
+        .bx-wrapper .bx-prev {
+            left: -80px;
+            cursor: pointer;
+        }
+
+        .bx-wrapper .bx-next {
+            right: -80px;
+            cursor: pointer;
+        }
+    </style>
+</head>
+
+<body>
+    <div class="slider">
+        <div class="nini">
+            <img src="./imges/bird-g0b3570adb_640.jpg" alt="이미지">
+        </div>
+        <div class="nini">
+            <img src="./imges/coffee-g909b5fd92_640.jpg" alt="이미지">
+        </div>
+        <div class="nini">
+            <img src="./imges/deer-g3389ddd19_640.jpg" alt="이미지">
+        </div>
+        <div class="nini">
+            <img src="./imges/flower-g4b24e16af_640.jpg" alt="이미지">
+        </div>
+    </div>
+
+</body>
+
+</html>

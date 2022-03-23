@@ -1,0 +1,8 @@
+[ {
+  "id" : "91ec4f7e-2012-0cb6-7d19-40391c5616fd",
+  "name" : "contents__",
+  "label" : "Contents_작성",
+  "required" : false,
+  "locked" : false,
+  "type" : "richtext"
+} ]

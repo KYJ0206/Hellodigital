@@ -1,0 +1,15 @@
+{
+  "global" : false,
+  "host_template_types" : [ "PAGE", "BLOG_POST", "BLOG_LISTING" ],
+  "module_id" : 57346457989,
+  "css_assets" : [ {
+    "autoload" : true,
+    "path" : "../../../../codeFiles/css/Module/module.css",
+    "name" : "module.css"
+  }, {
+    "autoload" : true,
+    "path" : "../../../../codeFiles/css/Module/module_m.css",
+    "name" : "module_m.css"
+  } ],
+  "is_available_for_new_content" : true
+}

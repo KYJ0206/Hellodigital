@@ -1,0 +1,99 @@
+
+{% set path = request.path|split('/', 2)|last %}
+{% set type = request.query_dict.type %}
+{% set text = request.query_dict.text %}
+{% set subCategory = type == 'blog' ? '블로그' : (type == 'category' ? '' : (type == 'tag' ? '태그' : (type == 'author' ? '작성자' : ( 'reco'? '':'')))) %}
+{% set breadCrumb = type == 'blog' ? '블로그' : (type == 'category' ? '기술' : (type == 'tag' ? '태그' : (type == 'author' ? '작성자' : ( 'reco'? '기획기사':'')))) %}
+
+{% set className = text == '기술' ? 'blog-instruction-c1' : (text == '지속가능경영' ? 'blog-instruction-c3' : 'blog-instruction-c2') %}
+{% set className2 = text == '기술' ? 'c1' : (text == '지속가능경영' ? 'c3' : 'c2') %}
+{% set subTitle = text == '기술' ? 'TECHNOLOGY' : (text == '지속가능경영' ? 'SUSTAINABILITY' : 'PEOPLE & CULTURE') %}
+{% set title = text == '기술' ? '기술' : (text == '지속가능경영' ? '지속가능경영' : '사람&문화') %}
+
+{% set show = type == 'blog' ? false : true %}
+
+{% if !show %}
+<section class="blog-instruction {{className}}">
+	<div class="inner">
+		<div class="inner2">
+			<div class="conWrap">
+				<div class="textWrap">
+					<span class="subTit">{{subTitle}}</span>
+					<h1 class='{{className2}}'>
+						{{title}}
+					</h1>
+				</div>
+			</div>
+		</div>
+	</div>
+</section>
+
+{% elif show %}
+<section class="media-instruction" style="margin-bottom:20px;">
+	<div class="inner">
+		<div class="inner2">
+			<div class="list-head-titWrap">
+				<h1>{{text}}</h1>
+				<div class="list-head-bottom">
+					<nav class="breadcrumb">
+						<a href="/"><span>NEWSROOM</span></a>
+						<a class='secondCrumb'><span>{{breadCrumb}}</span></a>
+						<a class='lastCrumb' style="display : {{text == '기획기사' ? 'none' : 'inline-block'}}"><span style="display : {{text == '기획기사' ? 'none' : 'inline-block'}}">{{text}}</span></a>
+					</nav>
+					<span class="subTit">{{subCategory}}</span>
+				</div>
+			</div>
+
+		</div>
+	</div>
+</section>
+{% endif %}
+
+
+<!-- blog-instruction-c3 -->
+{# {% if path == 'technology'%}
+<section class="blog-instruction blog-instruction-c1">
+	<div class="inner">
+		<div class="inner2">
+			<div class="conWrap">
+				<div class="textWrap">
+					<span class="subTit">TECHNOLOGY</span>
+					<h1 class='c1'>
+						기술
+					</h1>
+				</div>
+			</div>
+		</div>
+	</div>
+</section>
+{% elif path == 'culture' %}
+<section class="blog-instruction blog-instruction-c2">
+	<div class="inner">
+		<div class="inner2">
+			<div class="conWrap">
+				<div class="textWrap">
+					<span class="subTit">PEOPLE & CULTURE</span>
+					<h1 class='c2'>
+						사람&문화
+					</h1>
+				</div>
+			</div>
+		</div>
+	</div>
+</section>
+{% elif path == 'sustainability' %}
+<section class="blog-instruction blog-instruction-c3">
+	<div class="inner">
+		<div class="inner2">
+			<div class="conWrap">
+				<div class="textWrap">
+					<span class="subTit">SUSTAINABILITY</span>
+					<h1 class='c3'>
+						지속가능경영
+					</h1>
+				</div>
+			</div>
+		</div>
+	</div>
+</section>
+{% endif %} #}

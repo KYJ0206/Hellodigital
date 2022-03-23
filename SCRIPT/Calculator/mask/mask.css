@@ -1,0 +1,25 @@
+html, body {
+  margin: 0;
+  padding: 0;
+  overflow: hidden;
+}
+
+.container {
+  max-height: 100vh;
+	overflow-y: scroll;
+  scroll-snap-type: y mandatory;
+}
+
+.panel {
+  scroll-snap-align: start;
+  height: 100vh;
+}
+
+.red {
+  background-color: #cf3535;
+  background-image: none;
+}
+
+.panel p {
+  font-size: 32px;
+}

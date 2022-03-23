@@ -1,0 +1,838 @@
+.company_top .videoWrap {
+    position: relative;
+    width: 100%;
+    height: 50vw;
+    max-height: 890px;
+    min-height: 400px;
+    z-index: -1;
+/* EBOKE 1012 UPDATE   */
+    overflow:hidden;
+}
+.company_top .videoWrap::before{
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(0,0,0,.2) url({{get_asset_url('/hynixNewsRoom/codeFiles/images/contentImage/bg_videoLayerO2x.png')}}) center/44px repeat;
+}
+.company_top .videoWrap video {
+    position: absolute;
+    /* EBOKE 1012 UPDATE */
+    width:100%;
+    left: 50%;
+    top: 50%;
+    transform: translate(-50%, -50%);
+    z-index: -1;
+}
+
+.company_top .copyWrap {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    padding: 25px;
+    box-sizing: border-box;
+    word-break: keep-all;
+}
+.company_top .copyWrap h1 {
+    font-size: 34px;
+    font-weight: 600;
+    font-stretch: normal;
+    font-style: normal;
+    line-height: 1.5;
+    letter-spacing: normal;
+    text-align: center;
+    color: #fff;
+    margin-bottom: 13px;
+}
+.company_top .copyWrap h2 {
+    font-size: 20px;
+    font-weight: normal;
+    font-stretch: normal;
+    font-style: normal;
+    line-height: 1.5;
+    letter-spacing: normal;
+    text-align: center;
+    color: #fff;
+}
+
+
+.company_brand {
+    margin-top: -5vw;
+}
+.company_brand .inner {
+    width: 70%;
+    max-width: 888px;
+    background: #fff;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 0 24px;
+    padding-top: 5vw;
+    padding-bottom: 48px;
+    box-sizing: border-box;
+}
+.company_brand img.text-wedo {
+    width: 309px;
+    margin-bottom: 60px;
+}
+.company_brand p {
+    font-size: 18px;
+    line-height: 1.5;
+    text-align: center;
+    color: #000;
+    height:250px;
+    padding: 0 20px;
+    word-break: keep-all;
+    max-width: 640px;
+}
+
+.company_brand .logo-skh-en {
+    max-width: 178px;
+}
+.company_brand hr.line {
+    margin: 0 auto;
+    margin-top: 39px;
+    margin-bottom: 33px;
+    width: 1px;
+    height: 79px;
+    background: #000;
+    border: 0;
+}
+
+.company_brand h2 {
+    font-size: 34px;
+    font-weight: 800;
+    line-height: 0.97;
+    letter-spacing: normal;
+    text-align: center;
+    color: rgba(0, 0, 0, 0.85);
+}
+
+
+.company_brand .company_feature {
+    width: 100%;
+    height: 600px;
+    background: url({{get_asset_url('/hynixNewsRoom/codeFiles/images/contentImage/img-media-libray123x.png')}}) center/cover no-repeat;
+    display: flex;
+    align-items: center;
+}
+.company_brand .company_feature .inner2 {
+    padding: 0;
+/* EBOKE 1012 UPDATE  */
+    width:100%;
+}
+.company_brand .company_feature ul {
+    display: flex;
+    justify-content: space-between;
+}
+.company_brand .company_feature ul li {
+    flex: 1 0 33.3%;
+    padding: 10px 38px 13px;
+    box-sizing: border-box;
+    max-width:33.3%
+}
+.company_brand .company_feature ul li + li {
+    border-left: dashed 1px rgba(255, 255, 255, 0.5);
+}
+
+.company_brand .company_feature h5 {
+    font-size: 26px;
+    font-weight: 600;
+    line-height: 1.15;
+    letter-spacing: normal;
+    margin-bottom: 13px;
+}
+.company_brand .company_feature li:nth-child(1) h5 {color: #ddddff;}
+.company_brand .company_feature li:nth-child(2) h5 {color: #037cd5;}
+.company_brand .company_feature li:nth-child(3) h5 {color: #02a7a0;}
+
+
+.company_brand .company_feature span {
+    display: block;
+    font-size: 14px;
+    line-height: 1.36;
+    letter-spacing: normal;
+    color: rgba(255, 255, 255, 0.7);
+    height: 166px;
+}
+
+
+.company_brand .company_feature p {
+    font-size: 20px;
+    font-weight: 500;
+    line-height: 1.82;
+    color: #fff;
+    text-align: left;
+    height: auto;
+    padding: 0;
+}
+
+
+
+.company_global {
+    height: 1000px;
+    background: 
+    /* url(../asset/images/bg_company_map@2x.png) center/917px no-repeat, */
+    #342e73 url({{get_asset_url('/hynixNewsRoom/codeFiles/images/contentImage/bg_company_mapPatternO2x.png')}}) center/44px repeat;
+    position: relative;
+    padding-top: 70px;
+    box-sizing: border-box;;
+}
+.company_global .inner2 {
+    position: relative;
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+.company_global .mapWrap {
+    position: absolute;
+    top: 218px;
+    width: calc(100% - 48px);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+/* EBOKE 1012 UPDATE   */
+    margin:0 auto;
+    left:0;
+    right:0;
+}
+.company_global img {
+    width: 100%;
+    max-width: 917px;
+    display: block;
+}
+.company_global hr.line {
+    margin: 0 auto;
+    margin-bottom: 33px;
+    border: 0;
+    background: #fff;
+    width: 1px;
+    height: 79px;
+}
+.company_global h1 {
+    font-size: 34px;
+    font-weight: 600;
+    line-height: 0.97;
+    text-align: center;
+    color: #fff;
+    margin-bottom: 34px;
+}
+.company_global p {
+    opacity: 0.6;
+    font-size: 18px;
+    line-height: 1.5;
+    text-align: center;
+    color: #fff;
+    margin: 0 auto;
+    word-break: keep-all;
+}
+
+.company_global ul.companyCount {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    flex-wrap: wrap;
+    /* EBOKE UPDATE */
+    /*  gap: 30px; */
+    position: absolute;
+    bottom: 120px;
+    width: calc(100% - 48px);
+    /* EBOKE 1012 UPDATE  */
+    margin:0 auto;
+    left:0;
+    right:0;
+}
+.company_global ul.companyCount li {
+    padding: 22px 24px;
+    flex: 1 0 0;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    border-bottom: 2px solid #fff;
+    /* EBOKE UPDATE */
+    margin-right:30px;
+}
+/* EBOKE UPDATE */
+.company_global ul.companyCount li:last-child {
+    margin-right:0;
+}
+
+.company_global ul.companyCount li span {
+    font-size: 16px;
+    line-height: 1.5;
+    color: rgba(255, 255, 255, 0.6);
+}
+
+.company_global ul.companyCount li b {
+    font-size: 24px;
+    font-weight: 600;
+    line-height: 1.5;
+    text-align: right;
+    color: #fff;
+}
+
+
+
+.company_business {
+    padding-top: 72px;
+}
+.company_business hr.line {
+    margin: 0 auto;
+    margin-bottom: 33px;
+    width: 1px;
+    height: 79px;
+    background: #000;
+    border: 0;
+}
+.company_business h1 {
+    font-size: 34px;
+    font-weight: 600;
+    line-height: 0.97;
+    text-align: center;
+    color: #000;
+    margin-bottom: 110px;
+}
+
+.company_business h2 {
+    font-size: 22px;
+    font-weight: 600;
+    line-height: 1.5;
+    color: #000;
+    margin-bottom: 26px;
+    max-width: 100%;
+}
+
+.company_business .desWrap {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    /* EBOKE UPDATE  */
+    /* gap: 33px; */
+    margin-bottom: 40px;
+}
+.company_business .desWrap p {
+    opacity: 0.6;
+    font-size: 16px;
+    line-height: 1.5;
+    color: #000;
+    max-width: 640px;
+    margin-right:33px;
+}
+.company_dbl .conBottom a.p-moreBtn,
+.company_business .desWrap a.p-moreBtn {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    min-width: 190px;
+    box-sizing: border-box;
+    padding: 11px 15px;
+    font-size: 18px;
+    font-weight: 600;
+    line-height: 1.5;
+    color: #8f9094;
+    text-decoration: none;
+    border: solid 2px #eaeaed;
+    background-color: #fff;
+}
+.company_dbl .conBottom a.p-moreBtn i,
+.company_business .desWrap a.p-moreBtn i {
+    display: block;
+    margin-left: 10px;
+    width: 24px;
+    height: 24px;
+    background: url({{get_asset_url('/hynixNewsRoom/codeFiles/images/icons/icon-outlined-24-px-launch.svg')}}) center no-repeat;
+}
+.company_dbl .conBottom a.p-moreBtn.dark {
+    margin: 0 auto;
+    margin-top: 127px;
+    margin-bottom: 110px;
+    height: 49px;
+    width: 232px;
+    background: #4a4e5e;
+    color: #cdcdcd;
+    padding: 10px 12px 12px 13px;
+}
+.company_dbl .conBottom a.p-moreBtn.dark i {
+    background-image: url({{get_asset_url('/hynixNewsRoom/codeFiles/images/icons/icon-outlined-24-px-launch-white.svg')}});
+}
+.company_business .conWrap {
+    display: flex;
+    justify-content: space-between;
+    /* EBOKE UPDATE */
+    /*  gap: 30px; */
+    margin-bottom: 120px;
+}
+.company_business .conWrap li {
+    flex: 1;
+    align-items: stretch;
+    display: flex;
+    flex-direction: column;
+    /* EBOKE UPDATE */
+    margin-right:30px;
+}
+.company_business .conWrap li:last-child {
+    /* EBOKE UPDATE */
+    margin-right:0;
+}
+.company_business .conWrap .imgWrap {
+    padding-top: 73.75%;
+}
+/* .company_business .conWrap :hover img {
+    transform: var(--transform);
+    transition: var(--transition);    
+} */
+
+.company_business .textWrap {
+    padding: 36px 24px;
+    background: #eeeeee;
+    min-height: 292px;
+    height: 100%;
+    box-sizing: border-box;
+}
+
+.company_business .textWrap h4 {
+    font-size: 24px;
+    font-weight: 600;
+    line-height: 1.5;
+    margin-bottom: 26px;
+}
+.company_business .conWrap li:nth-child(1) h4 {color: #4747b3;}
+.company_business .conWrap li:nth-child(2) h4 {color: #0072c6;}
+.company_business .conWrap li:nth-child(3) h4 {color: #009a93;}
+
+
+.company_business .textWrap p {
+    opacity: 0.8;
+    font-size: 14px;
+    line-height: 1.57;
+    color: rgba(0, 0, 0, 0.87);
+}
+  
+
+.company_business .f-performance {
+    display: flex;
+    align-items: center;
+    height: 510px;
+    background: url({{get_asset_url('/hynixNewsRoom/codeFiles/images/contentImage/bg_company_b_performanceO2x.png')}}) center/cover no-repeat;
+}
+.company_business .f-performance .inner2 {
+    width: 100%;
+}
+.company_business .f-performance span {
+    font-size: 22px;
+    line-height: 1.5;
+    color: #fff;
+    text-align: left;
+}
+  
+.company_business .f-performance table {
+    table-layout: fixed;
+    width: 100%;
+    margin-top: 40px;
+}
+
+.company_business .f-performance table th {
+    height: 70px;
+    background-color: rgba(0, 0, 0, 0.85);
+    font-size: 20px;
+    font-weight: 600;
+    line-height: 1.5;
+    color: #fff;
+    vertical-align: middle;
+}
+
+
+.company_business .f-performance table td {
+    height: 108px;
+    background-color: #fff;
+    vertical-align: middle;
+    font-size: 34px;
+    line-height: 1.5;
+    text-align: center;
+    color: #262626;
+}
+.company_business .f-performance table td:nth-child(2n) {
+    background: #f5f5f5;
+}
+.company_business .f-performance table td:last-child {
+    color: #4747b3;
+    font-weight: 600;
+}
+
+
+
+.company_dbl {
+    padding-top: 72px;
+}
+.company_dbl hr.line {
+    margin: 0 auto;
+    margin-bottom: 56px;
+    width: 1px;
+    height: 79px;
+    background: #000;
+    border: 0;    
+}
+.company_dbl .icDBL {
+    margin: 0 auto;
+    margin-bottom: 16px;
+}
+.company_dbl .icDBL img { 
+    display: block;
+    width: 88px;
+    margin: 0 auto;
+}
+.company_dbl .conHead {
+    text-align: center;
+}
+.company_dbl .conHead span {
+    display: block;
+    font-size: 17px;
+    font-weight: 600;
+    line-height: 1.47;
+    color: #4a4e5e;
+    margin-bottom: 40px;
+}
+
+.company_dbl .conHead p {
+    font-size: 18px;
+    font-weight: normal;
+    font-stretch: normal;
+    font-style: normal;
+    line-height: 1.5;
+    letter-spacing: normal;
+    text-align: center;
+    color: #000;
+    max-width: 647px;
+    margin: 0 auto;
+    margin-bottom: 60px;
+}
+  
+.company_dbl .conHead .dbl-blue {color: #0072c6;}
+.company_dbl .conHead .dbl-green {color: #009a93;}
+
+.company_dbl .conBody {
+    border-radius: 30px;
+    border: solid 1px #979797;
+    padding-top: 60px;
+    padding-bottom: 40px;
+}
+
+
+.company_dbl .conBody h2 {
+    font-size: 32px;
+    font-weight: 600;
+    font-stretch: normal;
+    font-style: normal;
+    line-height: 1.35;
+    letter-spacing: normal;
+    text-align: center;
+    color: #000;
+    margin-bottom: 60px;
+}
+.company_dbl .conBody ul.dbl-card {
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    margin-bottom: 88px;
+}
+.company_dbl .conBody ul.dbl-card li .imgBx {
+    width: 203px;
+    height: 203px;
+    border-radius: 50%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.company_dbl .conBody ul.dbl-card li:nth-child(1) .imgBx {background: #f8f4f0;}
+.company_dbl .conBody ul.dbl-card li:nth-child(2) .imgBx {background: #ecf3f3;}
+.company_dbl .conBody ul.dbl-card li:nth-child(3) .imgBx {background: #eaf1f6;}
+.company_dbl .conBody ul.dbl-card li:nth-child(4) .imgBx {background: #f9efe7;}
+
+.company_dbl .conBody ul.dbl-card li span {
+    font-size: 16px;
+    font-weight: 600;
+    font-stretch: normal;
+    font-style: normal;
+    line-height: 1.44;
+    letter-spacing: normal;
+    text-align: center;
+    color: #000;
+    margin: 0 auto;
+    display: block;
+    margin-top: 20px;
+}
+
+.company_dbl .conBody hr {
+    width: 100%;
+    opacity: 0.8;
+    border: 0;
+    height: 1px;
+    background-color: #cdcd;
+}
+
+.company_dbl .conBody .itemWrap {
+    margin-top: 70px;
+    padding: 0 40px;
+}
+.company_dbl .conBody .itemWrap h3 {
+    font-size: 24px;
+    font-weight: 600;
+    font-stretch: normal;
+    font-style: normal;
+    line-height: 1.5;
+    letter-spacing: normal;
+    margin-bottom: 10px;
+}
+.company_dbl .conBody .itemWrap:nth-of-type(1) h3 {color: #009a93;}
+.company_dbl .conBody .itemWrap:nth-of-type(2) h3 {color: #00739a;}
+.company_dbl .conBody .itemWrap:nth-of-type(3) h3 {color: #009a93;}
+.company_dbl .conBody .itemWrap:nth-of-type(4) h3 {color: #00739a;}
+
+
+.company_dbl .conBody .itemWrap span {
+    display: block;
+    font-size: 18px;
+    font-weight: normal;
+    font-stretch: normal;
+    font-style: normal;
+    line-height: 1.5;
+    letter-spacing: normal;
+    color: rgba(0, 0, 0, 0.6);
+    margin-bottom: 50px;
+}
+.company_dbl .conBody .itemWrap .contWrap {
+    max-width: 1000px;
+    margin: 0 auto;
+}
+.company_dbl .conBody .itemWrap [class*="dbl-card-"] {
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-start;
+    max-width: 1000px;
+    margin: 0 auto;
+    margin-bottom: 30px;
+}
+
+.company_dbl .conBody .itemWrap [class*="dbl-card-"] li {
+    display: flex;
+    justify-content: center;
+    align-items: flex-start;
+}
+.company_dbl .conBody .itemWrap .dbl-card-v li {
+    flex-direction: column;
+}
+.company_dbl .conBody .itemWrap .dbl-card-v li .imgBx {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    width: 220px;
+    height: 151px;
+    border-radius: 15px;
+    background-color: #fbfbfb;
+    margin-bottom: 20px;
+    box-sizing:border-box;
+    padding:10px;
+}
+.company_dbl .conBody .itemWrap .dbl-card-v li .imgBx em {
+    font-size: 14px;
+    font-weight: bold;
+    font-stretch: normal;
+    font-style: normal;
+    line-height: 1.79;
+    letter-spacing: normal;
+    text-align: center;
+    color: #009a93;
+    /*  EBOKE 1012 UPDATE  */
+    width:100%;
+}
+.company_dbl .conBody .itemWrap .dbl-card-v li .imgBx em small {
+    font-size: 10px;
+}
+
+.company_dbl .conBody .itemWrap .dbl-card-v li p {
+    font-size: 12px;
+    font-weight: 600;
+    font-stretch: normal;
+    font-style: normal;
+    line-height: 1.67;
+    letter-spacing: normal;
+    color: rgba(0, 0, 0, 0.7);
+}
+
+.company_dbl .conBody .itemWrap .gold-desc {
+    font-size: 12px;
+    font-weight: normal;
+    font-stretch: normal;
+    font-style: normal;
+    line-height: 1.83;
+    letter-spacing: normal;
+    color: #a48e79;
+}
+.company_dbl .conBody .itemWrap .dbl-card-h li {
+    max-width: 480px;
+    width: 100%;
+}
+.company_dbl .conBody .itemWrap .dbl-card-h li .imgBx {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    /* EBOKE UPDATE  */
+    /* gap: 26px; */
+    border-radius: 15px;
+    width: 100%;
+    height: 151px;
+    background-color: #f7fcff;
+}
+/* EBOKE UPDATE */
+.company_dbl .conBody .itemWrap .dbl-card-h li .imgBx img {
+    margin-right: 26px;
+}
+.company_dbl .conBody .itemWrap .dbl-card-h li .imgBx em {
+    font-size: 12px;
+    font-weight: normal;
+    font-stretch: normal;
+    font-style: normal;
+    line-height: 1.58;
+    letter-spacing: normal;
+    color: #00739a;
+}
+  
+.company_dbl .conBody .itemWrap .dbl-card-h li .imgBx em b {
+    font-size: 14px;
+    font-weight: 600;
+    max-width: 243px;
+    display: block;
+}
+.company_dbl .conBody .itemWrap .p-bold {
+    font-size: 16px;
+    font-weight: 600;
+    font-stretch: normal;
+    font-style: normal;
+    line-height: 2.31;
+    letter-spacing: normal;
+    color: #4d4e52;
+    margin-bottom: 20px;
+}
+
+.company_dbl .ic_dbl_arrow {
+    display: block;
+    margin: 40px auto 50px;
+}
+.company_dbl .conBottom h4 {
+    font-size: 20px;
+    font-weight: 600;
+    font-stretch: normal;
+    font-style: normal;
+    line-height: 1.5;
+    letter-spacing: normal;
+    color: #000;
+    margin-bottom: 17px;
+}
+
+.company_dbl .conBottom h5 {
+    opacity: 0.6;
+    font-size: 18px;
+    font-weight: normal;
+    font-stretch: normal;
+    font-style: normal;
+    line-height: 1.5;
+    letter-spacing: normal;
+    color: #000;
+    max-width: 650px;
+    margin-bottom: 40px;
+}
+.company_dbl .conBottom .tableWrap {
+    border-top: 1px solid rgba(0, 0, 0, 0.85);
+    border-bottom: 1px solid rgba(0, 0, 0, 0.85);
+    overflow: auto;
+}
+.company_dbl .conBottom table {
+    table-layout: fixed;
+    width: 100%;
+    min-width: 660px;
+}
+.company_dbl .conBottom table th {
+    height: 105px;
+    vertical-align: middle;
+    font-size: 14px;
+    font-weight: normal;
+    font-stretch: normal;
+    font-style: normal;
+    line-height: 1.36;
+    letter-spacing: normal;
+    text-align: center;
+    color: rgba(0, 0, 0, 0.5);
+    border: 1px solid rgba(0, 0, 0, 0.25);
+}
+.company_dbl .conBottom table th b {
+    font-size: 20px;
+    font-weight: 600;
+    line-height: 1.5;
+    text-align: center;
+    color: #000;
+}
+.company_dbl .conBottom table tr:nth-child(2n) td {
+    background: #f5f5f5;
+}
+.company_dbl .conBottom table td {
+    vertical-align: middle;
+    height: 61px;
+    font-size: 16px;
+    font-weight: 600;
+    font-stretch: normal;
+    font-style: normal;
+    line-height: 1.5;
+    letter-spacing: normal;
+    color: rgba(0, 0, 0, 0.5);
+    border: 1px solid rgba(0, 0, 0, 0.25);
+}
+.company_dbl .conBottom table td strong {
+    text-align: right;
+    color: #000;
+}
+.company_dbl .conBottom table td em {
+    font-weight: 400;
+}
+.company_dbl .conBottom table td .flexCell {
+    display: flex;
+    justify-content: space-between;
+    width: 100%;
+    padding: 0 7%;
+    box-sizing: border-box;
+}
+.company_dbl .conBottom table td .flexCell div {
+    display: flex;
+    align-items: center;
+}
+.company_dbl .conBottom table td .flexCell div i {
+    display: block;
+    width: 12px;
+    height: 9px;
+    background: url({{get_asset_url('/hynixNewsRoom/codeFiles/images/icons/ic_dbl_tableValueUp.svg')}}) center no-repeat;
+    margin-right: 5px;
+}
+
+.company_dbl .conBottom .silver-desc {
+    font-size: 14px;
+    font-weight: normal;
+    font-stretch: normal;
+    font-style: normal;
+    line-height: 1.36;
+    letter-spacing: normal;
+    color: rgba(0, 0, 0, 0.5);
+    margin-top: 20px;
+}
+
+.company_business .desWrap a.p-moreBtn:hover{
+    color: #0072c6;
+}

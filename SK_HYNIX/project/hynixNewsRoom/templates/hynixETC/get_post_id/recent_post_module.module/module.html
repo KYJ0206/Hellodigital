@@ -1,0 +1,21 @@
+{% set blog_id = module.blog_id %}
+{% set press_blog_id = module.blog_field2 %}
+{% set blog_posts = blog_recent_posts(blog_id, 50) %}
+{% set press_blog_posts = blog_recent_posts(press_blog_id, 50) %}
+
+{% set totalArr = (blog_posts + press_blog_posts) | sort(True, False, 'publish_date') %}
+
+
+
+<h1>
+	최근 포스트 
+</h1>
+<div>
+	{% for post in totalArr%}
+	<div class='blogListContainer2' style='width: 100%; display: flex; align-items: center; justify-content: space-between; margin-bottom: 20px;'>
+		<input class='blogId' readonly style='width: 15%; border:none; outline:none;' value='{{post.id}}'>
+		<span class='blogName' style='width: 65%'>{{post.name}}</span>
+		<button class='blogCopy' style='width: 10%'>복사하기</button>
+	</div>
+	{% endfor %}
+</div>

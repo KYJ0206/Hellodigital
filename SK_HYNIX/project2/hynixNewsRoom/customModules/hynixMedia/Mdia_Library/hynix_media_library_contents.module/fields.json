@@ -1,0 +1,55 @@
+[ {
+  "picker" : "image",
+  "id" : "ed6765b0-a7e8-1433-5793-66e5a03e2e9a",
+  "name" : "image_file",
+  "label" : "이미지파일",
+  "required" : false,
+  "locked" : false,
+  "occurrence" : {
+    "min" : 0,
+    "max" : 10,
+    "sorting_label_field" : null,
+    "default" : 0
+  },
+  "type" : "file"
+}, {
+  "picker" : "video",
+  "id" : "2e4609bd-ce9a-8186-3063-4228477c012b",
+  "name" : "video_file",
+  "label" : "비디오파일",
+  "required" : false,
+  "locked" : false,
+  "occurrence" : {
+    "min" : 0,
+    "max" : 10,
+    "sorting_label_field" : null,
+    "default" : 0
+  },
+  "type" : "file"
+}, {
+  "id" : "98f71d5d-f1ee-a7b3-ba3b-c9d41bbd8085",
+  "name" : "choice_field",
+  "label" : "타입선택",
+  "required" : false,
+  "locked" : false,
+  "display" : "select",
+  "choices" : [ [ "img", "이미지" ], [ "video", "비디오" ], [ "youtube", "유튜브" ] ],
+  "type" : "choice",
+  "default" : ""
+}, {
+  "id" : "73dc768e-1bf8-3d47-ed9a-aa96e7d0ddc3",
+  "name" : "youtubeId",
+  "label" : "유튜브id",
+  "required" : false,
+  "locked" : false,
+  "occurrence" : {
+    "min" : 0,
+    "max" : 100,
+    "sorting_label_field" : null,
+    "default" : 0
+  },
+  "validation_regex" : "",
+  "allow_new_line" : false,
+  "show_emoji_picker" : false,
+  "type" : "text"
+} ]

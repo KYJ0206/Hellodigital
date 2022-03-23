@@ -1,0 +1,92 @@
+<section class="media-library_module">
+    <div class="inner2">
+        <div class="conWrap">
+            <div class="media-library-top">
+                <h3 class='hs-search-hidden' style='cursor: pointer'>미디어라이브러리<i style='cursor: pointer'></i></h3>
+                <h1 class='hs-search-hidden'>
+                    SK하이닉스의 다채로운 이미지와 영상을 소개합니다
+                </h1>
+                <img class="lazyload" src="{{get_asset_url("/hynixNewsRoom/codeFiles/images/contentImage/img-media-librayO2x.png")}}" alt="반도체이미지">
+            </div>
+            <hr>
+            <div class="media-library-bottom">
+                <div class="radioWrap">
+                    <div class="radioItem">
+                        <input id="radio1" type="radio" name="tab" value="all" checked>
+                        <label for="radio1">
+                            전체
+                        </label>
+                    </div>
+                    <div class="radioItem">
+                        <input id="radio2" type="radio" name="tab" value="img">
+                        <label for="radio2">
+                            사진
+                        </label>
+                    </div>
+                    <div class="radioItem">
+                        <input id="radio3" type="radio" name="tab" value="video">
+                        <label for="radio3">
+                            동영상
+                        </label>
+                    </div>
+                </div>
+                <div class="submitWrap">
+                    <div class="inputWrap">
+                        <input id="inputWrap" type="email" placeholder="키워드를 입력하세요">
+                        <button class="searchBtn">
+                            <i></i>
+                            검색
+                        </button>
+                    </div>
+									<a href="/library/tag/캠퍼스/page/1">#캠퍼스</a>
+									<a href="/library/tag/DRAM/page/1">#DRAM</a>
+									<a href="/library/tag/NAND/page/1">#NAND</a>
+									<a href="/library/tag/CIS/page/1">#CIS</a>
+									<a href="/library/tag/공정/page/1">#공정</a>
+<!--                     <span>#반도체</span>
+                    <span>#SSD출시</span>
+                    <span>#2021년D램</span>
+                    <span>#하이닉스제1공정</span> -->
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+
+
+<script type='text/babel'>
+$('.searchBtn').click(() => {
+  let searchType = $("input:radio[name=tab]:checked").val();
+//   $("input:checkbox[id='#category01']").prop("checked", true);
+//   $("input:checkbox[id='#category02']").prop("checked", false);
+//   $("input:checkbox[id='#category03']").prop("checked", false);
+      
+//   $("input:radio[name=radiovalue2]:checked").each(function(){
+//     searchType = $(this).val();
+//   });
+  const searchText =  $("#inputWrap").val();
+  const dateType = $(".skh-select").val();
+  const startDate = $("#date-from").val();
+  const endDate = $("#date-to").val();
+  location.href = `/library?searchText=${searchText}&searchType=${searchType}`
+	console.log(searchType)
+})
+
+$("#inputWrap").on('keyup', (key) => {
+	console.log(12312312)
+	if(key.keyCode===13) {
+		console.log('asdfasd')
+		let searchType = $("input:radio[name=tab]:checked").val();
+		const searchText =  $("#inputWrap").val();
+		const dateType = $(".skh-select").val();
+		const startDate = $("#date-from").val();
+		const endDate = $("#date-to").val();
+		location.href = `/library?searchText=${searchText}&searchType=${searchType}`
+	}
+})
+
+$('.media-library-top h3').click(() => {
+	location.href = `/library`
+})
+</script>
+

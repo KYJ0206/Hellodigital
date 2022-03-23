@@ -1,0 +1,127 @@
+{% set media_id = module.media_blog_field  %}
+{% set media_recent_posts = blog_recent_posts(media_id, 24) %}
+{% set media_popular_posts = blog_popular_posts(media_id, 24) %}
+{% set query = request.query_dict.searchText %}
+
+<!--     div .listItem active가 붙으면 선택완료 -->
+
+<section class="container media_module media-list-contents">
+  <div class="conWrap-body conWrap-body-recent">
+    <div class="inner2">
+      <div class='loading-container' style="display:none;justify-content:center;align-items: center;flex-direction: column;">
+        <img class='loading-gif' src='https://f.hubspotusercontent40.net/hubfs/20028749/C_NewsRoom_kr/loading-search.gif' alt='loading'>
+        <span class='searching'>Searching...</span>
+      </div>
+      <!--겁색 페이지가 없는거-->
+      <div class='noSearchContainer'>
+        <img class='noSearchImg' style='width: 85.9px;' class='no-search-icon' src='{{get_asset_url('/hynixNewsRoom/codeFiles/images/defaultImage/noun-search-result-1241317o2x.png')}}' alt='noSearch'>
+        <span class='noSearchTitle'>검색결과가 없습니다.</span>
+        <span class='noSearchDesc'>검색하신 단어가 정확한지 확인해 주시거나 다른 검색어를 사용해 주시기 바랍니다.</span>
+        <a class='noSearchBtn'>돌아가기</a>
+      </div>
+      
+      <!--     최신글 -->
+      <div class="statusbarWrap" style='display:flex;align-items:center;margin-bottom:32px'>
+        <div class="w3-light-grey" style='height:5px; width:100%'>
+          <div class="w3-green" style="height:5px;width:0%"></div>
+        </div>
+        <div class='barText' style='color:#055b9a;font-weight:bold;font-size:12px;margin-left:20px;width:2%'>0%</div>
+      </div>
+      
+      <div class="listWrap recent-blog recent-blog-api">
+				
+				{% if not query%}
+        {% for post in media_recent_posts %}
+        <div class="listItem test{{loop.index}}">
+          <div class="imgBx">
+            <a>
+              <div class="imgWrap">
+                <span class="thumbPlus">선택완료</span>
+                {% if post.widgets.module_1631532455283101.body.choice_field == 'video' %}
+                <div class="img-type img-type-mov" data-url="{{post.widgets.module_1631532455283101.body.video_file}}"></div>
+                <img src="{{post.featured_image ? post.featured_image : get_asset_url("/hynixNewsRoom/codeFiles/images/contentImage/groupO2x.png")}}" class=" ls-is-cached lazyloaded" alt="img">
+                <span class="thumbCheck"></span>
+								
+                {% elif post.widgets.module_1631532455283101.body.choice_field == 'youtube' %}
+								<div class="img-type img-type-youtube"></div>
+                <img src="{{post.featured_image ? post.featured_image : get_asset_url("/hynixNewsRoom/codeFiles/images/contentImage/groupO2x.png")}}" class=" ls-is-cached lazyloaded" alt="img">
+								
+                {% else %}
+                <div class="img-type img-type-pic" data-url="{{post.widgets.module_1631532455283101.body.image_file}}"></div>
+                <img src="{{post.featured_image ? post.featured_image : get_asset_url("/hynixNewsRoom/codeFiles/images/contentImage/groupO2x.png")}}" class=" ls-is-cached lazyloaded" alt="img">
+                <span class="thumbCheck"></span>
+                {% endif %}
+              </div>
+            </a>
+            {% if post.widgets.module_1631532455283101.body.choice_field == 'video' %}
+            <a class='dataDown' data-data="{{post.widgets.module_1631532455283101.body.choice_field}}" data-img="{{post.widgets.module_1631532455283101.body.image_file ? post.widgets.module_1631532455283101.body.image_file : null}}" data-video="{{post.widgets.module_1631532455283101.body.video_file ? post.widgets.module_1631532455283101.body.video_file : null}}" data-youtube="{{post.widgets.module_1631532455283101.body.youtubeId ? post.widgets.module_1631532455283101.body.youtubeId : null}}" style="cursor:pointer" class="hoverInDownload"><i></i>다운로드</a>
+            {% elif post.widgets.module_1631532455283101.body.choice_field == 'youtube' %}
+            <a class='dataDown' data-data="{{post.widgets.module_1631532455283101.body.choice_field}}" data-img="{{post.widgets.module_1631532455283101.body.image_file ? post.widgets.module_1631532455283101.body.image_file : null}}" data-video="{{post.widgets.module_1631532455283101.body.video_file ? post.widgets.module_1631532455283101.body.video_file : null}}" data-youtube="{{post.widgets.module_1631532455283101.body.youtubeId ? post.widgets.module_1631532455283101.body.youtubeId : null}}" style="cursor:pointer" class="hoverInDownload"></a>
+            {% elif post.widgets.module_1631532455283101.body.choice_field == 'img' %}
+            <a class='dataDown' data-data="{{post.widgets.module_1631532455283101.body.choice_field}}" data-img="{{post.widgets.module_1631532455283101.body.image_file ? post.widgets.module_1631532455283101.body.image_file : null}}" data-video="{{post.widgets.module_1631532455283101.body.video_file ? post.widgets.module_1631532455283101.body.video_file : null}}" data-youtube="{{post.widgets.module_1631532455283101.body.youtubeId ? post.widgets.module_1631532455283101.body.youtubeId : null}}" style="cursor:pointer" class="hoverInDownload"><i></i>다운로드</a>
+            {% endif %}
+
+          </div>
+          <a href="{{post.absolute_url}}">
+            <h3>{{post.name}}</h3>
+          </a>
+          <hr>
+          <div class="ml_con_info">
+            <div class="info">
+<!--               <span class="date">
+{#                 {{post.publish_date | datetimeformat ('%Y-%m-%d')}} #}
+              </span> -->
+              <span id='name{{loop.index}}' class="name">
+                {% for topic in post.topic_list %}
+									{% if topic != '' %}
+									  <a href='/library/tag/{{topic.name}}/page/1' class='topicText topicText{{loop.index}}'>#{{topic.name}}</a>
+									{% endif%}
+                {% endfor %}
+              </span>
+            </div>
+          </div>
+        </div>        
+        {% endfor %}
+				{% endif %}
+				
+				
+      </div>
+    </div>
+    <a id='loady' class="card-more recent-blog-btn"> 
+      더보기
+      <i></i>
+    </a>
+		<a href='/library/page/1' style='display:none;' class="media-total-page card-more  recent-blog-btn">
+				전체 글 보기
+				<i></i>
+			</a>
+  </div>
+  <!-- 	<a href="#" class="card-more">
+더보기
+<i></i>
+</a> -->
+</section>
+
+
+<script type='text/babel'>
+{
+	const removeCategory = () => {
+		const perentsLength = $('.ml_con_info .info').children('span.name').length
+		for(let i = 1; i <= perentsLength; i++) {
+			const chideLength = $(`.ml_con_info .info #name${i}`).children('a.topicText').length;
+			for(let j = 1; j <= chideLength; j++) {
+				const text = $(`#name${i} .topicText${j}`).text()	
+				if(text.includes('카테고리-')) {
+					$(`.ml_con_info .info #name${i} .topicText${j}`).remove()
+				}
+			}
+		}
+	}
+  $('.noSearchBtn').click(() => {
+    console.log('nosearch Click');
+    window.history.back();
+  })
+  
+	window.onload = removeCategory()
+}
+</script>

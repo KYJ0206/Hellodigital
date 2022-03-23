@@ -1,0 +1,10 @@
+
+.cate_module.cate-c a {
+  color : #383838 !important;
+}
+
+.cate_module.cate-c .cate-top {
+	border-image-source: linear-gradient(to right,#4747b3 0%,#0072c6 51%,#009a93 100%);
+	border-style: solid;
+	border-image-slice: 1;
+}

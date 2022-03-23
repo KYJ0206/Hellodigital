@@ -1,0 +1,29 @@
+[ {
+  "id" : "070659c1-30cf-efb2-abe7-41768e12b6a6",
+  "name" : "form_field",
+  "label" : "Form_기자",
+  "required" : false,
+  "locked" : false,
+  "type" : "form",
+  "default" : {
+    "form_id" : "e450f837-d033-4cb2-8ed2-e995699a87fa",
+    "response_type" : "inline",
+    "message" : "Thanks for submitting the form.",
+    "gotowebinar_webinar_key" : null,
+    "form_type" : "HUBSPOT"
+  }
+}, {
+  "id" : "8925d58d-fd80-6f77-5980-6820b342f124",
+  "name" : "form_bajic",
+  "label" : "Form_일반",
+  "required" : false,
+  "locked" : false,
+  "type" : "form",
+  "default" : {
+    "form_id" : "5951a21e-7c3f-4b6f-937f-b0c3e39eebb3",
+    "response_type" : "inline",
+    "message" : "<p>구독해주셔서 감사합니다.</p>",
+    "gotowebinar_webinar_key" : null,
+    "form_type" : "HUBSPOT"
+  }
+} ]

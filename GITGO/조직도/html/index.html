@@ -1,0 +1,367 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+<meta charset="UTF-8">
+<title>Gitgo</title>
+<meta http-equiv="X-UA-Compatible" content="IE=edge">
+<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0, user-scalable=no">
+<link rel="stylesheet" href="../css/import.css">
+<link rel="stylesheet" href="../css/jquery-ui.min.css">
+<link rel="stylesheet" href="../css/style.min.css" />
+<!-- <link rel="stylesheet" href="../dist/themes/default/style.min.css" /> -->
+<script src="../js/jquery-1.12.4.min.js"></script>
+<script src="../js/jquery-ui.js"></script>
+<script src="../js/bootstrap.bundle.min.js"></script>
+<script src="../js/ui.js"></script>
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+<script src="../dist/jstree.min.js"></script>
+ <!--[if lt IE 9]>
+<script src="../js/html5shiv.js"></script>
+</script>
+<![endif]-->
+</head>
+<body>
+	<div class="wrap">
+		<div class="organization_top flex space_btw">
+			<div class="user_info flex">
+				<h3 class="title_large"><i class="icon"><img src="../images/test/dum01.png" alt=""></i><span>(주)에스씨케이</span></h3>
+				<a href=#a" class="choose_num">선택한 사용자 [3]</a> 
+			</div>
+
+			<div class="search_box flex">
+				<input type="text" placeholder="검색어를 입력하세요.">
+				<button class="button search">검색</button>
+				<button type="button" class="search_box_close"></button>
+			</div>
+		</div><!-- // top -->
+
+		<div class="search_result flex" style="display:none;">
+			<p class="text_small">‘홍수철’에 대한 검색결과입니다.</p>
+			<button class="button_result_close">검색결과 닫기</button>
+		</div>
+		<script type="text/javascript">
+			$('.search_box .search').click(function(){
+				$('.search_result').show();
+			});
+			$('.button_result_close').click(function(){
+				$(this).parent('.search_result').hide();
+			});
+		</script>
+
+		<div class="org_contents rel">
+			<div class="list_control">
+				<button class="button button_card on">카드형 보기</button>
+				<button class="button button_list">리스트형 보기</button>
+			</div>
+
+			<div class="gnb accodian">
+				<ul>
+					<li><a href="#q" class="link_menu"><i></i>에쓰씨케이 [15]</a>
+						<div class="gnb_inner">
+							<ul>
+								<li><a href="#a" class="link_menu"><i></i>영업팀[10]</a>
+									<div class="gnb_inner">
+										<ul>
+											<li><a href="#a" class="link_menu"><i></i>영업 1부서[3]</a>
+												<div class="gnb_inner">
+													<div class="list_area flex">
+														<div class="allcheck"><button class="text_small">전체선택</button></div>
+														
+														<div class="list_inner">
+															<div class="list_inner_box">
+																<span class="inputCheck">
+																	<input type="checkbox" id="check00">
+																	<label for="check00"></label>
+																</span>
+
+																<div class="profile_img"><img src="../images/thumb-icon-normal.png" alt=""></div>
+																<div class="profile_txt">
+																	<p class="name">홍길동</p>
+																	<p class="belong">글로벌 프로모션 기획팀 ㅣ 팀장</p>
+																	<p class="email">hsjang.hello@gmail.com</p>
+																	<p class="phone">010-5106-5401</p>
+																</div>
+															</div><!-- // list_inner_box -->
+
+															<div class="list_inner_btns">
+																<a href="#a" class="btn talk"></a>
+																<a href="#a" class="btn sms"></a>
+																<a href="#a" class="btn calendar"></a>
+															</div><!-- // list_inner_btns -->
+														</div><!-- // list_inner -->
+														<div class="list_inner">
+															<div class="list_inner_box">
+																<span class="inputCheck">
+																	<input type="checkbox" id="check01">
+																	<label for="check01"></label>
+																</span>
+
+																<div class="profile_img"><img src="../images/thumb-icon-normal.png" alt=""></div>
+																<div class="profile_txt">
+																	<p class="name">홍길동</p>
+																	<p class="belong">글로벌 프로모션 기획팀 ㅣ 팀장</p>
+																	<p class="email">hsjang.hello@gmail.com</p>
+																	<p class="phone">010-5106-5401</p>
+																</div>
+															</div><!-- // list_inner_box -->
+
+															<div class="list_inner_btns">
+																<a href="#a" class="btn talk"></a>
+																<a href="#a" class="btn sms"></a>
+																<a href="#a" class="btn calendar"></a>
+															</div><!-- // list_inner_btns -->
+														</div><!-- // list_inner -->
+														<div class="list_inner">
+															<div class="list_inner_box">
+																<span class="inputCheck">
+																	<input type="checkbox" id="check02">
+																	<label for="check02"></label>
+																</span>
+
+																<div class="profile_img"><img src="../images/thumb-icon-normal.png" alt=""></div>
+																<div class="profile_txt">
+																	<p class="name">홍길동</p>
+																	<p class="belong">글로벌 프로모션 기획팀 ㅣ 팀장</p>
+																	<p class="email">hsjang.hello@gmail.com</p>
+																	<p class="phone">010-5106-5401</p>
+																</div>
+															</div><!-- // list_inner_box -->
+
+															<div class="list_inner_btns">
+																<a href="#a" class="btn talk"></a>
+																<a href="#a" class="btn sms"></a>
+																<a href="#a" class="btn calendar"></a>
+															</div><!-- // list_inner_btns -->
+														</div><!-- // list_inner -->
+														<div class="list_inner">
+															<div class="list_inner_box">
+																<span class="inputCheck">
+																	<input type="checkbox" id="check03">
+																	<label for="check03"></label>
+																</span>
+
+																<div class="profile_img"><img src="../images/thumb-icon-normal.png" alt=""></div>
+																<div class="profile_txt">
+																	<p class="name">홍길동</p>
+																	<p class="belong">글로벌 프로모션 기획팀 ㅣ 팀장</p>
+																	<p class="email">hsjang.hello@gmail.com</p>
+																	<p class="phone">010-5106-5401</p>
+																</div>
+															</div><!-- // list_inner_box -->
+
+															<div class="list_inner_btns">
+																<a href="#a" class="btn talk"></a>
+																<a href="#a" class="btn sms"></a>
+																<a href="#a" class="btn calendar"></a>
+															</div><!-- // list_inner_btns -->
+														</div><!-- // list_inner -->
+														<div class="list_inner">
+															<div class="list_inner_box">
+																<span class="inputCheck">
+																	<input type="checkbox" id="check04">
+																	<label for="check04"></label>
+																</span>
+
+																<div class="profile_img"><img src="../images/thumb-icon-normal.png" alt=""></div>
+																<div class="profile_txt">
+																	<p class="name">홍길동</p>
+																	<p class="belong">글로벌 프로모션 기획팀 ㅣ 팀장</p>
+																	<p class="email">hsjang.hello@gmail.com</p>
+																	<p class="phone">010-5106-5401</p>
+																</div>
+															</div><!-- // list_inner_box -->
+
+															<div class="list_inner_btns">
+																<a href="#a" class="btn talk"></a>
+																<a href="#a" class="btn sms"></a>
+																<a href="#a" class="btn calendar"></a>
+															</div><!-- // list_inner_btns -->
+														</div><!-- // list_inner -->
+														<div class="list_inner">
+															<div class="list_inner_box">
+																<span class="inputCheck">
+																	<input type="checkbox" id="check05">
+																	<label for="check05"></label>
+																</span>
+
+																<div class="profile_img"><img src="../images/thumb-icon-normal.png" alt=""></div>
+																<div class="profile_txt">
+																	<p class="name">홍길동</p>
+																	<p class="belong">글로벌 프로모션 기획팀 ㅣ 팀장</p>
+																	<p class="email">hsjang.hello@gmail.com</p>
+																	<p class="phone">010-5106-5401</p>
+																</div>
+															</div><!-- // list_inner_box -->
+
+															<div class="list_inner_btns">
+																<a href="#a" class="btn talk"></a>
+																<a href="#a" class="btn sms"></a>
+																<a href="#a" class="btn calendar"></a>
+															</div><!-- // list_inner_btns -->
+														</div><!-- // list_inner -->
+													</div>
+												</div>
+											</li>
+											<li><a href="#a" class="link_menu"><i></i>영업 2부서[4]</a>
+												<div class="gnb_inner">
+													<div class="list_area flex">
+														<div class="allcheck"><button class="text_small">전체선택</button></div>
+														<div class="list_inner">
+															<div class="list_inner_box">
+																<span class="inputCheck">
+																	<input type="checkbox" id="check00">
+																	<label for="check00"></label>
+																</span>
+
+																<div class="profile_img"><img src="../images/thumb-icon-normal.png" alt=""></div>
+																<div class="profile_txt">
+																	<p class="name">홍길동</p>
+																	<p class="belong">글로벌 프로모션 기획팀 ㅣ 팀장</p>
+																	<p class="email">hsjang.hello@gmail.com</p>
+																	<p class="phone">010-5106-5401</p>
+																</div>
+															</div><!-- // list_inner_box -->
+
+															<div class="list_inner_btns">
+																<a href="#a" class="btn talk"></a>
+																<a href="#a" class="btn sms"></a>
+																<a href="#a" class="btn calendar"></a>
+															</div><!-- // list_inner_btns -->
+														</div><!-- // list_inner -->
+														<div class="list_inner">
+															<div class="list_inner_box">
+																<span class="inputCheck">
+																	<input type="checkbox" id="check01">
+																	<label for="check01"></label>
+																</span>
+
+																<div class="profile_img"><img src="../images/thumb-icon-normal.png" alt=""></div>
+																<div class="profile_txt">
+																	<p class="name">홍길동</p>
+																	<p class="belong">글로벌 프로모션 기획팀 ㅣ 팀장</p>
+																	<p class="email">hsjang.hello@gmail.com</p>
+																	<p class="phone">010-5106-5401</p>
+																</div>
+															</div><!-- // list_inner_box -->
+
+															<div class="list_inner_btns">
+																<a href="#a" class="btn talk"></a>
+																<a href="#a" class="btn sms"></a>
+																<a href="#a" class="btn calendar"></a>
+															</div><!-- // list_inner_btns -->
+														</div><!-- // list_inner -->
+														<div class="list_inner">
+															<div class="list_inner_box">
+																<span class="inputCheck">
+																	<input type="checkbox" id="check02">
+																	<label for="check02"></label>
+																</span>
+
+																<div class="profile_img"><img src="../images/thumb-icon-normal.png" alt=""></div>
+																<div class="profile_txt">
+																	<p class="name">홍길동</p>
+																	<p class="belong">글로벌 프로모션 기획팀 ㅣ 팀장</p>
+																	<p class="email">hsjang.hello@gmail.com</p>
+																	<p class="phone">010-5106-5401</p>
+																</div>
+															</div><!-- // list_inner_box -->
+
+															<div class="list_inner_btns">
+																<a href="#a" class="btn talk"></a>
+																<a href="#a" class="btn sms"></a>
+																<a href="#a" class="btn calendar"></a>
+															</div><!-- // list_inner_btns -->
+														</div><!-- // list_inner -->
+														<div class="list_inner">
+															<div class="list_inner_box">
+																<span class="inputCheck">
+																	<input type="checkbox" id="check03">
+																	<label for="check03"></label>
+																</span>
+
+																<div class="profile_img"><img src="../images/thumb-icon-normal.png" alt=""></div>
+																<div class="profile_txt">
+																	<p class="name">홍길동</p>
+																	<p class="belong">글로벌 프로모션 기획팀 ㅣ 팀장</p>
+																	<p class="email">hsjang.hello@gmail.com</p>
+																	<p class="phone">010-5106-5401</p>
+																</div>
+															</div><!-- // list_inner_box -->
+
+															<div class="list_inner_btns">
+																<a href="#a" class="btn talk"></a>
+																<a href="#a" class="btn sms"></a>
+																<a href="#a" class="btn calendar"></a>
+															</div><!-- // list_inner_btns -->
+														</div><!-- // list_inner -->
+														<div class="list_inner">
+															<div class="list_inner_box">
+																<span class="inputCheck">
+																	<input type="checkbox" id="check04">
+																	<label for="check04"></label>
+																</span>
+
+																<div class="profile_img"><img src="../images/thumb-icon-normal.png" alt=""></div>
+																<div class="profile_txt">
+																	<p class="name">홍길동</p>
+																	<p class="belong">글로벌 프로모션 기획팀 ㅣ 팀장</p>
+																	<p class="email">hsjang.hello@gmail.com</p>
+																	<p class="phone">010-5106-5401</p>
+																</div>
+															</div><!-- // list_inner_box -->
+
+															<div class="list_inner_btns">
+																<a href="#a" class="btn talk"></a>
+																<a href="#a" class="btn sms"></a>
+																<a href="#a" class="btn calendar"></a>
+															</div><!-- // list_inner_btns -->
+														</div><!-- // list_inner -->
+														<div class="list_inner">
+															<div class="list_inner_box">
+																<span class="inputCheck">
+																	<input type="checkbox" id="check05">
+																	<label for="check05"></label>
+																</span>
+
+																<div class="profile_img"><img src="../images/thumb-icon-normal.png" alt=""></div>
+																<div class="profile_txt">
+																	<p class="name">홍길동</p>
+																	<p class="belong">글로벌 프로모션 기획팀 ㅣ 팀장</p>
+																	<p class="email">hsjang.hello@gmail.com</p>
+																	<p class="phone">010-5106-5401</p>
+																</div>
+															</div><!-- // list_inner_box -->
+
+															<div class="list_inner_btns">
+																<a href="#a" class="btn talk"></a>
+																<a href="#a" class="btn sms"></a>
+																<a href="#a" class="btn calendar"></a>
+															</div><!-- // list_inner_btns -->
+														</div><!-- // list_inner -->
+													</div>
+												</div>
+											</li>
+										</ul>
+									</div>
+								</li>
+							</ul>
+						</div>  
+					</li>
+				</ul>
+			</div><!-- // gnb -->
+
+			<div class="choice_info flex">
+				<div class="text">
+					<a href="#a" class="text_small" target="_blank">총 3명이 선택되었습니다. [확인하기]</a>
+				</div>
+
+				<div class="btns">
+					<a href="#a" class="button"><i class="chat"></i>채팅하기</a>
+					<a href="#a" class="button"><i class="email"></i>메일쓰기</a>
+					<a href="#a" class="button button_green"><i class="date"></i>일정추가</a><!-- green 추가 -->
+				</div>
+			</div>
+		</div><!-- // org_contents -->
+	</div><!--// wrap -->
+</body>
+</html>

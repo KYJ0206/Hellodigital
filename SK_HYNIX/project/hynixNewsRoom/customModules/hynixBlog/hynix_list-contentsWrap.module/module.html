@@ -1,0 +1,146 @@
+{% set path = request.path|split('/', 2)|last %}
+{% set query = request.query_dict.category %}
+
+{% set techBlogId = path == 'technology' ? 54615482386 : (path == 'culture' ? 54780923926 : 54784757872)  %}
+{% set tech_recent_posts = blog_recent_posts(techBlogId, 56) %}
+{% set tech_popular_posts = blog_popular_posts(techBlogId, 56) %}
+
+{% set show = path == 'technology' || path == 'culture' || path == 'sustainability' ? true : flase %}
+{% set blogName = path == 'technology' ? '기술' : (path == 'culture' ? '사람&문화' : '지속가능경영') %}
+{% set blogTagClass = path == 'technology' ? 'cate-tag-t' : (path == 'culture' ? 'cate-tag-c' : 'cate-tag-s') %}
+{% set blogTotalContents = path == 'technology' ? '/technology/page/1?type=blog&text=기술' : (path == 'culture' ? '/culture/page/1?type=blog&text=사람%26문화' : '/sustainability/page/1?type=blog&text=지속가능경영') %}
+
+
+
+{% if show %}
+<section class="list-contentsWrap">
+	<div class="conWrap-body">
+		<div class="inner2">
+<!-- 			<p class='choiceBlog'></p> -->
+			<ul class="flexWrap-4 addFlewWrap-4 recent-blog"> 
+				{% for post in tech_recent_posts%}
+				{% if query == 'all' || !query %}
+				  <li class='flewWrap-li'>
+						<div class="card">
+							<div class="imgWrap">
+								<a href="{{post.absolute_url}}"><img class=" ls-is-cached lazyloaded" src='{{post.featured_image ? post.featured_image : get_asset_url("/hynixNewsRoom/codeFiles/images/defaultImage/tnoimg.png")}}' alt="이미지"></a>
+							</div>
+							<div class="tagWrap">
+								<a href="#">
+									<div class="cate-tag {{blogTagClass}}">{{blogName}}</div>
+								</a>
+							</div>
+
+							<a href="{{post.absolute_url}}">
+								<h2>
+									{{post.name}}
+								</h2>
+							</a>
+						</div>
+					</li>
+				{% else %}
+				  {% if post.widgets.module_163167141691134.body.category_field == query %}
+				  <li class='flewWrap-li'>
+						<div class="card">
+							<div class="imgWrap">
+								<a href="{{post.absolute_url}}"><img class=" ls-is-cached lazyloaded" src='{{post.featured_image ? post.featured_image : get_asset_url("/hynixNewsRoom/codeFiles/images/defaultImage/tnoimg.png")}}' alt="이미지"></a>
+							</div>
+							<div class="tagWrap">
+								<a href="#">
+									<div class="cate-tag {{blogTagClass}}">{{blogName}}</div>
+								</a>
+							</div>
+
+							<a href="{{post.absolute_url}}">
+								<h2>
+									{{post.name}}
+								</h2>
+							</a>
+						</div>
+					</li>
+				  {% endif %}
+				{% endif %}
+				{% endfor %}
+			</ul>
+			<a id="loady" class="card-more">
+				글 더보기
+				<i></i>
+			</a>
+			{% if query == 'all'%}
+			<a href="{{blogTotalContents}}" style='display:none;' class="card-more  recent-blog-btn">
+				전체 글 보기
+				<i></i>
+			</a>
+			{% else %}
+			<a style='display:none;' class="recent-categoryTotal card-more  recent-blog-btn">
+				전체 글 보기
+				<i></i>
+			</a>
+			{% endif %}
+			
+			
+			<ul class="flexWrap-4 addFlewWrap-4 popular-blog"> 
+				{% for post in tech_popular_posts%}
+				{% if query == 'all'%}
+				  <li class='flewWrap-li'>
+						<div class="card">
+							<div class="imgWrap">
+								<a href="{{post.absolute_url}}"><img class=" ls-is-cached lazyloaded" src='{{post.featured_image ? post.featured_image : get_asset_url("/hynixNewsRoom/codeFiles/images/defaultImage/tnoimg.png")}}' alt="이미지"></a>
+							</div>
+							<div class="tagWrap">
+								<a href="#">
+									<div class="cate-tag {{blogTagClass}}">{{blogName}}</div>
+								</a>
+							</div>
+
+							<a href="{{post.absolute_url}}">
+								<h2>
+									{{post.name}}
+								</h2>
+							</a>
+						</div>
+					</li>
+				{% else %} 
+				  {% if post.widgets.module_163167141691134.body.category_field == query %}
+				  <li class='flewWrap-li'>
+						<div class="card">
+							<div class="imgWrap">
+								<a href="{{post.absolute_url}}"><img class=" ls-is-cached lazyloaded" src='{{post.featured_image ? post.featured_image : get_asset_url("/hynixNewsRoom/codeFiles/images/defaultImage/tnoimg.png")}}' alt="이미지"></a>
+							</div>
+							<div class="tagWrap">
+								<a href="#">
+									<div class="cate-tag {{blogTagClass}}">{{blogName}}</div>
+								</a>
+							</div>
+
+							<a href="{{post.absolute_url}}">
+								<h2>
+									{{post.name}}
+								</h2>
+							</a>
+						</div>
+					</li>
+				  {% endif %}
+				{% endif %}
+				{% endfor %}
+			</ul>
+			<a id="loady2" class="card-more">
+				글 더보기
+				<i></i>
+			</a>
+
+			{% if query == 'all'%}
+			<a href="{{blogTotalContents}}" style='display:none;' class="card-more  popular-blog-btn">
+				전체 글 보기
+				<i></i>
+			</a>
+			{% else %}
+			<a style='display:none;' class="popular-categoryTotal card-more  popular-blog-btn">
+				전체 글 보기
+				<i></i>
+			</a>
+			{% endif %}
+		</div>
+	</div>
+</section>
+{% endif %}

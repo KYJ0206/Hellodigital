@@ -1,0 +1,150 @@
+html .press-alramWrap{
+    border-bottom: 1px solid rgba(151,151,151,0.5);
+    margin-top: 16px;
+    margin-bottom: 44px;
+    padding-bottom: 44px;
+    position: relative;
+    margin-left: 8px;
+    margin-right: 8px;
+}
+
+.press-alramWrap a:hover{
+  color:#666;
+}
+
+.press-alramWrap a{
+text-underline-position: under;}
+
+
+/* radioWrap */
+.press-alramWrap .inputs-list,
+.press-alramWrap .multi-container {
+    display: flex;
+    flex-direction: column;
+  
+}
+
+
+.press-alramWrap .hs-form-radio{
+    margin-top: 8px; 
+}
+
+
+
+/* 이메일 */
+.press-alramWrap .hs-input{
+    width: 100%;
+    height: 36px;
+    padding: 6px 9px 8px 11px;
+    border: solid 1px #68696e;
+    background-color: #68696e;
+    font-size: 14px;
+    line-height: 1.57;
+    letter-spacing: normal;
+    box-sizing: border-box;
+    border: 0;
+    border-radius: 0;
+    color: #ffffff;
+  
+    position: absolute;
+    bottom: 190px;
+}
+
+
+/* 알림설정 박스 */
+.press-alramWrap .hs-button{
+    width: 100%;
+    height: 36px;
+    margin: 5px 0 15px;
+    padding: 8px 10.3px 6px 8.7px;
+    background-color: #2f3034;
+    box-sizing: border-box;
+    border: 0;
+    border-radius: 0;
+    cursor: pointer;
+    font-size: 14px;
+    font-weight: 600;
+    line-height: 1.57;
+    letter-spacing: normal;
+    text-align: center;
+    color: #fff;
+  
+    position: absolute;
+    bottom: 134px;
+}
+
+.hs-button:hover{
+    background-color:#4747b3;}
+
+.press-alramWrap{
+    padding-bottom: 44px;
+    border-bottom: 1px solid rgba(151,151,151,0.5);
+    margin-bottom: 44px;
+}
+
+.press-alramWrap .inputs-list{
+    margin-bottom: 112px;
+}
+
+.press-alramWrap img{
+    margin-bottom: 21px;
+}
+
+
+.hs-error-msgs{
+    display: none !important;
+}
+
+/* 텍스트 CSS */
+/* 메인타이틀 */
+.press-alramWrap h1,
+.press-alramWrap h1 strong{
+    font-size: 16px ;
+    font-weight: 500;
+    line-height: 1.5;
+    letter-spacing: normal;
+    color: #000;
+    margin-bottom: 16px;
+}
+
+/*  중간 설명글 */
+label{
+    font-size: 14px ;
+    font-weight: 600 ;
+    line-height: 1.71 ;
+    letter-spacing: normal ;
+    color: #4d4e52 ;
+} 
+
+/* 구독하기 설명 */
+.press-alramWrap p,
+.press-alramWrap p a{
+    font-size: 12px ;
+    font-weight: normal ;
+    line-height: 1.5 ;
+    letter-spacing: normal ;
+    color: #b0b1b5 ;
+}
+
+.press-alramWrap .hs-form-radio {
+    font-size: 12px;
+    font-weight: 600;
+    line-height: 1.5;
+    letter-spacing: normal;
+    color: #b0b1b5;
+}
+
+/* 이메일 텍스트 */
+input::-ms-input-placeholder { color: #b0b1b5; }
+input::-webkit-input-placeholder { color: #b0b1b5; }
+input::-moz-placeholder { color: #b0b1b5; }
+
+.sideTitle {
+  font-family: NotoSansCJKkr;
+  font-size: 14px;
+  color: rgba(0, 0, 0, 0.87);
+  line-height: 1.57;
+  margin: 17px 0 23px 0px;
+  font-weight : bold;
+}
+

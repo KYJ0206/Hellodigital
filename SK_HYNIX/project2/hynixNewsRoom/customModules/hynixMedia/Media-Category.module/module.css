@@ -1,0 +1,141 @@
+.orderItem.ck-all{
+  cursor : pointer;
+}
+
+/* .media-category .orderWrap.active .orderItem{
+  display : none;
+} */
+
+
+.orderItem.color-blue.order-download {
+  cursor : pointer;
+}
+
+.orderItem.ck-remove {
+  cursor : pointer;
+}
+
+
+
+
+
+@media screen and (max-width: 768px){
+  .mobile-sch{
+    display: none;
+  }
+  
+  
+  .Recangle{
+    display: block!important;
+    max-width: 705px;
+    height: auto;
+    padding: 27px 23.5px 29px 23.5px;
+    border-radius: 10px;
+    background-color: #f3f3f3;
+    margin: 0px 24px;
+    box-sizing: border-box;
+  }
+  
+  .Recangle .rec-ch{
+    width: 92px;
+    height: 22px;
+    margin: 0 238px 13px 0;
+    font-family: NotoSansCJKkr;
+    font-size: 14px;
+    font-weight: bold;
+    font-stretch: normal;
+    font-style: normal;
+    line-height: 1.57;
+    letter-spacing: normal;
+    color: rgba(0, 0, 0, 0.87);
+    text-decoration: none;
+  }
+  
+  .Recangle ul{
+    width: 100%;
+    height: 100%;
+    display: flex;
+  }
+  
+  .Rectangle-Copy-92 {
+    width: 100%;
+    height: 40px;
+    margin: 8px auto!important;
+    box-sizing: border-box;
+    margin-bottom: 4px!important;
+  }
+  
+  .skh-select {
+    margin-left: 0;
+    border-radius: 0;
+    background: transparent;
+    min-width: 125px;
+    height: 40px;
+    padding: 9px 13px 9px;
+    border: solid 1px #dfdfdf;
+    background-color: #fbfbfb;
+    font-size: 14px;
+    font-weight: 600;
+    font-stretch: normal;
+    font-style: normal;
+    line-height: 1.54;
+    letter-spacing: normal;
+    color: #757575;
+    font-family: inherit;
+    background: url(//f.hubspotusercontent40.net/hubfs/20028749/raw_assets/public/hynixNewsRoom/codeFiles/images/icons/ic-select-arrow.svg) no-repeat calc(100% - 13px) 50%;
+    -webkit-appearance: none;
+    -moz-appearance: none;
+    appearance: none;
+    margin-left: 25px;
+    border: solid .9px #dfdfdf;
+    background-color: #fbfbfb;
+    width: 100%;
+  }
+  
+  .list-conWrap-top .inner{
+    padding-bottom:0;
+  }
+}
+
+
+@media screen and (max-width: 425px){
+  .Recangle{
+    max-width: 378px;
+    height: auto;
+    padding: 27px 24.5px 32px 23.5px;
+    border-radius: 10px;
+    background-color: #f3f3f3;
+    margin: 0px 24px;
+    box-sizing: border-box;
+  }
+  
+  .Recangle .rec-ch{
+    width: 92px;
+    height: 22px;
+    margin: 0 238px 13px 0;
+    font-family: NotoSansCJKkr;
+    font-size: 14px;
+    font-weight: bold;
+    font-stretch: normal;
+    font-style: normal;
+    line-height: 1.57;
+    letter-spacing: normal;
+    color: rgba(0, 0, 0, 0.87);
+    text-decoration: none;
+    white-space: nowrap;
+  }
+  
+  .Recangle ul{
+    width: 100%;
+    height: 100%;
+    display: block;
+  }
+  
+  .Rectangle-Copy-92 {
+    max-width: 330px;
+    height: 40px;
+    margin: 0 auto;
+    box-sizing: border-box;
+    margin-top: 10px;
+  }
+}

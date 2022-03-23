@@ -1,0 +1,543 @@
+<!DOCTYPE html>
+<html lang="ko">
+
+<head>
+  <meta charset="UTF-8" />
+  <title>Gitgo</title>
+  <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0, user-scalable=no" />
+
+  <link rel="stylesheet" href="../css/tempusdominus-bootstrap-4.min.css">
+  <link rel="stylesheet" href="../css/jquery-ui.min.css" />
+  <link rel="stylesheet" href="../css/style.min.css" />
+  <link rel="stylesheet" href="../css/bootstrap.css" />
+  <link rel="stylesheet" href="../css/hello-ui/import.css" />
+  <link rel="stylesheet" href="../css/home.css">
+  <link rel="stylesheet" href="../css/teamschedule.css">
+  <link rel="stylesheet" href="../css/teamschedule-m.css">
+  <link rel="stylesheet" href="../css/font-awesome.css">
+
+  <script src="../js/jquery-3.4.1.min.js"></script>
+  <script src="../js/moment.js"></script>
+  <script src="../js/popper.min.js"></script>
+  <script src="../js/bootstrap.bundle.min.js"></script>
+  <script src="../js/tempusdominus-bootstrap-4.min.js"></script>
+
+
+
+</head>
+
+<body style="background-color: #f4f2f1;">
+  <div class="wrap h-100">
+
+    <div class="section-teamschedule h-100">
+      <!-- 공통 Nav tab -->
+      <div class="container py-3 container-mobile-tab">
+        <ul class="nav nav-tabs new-nav-tabs">
+          <a href="#" class="nav-hamburg" onclick="mSideToggle()">
+            <span></span>
+            <span></span>
+            <span></span>
+
+            <!-- <script>
+              function mSideToggle(){
+                if($('.container-mobile-tab').hasClass('m-side-on')) {
+                  $('.container-mobile-tab').removeClass('m-side-on')
+                  $('body').removeAttr("style")
+                } else {
+                  $('.container-mobile-tab').addClass('m-side-on')
+                  $('body').css("overflow","hidden")
+                }
+              }
+            </script> -->
+          </a>
+          
+          <li class="nav-item">
+            <a class="nav-link " href="./home.html">HOME</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link " href="./myschedule.html">나의 근태일정</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link active" href="./temschedule.html">부서 근태일정</a>
+          </li>
+          <a class="nav-setting" href="#" role="button" id="nav-setting" onclick="setting()">
+            Setting Btn
+            <script>
+              function setting() {
+                if($('.command-r').hasClass('active')) {
+                  $('.command-r').removeClass('active')
+                } else {
+                  $('.command-r').addClass('active')
+                }
+              }
+            </script>
+          </a>
+          <!-- <a class="nav-more-btn" href="#" role="button">...
+            <span></span>
+            <span></span>
+            <span></span>
+          </a> -->
+        </ul>
+
+        <!-- 모바일 사이드 메뉴 -->
+        <div class="m-sideWrap">
+          <ul class="m-side-menu">
+            <li>
+              <div class="item">
+                <a href="./home.html">
+                  <div>HOME</div>
+                </a>
+              </div>
+            </li>
+            <li>
+              <div class="item">
+                <a href="./myschedule.html">
+                  <div>나의 근태일정</div>
+                </a>
+              </div>
+            </li>
+            <li class="active">
+              <div class="item">
+                <a href="./temschedule.html">
+                  <div>부서 근태일정</div>
+                </a>
+              </div>
+              <dl>
+                <a href="./temschedule.html">
+                  <dd>업무조회</dd>
+                </a>
+                <a href="./temschedule_2.html">
+                  <dd class="active">연차조회</dd>
+                </a>
+              </dl>
+            </li>
+          </ul>
+        </div>
+
+      </div>
+
+      <section class="container container-schedule d-flex" style="height:100%">
+        <!-- 사이드 메뉴 -->
+        <aside class="sub-sideWrap">
+          <ul class="sub-side-menu">
+            <li class="sub-side-nav">
+              <a href="#" onclick="subSideOff()">
+                <i></i>
+              </a>
+            </li>
+            <li>
+              <div class="item">
+                <a href="./temschedule.html">
+                  <div>업무조회</div>
+                </a>
+              </div>
+            </li>
+            <li class="active">
+              <div class="item">
+                <a href="./temschedule_2.html">
+                  <div>연차조회</div>
+                </a>
+              </div>
+            </li>
+          </ul>
+          <script>
+            function subSideOff() {
+              $('.sub-sideWrap').removeClass('active')
+              $('.sub-menu').removeAttr("style")
+            }
+          </script>
+        </aside>
+
+        <!-- 컨텐츠 영역 -->
+        <div class="w-100 h-100 minWidthWrap">
+          <!-- 부서 근태설정 커맨드 -->
+          <div class="container team-command d-flex align-items-center justify-content-start">
+            
+            <!-- 0811 삭제 -->
+            <!-- <a href="#" class="sub-menuWrap">
+              <div class="sub-menu" onclick="subSideOn()">
+                <span></span>
+                <span></span>
+                <span></span>
+                <script>
+                  function subSideOn() {
+                    $('.sub-sideWrap').addClass('active')
+                      $('.sub-menu').css("display","none")
+                  }
+                </script>
+              </div>
+            </a> -->
+
+            <div class="dropdown newDropdown" style="display: block;">
+              <button class="btn btn-secondary dropdown-toggle" type="button" id="dropdownMenuButton" data-toggle="dropdown" aria-haspopup="true" aria-expanded="true">
+                컨설팅팀
+              </button>
+              <div class="dropdown-menu" aria-labelledby="dropdownMenuButton">
+                <a class="dropdown-item" href="#">컨설팅팀</a>
+                <a class="dropdown-item" href="#">컨설팅팀2</a>
+                <a class="dropdown-item" href="#">컨설팅팀3</a>
+              </div>
+            </div>
+
+            <!-- 0811 삭제 -->
+            <!-- <div class="date-calendar02 d-flex align-items-center">
+              <input type="text" class="form-control datetimepicker-input" id="datetimepicker7" data-toggle="datetimepicker" data-target="#datetimepicker7" style="width: 170px;">
+              <i></i>
+              <script>
+                $(function () {
+                    $('#datetimepicker7').datetimepicker({
+                        format: 'YYYY-MM-DD',
+                        defaultDate: "2021-06-01"
+                    });
+                });
+              </script>
+            </div> -->
+
+          </div>
+          <!-- 부서 근태설정 -->
+          <section class="container teamschedule-vac">
+            <div class="accordion" id="accordionExample">
+
+              <div class="card" data-toggle="collapse" data-target="#collapse1" aria-expanded="false" aria-controls="collapse1">
+                <!-- 카드 헤더 -->
+                <div class="card-header px-4 d-flex align-items-center justify-content-between" id="heading1">
+                  <div class="d-flex align-items-center">
+                    <img src="../images/thumb-icon-normal@2x.png" alt="thumb-icon-normal">
+                    <div class="d-flex align-items-center px-2 spot">
+                      <h2 class="mb-0">권희재</h2>
+                      <span>부장</span>
+                    </div>
+                    <div class="d-flex align-items-center px-2 date">
+                      <span class="tit">입사일</span>
+                      <span>2021-06-18</span>
+                    </div>
+                  </div>
+                  <div class="d-flex align-items-center count">
+                    <div class="px-4 d-flex align-items-center">
+                      <span class="tit">발생연차</span>
+                      <span class="value">15일</span>
+                    </div>
+                    <div class="px-4 d-flex align-items-center">
+                      <span class="tit">사용일</span>
+                      <span class="value">6일</span>
+                    </div>
+                    <div class="px-4 d-flex align-items-center">
+                      <span class="tit">잔여일</span>
+                      <span class="value">9일</span>
+                    </div>
+                  </div>
+                </div>
+                <!-- 상세 -->
+                <div id="collapse1" class="collapse" aria-labelledby="heading1" data-parent="#accordionExample">
+                  <div class="card-body">
+                    <div class="d-flex row-head">
+                      <div class="col-4 d-flex align-items-center justify-content-center">
+                        날짜
+                      </div>
+                      <div class="col-4 d-flex align-items-center justify-content-center">
+                        연차종류
+                      </div>
+                      <div class="col-4 d-flex align-items-center justify-content-center">
+                        승인상태
+                      </div>
+                    </div>
+                    <div class="d-flex row-body">
+                      <div class="col-4 d-flex align-items-center justify-content-center">
+                        2021-05-21
+                      </div>
+                      <div class="col-4 d-flex align-items-center justify-content-center">
+                        유급휴가 (차감안함)
+                      </div>
+                      <div class="col-4 d-flex align-items-center justify-content-center">
+                        <span class="status-f">승인완료</span>
+                      </div>
+                    </div>
+                    <div class="d-flex row-body">
+                      <div class="col-4 d-flex align-items-center justify-content-center">
+                        2021-05-21
+                      </div>
+                      <div class="col-4 d-flex align-items-center justify-content-center">
+                        연차 (1일)
+                      </div>
+                      <div class="col-4 d-flex align-items-center justify-content-center">
+                        <span class="status-i">승인중</span>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+
+              <div class="card" data-toggle="collapse" data-target="#collapse2" aria-expanded="false" aria-controls="collapse2">
+                <!-- 카드 헤더 -->
+                <div class="card-header px-4 d-flex align-items-center justify-content-between" id="heading2">
+                  <div class="d-flex align-items-center">
+                    <img src="../images/thumb-icon-normal@2x.png" alt="thumb-icon-normal">
+                    <div class="d-flex align-items-center px-2 spot">
+                      <h2 class="mb-0">권희재</h2>
+                      <span>부장</span>
+                    </div>
+                    <div class="d-flex align-items-center px-2 date">
+                      <span class="tit">입사일</span>
+                      <span>2021-06-18</span>
+                    </div>
+                  </div>
+                  <div class="d-flex align-items-center count">
+                    <div class="px-4 d-flex align-items-center">
+                      <span class="tit">발생연차</span>
+                      <span class="value">15일</span>
+                    </div>
+                    <div class="px-4 d-flex align-items-center">
+                      <span class="tit">사용일</span>
+                      <span class="value">6일</span>
+                    </div>
+                    <div class="px-4 d-flex align-items-center">
+                      <span class="tit">잔여일</span>
+                      <span class="value">9일</span>
+                    </div>
+                  </div>
+                </div>
+                <!-- 상세 -->
+                <div id="collapse2" class="collapse" aria-labelledby="heading2" data-parent="#accordionExample">
+                  <div class="card-body">
+                    <div class="d-flex row-head">
+                      <div class="col-4 d-flex align-items-center justify-content-center">
+                        날짜
+                      </div>
+                      <div class="col-4 d-flex align-items-center justify-content-center">
+                        연차종류
+                      </div>
+                      <div class="col-4 d-flex align-items-center justify-content-center">
+                        승인상태
+                      </div>
+                    </div>
+                    <div class="d-flex row-body">
+                      <div class="col-4 d-flex align-items-center justify-content-center">
+                        2021-05-21
+                      </div>
+                      <div class="col-4 d-flex align-items-center justify-content-center">
+                        유급휴가 (차감안함)
+                      </div>
+                      <div class="col-4 d-flex align-items-center justify-content-center">
+                        <span class="status-f">승인완료</span>
+                      </div>
+                    </div>
+                    <div class="d-flex row-body">
+                      <div class="col-4 d-flex align-items-center justify-content-center">
+                        2021-05-21
+                      </div>
+                      <div class="col-4 d-flex align-items-center justify-content-center">
+                        연차 (1일)
+                      </div>
+                      <div class="col-4 d-flex align-items-center justify-content-center">
+                        <span class="status-i">승인중</span>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+
+              <div class="card" data-toggle="collapse" data-target="#collapse3" aria-expanded="false" aria-controls="collapse3">
+                <!-- 카드 헤더 -->
+                <div class="card-header px-4 d-flex align-items-center justify-content-between" id="heading3">
+                  <div class="d-flex align-items-center">
+                    <img src="../images/thumb-icon-normal@2x.png" alt="thumb-icon-normal">
+                    <div class="d-flex align-items-center px-2 spot">
+                      <h2 class="mb-0">권희재</h2>
+                      <span>부장</span>
+                    </div>
+                    <div class="d-flex align-items-center px-2 date">
+                      <span class="tit">입사일</span>
+                      <span>2021-06-18</span>
+                    </div>
+                  </div>
+                  <div class="d-flex align-items-center count">
+                    <div class="px-4 d-flex align-items-center">
+                      <span class="tit">발생연차</span>
+                      <span class="value">15일</span>
+                    </div>
+                    <div class="px-4 d-flex align-items-center">
+                      <span class="tit">사용일</span>
+                      <span class="value">6일</span>
+                    </div>
+                    <div class="px-4 d-flex align-items-center">
+                      <span class="tit">잔여일</span>
+                      <span class="value">9일</span>
+                    </div>
+                  </div>
+                </div>
+                <!-- 상세 -->
+                <div id="collapse3" class="collapse" aria-labelledby="heading3" data-parent="#accordionExample">
+                  <div class="card-body">
+                    <div class="d-flex row-head">
+                      <div class="col-4 d-flex align-items-center justify-content-center">
+                        날짜
+                      </div>
+                      <div class="col-4 d-flex align-items-center justify-content-center">
+                        연차종류
+                      </div>
+                      <div class="col-4 d-flex align-items-center justify-content-center">
+                        승인상태
+                      </div>
+                    </div>
+                    <div class="d-flex row-body">
+                      <div class="col-4 d-flex align-items-center justify-content-center">
+                        2021-05-21
+                      </div>
+                      <div class="col-4 d-flex align-items-center justify-content-center">
+                        유급휴가 (차감안함)
+                      </div>
+                      <div class="col-4 d-flex align-items-center justify-content-center">
+                        <span class="status-f">승인완료</span>
+                      </div>
+                    </div>
+                    <div class="d-flex row-body">
+                      <div class="col-4 d-flex align-items-center justify-content-center">
+                        2021-05-21
+                      </div>
+                      <div class="col-4 d-flex align-items-center justify-content-center">
+                        연차 (1일)
+                      </div>
+                      <div class="col-4 d-flex align-items-center justify-content-center">
+                        <span class="status-i">승인중</span>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+              
+
+            </div>
+          </section>
+        </div>
+
+      </section>
+
+
+      
+      
+    </div>
+
+
+    <!-- Modal : 부서원 일정상세 -->
+    <div class="modal newModal fade" id="schedule-detail" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+      <div class="modal-dialog modal-dialog-centered" style="max-width: 335px;">
+        <div class="modal-content">
+          <div class="modal-header flex-row-reverse">
+            <button type="button" class="close justify-self-" data-dismiss="modal" aria-label="Close">
+              <span aria-hidden="true"></span>
+            </button>
+          </div>
+          <div class="modal-body modal-schedule case02">
+            <!-- 모달 내용 -->
+
+            <div class="schedule-name">
+              <h5>김개발</h5>
+              <span>부장</span>
+            </div>
+
+            <div class="schedule-thumb">
+              <dl>
+                <dt>
+                  <span class="work-type work-type-a">근무</span>
+                </dt>
+                <dd><b>AM 09:00 ~ PM 02:00</b></dd>
+              </dl>
+
+              <dl>
+                <dt>
+                  <span class="work-type work-type-c">외근</span>
+                </dt>
+                <dd><b>AM 09:00 ~ PM 02:00</b></dd>
+              </dl>
+            </div>
+
+            <!-- 스케줄 리스트 -->
+            <div class="schedule-list">
+              <dl>
+                <dt>분류</dt>
+                <dd>
+                  <span class="work-type work-type-a">근무</span>
+                </dd>
+              </dl>
+              
+              <dl>
+                <dt>시간</dt>
+                <dd><b>AM 09:00 ~ PM 02:00</b></dd>
+              </dl>
+
+              <dl>
+                <dt>장소</dt>
+                <dd>
+                  HelloDigital - 디지털에이전시 헬로디지털, 대한민국 서울특별시 성동구 성수동2가 280-9 생각공장 12층
+                </dd>
+              </dl>
+
+              <dl>
+                <dt>비고</dt>
+                <dd></dd>
+              </dl>
+            </div>
+
+            <!-- 스케줄 리스트 -->
+            <div class="schedule-list">
+              <dl>
+                <dt>분류</dt>
+                <dd>
+                  <span class="work-type work-type-c">외근</span>
+                </dd>
+              </dl>
+              
+              <dl>
+                <dt>시간</dt>
+                <dd><b>AM 09:00 ~ PM 02:00</b></dd>
+              </dl>
+
+              <dl>
+                <dt>장소</dt>
+                <dd>
+                  HelloDigital - 디지털에이전시 헬로디지털, 대한민국 서울특별시 성동구 성수동2가 280-9 생각공장 12층
+                </dd>
+              </dl>
+
+              <dl>
+                <dt>비고</dt>
+                <dd></dd>
+              </dl>
+            </div>
+
+          </div>
+        </div>
+      </div>
+
+      <!-- <script>
+        var myInput = document.getElementById('schedule-detail')
+        const newModal = $('#teamSchedule-cal td')
+  
+        newModal.addEventListener('shown.bs.modal', function () {
+          myInput.focus()
+        })
+      </script> -->
+    </div>
+
+    
+
+    <!-- calendar -->
+    <script type="text/javascript">
+      $(function () {
+          $('#datetimepicker5', '#datetimepicker7').datetimepicker({
+              format: 'YYYY-MM-DD',
+              defaultDate: "2021-06-01"
+          });
+      });
+    </script>
+
+    <!-- 모바일 사이드 햄버거 메뉴 Open&Close -->
+    <script src="../js/mSide.js"></script>
+
+  </div>
+  
+
+</body>
+
+</html>

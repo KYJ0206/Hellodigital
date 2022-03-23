@@ -1,0 +1,173 @@
+{% set tech_recent_blog = module.tech_blog  %}
+{% set tech_posts = blog_recent_posts(tech_recent_blog, 3) %}
+
+{% set culture_recent_blog = module.culture_blog  %}
+{% set culture_posts = blog_recent_posts(culture_recent_blog, 1) %}
+
+{% set sustainability_recent_blog = module.sustainability_blog  %}
+{% set sustainability_posts = blog_recent_posts(sustainability_recent_blog, 1) %}
+
+{% set tech = [] %}
+{% for item in tech_posts %}
+  {% for topic in item.topic_list %}
+    {% if topic == 'blog-기술' %}
+      {% do tech.append(item) %}
+    {% endif %}
+  {% endfor %}
+{% endfor %}
+
+<section class="home-keyContents keyCon-t">
+        <div class="inner">
+            <div class="slideWrap" style='display:none'>
+              <div class="bxslider">
+								{% for post in tech_posts %}
+                <div class="conWrap keyCon-t">
+									  <div class="col-l">
+											<a href="{{post.absolute_url}}">
+                        <div class="imgWrap">
+                            <img class="lazyload" style='width:100%' src="{{post.featured_image ? post.featured_image : get_asset_url("/hynixNewsRoom/codeFiles/images/contentImage/img_view-3-03O2x.png")}}" alt="홈슬라이드이미지">
+                        </div>
+												</a>
+                    </div>
+									
+                    
+                    <div class="col-r col-r-t">
+                        <div class='right-col-r'>
+                            <a href="{{post.absolute_url}}">
+															<div class="progress">
+																<em>기술</em>
+																<i class="arrow"></i>
+																<span class="progressBar pro-ani" style="width: 0%;"> <!-- 0913 span class style="width: 0%;" 수정--> </span>
+															</div>
+                            </a>
+													  <a  href="{{post.absolute_url}}">
+													    <h1>
+                                {{post.name}}
+                              </h1>
+															<div class='removeTech removeTech{{loop.index}}' style='display:none'>{{post.post_body}}</div>
+															<p class='showTech showTech{{loop.index}}'></p>
+													  </a>
+                        </div>
+                        <a class="btn-detail" href="{{post.absolute_url}}">
+                            <i></i>
+                            자세히 읽기
+                        </a>
+                    </div>
+                </div>
+								{% endfor %}
+								
+	{#							{% for post in culture_posts %}
+                <div class="conWrap keyCon-s"  style='visibility:hidden'>
+                    <div class="col-l">
+											<a href="{{post.absolute_url}}">
+                        <div class="imgWrap">
+                            <img class="lazyload" src="{{post.featured_image ? post.featured_image : get_asset_url("/hynixNewsRoom/codeFiles/images/contentImage/img_view-3-03O2x.png")}}" alt="홈슬라이드이미지">
+                        </div>
+											</a>
+                    </div>
+                    <div class="col-r col-r-s">
+                        <div>
+                            <a href="{{post.absolute_url}}">
+                                <div class="progress">
+                                    <em>사람&문화</em>
+                                    <i class="arrow"></i>
+                                  <span class="progressBar pro-ani" style="width: 0%;"> <!-- 0913 span class style="width: 0%;" 수정--> </span>
+                                </div>
+                            </a>
+													  <a  href="{{post.absolute_url}}">
+                            <h1>
+                                {{post.name}}
+                            </h1>
+													  <div class='removeCulture'>{{post.post_body}}</div>
+                            <p class='showCulture'></p>
+													  </a>	
+                        </div>
+													
+                        <a class="btn-detail" href="{{post.absolute_url}}">
+                            <i></i>
+                            자세히 읽기
+                        </a>
+                    </div>
+                </div>
+								{% endfor %}
+								
+								{% for post in sustainability_posts %}
+                <div class="conWrap  keyCon-c"  style='visibility:hidden'>
+                    <div class="col-l">
+											  <a href="{{post.absolute_url}}">
+                        <div class="imgWrap">
+                            <img class="lazyload" src="{{post.featured_image ? post.featured_image : get_asset_url("/hynixNewsRoom/codeFiles/images/contentImage/img_view-3-03O2x.png")}}" alt="홈슬라이드이미지">
+                        </div>
+											  </a>
+                    </div>
+                    <div class="col-r col-r-c">
+                        <div>
+                            <a href="{{post.absolute_url}}">
+                                <div class="progress">
+                                    <em>지속가능경영</em>
+                                    <i class="arrow"></i>
+                                  <span class="progressBar pro-ani" style="width: 0%;"> <!-- 0913 span class style="width: 0%;" 수정--> </span>
+                                </div>
+                            </a>
+													  <a href="{{post.absolute_url}}">
+                            <h1>
+                                {{post.name}}
+                            </h1>
+													  <div class='removeTech'>{{post.post_body}}</div>
+                            <p class='showTech'></p>
+													  </a>
+                        </div>
+                        <a class="btn-detail" href="{{post.absolute_url}}">
+                            <i></i>
+                            자세히 읽기
+                        </a>
+                    </div>
+                </div>
+								{% endfor %}   #}
+								
+              </div>
+            </div>
+        </div>
+</section>
+
+{% require_js %}
+<script>
+
+  var slider= $(function(){
+    $(".bxslider").bxSlider({
+      responsive : true,
+      HideControlOnEnd : true,
+      infiniteLoop: true , 
+      slidesToShow: 1,
+      autoControls : true,
+      slidesToScroll: 1,
+      stopAutoOnClick:true, //해당 클릭시 오토 리셋 
+      auto: true,
+      autoDirection : 'next',
+      arrows:false,
+      dots:true, 
+      autoplaySpeed: 1500,
+      speed: 800,
+      pause: 12000,
+      autoHover : true,
+			touchEnabled : (navigator.maxTouchPoints > 0),
+      onSliderLoad: function () {
+        $('.bx-controls.bx-has-controls-direction.bx-has-pager .bx-controls-direction a.bx-prev').addClass('btn-slide-l');  
+        $('.bx-controls.bx-has-controls-direction.bx-has-pager .bx-controls-direction a.bx-next').addClass('btn-slide-r');  
+			},
+      preloadImages:'all',
+      pauseOnHover:true,
+       onSlideBefore : function(event){
+         $(".progressBar").removeClass('pro-ani');  
+         $('.bx-start').trigger('click');
+       },
+       onSlideAfter : function(event){
+         $(".progressBar").addClass('pro-ani');
+         $('.bx-start').trigger('click');
+       },
+    }); 
+  });
+  
+  
+</script>
+{% end_require_js %} 

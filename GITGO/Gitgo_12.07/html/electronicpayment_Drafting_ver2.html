@@ -1,0 +1,1671 @@
+<!DOCTYPE html>
+<html lang="ko">
+
+<head>
+  <meta charset="UTF-8" />
+  <title>Gitgo</title>
+  <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+  <meta name="viewport"
+    content="width=device-width, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0, user-scalable=no" />
+
+  <link rel="stylesheet" href="../css/tempusdominus-bootstrap-4.min.css">
+  <link rel="stylesheet" href="../css/hello-ui/import2.css" />
+  <link rel="stylesheet" href="../css/jquery-ui.min.css" />
+  <link rel="stylesheet" href="../css/style.min2.css" />
+  <link rel="stylesheet" href="../css/bootstrap.css" />
+  <link rel="stylesheet" type="text/css" href="gridforms.css">
+  <link rel="stylesheet" href="../css/electro_Drafting_ver2.css">
+  <link rel="stylesheet" href="../css/font-awesome.css">
+
+  <script src="../js/jquery-3.4.1.min.js"></script>
+  <script src="../js/ui.js"></script>
+  <script src="../dist/jstree.js"></script>
+  <script src="../js/jstree-custom-module2.js"></script>
+  <script src="../js/jstree-custom-module_modal.js"></script>
+  <script src="../js/moment.js"></script>
+  <script src="../js/bootstrap.min.js"></script>
+  <script src="../js/tempusdominus-bootstrap-4.min.js"></script>
+  <script src="../js/bootstrap.bundle.min.js"></script>
+  <script src="../js/new-popover.js"></script>
+  <script src="../js/electronicpayment.js"></script>
+  <script src="../js/draggable.js"></script>
+
+
+
+
+
+
+  <!-- <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj" crossorigin="anonymous"></script> -->
+  <!-- <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.6.0/dist/css/bootstrap.min.css"integrity="sha384-B0vP5xmATw1+K9KRQjQERJvTumQW0nPEzvF6L/Z6nronJ3oUOFUFpCjEUQouq2+l" crossorigin="anonymous"> -->
+  <!-- <script src="https://cdn.jsdelivr.net/npm/bootstrap@4.6.0/dist/js/bootstrap.bundle.min.js"integrity="sha384-Piv4xVNRyMGpqkS2by6br4gNJ7DXjqk09RmUpJ8jgGtD7zP9yug3goQfGII0yAns" crossorigin="anonymous"></script> -->
+
+
+  <!-- <script src="https://cdnjs.cloudflare.com/ajax/libs/tempusdominus-bootstrap-4/5.39.0/js/tempusdominus-bootstrap-4.min.js" integrity="sha512-k6/Bkb8Fxf/c1Tkyl39yJwcOZ1P4cRrJu77p83zJjN2Z55prbFHxPs9vN7q3l3+tSMGPDdoH51AEU8Vgo1cgAA==" crossorigin="anonymous"></script> -->
+  <!-- <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.6.0/dist/css/bootstrap.min.css" integrity="sha384-B0vP5xmATw1+K9KRQjQERJvTumQW0nPEzvF6L/Z6nronJ3oUOFUFpCjEUQouq2+l" crossorigin="anonymous"> -->
+  <!-- <script src="https://cdnjs.cloudflare.com/ajax/libs/tempusdominus-bootstrap-4/5.38.0/js/tempusdominus-bootstrap-4.min.js" crossorigin="anonymous"></script> -->
+  <!-- <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/tempusdominus-bootstrap-4/5.38.0/css/tempusdominus-bootstrap-4.min.css" crossorigin="anonymous" /> -->
+  <!-- 달력 -->
+  <!-- <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/moment.js/2.29.0/moment.min.js"></script> -->
+  <!-- <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/tempusdominus-bootstrap-4/5.39.0/css/tempusdominus-bootstrap-4.min.css" integrity="sha512-3JRrEUwaCkFUBLK1N8HehwQgu8e23jTH4np5NHOmQOobuC4ROQxFwFgBLTnhcnQRMs84muMh0PnnwXlPq5MGjg==" crossorigin="anonymous" /> -->
+
+
+
+</head>
+
+<body style="background-color: #f4f2f1;">
+  <div class="wrap">
+    <div class="section-home">
+      <!-- 공통 Nav tab -->
+      <div class="container py-3 container-mobile-tab">
+        <ul class="nav nav-tabs new-nav-tabs">
+          <a class="nav-hamburg">
+            <img style="display: none;" src="../images/main-sub1129.png" alt="메인닫기이미지">
+            <span></span>
+            <span></span>
+            <span></span>
+          </a>
+
+          <li class="nav-item">
+            <a class="nav-link" href="./electronicpayment_HOME.html">HOME</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link active" href="./electronicpayment_Drafting_ver1.html">기안하기</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="./Approval document.html">결제할 문서</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="./Progress document.html">잔행중 문서</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="./Circulated document.html">회람받은 문서</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="./Receipt document.html">접수할 문서</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="./document box_approve.html">나의 문서함</a>
+          </li>
+
+          <div class='navBTN'>
+            <a>
+              <img src="../images/group-6@2x.png" alt="서브메뉴">
+            </a>
+          </div>
+
+          <a class="nav-setting" role="button" id="nav-setting" onclick="setting()">
+            Setting Btn
+            <script>
+              function setting() {
+                if ($('.command-r').hasClass('active')) {
+                  $('.command-r').removeClass('active')
+                } else {
+                  $('.command-r').addClass('active')
+                }
+              }
+            </script>
+          </a>
+          <!-- <a class="nav-more-btn"  role="button">...
+            <span></span>
+            <span></span>
+            <span></span>
+          </a> -->
+        </ul>
+        <div class="sub-tabs">
+          <ul>
+            <li>
+              <a>
+                개인설정
+              </a>
+            </li>
+            <li>
+              <a>
+                결제 문서 관리
+              </a>
+            </li>
+            <li>
+              <a>
+                인터페이스 관리
+              </a>
+            </li>
+            <li>
+              <a>
+                양식 작성기
+              </a>
+            </li>
+          </ul>
+        </div>
+        <!-- 모바일 사이드 메뉴 -->
+        <div class="m-sideWrap">
+          <ul class="m-side-menu">
+            <li>
+              <div class="item">
+                <a href="./electronicpayment_HOME.html">
+                  <div>HOME</div>
+                </a>
+              </div>
+            </li>
+            <div class="mainbuttonparent mbp1">
+              <div class="mainbuttonchild">
+                <img class="mainsubbuttonclose1" src="../images/main_sub_button1129.png" alt="기안하기버튼">
+                <img class="mainsubbuttonclose1_1"  src="../images/withe-50-1129.png" alt="기안하기 액티브 버튼">
+                <img class="mainsubbuttonopen1_1" src="../images/main_sub_button31129.png" alt="기안하기 버튼 오픈">
+                <img class="mainsubbuttonopen1" src="../images/main_sub_button21129.png" alt="기안하기 엑티브 버튼 오픈">
+              </div>
+              <li class="active">
+                <div class="item">
+                  <a href="./electronicpayment_Drafting_ver1.html">
+                    <div class='mainbutton'>
+                      <div>기안하기</div>
+                    </div>
+                    <dl>
+                      <a href="./electronicpayment_Drafting_ver1.html">
+                        <dd class="active">최근 사용 양식</dd>
+                      </a>
+                      <a href="./electronicpayment_Drafting_ver2.html">
+                        <dd>전체보기</dd>
+                      </a>
+                    </dl>
+                  </a>
+                </div>
+              </li>
+            </div>
+            <li>
+              <div class="item">
+                <a active" href="./Approval document.html">
+                  <div>결제할 문서</div>
+                </a>
+              </div>
+            </li>
+            <li>
+              <div class="item">
+                <a href="./Progress document.html">
+                  <div>잔행중 문서</div>
+                </a>
+              </div>
+            </li>
+            <li>
+              <div class="item">
+                <a href="./Circulated document.html">
+                  <div>회람받은 문서</div>
+                </a>
+              </div>
+            </li>
+            <li>
+              <div class="item">
+                <a href="./Receipt document.html">
+                  <div>접수할 문서</div>
+                </a>
+              </div>
+            </li>
+            <div class="mainbuttonparent mbp2">
+              <div class="mainbuttonchild2">
+                <img class="mainsubbuttonclose2" src="../images/main_sub_button1129.png" alt="기안하기버튼">
+                <img class="mainsubbuttonopen2_1" src="../images/main_sub_button31129.png" alt="기안하기 버튼 오픈">
+                <img class="mainsubbuttonopen2" src="../images/main_sub_button21129.png" alt="기안하기 액티브 버튼 오픈">
+              </div>
+              <li>
+                <div class="item">
+                  <a href="./document box_approve.html">
+                    <div class='mainbutton'>
+                      <div>나의 문서함</div>
+                    </div>
+                  </a>
+                </div>
+                <dl>
+                  <a href="./document box_approve.html">
+                    <dd class="active">개인</dd>
+                  </a>
+                  <a href="./document box_approve.html">
+                    <dd>팀</dd>
+                  </a>
+                  <a href="./document box_approve.html">
+                    <dd>참조</dd>
+                  </a>
+                </dl>
+              </li>
+            </div> 
+          </ul>
+        </div>
+      </div>
+    </div>
+
+    <!-- cont -->
+    <div class="cont">
+      <!-- 검색 사이드 -->
+      <!-- 검색창 -->
+      <div class="draftsubWrap">
+        <ul class="draftsub">
+          <!-- 1130삭제 -->
+          <!-- <div class="draftsubsearch">
+            <input placeholder="검색" type="text">
+          </div>
+          <i style="cursor: pointer;">
+            <img src="../images/icon-user-round-copy-3@2x.png" alt="검색아이콘">
+          </i> -->
+          <li>
+            <div class="item">
+              <a href="./electronicpayment_Drafting_ver1.html">
+                <div>최근 사용 양식</div>
+              </a>
+            </div>
+          </li>
+          <li class="active">
+            <div class="item">
+              <a href="./electronicpayment_Drafting_ver2.html">
+                <div>전체보기</div>
+              </a>
+            </div>
+          </li>
+        </ul>
+      </div>
+      <!-- org_contents -->
+      <div class="org_contents1 rel">
+        <!-- jstree -->
+        <div id="jstree_main1" class="gnb accodian"></div>
+        <!-- // jstree -->
+      </div>
+      <!-- // org_contents -->
+      <div class="inner">
+                          <!-- cont_approve -->
+                          <div class="cont_approve">
+                            <div class="inputWrap">
+                              <div>
+                                <a  class="nav-hamburg1">
+                                  <span></span>
+                                  <span></span>
+                                  <span></span>
+                                </a>
+                              </div>
+                              <input type="text " placeholder="검색어를 입력하세요.">
+                              <i>
+                                <img src="../images/icon-user-round-copy-3@2x.png" alt="검색버튼">
+                              </i>
+                            </div>
+                            <!-- 검토함 필터 -->
+                            <div class="searchfilter container">
+                              <ul>
+                                <li>
+                                  <div>
+                                    양식명
+                                  </div>
+                                  <input style="height:28px" type="text">
+                                </li>
+                                <li>
+                                  <div>
+                                    문서번호
+                                  </div>
+                                  <input style="height:28px" type="text">
+                                </li>
+                                <li>
+                                  <div>
+                                    기안자
+                                  </div>
+                                  <input style="height:28px" type="text">
+                                </li>
+                                <li>
+                                  <div>
+                                    기안부서
+                                  </div>
+                                  <input style="height:28px" type="text">
+                                </li>
+                                <li>
+                                  <div>
+                                    기안일자
+                                  </div>
+                                  <input style="height:28px" type="text">~<input style="height:28px" type="text">
+                                </li>
+                                <li>
+                                  <div >
+                                    제목
+                                  </div>
+                                  <input style="height:28px" type="text">
+                                </li>
+                                <li>
+                                  <button>
+                                    <i>
+                                      <img src="../images/icon-user-round-copy-3@2x.png" alt="검색아이콘">
+                                    </i>
+                                    <a >
+                                      검색
+                                    </a>
+                                  </button>
+                                </li>
+                                <li>
+                                  <button>
+                                    <i>
+                                      <img src="../images/group-7@2x.webp" alt="비우기아이콘">
+                                    </i>
+                                    <a >
+                                      비우기
+                                    </a>
+                                  </button>
+                                </li>
+                              </ul>
+                            </div>
+                            <div class="searchicon">
+                              <a >
+                                <img class="webimg" src="../images/group-5@2x.png" alt="웹이미지">
+                                <img class="mobileimg" src="../images/icon-user-round-copy-3@2x.png" alt="모바일이미지">
+                              </a>
+                            </div>
+                          </div>
+        <div class="inner3-1">
+          <div>
+            <img src="../images/group-5_1.png" alt="폴더이미지">
+            <a>
+              하위폴더 3-2
+            </a>
+          </div>
+
+        </div>
+        <div class="inner3-2">
+          <ul>
+            <li>
+              <a>
+                지출명세서
+              </a>
+              <i style="vertical-align: middle">
+                <svg width="16" height="16" xmlns="http://www.w3.org/2000/svg">
+                  <g fill="#b8b8b8" fill-rule="evenodd">
+                    <path d="M14 14H2.08V2.08h5.29v1.199H3.279v9.522h9.522V8.71H14zM14 6.7h-1.199V3.28H9.38v-1.2H14z" />
+                    <path d="m6.454 10.474-.848-.848 7.37-7.37.848.848z" />
+                  </g>
+                </svg>
+              </i>
+              <p>
+                USB 구매 신청
+              </p>
+            </li>
+            <li>
+              <a>
+                지출명세서
+              </a>
+              <i style="vertical-align: middle">
+                <svg width="16" height="16" xmlns="http://www.w3.org/2000/svg">
+                  <g fill="#b8b8b8" fill-rule="evenodd">
+                    <path d="M14 14H2.08V2.08h5.29v1.199H3.279v9.522h9.522V8.71H14zM14 6.7h-1.199V3.28H9.38v-1.2H14z" />
+                    <path d="m6.454 10.474-.848-.848 7.37-7.37.848.848z" />
+                  </g>
+                </svg>
+              </i>
+              <p>
+                USB 구매 신청
+              </p>
+            </li>
+            <li>
+              <a>
+                지출명세서
+              </a>
+              <i style="vertical-align: middle">
+                <svg width="16" height="16" xmlns="http://www.w3.org/2000/svg">
+                  <g fill="#b8b8b8" fill-rule="evenodd">
+                    <path d="M14 14H2.08V2.08h5.29v1.199H3.279v9.522h9.522V8.71H14zM14 6.7h-1.199V3.28H9.38v-1.2H14z" />
+                    <path d="m6.454 10.474-.848-.848 7.37-7.37.848.848z" />
+                  </g>
+                </svg>
+              </i>
+              <p>
+                USB 구매 신청
+              </p>
+            </li>
+            <li>
+              <a>
+                지출명세서
+              </a>
+              <i style="vertical-align: middle">
+                <svg width="16" height="16" xmlns="http://www.w3.org/2000/svg">
+                  <g fill="#b8b8b8" fill-rule="evenodd">
+                    <path d="M14 14H2.08V2.08h5.29v1.199H3.279v9.522h9.522V8.71H14zM14 6.7h-1.199V3.28H9.38v-1.2H14z" />
+                    <path d="m6.454 10.474-.848-.848 7.37-7.37.848.848z" />
+                  </g>
+                </svg>
+              </i>
+              <p>
+                USB 구매 신청
+              </p>
+            </li>
+            <li>
+              <a>
+                지출명세서
+              </a>
+              <i style="vertical-align: middle">
+                <svg width="16" height="16" xmlns="http://www.w3.org/2000/svg">
+                  <g fill="#b8b8b8" fill-rule="evenodd">
+                    <path d="M14 14H2.08V2.08h5.29v1.199H3.279v9.522h9.522V8.71H14zM14 6.7h-1.199V3.28H9.38v-1.2H14z" />
+                    <path d="m6.454 10.474-.848-.848 7.37-7.37.848.848z" />
+                  </g>
+                </svg>
+              </i>
+              <p>
+                USB 구매 신청
+              </p>
+            </li>
+            <li>
+              <a>
+                지출명세서
+              </a>
+              <i style="vertical-align: middle">
+                <svg width="16" height="16" xmlns="http://www.w3.org/2000/svg">
+                  <g fill="#b8b8b8" fill-rule="evenodd">
+                    <path d="M14 14H2.08V2.08h5.29v1.199H3.279v9.522h9.522V8.71H14zM14 6.7h-1.199V3.28H9.38v-1.2H14z" />
+                    <path d="m6.454 10.474-.848-.848 7.37-7.37.848.848z" />
+                  </g>
+                </svg>
+              </i>
+              <p>
+                USB 구매 신청
+              </p>
+            </li>
+            <li>
+              <a>
+                지출명세서
+              </a>
+              <i style="vertical-align: middle">
+                <svg width="16" height="16" xmlns="http://www.w3.org/2000/svg">
+                  <g fill="#b8b8b8" fill-rule="evenodd">
+                    <path d="M14 14H2.08V2.08h5.29v1.199H3.279v9.522h9.522V8.71H14zM14 6.7h-1.199V3.28H9.38v-1.2H14z" />
+                    <path d="m6.454 10.474-.848-.848 7.37-7.37.848.848z" />
+                  </g>
+                </svg>
+              </i>
+              <p>
+                USB 구매 신청
+              </p>
+            </li>
+          </ul>
+        </div>
+      </div>
+    </div>
+
+    <!-- 모바일 사이드 햄버거 메뉴 Open&Close -->
+    <script src="../js/mSide.js"></script>
+
+    <!-- 팝업창 (메인) -->
+    <div class="popupbox">
+      <div class="popup-wrap" id="popup">
+        <div class="popup">
+          <div class="popup-head">
+            <div class="pop-headinner">
+              <div class='poptitle'>
+                <span class="head-title">
+                  기안작성
+                </span>
+                <p>
+                  [업무보고서]
+                </p>
+              </div>
+              <div class="popicon">
+                <img src="../images/group-13.png" alt="다운로드 이미지">
+                <img src="../images/group-12.png" alt="확대 이미지">
+                <img id="close" src="../images/icon-cancle.png" alt="팝업창끄기 이미지">
+              </div>
+            </div>
+            <input class="input" type="text" placeholder="문서제목을 입력해주세요.">
+          </div>
+          <div class="popupname_mb">
+            <div class="vivac1 vivac0 active">문서내용</div>
+            <div class="vivac2 vivac3">결제선선택</div>
+          </div>
+          <div class="popup-body">
+            <div class="body-content">
+              <div class="body-titlebox">
+                <p> 1. 문서내용 </p>
+                <iframe src="https://www.naver.com" frameborder="0"></iframe>
+                <!-- Drag and Drop -->
+                <!-- <a> 첨부파일 </a>
+            <div class="dropwrap">
+              <div class="form-group file-upload" required="required">
+                <label class="cols-sm-2 control-label" for="document_file"></label>
+                <div class="cols-sm-10">
+                  <div class="input-group">
+                    <div class="form-control" data-message="파일을 첨부하려면 클릭하거나 파일을 끌어다 놓으십시오.">
+                      <input required="required" title="파일을 첨부하려면 클릭하거나 파일을 끌어다 놓으십시오." type="file"
+                        name="document[file]" id="document_file">
+                        <span id='file_name'></span>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div> -->
+              </div>
+              <div class="body-contentbox">
+                <p> 2. 결재선 선택 </p>
+                <div>
+                  <!-- 결제 -->
+                  <div>
+                    <a>결재</a>
+                    <div>
+                      <div class="inboxinner">
+                        <!-- 검색창 -->
+                        <!-- 추가 버튼 -->
+                        <div class="searchgroup">
+                          <input id="search" onkeyup='filter()' type="text" placeholder="검색">
+                          <div class="navgroup1">
+                            <div class="popnav">
+                              <div class="profile_img">
+                                <img src="../images/thumb-icon-normal@2x.png" alt="profile-image">
+                              </div>
+                              <div class="profile_txt">
+                                <p class="name tool-tip" title="홍길동">홍길동</p>
+                                <p class="belong">
+                                  <span class="tool-tip belong_team" title="개발팀">개발팀</span>
+                                  <span class="tool-tip belong_team belong_position" title="ㅣ차장">ㅣ차장</span>
+                                </p>
+                              </div>
+                            </div>
+                            <div class="popnav">
+                              <div class="profile_img">
+                                <img src="../images/thumb-icon-normal@2x.png" alt="profile-image">
+                              </div>
+                              <div class="profile_txt">
+                                <p class="name tool-tip" title="홍길동">홍길동</p>
+                                <p class="belong">
+                                  <span class="tool-tip belong_team" title="개발팀">개발팀</span>
+                                  <span class="tool-tip belong_team belong_position" title="ㅣ차장">ㅣ차장</span>
+                                </p>
+                              </div>
+                            </div>
+                          </div>
+                          <img src="../images/icon-user-round-copy-modalpop.png" alt="검색아이콘">
+                        </div>
+                        <!-- 저장/불러오기 버튼 -->
+                        <div class="saveroadbtn">
+                          <button class="roadbtn">
+                            <img src="../images/icon-open-1119.png" alt="불러오기 아이콘">
+                            <p>불러오기</p>
+                          </button>
+                          <button class="savebtn">
+                            <img src="../images/icon-save-1119.png" alt="저장하기 아이콘">
+                            <p>저장하기</p>
+                          </button>
+                        </div>
+                      </div>
+                      <div class="btngroup">
+                        <div class="container1">
+                          <button class="plusbutton2 draggable" draggable="true">
+                            <!-- 해드 -->
+                            <div class="pophaeder" style="display: flex;">
+                              <div>
+                                <img src="../images/icon-9-p-1119.png" alt="펼치기아이콘">
+                              </div>
+                              <div>
+                                <img class="dragwebicon" src="../images/icon-cancle_1-1119.png" alt="닫기아이콘">
+                                <img class="dragmbicon" src="../images/icon-cancle_1207.png " alt="모바일닫아이콘">
+                              </div>
+                            </div>  
+                            <!-- 컨텐츠 -->
+                            <div class="popnav">
+                              <div class="profile_img">
+                                <img src="../images/icon-person-1119.png" alt="profile-image">
+                              </div>
+                              <div class="profile_txt">
+                                <p class="name tool-tip" title="홍길동">홍길동</p>
+                                <p class="belong">
+                                  <span class="tool-tip belong_team" title="개발팀">개발팀</span>
+                                  <span class="tool-tip belong_team belong_position" title="ㅣ차장">ㅣ차장</span>
+                                </p>
+                              </div>
+                            </div>
+                            <!-- 하단 푸터 -->
+                            <div class="buttonfooterbox">
+                              <div class="buttonfooter">
+                                <div>
+                                  <a>
+                                    기안
+                                  </a>
+                                </div>
+                                <img src="../images/downtri-1207.png" alt="기안버튼이미지">
+                              </div>
+                            </div>
+                          </button>
+                        </div>
+                        <div class="container1">
+                          <button class="plusbutton2 draggable" draggable="true">
+                            <!-- 해드 -->
+                            <div class="pophaeder" style="display: flex;">
+                              <div>
+                                <img src="../images/icon-9-p-1119.png" alt="펼치기아이콘">
+                              </div>
+                              <div>
+                                <img class="dragwebicon" src="../images/icon-cancle_1-1119.png" alt="닫기아이콘">
+                                <img class="dragmbicon" src="../images/icon-cancle_1207.png " alt="모바일닫아이콘">
+                              </div>
+                            </div>
+                            <!-- 컨텐츠 -->
+                            <div class="popnav">
+                              <div class="profile_img">
+                                <img src="../images/icon-person-1119.png" alt="profile-image">
+                              </div>
+                              <div class="profile_txt">
+                                <p class="name tool-tip" title="홍길동">홍길동</p>
+                                <p class="belong">
+                                  <span class="tool-tip belong_team" title="개발팀">개발팀</span>
+                                  <span class="tool-tip belong_team belong_position" title="ㅣ차장">ㅣ차장</span>
+                                </p>
+                              </div>
+                            </div>
+                            <!-- 하단 푸터 -->
+                            <div class="buttonfooterbox">
+                              <div class="buttonfooter">
+                                <div>
+                                  <a>
+                                    기안
+                                  </a>
+                                </div>
+                                <img src="../images/downtri-1207.png" alt="기안버튼이미지">
+                              </div>
+                            </div>
+                          </button>
+                        </div>
+                        <div class="container1">
+                          <button class="plusbutton2 draggable" draggable="true">
+                            <!-- 해드 -->
+                            <div class="pophaeder" style="display: flex;">
+                              <div>
+                                <img src="../images/icon-9-p-1119.png" alt="펼치기아이콘">
+                              </div>
+                              <div>
+                                <img class="dragwebicon" src="../images/icon-cancle_1-1119.png" alt="닫기아이콘">
+                                <img class="dragmbicon" src="../images/icon-cancle_1207.png " alt="모바일닫아이콘">
+                              </div>
+                            </div>
+                            <!-- 컨텐츠 -->
+                            <div class="popnav">
+                              <div class="profile_img">
+                                <img src="../images/icon-person-1119.png" alt="profile-image">
+                              </div>
+                              <div class="profile_txt">
+                                <p class="name tool-tip" title="홍길동">홍길동</p>
+                                <p class="belong">
+                                  <span class="tool-tip belong_team" title="개발팀">개발팀</span>
+                                  <span class="tool-tip belong_team belong_position" title="ㅣ차장">ㅣ차장</span>
+                                </p>
+                              </div>
+                            </div>
+                            <!-- 하단 푸터 -->
+                            <div class="buttonfooterbox">
+                              <div class="buttonfooter">
+                                <div>
+                                  <a>
+                                    기안
+                                  </a>
+                                </div>
+                                <img src="../images/downtri-1207.png" alt="기안버튼이미지">
+                              </div>
+                            </div>
+                          </button>
+                        </div>
+                        <!-- class='container2' css 합쳐진 디자인적용 입니다. -->
+                        <div class="container1 container2">
+                          <button class="plusbutton2 draggable" draggable="true">
+                            <!-- 해드 -->
+                            <div class="pophaeder" style="display: flex;">
+                              <div>
+                                <img src="../images/icon-9-p-1119.png" alt="펼치기아이콘">
+                              </div>
+                              <div>
+                                <img class="dragwebicon" src="../images/icon-cancle_1-1119.png" alt="닫기아이콘">
+                                <img class="dragmbicon" src="../images/icon-cancle_1207.png " alt="모바일닫아이콘">
+                              </div>
+                            </div>
+                            <!-- 컨텐츠 -->
+                            <div class="popnav">
+                              <div class="profile_img">
+                                <img src="../images/icon-person-1119.png" alt="profile-image">
+                              </div>
+                              <div class="profile_txt">
+                                <p class="name tool-tip" title="홍길동">홍길동</p>
+                                <p class="belong">
+                                  <span class="tool-tip belong_team" title="개발팀">개발팀</span>
+                                  <span class="tool-tip belong_team belong_position" title="ㅣ차장">ㅣ차장</span>
+                                </p>
+                              </div>
+                            </div>
+                            <!-- 하단 푸터 -->
+                            <div class="buttonfooterbox">
+                              <div class="buttonfooter">
+                                <div>
+                                  <a>
+                                    기안
+                                  </a>
+                                </div>
+                                <img src="../images/downtri-1207.png" alt="기안버튼이미지">
+                              </div>
+                            </div>
+                          </button>
+                          <button class="plusbutton2 draggable" draggable="true">
+                            <!-- 해드 -->
+                            <div class="pophaeder" style="display: flex;">
+                              <div>
+                                <img src="../images/icon-9-p-1119.png" alt="펼치기아이콘">
+                              </div>
+                              <div>
+                                <img class="dragwebicon" src="../images/icon-cancle_1-1119.png" alt="닫기아이콘">
+                                <img class="dragmbicon" src="../images/icon-cancle_1207.png " alt="모바일닫아이콘">
+                              </div>
+                            </div>
+                            <!-- 컨텐츠 -->
+                            <div class="popnav">
+                              <div class="profile_img">
+                                <img src="../images/icon-person-1119.png" alt="profile-image">
+                              </div>
+                              <div class="profile_txt">
+                                <p class="name tool-tip" title="홍길동">홍길동</p>
+                                <p class="belong">
+                                  <span class="tool-tip belong_team" title="개발팀">개발팀</span>
+                                  <span class="tool-tip belong_team belong_position" title="ㅣ차장">ㅣ차장</span>
+                                </p>
+                              </div>
+                            </div>
+                            <!-- 하단 푸터 -->
+                            <div class="buttonfooterbox">
+                              <div class="buttonfooter">
+                                <div>
+                                  <a>
+                                    기안
+                                  </a>
+                                </div>
+                                <img src="../images/downtri-1207.png" alt="기안버튼이미지">
+                              </div>
+                            </div>
+                          </button>
+                        </div>
+                        <div class="container1">
+                          <button class="plusbutton2 draggable" draggable="true">
+                            <!-- 해드 -->
+                            <div class="pophaeder" style="display: flex;">
+                              <div>
+                                <img src="../images/icon-9-p-1119.png" alt="펼치기아이콘">
+                              </div>
+                              <div>
+                                <img class="dragwebicon" src="../images/icon-cancle_1-1119.png" alt="닫기아이콘">
+                                <img class="dragmbicon" src="../images/icon-cancle_1207.png " alt="모바일닫아이콘">
+                              </div>
+                            </div>
+                            <!-- 컨텐츠 -->
+                            <div class="popnav">
+                              <div class="profile_img">
+                                <img src="../images/icon-person-1119.png" alt="profile-image">
+                              </div>
+                              <div class="profile_txt">
+                                <p class="name tool-tip" title="홍길동">홍길동</p>
+                                <p class="belong">
+                                  <span class="tool-tip belong_team" title="개발팀">개발팀</span>
+                                  <span class="tool-tip belong_team belong_position" title="ㅣ차장">ㅣ차장</span>
+                                </p>
+                              </div>
+                            </div>
+                            <!-- 하단 푸터 -->
+                            <div class="buttonfooterbox">
+                              <div class="buttonfooter">
+                                <div>
+                                  <a>
+                                    기안
+                                  </a>
+                                </div>
+                                <img src="../images/downtri-1207.png" alt="기안버튼이미지">
+                              </div>
+                            </div>
+                          </button>
+                        </div>
+                        <div class="container1 container2">
+                          <button class="plusbutton2 draggable" draggable="true">
+                            <!-- 해드 -->
+                            <div class="pophaeder" style="display: flex;">
+                              <div>
+                                <img src="../images/icon-9-p-1119.png" alt="펼치기아이콘">
+                              </div>
+                              <div>
+                                <img class="dragwebicon" src="../images/icon-cancle_1-1119.png" alt="닫기아이콘">
+                                <img class="dragmbicon" src="../images/icon-cancle_1207.png " alt="모바일닫아이콘">
+                              </div>
+                            </div>
+                            <!-- 컨텐츠 -->
+                            <div class="popnav">
+                              <div class="profile_img">
+                                <img src="../images/icon-person-1119.png" alt="profile-image">
+                              </div>
+                              <div class="profile_txt">
+                                <p class="name tool-tip" title="홍길동">홍길동</p>
+                                <p class="belong">
+                                  <span class="tool-tip belong_team" title="개발팀">개발팀</span>
+                                  <span class="tool-tip belong_team belong_position" title="ㅣ차장">ㅣ차장</span>
+                                </p>
+                              </div>
+                            </div>
+                            <!-- 하단 푸터 -->
+                            <div class="buttonfooterbox">
+                              <div class="buttonfooter">
+                                <div>
+                                  <a>
+                                    기안
+                                  </a>
+                                </div>
+                                <img src="../images/downtri-1207.png" alt="기안버튼이미지">
+                              </div>
+                            </div>
+                          </button>
+                          <button class="plusbutton2 draggable" draggable="true">
+                            <!-- 해드 -->
+                            <div class="pophaeder" style="display: flex;">
+                              <div>
+                                <img src="../images/icon-9-p-1119.png" alt="펼치기아이콘">
+                              </div>
+                              <div>
+                                <img class="dragwebicon" src="../images/icon-cancle_1-1119.png" alt="닫기아이콘">
+                                <img class="dragmbicon" src="../images/icon-cancle_1207.png " alt="모바일닫아이콘">
+                              </div>
+                            </div>
+                            <!-- 컨텐츠 -->
+                            <div class="popnav">
+                              <div class="profile_img">
+                                <img src="../images/icon-person-1119.png" alt="profile-image">
+                              </div>
+                              <div class="profile_txt">
+                                <p class="name tool-tip" title="홍길동">홍길동</p>
+                                <p class="belong">
+                                  <span class="tool-tip belong_team" title="개발팀">개발팀</span>
+                                  <span class="tool-tip belong_team belong_position" title="ㅣ차장">ㅣ차장</span>
+                                </p>
+                              </div>
+                            </div>
+                            <!-- 하단 푸터 -->
+                            <div class="buttonfooterbox">
+                              <div class="buttonfooter">
+                                <div>
+                                  <a>
+                                    기안
+                                  </a>
+                                </div>
+                                <img src="../images/downtri-1207.png" alt="기안버튼이미지">
+                              </div>
+                            </div>
+                          </button>
+                        </div>
+                        <div class="container1">
+                          <button class="plusbutton2 draggable" draggable="true">
+                            <!-- 해드 -->
+                            <div class="pophaeder" style="display: flex;">
+                              <div>
+                                <img src="../images/icon-9-p-1119.png" alt="펼치기아이콘">
+                              </div>
+                              <div>
+                                <img class="dragwebicon" src="../images/icon-cancle_1-1119.png" alt="닫기아이콘">
+                                <img class="dragmbicon" src="../images/icon-cancle_1207.png " alt="모바일닫아이콘">
+                              </div>
+                            </div>
+                            <!-- 컨텐츠 -->
+                            <div class="popnav">
+                              <div class="profile_img">
+                                <img src="../images/icon-person-1119.png" alt="profile-image">
+                              </div>
+                              <div class="profile_txt">
+                                <p class="name tool-tip" title="홍길동">홍길동</p>
+                                <p class="belong">
+                                  <span class="tool-tip belong_team" title="개발팀">개발팀</span>
+                                  <span class="tool-tip belong_team belong_position" title="ㅣ차장">ㅣ차장</span>
+                                </p>
+                              </div>
+                            </div>
+                            <!-- 하단 푸터 -->
+                            <div class="buttonfooterbox">
+                              <div class="buttonfooter">
+                                <div>
+                                  <a>
+                                    기안
+                                  </a>
+                                </div>
+                                <img src="../images/downtri-1207.png" alt="기안버튼이미지">
+                              </div>
+                            </div>
+                          </button>
+                        </div>
+                        <div class="container1">
+                          <button class="plusbutton2 draggable" draggable="true">
+                            <!-- 해드 -->
+                            <div class="pophaeder" style="display: flex;">
+                              <div>
+                                <img src="../images/icon-9-p-1119.png" alt="펼치기아이콘">
+                              </div>
+                              <div>
+                                <img class="dragwebicon" src="../images/icon-cancle_1-1119.png" alt="닫기아이콘">
+                                <img class="dragmbicon" src="../images/icon-cancle_1207.png " alt="모바일닫아이콘">
+                              </div>
+                            </div>
+                            <!-- 컨텐츠 -->
+                            <div class="popnav">
+                              <div class="profile_img">
+                                <img src="../images/icon-person-1119.png" alt="profile-image">
+                              </div>
+                              <div class="profile_txt">
+                                <p class="name tool-tip" title="홍길동">홍길동</p>
+                                <p class="belong">
+                                  <span class="tool-tip belong_team" title="개발팀">개발팀</span>
+                                  <span class="tool-tip belong_team belong_position" title="ㅣ차장">ㅣ차장</span>
+                                </p>
+                              </div>
+                            </div>
+                            <!-- 하단 푸터 -->
+                            <div class="buttonfooterbox">
+                              <div class="buttonfooter">
+                                <div>
+                                  <a>
+                                    기안
+                                  </a>
+                                </div>
+                                <img src="../images/downtri-1207.png" alt="기안버튼이미지">
+                              </div>
+                            </div>
+                          </button>
+                        </div>
+                        <div class="container1">
+                          <button class="plusbutton2 draggable" draggable="true">
+                            <!-- 해드 -->
+                            <div class="pophaeder" style="display: flex;">
+                              <div>
+                                <img src="../images/icon-9-p-1119.png" alt="펼치기아이콘">
+                              </div>
+                              <div>
+                                <img class="dragwebicon" src="../images/icon-cancle_1-1119.png" alt="닫기아이콘">
+                                <img class="dragmbicon" src="../images/icon-cancle_1207.png " alt="모바일닫아이콘">
+                              </div>
+                            </div>
+                            <!-- 컨텐츠 -->
+                            <div class="popnav">
+                              <div class="profile_img">
+                                <img src="../images/icon-person-1119.png" alt="profile-image">
+                              </div>
+                              <div class="profile_txt">
+                                <p class="name tool-tip" title="홍길동">홍길동</p>
+                                <p class="belong">
+                                  <span class="tool-tip belong_team" title="개발팀">개발팀</span>
+                                  <span class="tool-tip belong_team belong_position" title="ㅣ차장">ㅣ차장</span>
+                                </p>
+                              </div>
+                            </div>
+                            <!-- 하단 푸터 -->
+                            <div class="buttonfooterbox">
+                              <div class="buttonfooter">
+                                <div>
+                                  <a>
+                                    기안
+                                  </a>
+                                </div>
+                                <img src="../images/downtri-1207.png" alt="기안버튼이미지">
+                              </div>
+                            </div>
+                          </button>
+                        </div>
+                        <div class="container1">
+                          <button class="plusbutton2 draggable" draggable="true">
+                            <!-- 해드 -->
+                            <div class="pophaeder" style="display: flex;">
+                              <div>
+                                <img src="../images/icon-9-p-1119.png" alt="펼치기아이콘">
+                              </div>
+                              <div>
+                                <img class="dragwebicon" src="../images/icon-cancle_1-1119.png" alt="닫기아이콘">
+                                <img class="dragmbicon" src="../images/icon-cancle_1207.png " alt="모바일닫아이콘">
+                              </div>
+                            </div>
+                            <!-- 컨텐츠 -->
+                            <div class="popnav">
+                              <div class="profile_img">
+                                <img src="../images/icon-person-1119.png" alt="profile-image">
+                              </div>
+                              <div class="profile_txt">
+                                <p class="name tool-tip" title="홍길동">홍길동</p>
+                                <p class="belong">
+                                  <span class="tool-tip belong_team" title="개발팀">개발팀</span>
+                                  <span class="tool-tip belong_team belong_position" title="ㅣ차장">ㅣ차장</span>
+                                </p>
+                              </div>
+                            </div>
+                            <!-- 하단 푸터 -->
+                            <div class="buttonfooterbox">
+                              <div class="buttonfooter">
+                                <div>
+                                  <a>
+                                    기안
+                                  </a>
+                                </div>
+                                <img src="../images/downtri-1207.png" alt="기안버튼이미지">
+                              </div>
+                            </div>
+                          </button>
+                        </div>
+                        <!-- 그룹 디자인 -->
+                        <div class="container1 unidentified">
+                          <button class="plusbutton2 draggable" draggable="true">
+                            <!-- 해드 -->
+                            <div class="pophaeder" style="display: flex;">
+                              <div>
+                                <img src="../images/icon-9-p-1119.png" alt="펼치기아이콘">
+                              </div>
+                              <div>
+                                <img class="dragwebicon" src="../images/icon-cancle_1-1119.png" alt="닫기아이콘">
+                                <img class="dragmbicon" src="../images/icon-cancle_1207.png " alt="모바일닫아이콘">
+                              </div>
+                            </div>
+                            <!-- 컨텐츠 -->
+                            <div class="popnav">
+                              <div class="profile_img">
+                                <img src="../images/icon-people-1207.png" alt="profile-image">
+                              </div>
+                              <div class="profile_txt">
+                                <p class="name tool-tip" title="홍길동">그룹!</p>
+                                <p class="belong">
+                                  <span class="tool-tip belong_team" title="개발팀">개발팀</span>
+                                </p>
+                              </div>
+                            </div>
+                            <!-- 하단 푸터 -->
+                            <div class="buttonfooterbox">
+                              <div class="buttonfooter">
+                                <a>
+                                  미확인
+                                </a>
+                              </div>
+                            </div>
+                          </button>
+                        </div>
+                        <!-- 날짜적용 디자인 -->
+                        <div class="container1 containerdate">
+                          <button class="plusbutton2 draggable" draggable="true">
+                            <!-- 해드 -->
+                            <div class="pophaeder" style="display: flex;">
+                              <div>
+                                <img src="../images/icon-9-p-1119.png" alt="펼치기아이콘">
+                              </div>
+                              <div>
+                                <img class="dragwebicon" src="../images/icon-cancle_1-1119.png" alt="닫기아이콘">
+                                <img class="dragmbicon" src="../images/icon-cancle_1207.png " alt="모바일닫아이콘">
+                              </div>
+                            </div>
+                            <!-- 컨텐츠 -->
+                            <div class="popnav">
+                              <div class="profile_img">
+                                <img src="../images/icon-person-1119.png" alt="profile-image">
+                              </div>
+                              <div class="profile_txt">
+                                <p class="name tool-tip" title="홍길동">홍길동</p>
+                                <p class="belong">
+                                  <span class="tool-tip belong_team" title="개발팀">개발팀</span>
+                                  <span class="tool-tip belong_team belong_position" title="ㅣ차장">ㅣ차장</span>
+                                </p>
+                              </div>
+                            </div>
+                            <!-- 하단 푸터 -->
+                            <div class="buttonfooterbox">
+                              <div class="buttonfooter">
+                                <a>
+                                  2021.04.15 16:30
+                                </a>
+                              </div>
+                            </div>
+                          </button>
+                        </div>
+                        <!-- 기안완료후 상태 디자인 -->
+                        <div class="container1 containersuccess">
+                          <button class="plusbutton2 draggable" draggable="true">
+                            <!-- 해드 -->
+                            <div class="pophaeder" style="display: flex;">
+                              <div>
+                                <img src="../images/icon-9-p-1119.png" alt="펼치기아이콘">
+                              </div>
+                              <div>
+                                <img class="dragwebicon" src="../images/icon-cancle_1-1119.png" alt="닫기아이콘">
+                                <img class="dragmbicon" src="../images/icon-cancle_1207.png " alt="모바일닫아이콘">
+                              </div>
+                            </div>
+                            <!-- 컨텐츠 -->
+                            <div class="popnav">
+                              <div class="profile_img">
+                                <img src="../images/icon-person-1119.png" alt="profile-image">
+                              </div>
+                              <div class="profile_txt">
+                                <p class="name tool-tip" title="홍길동">홍길동</p>
+                                <p class="belong">
+                                  <span class="tool-tip belong_team" title="개발팀">개발팀</span>
+                                  <span class="tool-tip belong_team belong_position" title="ㅣ차장">ㅣ차장</span>
+                                </p>
+                              </div>
+                            </div>
+                            <!-- 기안 완료시 디자인 -->
+                            <div class="popsuccess">
+                              <img src="../images/icon-talk-1206.png" alt="기안완료 아이콘">
+                              <span>단가 확인 완료</span>
+                            </div>
+                            <!-- 하단 푸터 -->
+                            <div class="buttonfooterbox">
+                              <div class="buttonfooter">
+                                <div>
+                                  <a>
+                                    승인
+                                  </a>
+                                </div>
+                                <a>
+                                  2021.04.15 16:30
+                                </a>
+                                <img src="../images/downtri-1207.png" alt="기안버튼이미지">
+                              </div>
+                            </div>
+                          </button>
+                        </div>
+                        <div class="container1 container2">
+                          <button class="plusbutton2 draggable" draggable="true">
+                            <!-- 해드 -->
+                            <div class="pophaeder" style="display: flex;">
+                              <div>
+                                <img src="../images/icon-9-p-1119.png" alt="펼치기아이콘">
+                              </div>
+                              <div>
+                                <img class="dragwebicon" src="../images/icon-cancle_1-1119.png" alt="닫기아이콘">
+                                <img class="dragmbicon" src="../images/icon-cancle_1207.png " alt="모바일닫아이콘">
+                              </div>
+                            </div>
+                            <!-- 컨텐츠 -->
+                            <div class="popnav">
+                              <div class="profile_img">
+                                <img src="../images/icon-person-1119.png" alt="profile-image">
+                              </div>
+                              <div class="profile_txt">
+                                <p class="name tool-tip" title="홍길동">홍길동</p>
+                                <p class="belong">
+                                  <span class="tool-tip belong_team" title="개발팀">개발팀</span>
+                                  <span class="tool-tip belong_team belong_position" title="ㅣ차장">ㅣ차장</span>
+                                </p>
+                              </div>
+                            </div>
+                            <!-- 하단 푸터 -->
+                            <div class="buttonfooterbox">
+                              <div class="buttonfooter">
+                                <div>
+                                  <a>
+                                    기안
+                                  </a>
+                                </div>
+                                <img src="../images/downtri-1207.png" alt="기안버튼이미지">
+                              </div>
+                            </div>
+                          </button>
+                          <button class="plusbutton2 draggable" draggable="true">
+                            <!-- 해드 -->
+                            <div class="pophaeder" style="display: flex;">
+                              <div>
+                                <img src="../images/icon-9-p-1119.png" alt="펼치기아이콘">
+                              </div>
+                              <div>
+                                <img class="dragwebicon" src="../images/icon-cancle_1-1119.png" alt="닫기아이콘">
+                                <img class="dragmbicon" src="../images/icon-cancle_1207.png " alt="모바일닫아이콘">
+                              </div>
+                            </div>
+                            <!-- 컨텐츠 -->
+                            <div class="popnav">
+                              <div class="profile_img">
+                                <img src="../images/icon-person-1119.png" alt="profile-image">
+                              </div>
+                              <div class="profile_txt">
+                                <p class="name tool-tip" title="홍길동">홍길동</p>
+                                <p class="belong">
+                                  <span class="tool-tip belong_team" title="개발팀">개발팀</span>
+                                  <span class="tool-tip belong_team belong_position" title="ㅣ차장">ㅣ차장</span>
+                                </p>
+                              </div>
+                            </div>
+                            <!-- 하단 푸터 -->
+                            <div class="buttonfooterbox">
+                              <div class="buttonfooter">
+                                <div>
+                                  <a>
+                                    기안
+                                  </a>
+                                </div>
+                                <img src="../images/downtri-1207.png" alt="기안버튼이미지">
+                              </div>
+                            </div>
+                          </button>
+                        </div>
+                        <button class="plusbutton1">
+                          <img src="../images/icon-cross-1119@2x.png" alt="추가버튼">
+                        </button>
+                      </div>
+
+                    </div>
+                  </div>
+                  <!-- 수신 -->
+                  <div>
+                    <a>수신</a>
+                    <div>
+                      <div class="inboxinner">
+                        <!-- 검색창 -->
+                        <!-- 추가 버튼 -->
+                        <div class="searchgroup">
+                          <input type="text" placeholder="검색">
+                          <div class="navgroup">
+                            <div class="popnav">
+                              <div class="profile_img">
+                                <img src="../images/thumb-icon-normal@2x.png" alt="profile-image">
+                              </div>
+                              <div class="profile_txt">
+                                <p class="name tool-tip" title="홍길동">홍길동</p>
+                                <p class="belong">
+                                  <span class="tool-tip belong_team" title="개발팀">개발팀</span>
+                                  <span class="tool-tip belong_team belong_position" title="ㅣ차장">ㅣ차장</span>
+                                </p>
+                              </div>
+                            </div>
+                            <div class="popnav">
+                              <div class="profile_img">
+                                <img src="../images/thumb-icon-normal@2x.png" alt="profile-image">
+                              </div>
+                              <div class="profile_txt">
+                                <p class="name tool-tip" title="홍길동">홍길동</p>
+                                <p class="belong">
+                                  <span class="tool-tip belong_team" title="개발팀">개발팀</span>
+                                  <span class="tool-tip belong_team belong_position" title="ㅣ차장">ㅣ차장</span>
+                                </p>
+                              </div>
+                            </div>
+                          </div>
+                          <img src="../images/icon-user-round-copy-modalpop.png" alt="검색아이콘">
+                        </div>
+                        <!-- 저장/불러오기 버튼 -->
+                        <div class="saveroadbtn">
+                          <button class="roadbtn">
+                            <img src="../images/icon-open-1119.png" alt="불러오기 아이콘">
+                            <p>불러오기</p>
+                          </button>
+                          <button class="savebtn">
+                            <img src="../images/icon-save-1119.png" alt="저장하기 아이콘">
+                            <p>저장하기</p>
+                          </button>
+                        </div>
+                      </div>
+                      <div class="btngroup">
+                        <button class="plusbutton1">
+                          <img src="../images/icon-cross-1119@2x.png" alt="추가버튼">
+                        </button>
+                      </div>
+
+                    </div>
+                  </div>
+                  <!-- 참조 -->
+                  <div>
+                    <a>참조</a>
+                    <div>
+                      <div class="inboxinner">
+                        <!-- 검색창 -->
+                        <!-- 추가 버튼 -->
+                        <div class="searchgroup">
+                          <input type="text" placeholder="검색">
+                          <div class="navgroup">
+                            <div class="popnav">
+                              <div class="profile_img">
+                                <img src="../images/thumb-icon-normal@2x.png" alt="profile-image">
+                              </div>
+                              <div class="profile_txt">
+                                <p class="name tool-tip" title="홍길동">홍길동</p>
+                                <p class="belong">
+                                  <span class="tool-tip belong_team" title="개발팀">개발팀</span>
+                                  <span class="tool-tip belong_team belong_position" title="ㅣ차장">ㅣ차장</span>
+                                </p>
+                              </div>
+                            </div>
+                            <div class="popnav">
+                              <div class="profile_img">
+                                <img src="../images/thumb-icon-normal@2x.png" alt="profile-image">
+                              </div>
+                              <div class="profile_txt">
+                                <p class="name tool-tip" title="홍길동">홍길동</p>
+                                <p class="belong">
+                                  <span class="tool-tip belong_team" title="개발팀">개발팀</span>
+                                  <span class="tool-tip belong_team belong_position" title="ㅣ차장">ㅣ차장</span>
+                                </p>
+                              </div>
+                            </div>
+                          </div>
+                          <img src="../images/icon-user-round-copy-modalpop.png" alt="검색아이콘">
+                        </div>
+                        <!-- 저장/불러오기 버튼 -->
+                        <div class="saveroadbtn">
+                          <button class="roadbtn">
+                            <img src="../images/icon-open-1119.png" alt="불러오기 아이콘">
+                            <p>불러오기</p>
+                          </button>
+                          <button class="savebtn">
+                            <img src="../images/icon-save-1119.png" alt="저장하기 아이콘">
+                            <p>저장하기</p>
+                          </button>
+                        </div>
+                      </div>
+                      <div class="btngroup">
+                        <button class="plusbutton1">
+                          <img src="../images/icon-cross-1119@2x.png" alt="추가버튼">
+                        </button>
+                      </div>
+
+                    </div>
+                  </div>
+                  <!-- 회람 -->
+                  <div>
+                    <a>회람</a>
+                    <div>
+                      <div class="inboxinner">
+                        <!-- 검색창 -->
+                        <!-- 추가 버튼 -->
+                        <div class="searchgroup">
+                          <input type="text" placeholder="검색">
+                          <div class="navgroup">
+                            <div class="popnav">
+                              <div class="profile_img">
+                                <img src="../images/thumb-icon-normal@2x.png" alt="profile-image">
+                              </div>
+                              <div class="profile_txt">
+                                <p class="name tool-tip" title="홍길동">홍길동</p>
+                                <p class="belong">
+                                  <span class="tool-tip belong_team" title="개발팀">개발팀</span>
+                                  <span class="tool-tip belong_team belong_position" title="ㅣ차장">ㅣ차장</span>
+                                </p>
+                              </div>
+                            </div>
+                            <div class="popnav">
+                              <div class="profile_img">
+                                <img src="../images/thumb-icon-normal@2x.png" alt="profile-image">
+                              </div>
+                              <div class="profile_txt">
+                                <p class="name tool-tip" title="홍길동">홍길동</p>
+                                <p class="belong">
+                                  <span class="tool-tip belong_team" title="개발팀">개발팀</span>
+                                  <span class="tool-tip belong_team belong_position" title="ㅣ차장">ㅣ차장</span>
+                                </p>
+                              </div>
+                            </div>
+                          </div>
+                          <img src="../images/icon-user-round-copy-modalpop.png" alt="검색아이콘">
+                        </div>
+                        <!-- 저장/불러오기 버튼 -->
+                        <div class="saveroadbtn">
+                          <button class="roadbtn">
+                            <img src="../images/icon-open-1119.png" alt="불러오기 아이콘">
+                            <p>불러오기</p>
+                          </button>
+                          <button class="savebtn">
+                            <img src="../images/icon-save-1119.png" alt="저장하기 아이콘">
+                            <p>저장하기</p>
+                          </button>
+                        </div>
+                      </div>
+                      <div class="btngroup">
+                        <button class="plusbutton1">
+                          <img src="../images/icon-cross-1119@2x.png" alt="추가버튼">
+                        </button>
+                      </div>
+
+                    </div>
+                  </div>
+                  <ul class="body-security">
+                    <li>
+                      <div>
+                        <p>
+                          보안 등급
+                        </p>
+                        <div>
+                          <div class="radiobutton1">
+                            <p>
+                              <a>
+                                일반
+                              </a>
+        
+                              <input type="radio" name="security" value="일반">
+                            </p>
+                          </div>
+                          <div class="radiobutton">
+                            <p>
+                              <a>
+                                고급  
+                              </a>
+        
+                              <input type="radio" name="security" value="고급" checked="checked">
+                            </p>
+                          </div>
+                        </div>
+                      </div>
+                      <div>
+                        <p>
+                          보안 기간
+                        </p>
+                        <form>
+                          <select id="qickqick" name="QuickLink">
+                            <option value="SCK 웹사이트" selected>2년</option>
+                            <option value="SCK 웹사이트">3년</option>
+                            <option value="SCK 웹사이트">4년</option>
+                            <option value="SCK 웹사이트">5년</option>
+                          </select>
+                        </form>
+                      </div>
+                    </li>
+                   
+                    <li>
+                      <p>근거 문서</p>
+                      <div class="fileplus">
+                        <input type="text" placeholder="파일을 첨부해주세요.">
+                        <button>파일추가</button>
+                      </div>
+                    </li>
+                  </ul>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="popup-foot">
+            <button>
+              <img src="../images/icon-storage-newwhite@2x.png" alt="임시저장 아이콘">
+              <span class="pop-btn confirm" id="confirm">임시저장</span>
+            </button>
+            <button>
+              <img src="../images/pen_icon@2x.png" alt="기안하기 아이콘">
+              <span class="pop-btn close" id="close">기안하기</span>
+            </button>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- 팝업창 (모달) -->
+    <div class="popup-wrap2">
+      <div class="modalpop">
+        <!-- 타이틀 -->
+        <div>
+          <span>결제자 추가</span>
+          <img id="close" src="../images/icon-cancle.png" alt="팝업창끄기 이미지">
+        </div>
+        <!-- 컨텐츠 -->
+        <div>
+          <!-- 검색추가창 -->
+          <div class="searchpop">
+            <input type="text" placeholder="검색">
+            <img src="../images/icon-user-round-copy-modalpop.png" alt="검색아이콘">
+            <button>
+              추가
+            </button>
+          </div>
+          <!-- org_contents -->
+          <div class="org_contents rel">
+            <!-- jstree -->
+            <div id="jstree_main" class="gnb accodian">
+            </div>
+            <!-- // jstree -->
+          </div>
+          <!-- // org_contents -->
+        </div>
+      </div>
+    </div>
+
+
+    <!-- 팝업창 (결제선 불러오기) -->
+    <div class="popup-wrap3">
+      <div class="roadpop">
+        <!-- 해더 -->
+        <div>
+          <div class="wrap3btngroup1">
+            <div>개인 결제선 목록</div>
+            <div>
+              <img src="../images/icon-cancle-1119@2x.png" alt="닫기버튼">
+            </div>
+          </div>
+          <div class="wrap3btngroup2">
+            <div>제목</div>
+            <div>
+              <button>
+                검토
+              </button>
+            </div>
+            <div>
+              <button>
+                결제
+              </button>
+            </div>
+            <div>
+
+            </div>
+          </div>
+        </div>
+        <!-- 컨텐츠 -->
+        <div class="wrap3cont">
+          <div>
+            <div class="wrap3contgroup1">
+              <div>마케팅 결제선 지정</div>
+              
+              <div>
+                <div>
+                  <p>
+                    홍차장 | 영업부
+                  </p>
+                  <p>
+                    김온돌 | 개발팀
+                  </p>
+                </div>
+                <div>
+                  <p>
+                    김알렉스스 | 마케팅팀
+                  </p>
+                  <p>
+                    김강 | 마케팅팀
+                  </p>
+                  <p>
+                    김강 | 마케팅팀
+                  </p>
+                </div>
+              </div>
+             
+              <div>
+                <button>
+                  <img src="../images/combined-shape1_1122.png" alt="적용아이콘">
+                  <a>
+                    적용
+                  </a>
+                </button>
+                <button>
+                  <img src="../images/combined-shape2_1122.png" alt="재적용아이콘">
+                  <a>
+                    재적용
+                  </a>
+                </button>
+                <button>
+                  <img src="../images/icon-trash1122.png" alt="삭제아이콘">
+                  <a>
+                    삭제
+                  </a>
+                </button>
+              </div>
+            </div>
+            <div class="wrap3contgroup2">
+              <div>품의 결제선</div>
+
+              <div>
+                <div>
+                  <p>
+                    김종현 | 인사팀
+                  </p>
+                </div>
+                <div>
+                  <p>
+                    박종현 | 재무팀
+                  </p>
+                </div>
+              </div>
+              
+              <div>
+                <button>
+                  <img src="../images/combined-shape1_1122.png" alt="적용아이콘">
+                  <a>
+                    적용
+                  </a>
+                </button>
+                <button>
+                  <img src="../images/combined-shape2_1122.png" alt="재적용아이콘">
+                  <a>
+                    재적용
+                  </a>
+                </button>
+                <button>
+                  <img src="../images/icon-trash1122.png" alt="삭제아이콘">
+                  <a>
+                    삭제
+                  </a>
+                </button>
+              </div>
+            </div>
+          </div>
+        </div>
+
+
+        <!-- 푸터 -->
+        <div></div>
+      </div>
+    </div>
+
+    <!-- 팝업창 (결제선 저장) -->
+    <div class="popup-wrap4">
+      <div class="savepop">
+        <!-- 해더 -->
+        <div>
+          <div class="wrap4btngroup">
+            <div>개인 결제선 저장</div>
+            <div>
+              <img src="../images/icon-cancle-1119@2x.png" alt="닫기버튼">
+            </div>
+          </div>
+        </div>
+        <!-- 컨텐츠 -->
+        <div>
+          <div>
+            <p>
+              제목
+            </p>
+            <input type="text" placeholder="결제선 제목을 입력해주세요.">
+          </div>
+        </div>
+        <!-- 푸터 -->
+        <div>
+          <div>
+            <button>
+              <img src="../images/icon-storage-newwhite@2x.png" alt="저장하기아이콘">
+              <a>
+                저장하기
+              </a>
+            </button>
+          </div>
+        </div>
+      </div>
+    </div>
+
+
+
+  </div>
+
+</body>
+
+</html>

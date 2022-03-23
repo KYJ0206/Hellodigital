@@ -1,0 +1,37 @@
+.copyright {
+    display: block;
+    width: 100%;
+    text-align: left;
+    color: #68696e;
+    font-size: 12px;
+    padding-top: 14px;
+  }
+.copyright p {
+	 margin-left: 24px;
+}
+@media screen and (max-width: 1023px) {
+	.footer-globeIconBox {
+		display: none;
+	}
+  .copyright {
+    display: block;
+    width: 100%;
+    text-align: center;
+    color: #68696e;
+    font-size: 12px;
+    padding-top: 14px;
+  }
+	.copyright p {
+	 margin-left: 0px;
+}
+}
+@media screen and (max-width: 768px) {
+.copyright {
+  display: block;
+    width: 100%;
+    text-align: center;
+    color: #68696e;
+    font-size: 12px;
+    padding: 30px 0px 10px 0px;
+}
+}

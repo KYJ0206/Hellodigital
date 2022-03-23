@@ -1,0 +1,11 @@
+{
+  "global" : false,
+  "host_template_types" : [ "PAGE", "BLOG_POST", "BLOG_LISTING" ],
+  "module_id" : 55445615493,
+  "js_assets" : [ {
+    "autoload" : true,
+    "path" : "../../../codeFiles/jsFile/moment.min.js",
+    "name" : "moment.min.js"
+  } ],
+  "is_available_for_new_content" : true
+}

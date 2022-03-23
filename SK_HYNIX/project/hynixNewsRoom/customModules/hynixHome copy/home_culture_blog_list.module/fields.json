@@ -1,0 +1,9 @@
+[ {
+  "id" : "da0fd9cf-c00b-d1bb-2ea7-d5eda97aeecb",
+  "name" : "culture_blog",
+  "label" : "사람&문화 블로그",
+  "required" : false,
+  "locked" : false,
+  "type" : "blog",
+  "default" : 54780923926
+} ]

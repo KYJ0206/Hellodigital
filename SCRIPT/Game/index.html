@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta property="og:title" content="Balance Tetris">
+  <meta property="og:description" content="Tetris built with vanilla javascript">
+  <meta property="og:image"
+    content="https://raw.githubusercontent.com/WoochanLee/BalanceTetris/gh-pages/res/image_800x800.png">
+  <meta name="description" content="Tetris built with vanilla javascript">
+  <meta name="keywords" content="Tetris,balancehero,balancetetris,테트리스,밸런스히어로,밸런스테트리스">
+  <link rel="shortcut icon" type="image/x-icon" href="res/favicon.ico">
+  <link rel="stylesheet" href="css/screen.css">
+  <title>Balance Tetris</title>
+  <style>
+
+  </style>
+</head>
+
+<body>
+  <div class="main">
+    <h1>TETRIS</h1>
+    <div class="board">
+      <div class="board__logo">
+        <h2>score</h2>
+        <h2 id="score">0</h4>
+      </div>
+    </div>
+    <h5 id="game-over">GAME OVER</h5>
+    <div class="screen">
+      <div id="stage">
+        <canvas id="canvas" width="500" height="680"></canvas>
+        <canvas id="background" width="500" height="680"></canvas>
+      </div>
+    </div>
+  </div>
+  <audio id="sound-drop" style="display:none">
+    <source src="res/sound/drop.mp3" type="audio/mp3">
+  </audio>
+  <audio id="sound-shift" style="display:none">
+    <source src="res/sound/shift.mp3" type="audio/mp3">
+  </audio>
+  <audio id="sound-clear_line" style="display:none">
+    <source src="res/sound/clear_line.mp3" type="audio/mp3">
+  </audio>
+  <audio id="sound-game_over" style="display:none">
+    <source src="res/sound/game_over.mp3" type="audio/mp3">
+  </audio>
+  <script type="text/javascript" src="util.js"></script>
+  <script type="text/javascript" src="settings/config.js"></script>
+  <script type="text/javascript" src="components/game/block-blueprints.js"></script>
+  <script type="text/javascript" src="components/game/block-preview.js"></script>
+  <script type="text/javascript" src="components/game/block-shift.js"></script>
+  <script type="text/javascript" src="components/system.js"></script>
+  <script type="text/javascript" src="components/control.js"></script>
+  <script type="text/javascript" src="components/audio-player.js"></script>
+  <script type="text/javascript" src="components/game/block.js"></script>
+  <script type="text/javascript" src="components/game/screen.js"></script>
+  <script type="text/javascript" src="components/renderer/renderer.js"></script>
+  <script type="text/javascript" src="components/game/init.js"></script>
+  <script type="text/javascript" src="components/resources/sounds.js"></script>
+</body>
+
+</html>

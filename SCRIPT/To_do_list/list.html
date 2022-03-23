@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="ko">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>To_do_list</title>
+    <link rel="stylesheet" href="./list.css">
+    <script src="./list.js"></script>
+</head>
+
+<body>
+    <div class="wrap">
+        <h1>TO DO List</h1>
+        <div class="wrapform">
+            <form name="todoform" id="todoform">
+                <div class="label">할일</div>
+                <textarea name="todo" id="todo" rows="5"></textarea>
+                <div class="label">중요도</div>
+                <div class="radio">
+                    <input type="radio" name="priority" value="1" /><label>1순위</label>
+                    <input type="radio" name="priority" value="2" /><label>2순위</label>
+                    <input type="radio" name="priority" value="3" /><label>3순위</label>
+                    <input type="radio" name="priority" value="4" /><label>4순위</label>
+                    <input type="radio" name="priority" value="5" /><label>5순위</label>
+                </div>
+                <div class="cmd">
+                    <input type="button" name="reset" value="내용지우기" />
+                    <input type="button" name="save" value="등록">
+                </div>
+            </form>
+            <section class="section entry-content">
+                <div class="todo">
+                    <div class="title">할일</div>
+                    <div class="content"></div>
+                </div>
+                <div class="doing">
+                    <div class="title">진행중</div>
+                    <div class="content"></div>
+                </div>
+                <div class="done">
+                    <div class="title">완료</div>
+                    <div class="content"></div>
+                </div>
+            </section>
+        </div>
+    </div>
+    <script type="template" id="newitem">
+        <div class="item">
+            <h3 class="todo"></h3>
+            <span class="date"></span>
+            <span class="priority"></span>
+            <span class="moveitem">>></span>
+        </div>
+    </script>
+</body>
+
+</html>

@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="ko">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <button id="btn">클릭</button>
+    <p id="text"></p>
+    <script>
+        let btn = document.getElementById("btn"); 
+        btn.addEventListener("click", clickBtn); 
+        btn.addEventListener("mouseover", mouseoverBtn); 
+        btn.addEventListener("mouseout", mouseoutBtn); 
+        
+        function clickBtn() {
+            document.getElementById("text").innerHTML = "버튼이 클릭됐어요!";
+        }
+        function mouseoverBtn() {
+            document.getElementById("text").innerHTML = "버튼 위에 마우스가 있네요!";
+        }
+        function mouseoutBtn() {
+            document.getElementById("text").innerHTML = "버튼 밖으로 마우스가 나갔어요!";
+        }
+    </script>
+</body>
+
+</html>

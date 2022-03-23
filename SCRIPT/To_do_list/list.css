@@ -1,0 +1,103 @@
+body{
+    background-color: #e8e8e8;
+}
+a, a:hover, a:visited, a:active{
+    text-decoration: none;
+    color: #000;
+}
+a:hover{
+    color: #a00;
+}
+h1{
+    text-align: center;
+    background-color: #fff;
+    padding: 5px;
+    margin: 0;
+}
+
+/* 레이아웃 외곽 너비 400px 제한*/
+.wrap{
+    max-width: 480px;
+    margin: 0 auto; /* 화면 가운데로 */
+}
+
+/* 폼 */
+.wrapform{
+    padding: 20px;
+    width: 100%;
+    background-color: #f0f0f0;
+    box-sizing: border-box;
+}
+.wrapform form[name=todoform]{
+    margin: 0 auto;
+}
+form[name=todoform] > textarea{
+    width: 100%;
+}
+form[name=todoform] > .label{
+    background-color: #f8f8f8;
+    margin: 10px 0 10px 0;
+    padding: 10px;
+    font-weight: 600;
+}
+form[name=todoform] > .radio label{
+    margin-right: 20px;
+}
+form[name=todoform] > .cmd{
+    margin-top: 20px;
+    text-align: right;
+}
+form[name=todoform] > .cmd input[type="button"]{
+    padding: 10px 20px;
+    border: 1px solid #e8e8e8;
+    background-color: #fff;
+    background-color:#000;  
+    color: #fff;
+}
+
+form[name=todoform] input[type=button]{
+    cursor: pointer;
+}
+
+/* 목록 */
+.section{
+    padding: 20px;
+    box-sizing: border-box;
+    background-color: #fff;
+    margin-top: 20px;
+}
+.entry-content > div{
+    width: 100%;
+    box-sizing: border-box;    
+}
+.entry-content > div .title{
+    background-color: #a00;
+    padding: 10px;
+    box-sizing: border-box;
+    color: #fff;
+    font-weight: 600;
+}
+.entry-content > div .content{
+    min-height:50px;
+    padding: 10px;
+    box-sizing: border-box;
+    color: #000;
+    background-color: #f0f0f0;
+}
+.entry-content > div div.item{
+    background-color: #D5E3E8;
+}
+.entry-content > div div.item .moveitem{
+    background-color: #e8e8e8;
+    float: right;
+    padding: 5px;
+    margin-top: -5px;
+    box-sizing: border-box;
+    line-height: 1;
+    cursor: pointer;
+}
+.entry-content > div div.content > .item{
+    padding: 10px;
+    box-sizing: border-box;
+    margin-top: 5px;
+}

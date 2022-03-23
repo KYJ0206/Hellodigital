@@ -1,0 +1,15 @@
+[ {
+  "id" : "2afc60d5-4acf-d524-72a1-b34b5656227e",
+  "name" : "form_field",
+  "label" : "Form",
+  "required" : false,
+  "locked" : true,
+  "type" : "form",
+  "default" : {
+    "form_id" : "42b54da7-baff-4f8f-91c6-6f7c77175a7e",
+    "response_type" : "inline",
+    "message" : "<p style=\"text-align: center;\"><strong>구독 설정 변경</strong></p>\n<p style=\"text-align: center;\">감사합니다</p>\n<p style=\"text-align: center;\">&nbsp;</p>",
+    "gotowebinar_webinar_key" : null,
+    "form_type" : "HUBSPOT"
+  }
+} ]

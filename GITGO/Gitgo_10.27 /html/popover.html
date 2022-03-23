@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.6.0/dist/css/bootstrap.min.css"integrity="sha384-B0vP5xmATw1+K9KRQjQERJvTumQW0nPEzvF6L/Z6nronJ3oUOFUFpCjEUQouq2+l" crossorigin="anonymous">
+    <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj" crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@4.6.0/dist/js/bootstrap.bundle.min.js"integrity="sha384-Piv4xVNRyMGpqkS2by6br4gNJ7DXjqk09RmUpJ8jgGtD7zP9yug3goQfGII0yAns" crossorigin="anonymous"></script>
+    
+    
+    <!-- <script src="../js/new-popover.js"></script> -->
+
+    <style>
+        button {
+            height: 60px;
+            margin-bottom: 40px;
+        }
+    </style>
+</head>
+
+<body>
+    <div class="d-flex flex-column">
+        <div class="div" type="button" class="btn btn-lg btn-danger" data-toggle="popover" data-placement="bottom">
+            Click to toggle popover
+        </div>
+        <button type="button" class="btn btn-lg btn-danger" data-toggle="popover" data-content="일케일케 넣는데 구조를 어케 넣지" data-placement="bottom">
+            Click to toggle popover
+        </button>
+        <button type="button" class="btn btn-lg btn-danger" data-toggle="popover" title="팝오버 제목"
+        data-content="" id="a" data-placement="bottom">
+            Click to toggle popover
+        </button>
+        <button type="button" class="btn btn-lg btn-danger" data-toggle="popover" title="팝오버 제목"
+        data-content="일케일케 넣는데 구조를 어케 넣지" id="a" data-placement="bottom">
+            Click to toggle popover
+        </button>
+        <button type="button" class="btn btn-lg btn-danger" data-toggle="popover" title="팝오버 제목"
+        data-content="일케일케 넣는데 구조를 어케 넣지" id="a" data-placement="bottom">
+            Click to toggle popover
+        </button>
+        <button type="button" class="btn btn-lg btn-danger" data-toggle="popover" title="팝오버 제목"
+        data-content="일케일케 넣는데 구조를 어케 넣지" id="a" data-placement="bottom">
+            Click to toggle popover
+        </button>
+        <button type="button" class="btn btn-lg btn-danger" data-toggle="popover" title="팝오버 제목"
+        data-content="일케일케 넣는데 구조를 어케 넣지" id="a" data-placement="bottom">
+            Click to toggle popover
+        </button>
+    </div>
+
+
+    <script>
+        $(function () {
+            $('[data-toggle="popover"]').popover({
+                trigger:'click',
+                html:true,
+                template: '<div class="popover"><div class="arrow"></div><div class="popover-body new-popover-body"><div class="card-work-detail"><div class="conWrap-top"><div class="d-flex align-items-center justify-content-between"><div class="d-flex align-items-center work-info"><span class="tit">기본근무</span><span>8시간</span></div><div class="d-flex align-items-center work-time"><span class="work-type work-type-a">근무</span><span>AM 09:00 ~ PM 06:00</span></div></div><div class="d-flex align-items-center justify-content-between"><div class="d-flex align-items-center work-info"><span class="tit">연장근무</span><span>8시간</span></div><div class="d-flex align-items-center work-time"><span class="work-type work-type-c">외근</span><span>AM 09:00 ~ PM 06:00</span></div></div><div class="d-flex align-items-center justify-content-between"><div class="d-flex align-items-center work-info"><span class="tit"></span><span></span></div><div class="d-flex align-items-center work-time"><span class="work-type work-type-b">야근</span><span>AM 09:00 ~ PM 06:00</span></div></div></div><div class="conWrap-bottom"><div class="d-flex align-items-center justify-content-around"><span>IP</span><span>출근: 111.172.555</span><span>퇴근: 111.172.555</span></div></div></div></div></div>'
+            })
+        })
+    </script>
+</body>
+
+
+</html>

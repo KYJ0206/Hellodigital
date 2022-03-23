@@ -1,0 +1,9 @@
+[ {
+  "id" : "1a42f721-6e07-a9dc-b1b6-bd9e3b6ee13a",
+  "name" : "press_blog_field",
+  "label" : "프레스블로그",
+  "required" : false,
+  "locked" : false,
+  "type" : "blog",
+  "default" : 54775817801
+} ]

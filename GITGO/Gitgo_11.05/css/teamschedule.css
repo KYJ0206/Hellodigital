@@ -1,0 +1,216 @@
+.section-teamschedule .container { margin-bottom: 0; } 
+
+.section-teamschedule .team-command { height: 35px; } 
+
+.section-teamschedule .team-command .sub-menu { padding: 10px; } 
+.section-teamschedule .team-command .sub-menu span { display: block; width: 16px; height: 2px; border-radius: 1px; background-color: #7d7d7d; } 
+.section-teamschedule .team-command .sub-menu span + span { margin-top: 5px; } 
+
+
+
+.teamscheduleWrap { width: 100%; position: relative; border: 1px solid #cdcdcd; border-radius: 4px; } 
+.teamschedule-cal { padding-left: 12px; display: flex; } 
+
+.teamschedule-cal th,
+.teamschedule-cal td { width: 11.11%; } 
+.teamschedule-cal .table { margin-bottom: 0; } 
+.teamschedule-cal tr,
+.teamschedule-cal th,
+.teamschedule-cal td { padding: 0; border: 0; } 
+.teamschedule-cal th:first-child > div { border-left: 0 !important; } 
+/* .teamschedule-cal thead th:first-child > div { border-right: 1px solid #c8c8c8; } */
+/* 0805 수정 */
+
+/* .teamschedule-cal thead th div { height: 53px; border-width: 1px; border-style: solid; border-color: #cdcdcd; border-right-color: #e7e7e7; border-bottom-color: #c8c8c8; background-color: #eff4ee; border-top: 0; display: flex; justify-content: center; align-items: center; font-size: 14px; font-weight: bold; font-stretch: normal; font-style: normal; line-height: normal; letter-spacing: -0.4px; text-align: center; color: #666666; } */
+/* .teamschedule-cal thead th:first-child div { border-top-left-radius: 4px; border-right-color: #c8c8c8; } 
+.teamschedule-cal thead th:last-child div { border-top-right-radius: 4px; border-right-color: #cdcdcd; } */
+.teamschedule-cal thead th:nth-child(1) ~ th div { border-left: 0; } 
+
+.teamschedule-cal tbody .cell { height: 84px; display: flex; justify-content: center; align-items: center; flex-direction: column; } 
+
+.teamschedule-cal tbody th div.cell { /* background-color: #eff4ee; border-width: 1px; border-style: solid; border-color: #e7e7e7; border-top: 0; border-left-color: #cdcdcd; border-right-color: #c8c8c8; */ } 
+.teamschedule-cal tbody td div.cell { border: solid 1px #e7e7e7; border-top: 0; border-left: 0; } 
+.teamschedule-cal tbody td:last-child div.cell { border-right: 0; } 
+.teamschedule-cal .cell { padding: 5px; } 
+.teamschedule-cal tbody td { background-color: #fff; } 
+.teamschedule-cal tbody th h5 { font-size: 14px; font-weight: bold; font-stretch: normal; font-style: normal; line-height: normal; letter-spacing: -0.4px; text-align: center; color: #666666; margin-bottom: 7px; } 
+.teamschedule-cal tbody th span { font-size: 12px; font-weight: normal; font-stretch: normal; font-style: normal; line-height: normal; letter-spacing: -0.4px; color: #666666; } 
+.teamschedule-cal tbody td.graph { background-color: #f5f5f5; } 
+.teamschedule-cal tbody td.graph { font-size: 10px; font-weight: normal; font-stretch: normal; font-style: normal; line-height: normal; letter-spacing: -0.4px; text-align: right; color: #666666; } 
+.teamschedule-cal tbody td.graph .cell { padding: 0 15px; justify-content: center; } 
+.teamschedule-cal tbody td.graph em { color: #999; } 
+.teamschedule-cal tbody td.graph .progress { height: 4px; border-radius: 5px; background-color: #ffffff; margin-top: 5px; } 
+
+.teamschedule-cal tbody td.graph .progress .progress-bar { background-color: #2e7000; position: relative; overflow: visible; } 
+.teamschedule-cal tbody td.graph .progress .progress-bar::after { position: absolute; content: ''; right: -3px; top: 50%; transform: translateY(-50%); width: 6px; height: 6px; border-radius: 3px; border: solid 1px #ffffff; background-color: #2e7000; box-sizing: border-box; } 
+.teamschedule-cal tbody td.graph .graphCon { width: 100%; } 
+.teamschedule-cal tbody td.graph .con02 { margin-top: 5px; } 
+.teamschedule-cal tbody td.graph .graphCon .tit { text-align: left; overflow:hidden; text-overflow:ellipsis; -webkit-line-clamp: 2; -webkit-box-orient: vertical; display: -webkit-box; } 
+
+
+.teamschedule-cal tbody td .cell { justify-content: flex-start; } 
+.teamschedule-cal tbody .cell .schedule { position: relative; } 
+.teamschedule-cal tbody .cell .schedule i { display: block; width: 13px; height: 13px; margin: 0 auto; margin-bottom: 4px; } 
+.teamschedule-cal tbody .cell .schedule i::before { content: '!'; display: none; font-family: inherit; font-style: normal; color: #fff; align-items: center; font-size: 7px; padding: 1px 4.5px 0; width: 13px; height: 13px; border-radius: 50%; background-color: #d3694a; } 
+.teamschedule-cal tbody .cell .schedule.active i::before { display: flex; } 
+.teamschedule-cal tbody .cell .schedule > span { display: block; font-size: 12px; font-weight: 600; font-stretch: normal; font-style: normal; line-height: normal; letter-spacing: -0.4px; color: #696969; margin-bottom: 10px; text-align: center; overflow:hidden; text-overflow:ellipsis; -webkit-line-clamp: 2; -webkit-box-orient: vertical; display: -webkit-box; } 
+/* 0805 삭제 */
+/* .teamschedule-cal tbody .cell .schedule.active > span { color: #d3694a; } */
+/* .teamschedule-cal tbody .cell .schedule .work-type + .work-type { margin-right: 0; margin-left: 5px; } */
+
+
+
+.sub-sideWrap.active { display: block; } 
+.sub-sideWrap { display: none; width: 143px; height: 100%; background: #fff; } 
+.sub-sideWrap .sub-side-menu .sub-side-nav { height: 34px; border-bottom: solid 1px rgba(151, 151, 151, 0.4); display: flex; align-items: center; justify-content: flex-end; padding: 12px; box-sizing: border-box; } 
+.sub-sideWrap .sub-side-menu .sub-side-nav i { display: block; width: 10px; height: 10px; background: red; } 
+.sub-sideWrap .sub-side-menu .item a { font-size: 14px; font-weight: 500; font-stretch: normal; font-style: normal; line-height: normal; letter-spacing: -0.2px; text-align: center; color: rgba(155, 155, 155, 0.89); background-color: #d3d3d3; height: 40px; display: flex; justify-content: center; align-items: center; text-decoration: none; } 
+.sub-sideWrap .sub-side-menu li.active .item a { border-left: 3px solid #2e7000; font-size: 14px; font-weight: 600; font-stretch: normal; font-style: normal; line-height: normal; letter-spacing: -0.2px; text-align: center; color: rgba(0, 0, 0, 0.89); background: #fff; } 
+
+
+/* 상세 호버 */
+
+
+/* .card-work-detail { position: absolute; display: none; } */
+.schedule.hover .card-work-detail, 
+.schedule:hover .card-work-detail { display: block; left: 50%; top: 130%; transform: translateX(-50%); box-shadow: 0 2px 10px 0 rgb(0 0 0 / 28%); z-index: 1; width: auto; } 
+.card-work-detail .conBody { padding: 10px 16px; background-color: #fff; border: 1px solid #2e7000; border-radius: 4px; position: relative; width: auto; } 
+.card-work-detail .conBody > div + div { margin-top: 9px; } 
+.card-work-detail .conBody span { white-space: nowrap; } 
+.card-work-detail .conBody span:last-child { font-size: 12px; font-weight: 600; font-stretch: normal; font-style: normal; line-height: normal; letter-spacing: -0.4px; color: #696969; margin-left: 9px; } 
+.card-work-detail::after,
+.card-work-detail::before { content: ''; width: 14px; border: 10px solid transparent; border-bottom-color: #2e7000; position: absolute; top: -20px; left: 0; right: 0; margin: 0 auto; z-index: 2; } 
+.card-work-detail::after { top:-19px; border-bottom-color: #fff; } 
+/* .card-work-detail .table { margin-bottom: 9px; } */
+.card-work-detail .table td { padding: 3px 0; font-size: 10px; font-weight: 600; font-stretch: normal; font-style: normal; line-height: normal; letter-spacing: -0.33px; color: #696969; border-bottom: 0; vertical-align: baseline; } 
+.card-work-detail .table td:first-child { font-size: 10px; font-weight: 600; font-stretch: normal; font-style: normal; line-height: normal; letter-spacing: -0.33px; color: #c5c5c5; } 
+.card-work-detail .conWrap-bottom { border-top: 1px solid #979797; padding-top: 9px; } 
+.card-work-detail .conWrap-bottom span { font-size: 10px; font-weight: normal; font-stretch: normal; font-style: normal; line-height: normal; letter-spacing: -0.4px; color: #666666; } 
+
+
+/* 0803 수정 */
+.teamschedule-cal tbody .cell .schedule i::before { content: '!'; display: none; font-family: inherit; font-style: normal; color: #fff; justify-content: center; align-items: center; font-size: 7px; padding: 1px 4.5px 0; width: 13px; height: 13px; border-radius: 50%; background-color: #d3694a; } 
+
+
+
+/* 0804 수정 */
+
+/* 부서원 일정 상세 모달 */
+.newModal .modal-body.modal-schedule.case02 { padding: 20px; max-height:425px; overflow:auto; } 
+.newModal .modal-schedule.case02 .schedule-name { display: flex; align-items: center; margin-bottom: 10px; } 
+.newModal .modal-schedule.case02 .schedule-thumb .work-type { margin: 0 auto; } 
+.newModal .modal-schedule.case02 .schedule-name h5 { font-size: 14px; font-weight: bold; font-stretch: normal; font-style: normal; line-height: normal; letter-spacing: -0.4px; text-align: center; color: #666; margin: 0; } 
+.newModal .modal-schedule.case02 .schedule-name span { font-size: 12px; font-weight: normal; font-stretch: normal; font-style: normal; line-height: normal; letter-spacing: -0.4px; color: #666; margin-left: 10px; } 
+
+.newModal .modal-schedule.case02 .schedule-list { padding: 4px 0; border-top: solid 1px rgb(151 151 151 / 23%); } 
+.newModal .modal-schedule.case02 dl { display: table-row; /* align-items: center; justify-content: space-between; */
+ margin-bottom: 0; } 
+.newModal .modal-schedule.case02 dl dt,
+.newModal .modal-schedule.case02 dl dd { padding: 7px 4px; height: 26px; vertical-align: text-top; display: table-cell; } 
+.newModal .modal-schedule.case02 dl dt { /* display: flex; align-items: center; justify-content: center; */
+ text-align: center; width: 45px; margin: 0; margin-right: 10px; font-size: 10px; font-weight: normal; font-stretch: normal; font-style: normal; line-height: 1.5; letter-spacing: -0.4px; color: #666; } 
+.newModal .modal-schedule.case02 dl dd { /* display: flex; align-items: center; justify-content: flex-start; */
+ margin: 0; width: calc(100% - 45px); font-size: 10px; font-weight: normal; font-stretch: normal; font-style: normal; line-height: 1.5; letter-spacing: -0.4px; color: #666; } 
+.newModal .modal-schedule.case02 dl dd b { font-size: 10px; font-weight: 600; font-stretch: normal; font-style: normal; line-height: normal; letter-spacing: -0.33px; color: #696969; } 
+
+.newModal .modal-schedule.case02 .schedule-thumb b { font-size: 12px; font-weight: 600; font-stretch: normal; font-style: normal; line-height: normal; letter-spacing: -0.4px; color: #696969; } 
+.newModal .modal-schedule.case02 .schedule-list dl { align-items: flex-start; } 
+.newModal .modal-schedule.case02 .work-type { margin-top: -3px; } 
+.newModal .modal-schedule.case02 .schedule-list .work-type { padding: 6px 14px; width: 44px; white-space: nowrap; } 
+
+
+/* 0805 */
+.teamschedule-cal tbody .cell .schedule.active .time { color: #d3694a; } 
+.teamschedule-cal tbody .cell .schedule .date { display: none; margin-bottom: 0; font-size: 13px; font-weight: 600; font-stretch: normal; font-style: normal; line-height: 1; letter-spacing: normal; color: #747474; } 
+.teamschedule-cal tbody td.graph .progress .progress-bar.progress-bar02 { background-color: #879d77; } 
+.teamschedule-cal tbody td.graph .progress .progress-bar.progress-bar02::after { background-color: #879d77; } 
+
+.dropdown.newDropdown { display: none; } 
+.dropdown.newDropdown .btn { background-color: transparent; border: 0; font-size: 12px; font-weight: 600; font-stretch: normal; font-style: normal; line-height: 1.17; letter-spacing: -0.4px; text-align: right; color: #5d5d5d; } 
+
+.dropdown.newDropdown .dropdown-toggle::after { display: inline-block; margin-left: 0.255em; vertical-align: 0.255em; content: ""; border-top: 4px solid; border-right: 4px solid transparent; border-bottom: 0; border-left: 4px solid transparent; border-bottom-color: #9a9a9a; margin-bottom: -2px; } 
+
+
+.teamschedule-vac .accordion .card { border: solid 1px #eaeaea; border-radius: 4px; background-color: #f9f8f8; border: solid 1px #eaeaea; overflow: hidden; } 
+.teamschedule-vac .accordion .card[aria-expanded="true"] { border: solid 1px #2d6b00; } 
+
+.teamschedule-vac .accordion .card:hover { border: solid 1px #2d6b00; } 
+.teamschedule-vac .accordion .card + .card { margin-top: 8px; } 
+.teamschedule-vac .accordion .card-header { height: 66px; border-bottom: 0; background-color: #f9f8f8; } 
+.teamschedule-vac .accordion .card-header img { width: 43px; } 
+.teamschedule-vac .accordion .card-header h2 { font-size: 14px; font-weight: bold; font-stretch: normal; font-style: normal; line-height: normal; letter-spacing: -0.4px; text-align: center; color: #666; } 
+.teamschedule-vac .accordion .card-header .spot { margin-left: 10px; } 
+.teamschedule-vac .accordion .card-header .spot span { font-size: 12px; font-weight: normal; font-stretch: normal; font-style: normal; line-height: normal; letter-spacing: -0.4px; color: #666; margin-left: 20px; } 
+.teamschedule-vac .accordion .card-header .date { margin-left: 16px; } 
+.teamschedule-vac .accordion .card-header .date span { font-size: 12px; font-weight: 600; font-stretch: normal; font-style: normal; line-height: 1.17; letter-spacing: -0.4px; text-align: right; color: #acacac; } 
+.teamschedule-vac .accordion .card-header .date span.tit { color: #5d5d5d; margin-right: 26px; } 
+.teamschedule-vac .accordion .card-header .count div + div { border-left: solid 1px rgb(151 151 151 / 42%); height: 18px; } 
+.teamschedule-vac .accordion .card-header .count span { font-size: 12px; font-weight: 600; font-stretch: normal; font-style: normal; line-height: 1.17; letter-spacing: -0.4px; color: #acacac; } 
+.teamschedule-vac .accordion .card-header .count .tit { color: #5d5d5d; } 
+.teamschedule-vac .accordion .card-header .count .value { display: inline-block; width: 40px; text-align: right; } 
+
+
+.teamschedule-vac .accordion .card-body { background-color: #f9f8f8; padding: 0; } 
+
+.teamschedule-vac .accordion .row-head { height: 30px; background-color: rgb(243 242 242 / 43%); } 
+
+.teamschedule-vac .accordion .row-head div { font-size: 12px; font-weight: 600; font-stretch: normal; font-style: normal; line-height: 1.17; letter-spacing: -0.4px; text-align: right; color: #5d5d5d; } 
+
+.teamschedule-vac .accordion .row-body { height: 47px; } 
+.teamschedule-vac .accordion .row-body + .row-body { border-top: solid 1px rgb(151 151 151 / 31%); } 
+.teamschedule-vac .accordion .row-body div { font-size: 12px; font-weight: 600; font-stretch: normal; font-style: normal; line-height: 1.17; letter-spacing: -0.4px; color: #acacac; } 
+.container-schedule { padding: 0; } 
+
+
+/* 0811 */
+
+.sub-sideWrap .sub-side-menu .sub-side-nav i { display: block; padding: 10px; background: url(../images/sub-side-menu@2x.png) center/8px 11px no-repeat; margin-right: -7px; } 
+.teamschedule-cal .table { margin-bottom: 0; width: calc(100% + 2px); } 
+.teamscheduleWrap { width: 100%; position: relative; border: 1px solid #cdcdcd; border-radius: 4px; overflow: hidden; } 
+.teamschedule-cal thead th { border-width: 1px; border-style: solid; border-color: #cdcdcd; border-right-color: #e7e7e7; border-bottom-color: #c8c8c8 !important; background-color: #eff4ee; border-top: 0; } 
+.teamschedule-cal thead th div { height: 53px; display: flex; justify-content: center; align-items: center; font-size: 16px; font-weight: bold; font-stretch: normal; font-style: normal; line-height: normal; letter-spacing: -0.4px; text-align: center; color: #666666; } 
+.teamschedule-cal thead th:nth-child(1) { min-width: 72px; } 
+.teamschedule-cal thead th:nth-child(2) { min-width: 120px; } 
+.teamschedule-cal tbody th:first-child,
+.teamschedule-cal thead th:first-child { border-left: 0 !important; } 
+.teamschedule-cal tbody td:last-child,
+.teamschedule-cal thead th:last-child { border-right: 0 !important; } 
+.teamschedule-cal tbody tr:last-child th,
+.teamschedule-cal tbody tr:last-child td { border-bottom: 0 !important; } 
+.teamschedule-cal thead th div { height: 53px; display: flex; justify-content: center; align-items: center; font-size: 14px; font-weight: bold; font-stretch: normal; font-style: normal; line-height: normal; letter-spacing: -0.4px; text-align: center; color: #666666; } 
+.teamschedule-cal thead th:first-child { border-right: 1px solid #c8c8c8; } 
+.teamschedule-cal thead th:first-child > div { border-right: 0; } 
+
+.teamschedule-cal tbody td { background-color: #fff; border: solid 1px #e7e7e7; } 
+.teamschedule-cal tbody td div.cell { /* border: solid 1px #e7e7e7; */ border: initial; border-top: 0; border-left: 0; height: auto; } 
+.teamschedule-cal tbody td.graph { font-size: 12px; font-weight: normal; font-stretch: normal; font-style: normal; line-height: normal; letter-spacing: -0.4px; text-align: right; color: #666666; } 
+.teamschedule-cal tbody th div.cell { background-color: transparent; /* border-width: 1px; border-style: solid; border-color: #e7e7e7; border-top: 0; border-left-color: #cdcdcd; border-right-color: #c8c8c8; */ } 
+.teamschedule-cal tbody th[scope="row"] { background-color: #eff4ee; border-width: 1px; border-style: solid; border-color: #e7e7e7; border-top: 0; border-left-color: #cdcdcd; border-right-color: #c8c8c8; } 
+.teamschedule-cal tbody th h5 { font-size: 16px; font-weight: bold; font-stretch: normal; font-style: normal; line-height: normal; letter-spacing: -0.4px; text-align: center; color: #666666; margin-bottom: 7px; } 
+.teamschedule-cal tbody th span { font-size: 14px; font-weight: normal; font-stretch: normal; font-style: normal; line-height: normal; letter-spacing: -0.4px; color: #666666; } 
+.teamschedule-cal tbody .cell .schedule .work-type { display: flex; justify-content: center; align-items: center; width: 28px; height: 28px; color: #fff; font-size: 12px; font-weight: 600; font-stretch: normal; font-style: normal; line-height: 1; letter-spacing: -0.16px; text-align: center; color: #ffffff; border-radius: 4px; } 
+.teamschedule-cal tbody .cell .schedule .work-typeWrap { margin-left: auto; flex: 1 auto; flex-wrap: wrap; width: 131px; row-gap: 4px; column-gap: 4px; padding-bottom: 7px; } 
+.teamschedule-cal tbody .cell .schedule .work-type + .work-type { margin-right: 0; margin-left: 0px; } 
+.teamschedule-cal tbody .cell .schedule > span { display: block; font-size: 14px; font-weight: 600; font-stretch: normal; font-style: normal; line-height: normal; letter-spacing: -1.4px; color: #696969; margin-bottom: 10px; text-align: center; overflow: visible; text-overflow: ellipsis; -webkit-line-clamp: 2; -webkit-box-orient: vertical; display: -webkit-box; } 
+
+.dropdown.newDropdown .btn { background-color: transparent; border: 0; font-size: 14px; font-weight: 600; font-stretch: normal; font-style: normal; line-height: 1.17; letter-spacing: -0.4px; text-align: right; color: #5d5d5d; } 
+
+.sub-sideWrap .sub-side-menu { width: 143px; } 
+.container-schedule > .sub-sideWrap + .w-100 { width: calc(100% - 143px) !important; } 
+.sub-sideWrap.active { display: block; } 
+.sub-sideWrap { display: block; width: 143px; height: 100%; background: #fff; } 
+.sub-sideWrap .sub-side-menu .sub-side-nav { display: none; } 
+
+.team-command { justify-content: flex-end; } 
+
+/* 0819 */
+.minWidthWrap {
+    overflow: auto;
+}
+.teamschedule-vac {
+    min-width: 760px;
+}
+.team-command02,
+.teamschedule-cal {
+    min-width: 1080px;
+}

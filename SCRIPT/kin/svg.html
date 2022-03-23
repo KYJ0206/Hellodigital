@@ -1,0 +1,143 @@
+<html>
+
+<head>
+    <style>
+      body,
+html {
+  height: 100%;
+  font-size: 16px;
+  font-weight: normal;
+  font-family: "Roboto", sans-serif;
+  color: white;
+  background-color: #f0f0ee;
+  margin: 0px;
+  padding: 0;
+}
+
+h1 {
+  font-size: 32px;
+  color: white;
+  position: relative;
+  display: block;
+  top: 40%;
+  text-align: center;
+  text-transform: uppercase;
+}
+
+#pinContainer {
+  width: 100%;
+  height: 100vh;
+  overflow: hidden;
+  position: relative;
+}
+.panel {
+  height: 100%;
+  width: 100%;
+  position: absolute;
+}
+
+#pinMaster {
+  position: relative;
+}
+
+.one {
+  background-color: #1bb1a5;
+}
+.two {
+  background-color: #94c356;
+}
+.three {
+  background-color: #e3aa59;
+}
+.four {
+  background-color: #777;
+}
+
+.five {
+  background-color: #a63ba0;
+}
+.six {
+  background-color: #cf5b21;
+}
+    </style>
+</head>
+
+<body>
+    <div id="pinMaster">
+        <div id="pinContainer">
+            <section class="panel one">
+                <h1>Pin Panel A</h1>
+            </section>
+            <section class="panel two">
+                <h1>Pin Panel B</h1>
+            </section>
+            <section class="panel three">
+                <h1>Pin Panel C</h1>
+            </section>
+            <section class="panel four">
+                <h1>Pin Panel D</h1>
+            </section>
+            <section class="panel five">
+                <h1>Pin Panel E</h1>
+            </section>
+            <section class="panel six">
+                <h1>Pin Panel F</h1>
+            </section>
+        </div>
+
+    </div>
+    <script>
+       console.clear();
+var controller = new ScrollMagic.Controller();
+var sections = document.querySelectorAll("section");
+var tl = new TimelineMax();
+var offset = window.innerHeight;
+
+for (let i = 1; i < sections.length; i++) {
+  tl.from(sections[i], 1, { xPercent:100, ease: Linear.easeNone }, "+=1");
+}
+
+new ScrollMagic.Scene({
+  triggerElement: "#pinMaster",
+  triggerHook: "onLeave",
+  duration: "500%"
+})
+  .setPin("#pinMaster")
+  .setTween(tl)
+  .addIndicators({
+    colorTrigger: "white",
+    colorStart: "white",
+    colorEnd: "white",
+    indent: 40
+  })
+  .addTo(controller);
+
+$("section").each(function(i) {
+  let target1 = $(this).find("h1");
+  let split = new SplitText(target1, { type: "chars" });
+  var tl = new TimelineMax();
+  tl.staggerFrom(
+    split.chars,
+    0.5,
+    { opacity: 0, scale: 0.5, y: -100, ease: Bounce.easeOut },
+    0.05
+  );
+
+  new ScrollMagic.Scene({
+    triggerElement: "#pinMaster",
+    triggerHook: 0,
+    offset: i * offset
+  })
+    .setTween(tl)
+    .addTo(controller)
+    .addIndicators({
+      colorTrigger: "white",
+      colorStart: "white",
+      colorEnd: "white",
+      indent: 40
+    });
+});
+    </script>
+</body>
+
+</html>

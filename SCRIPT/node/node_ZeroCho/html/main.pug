@@ -1,0 +1,33 @@
+extends ./layout.pug
+block title
+  title About
+block content
+  body
+    form#start-screen
+      input#name-input(placeholder='영웅 이름을 입력하세요', autofocus)
+      button#start 시작
+    #screen
+      #hero-stat
+        span#hero-name
+        span#hero-level
+        span#hero-hp
+        span#hero-xp
+        span#hero-att
+      form#game-menu(style='display:none;')
+        #menu-1 1.모험
+        #menu-2 2.휴식
+        #menu-3 3.종료
+        input#menu-input(name='menuInput')
+        button#menu-button 입력
+      form#battle-menu(style='display:none;')
+        #battle-1 1.공격
+        #battle-2 2.회복
+        #battle-3 3.종료
+        input#battle-input(name='battleInput')
+        button#battle-button 입력
+      #message
+      #monster-stat
+        span#monster-name
+        span#monster-hp
+        span#monster-att
+    script(src='turn.js')

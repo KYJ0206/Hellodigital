@@ -1,0 +1,12 @@
+{
+  "global" : true,
+  "smart_type" : "NOT_SMART",
+  "host_template_types" : [ "PAGE", "BLOG_POST", "BLOG_LISTING" ],
+  "module_id" : 57410287125,
+  "js_assets" : [ {
+    "autoload" : true,
+    "path" : "../../../codeFiles/jsFile/bxSlider.js",
+    "name" : "bxSlider.js"
+  } ],
+  "is_available_for_new_content" : true
+}

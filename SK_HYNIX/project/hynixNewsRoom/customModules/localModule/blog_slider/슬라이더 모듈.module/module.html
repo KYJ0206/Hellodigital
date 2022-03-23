@@ -1,0 +1,62 @@
+<div class='imageContainer'>
+	{% for item in module.image_field %}
+		<img class='sliderImage slider{{loop.index}}' value='{{item.src}}' src='{{item.src}}' alt='{{item.alt}}'>
+	{% endfor %}
+	<button class='changeCode'>
+		코드변환
+	</button>
+</div>
+
+<div style='width: 100%; max-width: 945px; margin: 0 auto;'>
+  <code id='code' class='codeContainer'></code>	
+</div>
+
+
+<script type='text/babel'>
+
+
+$(document).ready(function(){ 
+	
+	function copyToClipboard(val) {
+		const t = document.createElement("textarea");
+		document.body.appendChild(t);
+		t.value = val;
+		t.select();
+		document.execCommand('copy');
+		document.body.removeChild(t);
+		alert('슬라이더 태그 복사되었습니다.')
+	}
+	
+	// 코드 변환 및 복사
+	$('.changeCode').click(() => {
+		const imageTagLength = $('.imageContainer').children('img').length
+		const arr = []
+		for(let i = 1; i <= imageTagLength; i++) {
+			const url = $(`.slider${i}`).attr('src')
+			arr.push(url)
+		}
+
+		let item = '<div class="bxslider">'
+		let item2 = '</div>'
+		let item3 = '';
+
+		arr.forEach(el => item3 += `<img src=${el} alt=${el}>`)
+
+		let totalItem = item + item3 + item2
+
+		$('code.codeContainer').text(totalItem)
+		
+		copyToClipboard(totalItem)
+
+	})
+	
+	const currentLocation = location.href
+	if(currentLocation.includes('https://news.skhynix.co.kr/')) {
+		$('.imageContainer').css('display', 'none')
+	}
+	
+	$('.bx-wrapper').css('max-width', '100% !important')
+	$('.bx-wrapper').css('width', '600px')
+	$('.bx-wrapper').css('margin', '50px auto')
+});
+</script>

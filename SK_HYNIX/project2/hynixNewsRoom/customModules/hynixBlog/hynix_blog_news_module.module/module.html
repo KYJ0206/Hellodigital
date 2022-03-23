@@ -1,0 +1,236 @@
+{% set url = request %}
+
+<!-- NEWS MODULE -->
+{% if module.related_article_yn %}
+	<section class="container media_module news_module">
+		<div class="ml_inner ml_render_area">
+			<h3>관련기사</h3>
+			<div class="conWrap"></div>
+		</div>
+	</section>
+
+	<section class="container media_module news_module new_module2">
+	</section>
+
+
+<p class='blogIdsList' style='display: none;'>
+	{{content.widgets.module_1630644983029128.body.text_field}}
+</p>
+	
+
+{% endif %}
+
+<script type='text/babel'> 
+	let OFFSET = 0;
+	const ORIGIN_LIST = [];
+	const RENDER_LIST = [];
+	
+// 	const renderTags = (arr) => {
+//     let item = '';
+// 		if(arr === null || arr === undefined || arr.length === 0) {
+// 			return ``
+// 		} else {
+// 			const newArr = arr.map(el => {
+// 				return `<span class="name"><a>${el}</a></span>`
+// 			})
+//       console.log(newArr,'NEW')
+// 			newArr.forEach(el => item += el)
+//       console.log('forEach',newArr)
+// 		}
+//     console.log(item,'IT23EM');
+//     return item
+// 	}
+	
+	const importHtml = () => {
+		const currentUrl = location.href
+		const writePage = currentUrl.includes('https://news.skhynix.co.kr/');
+    console.log(writePage,'writePagewritePagewritePage');
+		const selectHtml = `
+			<div class="ml_inner">
+				<h3>
+					관련기사 블로그 선택
+				</h3>
+				<div class="conWrap">
+					<div class="conItem">
+						<div class="ml_con_info">
+							<div class="info">
+								<select class="date">
+                  <option value='54775817801'>프레스센터</option>
+									<option value='54615482386'>기술</option>
+									<option value='54780923926'>사람&문화</option>
+									<option value='54784757872'>지속가능경영</option>
+                  <option value='54935499546'>미디어라이브러리</option>
+								</select>
+								<span class="name">
+									<input class='searchArticleName'>
+									<button class='searchArticle'>검색</button>
+								</span>
+							</div>
+						</div>
+						<div class="newsCon newsCon2"></div>
+					</div>
+				</div>
+			</div>
+		`
+		if(!writePage) {
+			$('.container.media_module.news_module.new_module2').html(selectHtml)
+		}
+	}
+  
+  const renderBaBo = (arr) => {
+    let item = '';
+    if(arr === null || arr === undefined || arr.length === 0) {
+      return ``
+    }
+    if (arr.length >= 1) {
+      const newArr = arr.map(el => {
+        return `<a>#${el}</a>`
+      })
+      for(let i =0; i < newArr.length; i++){
+        console.log(newArr[i],'for')
+        item += newArr[i];
+      }
+      console.log(item,'담긴 배열 리스트');
+      return item
+    }
+    
+  }
+	
+	const renderNews = (renderArr) => {
+    console.log(renderArr,'2');
+		if(renderArr === null || renderArr === undefined || renderArr.length === 0) {
+			return ``
+		} else {
+			let item = '';
+			const arr = renderArr.map(el => {
+				const { url, title, tags, content, id, date } = el
+				return `
+        <div class="conItem">
+					<div class="ml_con_info">
+						<div class="info">
+							<span class="date">${date}</span>
+              <span class="name">${renderBaBo(tags)}</span>
+						</div>
+					</div>
+          <a href='${url}' style='text-decoration: none;'>
+						<div class="newsCon">
+							<h2>${title}</h2>
+						</div>
+          </a>
+				</div>
+        `
+			})
+			arr.forEach(el => item += el)
+			return item
+		}
+	}
+	
+// 	const selectBlog = () => {
+// 		$('.blogList').click(e => {
+// 			console.log('~~')
+// 			const id = $(e.target).data().id
+// 			console.log(id)
+// // 			$('.hs_cos_wrapper.hs_cos_wrapper_widget.hs_cos_wrapper_type_inline_text').html(id)
+// 			const renderList = ORIGIN_LIST.filter(el => el.id === id)
+// 			RENDER_LIST.push(...renderList)
+// 			$('.ml_inner.ml_render_area .conWrap').html(renderNews(RENDER_LIST))
+// 		})
+// 	}
+	
+	const getList = (arr) => {
+		if(arr.length === 0 || arr === null || arr === undefined) {
+			return ``
+		} else {
+			let item = '';
+			const list = arr.map((el,index) => {
+				const {date, title, id} = el;
+				return `<div class='blogListContainer' style='display: flex; align-items: center; justify-content:space-between; margin-bottom: 5px;'><p style='cursor: pointer;' class='blogList' data-id='${id}'>${date} ${title}</p><input value=${id} style='opacity:0;' class='blogId'> <button class='copyButton'>클립보드 복사</button></div>`
+			})
+			list.forEach(el => item += el)
+			return item;
+		}
+	}
+	
+	const searchArticle = async (blogId, searchText) => {
+		try {
+			const sendObject = {
+				id: blogId,
+				searchText: searchText,
+				offset: OFFSET
+			}
+			const res = await fetch(`https://www.hynixapi.com/blog/relative`, {
+				method: 'POST',
+				headers: {
+					'Content-Type': 'application/json;charset=utf-8'
+				},
+				body: JSON.stringify(sendObject)
+			})
+			const data = await res.json()
+			if(data.status === 200) {
+        console.log(data,'DATA')
+				const list = data.relationWord;
+			  ORIGIN_LIST.push(...list)
+				$('.newsCon.newsCon2').html(getList(list))
+				
+				$('.copyButton').click((e) => {
+					const blogId = $(e.target).parents('div.blogListContainer').children('input.blogId')
+					const blogName = $(e.target).parents('div.blogListContainer').children('p.blogList').text()
+					const id = $(e.target).parents('div.blogListContainer').children('input.blogId').attr('value')
+					$(blogId).select()
+					document.execCommand("copy")
+					alert(`${blogName} 게시물의 ID : ${id}가 복사되었습니다.`)
+				})
+			} 
+			if(data.status === 400) {
+				alert(data.msg)
+			}
+		} catch(e) {
+			console.log(e)
+		}
+	}
+	
+	const articleList = async ()=> {
+		try {
+			const blogIdText = $('.blogIdsList').text().trim()
+			const blogId = blogIdText.split(',')
+			const blogIdsArr = blogId.map(el => parseInt(el.replace(/[^0-9]/g, '')))
+
+			const sendObject = {
+				blogList : blogIdsArr
+			}
+			if(blogIdsArr !== null || blogIdsArr !== undefined || blogIdsArr.length !== 0) {
+				const res = await fetch(`https://www.hynixapi.com/blog/detail`, {
+					method: 'POST',
+					headers: {
+						'Content-Type': 'application/json;charset=utf-8'
+					},
+					body: JSON.stringify(sendObject)
+				})
+				const data = await res.json(res)
+// 				RENDER_LIST.push(...renderList)
+  			$('.ml_inner.ml_render_area .conWrap').html(renderNews(data.blog))
+			}
+		} catch(e) {
+			console.log(e)
+		}
+	}
+	
+	const getData = () => {
+		console.log('^_^')
+		$('.searchArticle').click(() => {
+			const blogId = $("select.date option:selected").val();
+			const searchText = $('.searchArticleName').val()
+      searchArticle(blogId, searchText)
+		})
+	}
+	
+	
+	
+	const initData = () => {
+		importHtml()
+		getData()
+		articleList()
+	}
+	
+	window.onload = initData()
+</script>

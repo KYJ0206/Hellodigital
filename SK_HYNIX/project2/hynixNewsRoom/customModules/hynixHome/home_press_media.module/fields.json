@@ -1,0 +1,17 @@
+[ {
+  "id" : "37714919-1fa7-1460-7f8a-efa3653d210b",
+  "name" : "press_blog",
+  "label" : "Blog",
+  "required" : false,
+  "locked" : false,
+  "type" : "blog",
+  "default" : 54775817801
+}, {
+  "id" : "953794b4-d0a0-3008-3e4b-a321c4f63b40",
+  "name" : "media_library",
+  "label" : "Blog copy",
+  "required" : false,
+  "locked" : false,
+  "type" : "blog",
+  "default" : 54935499546
+} ]

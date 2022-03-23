@@ -1,0 +1,1 @@
+const gameScreen = new GameScreen();

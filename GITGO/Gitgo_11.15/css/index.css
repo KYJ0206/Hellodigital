@@ -1,0 +1,154 @@
+.wrap { background: #f9f9f9; height: 100vh; } 
+.title_large span { font-size: 14px; font-weight: bold; font-stretch: normal; font-style: normal; line-height: normal; letter-spacing: -0.4px; color: #414141; } 
+.user_info .choose_num { margin-top: 3px; } 
+.choice_info .btns .button { text-decoration: none; height: 30px; line-height: 30px; min-width: unset; padding-right: 12px; } 
+.button i { height: 30px; } 
+.choice_info { height: 78px; } 
+.search_result .text_small { color: #1f4b00; margin-bottom: 0; } 
+.list_inner { height: auto; } 
+.list_inner .list_inner_btns { padding-bottom: 20px; } 
+.flex_list .list_inner_box .profile_txt p { margin-bottom: 0; } 
+.flex_list .list_inner .list_inner_btns { padding-bottom: 0; } 
+
+.profile_txt .name { margin-bottom: -3px; } 
+.profile_txt .belong { margin-bottom: -7px; } 
+.profile_txt .email { margin-bottom: -2px; } 
+.profile_txt .phone { margin-bottom: 0; } 
+
+/* @media screen and (max-width:768px){
+ .list_inner.main_list_wrap { margin: 0; width: calc(100vw - 40px); position: absolute; left: 20px; } 
+ .gnb-list-wrap.main-leaf { height: 120px; } 
+ .choice_info .btns .button { padding-right: 0; } 
+ .newModal { margin-left: 20px; margin-right: 20px; } 
+ .newModal .popup_contents { padding: 0 14px; } 
+ .newModal .popup_contents .list_area { margin: 0; padding: 0; padding-top: 18px; max-height: unset; height: 100%; overflow-y: visible; } 
+ .profile_txt .name,
+ .profile_txt .belong,
+ .profile_txt .belong .belong_team,
+ .profile_txt .belong .belong_position { display: inline; } 
+ .profile_txt .belong { margin-left: 15px; } 
+ }
+*/
+
+
+
+
+
+/* 0801 */
+
+
+/* 조직도 이미지류 해상도 수정 */
+.modal-header button.popup_close img { width: 24px; height: 24px; border-radius: 4px; background-color: #d35230; } 
+.inputCheck input[type="checkbox"] + label:after { content: ''; display: inline-block; width: 17px; height: 17px; position: absolute; top: 0; left: 0; /*background: url(../../images/i_gnb_back@2x.png) center/contain no-repeat; */}
+/*.inputCheck input[type="checkbox"]:checked + label:after { background: url(../../images/ui-select-ui-select-gitgo@2x.png) center/contain no-repeat; } */
+/*.button_card { background: url(../../images/btn_card@2x.png) center/contain no-repeat; } 
+.button_card.on { background: url(../../images/btn_card_on@2x.png) center/contain no-repeat; } 
+.button_list { background: url(../../images/btn_list@2x.png) center/contain no-repeat; } 
+.button_list.on { background: url(../../images/btn_list_on@2x.png) center/contain no-repeat; } */
+
+.jstree-leaf .jstree-icon { background-image: url(../images/i_gnb_dis.svg) !important; } 
+
+
+
+@media screen and (max-width:768px){
+ .list_inner.main_list_wrap { margin: 0; width: calc(100vw - 40px); position: absolute; left: 20px; } 
+ .gnb-list-wrap.main-leaf { height: 120px; } 
+ .choice_info .btns .button { padding-right: 0; padding-left: 30px; width: 0; } 
+ .newModal { margin-left: 20px; margin-right: 20px; } 
+ .newModal .popup_contents { padding: 0 14px; } 
+ .newModal .popup_contents .list_area { margin: 0; padding: 0; padding-top: 18px; max-height: unset; height: 100%; overflow-y: visible; } 
+ .profile_txt .name,
+ .profile_txt .belong,
+ .profile_txt .belong .belong_team,
+ .profile_txt .belong .belong_position { display: inline; } 
+ .profile_txt .belong { margin-left: 15px; } 
+ .button i { width: 30px; } 
+
+ 
+
+ /* 팝업 리스트 수정 (2줄로) */
+ .popup_contents .list_inner { flex-basis: 100%; height: 74px; margin: 6px 0 0 0; } 
+ .popup_contents .list_inner_box { padding: 0 20px; align-items: flex-start; height: 74px; display: flex; } 
+ .popup_contents .list_inner_box .inputCheck { top: 19px; left: 21px; } 
+ .popup_contents .list_inner_box .profile_img { width: 31px; height: 31px; min-width: 31px; margin-left: 34px; margin-top: 11px; } 
+ .popup_contents .list_inner_box .profile_txt { margin-top: 0; margin-left: 10px; width: 85%; display: block; } 
+ .profile_txt .name { margin-bottom: -3px; padding: 0px; display: block !important; margin-top: 16px; font-size: 14px; } 
+ .profile_txt .belong { margin-left: 0; } 
+}
+
+
+/* 0802 수정 */
+.flex_list .list_inner_box .profile_txt p { margin-bottom: 0; display: flex; justify-content: center; align-items: center; } 
+.profile_txt .email { margin-bottom: 2px; } 
+.phoneWrap { height: 48px; display: flex; flex-direction: column; justify-content: center; align-items: center; } 
+
+@media screen and (max-width: 768px){
+ .profile_txt .name { margin-bottom: -3px; padding: 0px; display: inline-block !important; margin-top: 4px; font-size: 14px; } 
+ .gnb-list-wrap.main-leaf { height: 123px; } 
+ .profile_txt .belong { display: inline-block; margin-bottom: -2px; margin-left: 14px; } 
+ .profile_txt .email { margin-bottom: -3px; margin-top: -7px; font-size: 14px; } 
+ .phoneWrap { height: 40px; align-items: flex-start; } 
+ .profile_txt .phone { min-height: 16px; line-height: 1.4; } 
+ .button_popUp .confirm { display: flex; } 
+ }
+
+/* 0803 수정 */
+
+@media screen and (max-width: 768px){
+ .profile_txt .name { margin-bottom: -3px !important; padding: 0px !important; display: inline-block !important; margin-top: -2px !important; font-size: 14px !important; } 
+ .profile_txt .belong { display: block; margin-bottom: -2px !important; margin-left: 0 !important; margin-top: -8px !important; } 
+ .gnb-list-wrap.main-leaf { height: 148px; } 
+ .profile_txt .email { margin-bottom: -3px; margin-top: 0px !important; font-size: 14px !important; justify-content: flex-start !important; } 
+ .profile_txt .phone { min-height: 16px !important; line-height: 2 !important; justify-content: flex-start !important; } 
+
+ .flex_list .list_inner_box .profile_txt p { margin-bottom: -2px !important; } 
+
+
+}
+/* 0804 수정 */
+
+.newModal .popup_contents { border-radius: 4px; } 
+.newModal .popup_contents .list_area { max-height: initial; } 
+@media screen and (max-width: 768px){
+ .popup_contents .list_inner_box .profile_txt { margin-top: 0; margin-left: 10px; width: 85%; display: block; align-self: center; } 
+ .flex_list .list_inner_box .profile_txt p { justify-content: flex-start; } 
+ }
+
+
+/* 0805 수정 */
+@media screen and (max-width: 768px){
+ .profile_txt .phone { min-height: 16px !important; line-height: 2 !important; justify-content: flex-start !important; overflow: visible; } 
+ }
+
+/* 0810 수정 */
+@media screen and (max-width: 768px){
+ .popup_contents .list_inner_box { padding: 0 20px; height: 74px; display: flex; align-items: center; } 
+ .popup_contents .list_inner_box .inputCheck { top: initial; left: initial; position: relative; } 
+ .popup_contents .list_inner_box .profile_img { width: 42px; height: 42px; min-width: 31px; margin-left: 12px; margin-top: 0; margin-right: 12px; } 
+ .profile_txt .belong .belong_team { display: inline-block; max-width: inherit; white-space: nowrap; overflow-x: hidden; text-overflow: ellipsis; min-width: 5ch; font-size: 12px; } 
+ }
+
+
+/* 0817 */
+.wrap { background: #f9f9f9; height: 100vh; overflow: hidden; padding-top: 64px; position: relative; } 
+.organization_top { position: absolute; top: 0; left: 0; width: 100%; padding-right: 110px; } 
+.org_contents { height: 100%; overflow: auto; position: relative; } 
+.list_control { position: absolute; top: 15px; right: 20px; z-index: 1; } 
+@media screen and (max-width:768px){
+ .wrap { padding-top: 88px; } 
+ .organization_top { height: 88px; padding-right: 20px; } 
+ }
+
+
+ /* 0819 */
+ @media screen and (max-width:425px){
+ 	.list_inner_box .profile_img img{width:120%;}
+ }
+ #jstree_main {
+     min-width: 840px;
+ }
+ @media screen and (max-width:768px){
+    #jstree_main {
+        min-width: auto;
+    }   
+ }

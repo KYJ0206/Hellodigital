@@ -1,0 +1,35 @@
+<!-- WRITER MODULE -->
+{% if module.show_module == 'yes' %}
+<section class="container writer_module">
+	<div class="ml_inner">
+		<div class="left-con">
+			<div class="sk-cir-img" style="background-image: url('{{content.blog_post_author.avatar}}')"></div>
+			<div class="titWrap">
+				<span>{{content.blog_post_author.bio}}</span>
+				<h2>{{content.blog_post_author.name}}</h2>
+			</div>
+		</div>
+		<div class="right-con">
+			<a style='cursor: pointer' id='viewAuthor' class="viewAll" data-text="{{content.blog_post_author.name}}" data-author="{{content.blog_post_author.slug}}">작성글 모두보기</a>
+		</div>
+	</div>
+</section>
+{% endif %}
+
+
+<!-- <script type='text/babel'>
+
+
+const path = location.pathname;
+
+const auth = $('#viewAuthor').data().author
+const text = $('#viewAuthor').data().text
+
+
+$('#viewAuthor').click(() => {
+	console.log('asdfdf')
+	location.href = `/post/author/${auth}?type=author&text=${text}`
+})
+
+
+</script> -->

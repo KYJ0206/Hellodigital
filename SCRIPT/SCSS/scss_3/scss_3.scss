@@ -1,0 +1,312 @@
+@import 'mixin';
+
+// color
+$white: #fff;
+$black: #000;
+$red: rgb(255, 38, 0);
+$yello: rgb(255, 217, 0);
+$navy: rgb(0, 0, 77);
+$gray: #777;
+
+
+
+// reset
+html,
+body,
+div,
+span,
+applet,
+object,
+iframe,
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+p,
+blockquote,
+pre,
+a,
+abbr,
+acronym,
+address,
+big,
+cite,
+code,
+del,
+dfn,
+em,
+img,
+ins,
+kbd,
+q,
+s,
+samp,
+small,
+strike,
+strong,
+sub,
+sup,
+tt,
+var,
+b,
+u,
+i,
+center,
+dl,
+dt,
+dd,
+ol,
+ul,
+li,
+fieldset,
+form,
+label,
+legend,
+table,
+caption,
+tbody,
+tfoot,
+thead,
+tr,
+th,
+td,
+article,
+aside,
+canvas,
+details,
+embed,
+figure,
+figcaption,
+footer,
+header,
+hgroup,
+menu,
+nav,
+output,
+ruby,
+section,
+summary,
+time,
+mark,
+audio,
+video {
+    @include reset;
+}
+
+/* HTML5 display-role reset for older browsers */
+article,
+aside,
+details,
+figcaption,
+figure,
+footer,
+header,
+hgroup,
+menu,
+nav,
+section {
+    @include block;
+}
+
+ol,
+ul,
+li,
+dl,
+dt,
+dd {
+    @include list;
+}
+
+li {
+    flex: 1;
+    display: block;
+    text-align: center;
+}
+
+body {
+    line-height: 1;
+}
+
+blockquote,
+q {
+    quotes: none;
+}
+
+blockquote:before,
+blockquote:after,
+q:before,
+q:after {
+    @include after-before;
+}
+
+input:focus {
+    @include focus;
+}
+
+a {
+    @include a;
+}
+
+// style - default
+.active {
+    color: $black;
+    background-color: $yello;
+    font-weight: bold;
+}
+
+html {
+    font-size: 10px;
+
+    // 네비게이션
+    nav {
+        position: relative;
+        height: 100%;
+
+        ul {
+            display: flex;
+            flex-wrap: wrap;
+
+            div {
+                flex: 1;
+                border-left: 1px solid $black;
+                border-bottom: 1px solid $black;
+
+                &:last-child li {
+                    border-right: 1px solid #fff;
+                }
+
+                li {
+                    background: #0c0c0c;
+                    color: $white;
+                    font-size: 2rem;
+                    height: 50px;
+                    line-height: 50px;
+                    transition: .2s;
+                    box-shadow: 0px 2px 3px $gray;
+                    cursor: pointer;
+                    border-left: 1px solid #fff;
+                    border-bottom: 1px solid #fff;
+                    border-top: 1px solid #fff;
+
+                    &:hover {
+                        font-weight: bold;
+                        color: $black;
+                        background-color: $yello;
+                    }
+                }
+
+                dl {
+                    height: auto;
+                    display: none;
+
+                    dd {
+                        background: #8b8b8b;
+                        color: $white;
+                        cursor: pointer;
+                        height: 40px;
+                        line-height: 40px;
+                        text-align: center;
+                        font-size: 1.4rem;
+                        transition: .2s;
+
+                        &:hover {
+                            font-weight: bold;
+                            color: $black;
+                            background-color: $yello;
+                        }
+                    }
+                }
+            }
+
+        }
+    }
+
+    // 컨텐츠
+    .contents {
+        width: 100%;
+        height: auto;
+        display: flex;
+
+        aside {
+            flex: 1.5;
+            padding: 15px;
+            background: #ccc;
+
+            figure {
+                margin: 0 auto;
+
+                img {
+                    margin: 0 auto;
+                    display: block;
+                    width: 100%;
+                    height: 100%;
+                    max-width: 200px;
+                    max-height: 150px;
+                    background: #ccc;
+                    border: 1px solid $black;
+                    border-radius: 4px;
+                }
+            }
+            figcaption{
+                padding: 10px;
+                text-align: center;
+                p{
+                    font-size: 1.4rem;
+                    font-weight: 800;
+                }
+                h3{
+                    font-size: 1.2rem;
+                    padding-top: 5px;
+                }
+                
+            }
+        }
+
+        section {
+            display: grid;
+            flex: 8.5;
+            padding: 15px;
+            figcaption{
+                font-size: 2rem;
+                text-align: center;
+                line-height: 15;
+            }
+            figure {
+                margin: 0 auto;
+                &:nth-child(2){
+                    grid-column: 2;
+                }
+                &:nth-child(3){
+                    grid-column: 1;
+                }
+
+                img {
+                    display: block;
+                    width: 100%;
+                    height: auto;
+                    max-width: 500px;
+                    background: #ccc;
+                    border: 1px solid $black;
+                    border-radius: 4px;
+                }
+            }
+        }
+    }
+
+    footer{
+        position: relative;
+        background: #0c0c0c;
+        height: 300px;
+        border: 1px solid #fff;
+        box-shadow: 0px -3px 6px #777;
+        z-index: 999;
+    }
+}
+
+@media screen and (max-width : 602px) {
+    nav div {
+        min-width: 200px;
+    }
+}

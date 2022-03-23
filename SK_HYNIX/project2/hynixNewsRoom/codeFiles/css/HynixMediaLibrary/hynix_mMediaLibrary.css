@@ -1,0 +1,148 @@
+/* @import url(../blog/blog_m.css);
+@import url(../module/module_m.css); */
+{% include "/hynixNewsRoom/codeFiles/css/blog/hynix_mblogDetail.css" %}
+
+
+/* IE */
+
+
+@media  all and (-ms-high-contrast: none) and (max-width:768px),
+  (-ms-high-contrast: active) and (max-width:768px) {
+    .view-img-thumb { flex-wrap: wrap; } 
+    .view-img-thumb li { position: relative; width: 32%; } 
+
+    .media-instruction .inner2 { position: relative; } 
+    .media-instruction .list-head-titWrap { padding-top: 48px; height: 297px; box-sizing: border-box; } 
+    .media-instruction .breadcrumb { position: absolute; left: 24px; bottom: 50px; top: unset; right: unset; } 
+    .media-instruction .list-head-bottom { justify-content: flex-end; } 
+    .media-instruction .breadcrumb a { margin-left: 13px; } 
+    .media-instruction .breadcrumb a:first-child { margin-left: 0; } 
+    .media-instruction .list-head-titWrap h1 { text-align: right; margin-bottom: 6px; } 
+    .media-instruction .breadcrumb span { font-size: 12px; } 
+    .media-instruction .breadcrumb span::before { width: 2px; height: 2px; top: 7px; left: -11px; } 
+    section.search-full.media-list-search { margin-top:5px; margin-bottom: 5px; } 
+    section.search-full.media-list-search .flexWrap { justify-content: flex-start; } 
+    section.search-full.media-list-search .flexWrap .radioWrap label:first-child { margin-left: 0; } 
+    section.search-full.media-list-search .flexWrap .radioWrap { margin-bottom: 25px; } 
+    section.search-full.media-list-search .input-searchWrap { max-width: unset; } 
+    section.search-full .input-searchWrap input { border-radius: 14px !important; } 
+    section.search-full.media-list-search .tagWrap2 { flex-wrap: wrap; } 
+    section.search-full.media-list-search .tagWrap2 { margin-left: 7px; } 
+/*     .media-category .list-conWrap-top .categoryWrap .d-mobile { display: block; }  */
+    .media-category .list-conWrap-top .categoryWrap .d-pc { display: none !important; } 
+    .media-category .orderWrap.active span.orderItem { display: block !important; text-align: right; margin-bottom: 10px; } 
+    /* 0930 EBOKE UPDATE START */
+    .media-list-contents .listItem {
+      width: 100%;
+      margin-bottom: 0;
+      padding-bottom: 32px;
+      margin-right:0 !important;
+    }
+    /* 0930 EBOKE UPDATE END */
+    .media-list-contents.media_module .card-more {
+      margin-top: 70px;
+    }
+}
+
+@media screen and (max-width: 1440px){
+  .media-instruction {
+     margin-top: 0px!important;
+  }
+}
+@media  all and (-ms-high-contrast: none) and (max-width:1024px),
+  (-ms-high-contrast: active) and (max-width:1024px) {
+    section.search-full.media-list-search .flexWrap { margin-right: unset; max-width: unset; justify-content: flex-end; margin-bottom: 0px; flex-wrap: wrap; } 
+    section.search-full.media-list-search .flexWrap .radioWrap { position: static; margin-right: 20px; } 
+/*     section.search-full.media-list-search .input-searchWrap { margin: 0; }  */
+    section.search-full.media-list-search .tagWrap2 { margin-left: auto;padding: 0; flex-wrap: wrap; } 
+}
+
+
+
+@media  all and (-ms-high-contrast: none) and (max-width:1023px),
+  (-ms-high-contrast: active) and (max-width:1023px) {
+    .media-instruction {
+      margin-top: 0;
+    }
+
+    .media-list-contents .listItem:nth-child(2n) {
+      margin-right:0;
+    }
+}
+
+
+@media screen and (max-width:768px){
+ .view-img-thumb { flex-wrap: wrap; } 
+ .view-img-thumb li { position: relative; width: 32%; } 
+
+ .media-instruction .inner2 { position: relative; } 
+ .media-instruction .list-head-titWrap { padding-top: 48px; height: 297px; box-sizing: border-box; } 
+ .media-instruction .breadcrumb { position: absolute; left: 24px; bottom: 50px; top: unset; right: unset; } 
+ .media-instruction .list-head-bottom { justify-content: flex-end; } 
+ .media-instruction .breadcrumb a { margin-left: 13px; } 
+ .media-instruction .breadcrumb a:first-child { margin-left: 0; } 
+ .media-instruction .list-head-titWrap h1 { text-align: right; margin-bottom: 6px; } 
+ .media-instruction .breadcrumb span { font-size: 12px; } 
+ .media-instruction .breadcrumb span::before { width: 2px; height: 2px; top: 7px; left: -11px; } 
+ }
+
+
+
+/* 0912 UPDATE */
+@media screen and (max-width:1024px) { 
+ section.search-full.media-list-search .flexWrap { margin-right: unset; max-width: unset; justify-content: flex-end; margin-bottom: 18px; flex-wrap: wrap; } 
+ section.search-full.media-list-search .flexWrap .radioWrap { position: static; margin-right: 20px; } 
+/*  section.search-full.media-list-search .input-searchWrap { margin: 0; }  */
+ section.search-full.media-list-search .tagWrap2 { margin-left: auto; padding: 0; flex-wrap: wrap; } 
+ }
+
+@media screen and (max-width:768px) { section.search-full.media-list-search { margin-top:5px; margin-bottom: 5px; } 
+ section.search-full.media-list-search .flexWrap { justify-content: flex-start; } 
+ section.search-full.media-list-search .flexWrap .radioWrap label:first-child { margin-left: 0; } 
+ section.search-full.media-list-search .flexWrap .radioWrap { margin-bottom: 25px; } 
+ section.search-full.media-list-search .input-searchWrap { max-width: 425px; } 
+ section.search-full .input-searchWrap input { border-radius: 14px !important; } 
+ section.search-full.media-list-search .tagWrap2 { flex-wrap: wrap; } 
+ section.search-full.media-list-search .tagWrap2 { margin-left: 7px; } 
+
+/*  .media-category .list-conWrap-top .categoryWrap .d-mobile { display: block; }  */
+ .media-category .list-conWrap-top .categoryWrap .d-pc { display: none !important; } 
+
+ .media-category .orderWrap.active span.orderItem { display: block !important; text-align: right; margin-bottom: 10px; } 
+ }
+
+/* 0913 UPDATE */
+/* 0930 EBOKE UPDATE START */
+@media screen and (max-width:1023px) {
+    .media-instruction {
+        margin-top: 0;
+    }
+
+    .media-list-contents .listItem:nth-child(2n) {
+        margin-right:0;
+    }  
+}
+/* 0930 EBOKE UPDATE END */
+@media screen and (max-width:768px) {
+    /* 0930 EBOKE UPDATE START */
+    .media-list-contents .listItem {
+        width: 100%;
+        margin-bottom: 0;
+        padding-bottom: 32px;
+        margin-right:0 !important;
+    }
+    /* 0930 EBOKE UPDATE END */
+
+
+    .media-list-contents.media_module .card-more {
+        margin-top: 70px;
+    }
+}
+
+
+@media screen and (max-width:425px) {
+  .media-instruction .list-head-titWrap {height: 277px; }
+}
+
+
+

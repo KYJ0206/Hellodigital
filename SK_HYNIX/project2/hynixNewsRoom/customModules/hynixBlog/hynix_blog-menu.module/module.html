@@ -1,0 +1,31 @@
+{% set path = request.path|split('/', 2)|last %}
+
+{% set query = request.query_dict.category %}
+{% set text = request.query_dict.text %}
+
+{% set show = text == '기술' || text == '반도체' || text == '비즈니스' || text == '트렌드' ? true : flase %}
+
+
+  {% if show %}
+
+<section class="blog-menu">
+<div class="list-conWrap-top">
+	<div class="inner">
+    <div class="inner2" >
+   {#   {% if path == 'technology' %}#}
+      <ul id='archive'>
+        <li class="{{text == '기술' ? 'active' : ''}}"><a href="/post/tag/blog-기술/page/1?type=blog&text=기술">전체 글</a></li>
+        <li class="{{text == '반도체' ? 'active' : ''}}"><a href="/post/tag/카테고리-반도체/page/1?type=category&text=반도체">반도체</a></li>
+        <li class="{{text == '비즈니스' ? 'active' : ''}}"><a href="/post/tag/카테고리-비즈니스/page/1?type=category&text=비즈니스">비즈니스</a></li>
+        <li class="{{text == '트렌드' ? 'active' : ''}}"><a href="/post/tag/카테고리-트렌드/page/1?type=category&text=트렌드">트렌드</a></li>
+      </ul>
+    {#  {% endif %}#}
+<!--       <div class="ckWrap">
+        <label for="ck-recent"><input id="ck-recent" type="checkbox" checked=""><i></i>최신</label>
+        <label for="ck-popularity"><input id="ck-popularity" type="checkbox"><i></i>인기</label>
+      </div> -->
+    </div>
+	</div>
+</div>
+</section>
+{% endif %}

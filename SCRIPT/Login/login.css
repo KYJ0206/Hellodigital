@@ -1,0 +1,15 @@
+input:first-child{
+    margin: 5px 27px 10px;
+}
+
+input:last-child {
+    margin-top: 10px;
+}
+
+form{
+    position: absolute;
+    top: 34%;
+    left: 50%;
+    transform: translate(-50%,-100%);
+
+}

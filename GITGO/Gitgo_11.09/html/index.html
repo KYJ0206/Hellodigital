@@ -1,0 +1,129 @@
+<!DOCTYPE html>
+<html lang="ko">
+  <head>
+    <meta charset="UTF-8" />
+    <title>Gitgo</title>
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta
+      name="viewport"
+      content="width=device-width, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0, user-scalable=no"
+    />
+    <link rel="stylesheet" href="../css/hello-ui/import.css" />
+    <link rel="stylesheet" href="../css/jquery-ui.min.css" />
+    <link rel="stylesheet" href="../css/style.min.css" />
+    <link rel="stylesheet" href="../css/bootstrap.css" />
+    <link rel="stylesheet" href="../css/index.css" />
+    
+    <script src="../js/jquery-3.4.1.min.js"></script>
+    <script src="../js/ui.js"></script>
+    <script src="../dist/jstree.js"></script>
+    <script src="../js/jstree-custom-module.js"></script>
+    <script src="../js/bootstrap.bundle.min.js"></script>
+
+  </head>
+
+  <body>
+    <!-- 0822 style 추가 -->
+    <div class="wrap" style="padding-bottom:78px">
+      <div class="organization_top flex space_btw align-items-center">
+        <div class="user_info flex align-items-center">
+          <h3 class="title_large mb-0">
+            <i class="icon"><img src="../images/dum01.png" alt="로고 이미지" /></i><span>(주)에스씨케이</span>
+          </h3>
+          <a href="#a" class="choose_num">선택한 사용자 [3]</a>
+        </div>
+
+        <div class="search_box flex">
+          <input type="text" placeholder="검색어를 입력하세요." />
+          <button class="button search">검색</button>
+          <button type="button" class="search_box_close"></button>
+        </div>
+      </div>
+      <!-- // top -->
+
+      <div class="search_result flex" style="display: none">
+        <p class="text_small">‘홍수철’에 대한 검색결과입니다.</p>
+        <button class="button_result_close">검색결과 닫기</button>
+      </div>
+      <script type="text/javascript">
+        $(".search_box input").keypress(function (e) {
+          let key = e.which;
+          if (key === 13) {
+            $(".search_result").show();
+          }
+        });
+        $(".search_box .search").click(function () {
+          $(".search_result").show();
+        });
+        $(".button_result_close").click(function () {
+          $(this).parent(".search_result").hide();
+        });
+      </script>
+
+      <!-- 0817 수정 -->
+      <div class="list_control main_control">
+        <button class="button button_card">카드형 보기</button>
+        <button class="button button_list on">리스트형 보기</button>
+      </div>
+
+      <!-- org_contents -->
+      <div class="org_contents rel">
+        <!-- jstree -->
+        <div id="jstree_main" class="gnb accodian"></div>
+        <!-- // jstree -->
+
+        <div class="choice_info flex">
+          <div class="text">
+            <!-- 0802 수정 -->
+            <button class="text_small button_popUp" target="_blank" data-bs-target="#popup" role="button">
+              총 3명이 선택되었습니다. <span class="confirm">[확인하기]</span>
+            </button>
+          </div>
+
+          <div class="btns">
+            <a href="#a" class="button"><i class="chat"></i>채팅하기</a>
+            <a href="#a" class="button"><i class="email"></i>메일쓰기</a>
+            <a href="#a" class="button button_green"><i class="date"></i>일정추가</a>
+          </div>
+        </div>
+      </div>
+      <!-- // org_contents -->
+
+      <!-- 0801 팝업 Wrap 안쪽으로 이동 -->
+      <!-- popup start -->
+      <div class="modal fade" aria-hidden="true" data-toggle="modal" id="popup" tabindex="-1">
+        <div class="modal-dialog modal-dialog-centered newModal">
+          <div class="modal-content">
+            <div class="modal-header">
+              <span class="choose_num modal-title">선택한 사용자 [3]</span>
+
+              <button type="button" class="popup_close" data-bs-dismiss="modal" aria-label="Close">
+                <img src="../images/icon-cancle_2@2x.png" alt="">
+                <!-- <img src="../images/icon_cancle_2.png" alt="" /> -->
+              </button>
+            </div>
+            <div class="modal-body">
+              <div class="popup_contents">
+                <div class="list_control popup_control">
+                  <!---------------------- 0630 수정 ------------------>
+                  <button class="button button_card">카드형 보기</button>
+                  <button class="button button_list on">리스트형 보기</button>
+                  <!---------------------- 0630 수정 ------------------>
+                </div>
+                <!-- jstree -->
+                <div id="jstree_popup" class="gnb"></div>
+                <!-- // jstree -->
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="dim"></div>
+      </div>
+      <!--// popup -->
+
+
+
+    </div>
+    
+  </body>
+</html>

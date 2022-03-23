@@ -1,0 +1,782 @@
+<!DOCTYPE html>
+<html lang="ko">
+
+<head>
+  <meta charset="UTF-8" />
+  <title>Gitgo</title>
+  <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+  <meta name="viewport"
+    content="width=device-width, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0, user-scalable=no" />
+
+  <link rel="stylesheet" href="../css/tempusdominus-bootstrap-4.min.css">
+  <link rel="stylesheet" href="../css/hello-ui/import.css" />
+  <link rel="stylesheet" href="../css/jquery-ui.min.css" />
+  <link rel="stylesheet" href="../css/style.min.css" />
+  <link rel="stylesheet" href="../css/bootstrap.css" />
+  <link rel="stylesheet" type="text/css" href="gridforms.css">
+  <link rel="stylesheet" href="../css/document box.css">
+  <link rel="stylesheet" href="../css/font-awesome.css">
+
+  <script src="../js/jquery-3.4.1.min.js"></script>
+  <script src="../js/ui.js"></script>
+  <script src="../dist/jstree.js"></script>
+  <script src="../js/jstree-custom-module.js"></script>
+  <script src="../js/moment.js"></script>
+  <script src="../js/bootstrap.min.js"></script>
+  <script src="../js/tempusdominus-bootstrap-4.min.js"></script>
+  <script src="../js/bootstrap.bundle.min.js"></script>
+  <script src="../js/new-popover.js"></script>
+  <script src="../js/document box.js"></script>
+
+
+
+
+
+
+  <!-- <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj" crossorigin="anonymous"></script> -->
+  <!-- <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.6.0/dist/css/bootstrap.min.css"integrity="sha384-B0vP5xmATw1+K9KRQjQERJvTumQW0nPEzvF6L/Z6nronJ3oUOFUFpCjEUQouq2+l" crossorigin="anonymous"> -->
+  <!-- <script src="https://cdn.jsdelivr.net/npm/bootstrap@4.6.0/dist/js/bootstrap.bundle.min.js"integrity="sha384-Piv4xVNRyMGpqkS2by6br4gNJ7DXjqk09RmUpJ8jgGtD7zP9yug3goQfGII0yAns" crossorigin="anonymous"></script> -->
+
+
+  <!-- <script src="https://cdnjs.cloudflare.com/ajax/libs/tempusdominus-bootstrap-4/5.39.0/js/tempusdominus-bootstrap-4.min.js" integrity="sha512-k6/Bkb8Fxf/c1Tkyl39yJwcOZ1P4cRrJu77p83zJjN2Z55prbFHxPs9vN7q3l3+tSMGPDdoH51AEU8Vgo1cgAA==" crossorigin="anonymous"></script> -->
+  <!-- <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.6.0/dist/css/bootstrap.min.css" integrity="sha384-B0vP5xmATw1+K9KRQjQERJvTumQW0nPEzvF6L/Z6nronJ3oUOFUFpCjEUQouq2+l" crossorigin="anonymous"> -->
+  <!-- <script src="https://cdnjs.cloudflare.com/ajax/libs/tempusdominus-bootstrap-4/5.38.0/js/tempusdominus-bootstrap-4.min.js" crossorigin="anonymous"></script> -->
+  <!-- <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/tempusdominus-bootstrap-4/5.38.0/css/tempusdominus-bootstrap-4.min.css" crossorigin="anonymous" /> -->
+  <!-- 달력 -->
+  <!-- <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/moment.js/2.29.0/moment.min.js"></script> -->
+  <!-- <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/tempusdominus-bootstrap-4/5.39.0/css/tempusdominus-bootstrap-4.min.css" integrity="sha512-3JRrEUwaCkFUBLK1N8HehwQgu8e23jTH4np5NHOmQOobuC4ROQxFwFgBLTnhcnQRMs84muMh0PnnwXlPq5MGjg==" crossorigin="anonymous" /> -->
+
+
+
+</head>
+
+<body style="background-color: #f4f2f1; height:100%">
+  <div class="wrap">
+    <div class="section-home">
+      <!-- 공통 Nav tab -->
+      <div class="container py-3 container-mobile-tab">
+        <ul class="nav nav-tabs new-nav-tabs">
+          <a  class="nav-hamburg" onclick="mSideToggle()">
+            <span></span>
+            <span></span>
+            <span></span>
+          </a>
+          <li class="nav-item">
+            <a class="nav-link" href="./electronicpayment_HOME.html">HOME</a>
+          </li>       
+          <li class="nav-item">
+            <a class="nav-link " href="./electronicpayment_Drafting_ver1.html">기안하기</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="./Approval document.html">결제할 문서</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="./Progress document.html">잔행중 문서</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="./Circulated document.html">회람받은 문서</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="./electronicpayment_HOME.html">접수할 문서</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link active" href="./document box_approve.html">나의 문서함</a>
+            <div class="dcbsb">
+              <img src="../images/triangle@2x.png" alt="문서함 모바일용 이미지">
+            </div>
+            <ul class="documentboxsub">
+              <li>개인 문서함</li>
+              <li>팀 문서함</li>
+              <li>참조함</li>
+            </ul>
+          </li>
+
+          <div class='navBTN'>
+            <a >
+              <img src="../images/group-6@2x.png" alt="서브메뉴">
+            </a>
+          </div>
+
+          <a class="nav-setting"  role="button" id="nav-setting" onclick="setting()">
+            Setting Btn
+            <script>
+              function setting() {
+                if ($('.command-r').hasClass('active')) {
+                  $('.command-r').removeClass('active')
+                } else {
+                  $('.command-r').addClass('active')
+                }
+              }
+            </script>
+          </a>
+          <!-- <a class="nav-more-btn"  role="button">...
+            <span></span>
+            <span></span>
+            <span></span>
+          </a> -->
+        </ul>
+        <div class="sub-tabs">
+          <ul>
+            <li>
+              <a >
+                개인설정
+              </a>
+            </li>
+            <li>
+              <a >
+                결제 문서 관리
+              </a>
+            </li>
+            <li>
+              <a >
+                인터페이스 관리
+              </a>
+            </li>
+            <li>
+              <a >
+                양식 작성기
+              </a>
+            </li>
+          </ul>
+        </div>
+        <!-- 모바일 사이드 메뉴 -->
+        <div class="m-sideWrap" onclick="mSideClose()">
+          <ul class="m-side-menu">
+            <li>
+              <div class="item">
+                <a href="./electronicpayment_HOME.html">
+                  <div>HOME</div>
+                </a>
+              </div>
+            </li>
+            <li>
+              <div class="item">
+                <a href="./electronicpayment_Drafting_ver1.html">
+                  <div>기안하기</div>
+                </a>
+              </div>
+            </li>
+            <li>
+              <div class="item">
+                <a active" href="./Approval document.html">
+                  <div>결제할 문서</div>
+                </a>
+              </div>
+            </li>
+            <li>
+              <div class="item">
+                <a href="./Progress document.html">
+                  <div>잔행중 문서</div>
+                </a>
+              </div>
+            </li>
+            <li>
+              <div class="item">
+                <a href="./Circulated document.html">
+                  <div>회람받은 문서</div>
+                </a>
+              </div>
+            </li>
+            <li>
+              <div class="item">
+                <a href="./electronicpayment_HOME.html">
+                  <div>접수할 문서</div>
+                </a>
+              </div>
+            </li>
+            <li class="active">
+              <div class="item">
+                <a href="./document box_approve.html">
+                  <div>나의 문서함</div>
+                </a>
+              </div>
+              <dl>
+                <a href="./Approval document.html">
+                  <dd class="active">개인</dd>
+                </a>
+                <a href="./Approval document.html">
+                  <dd>팀</dd>
+                </a>
+                <a href="./Approval document.html">
+                  <dd>참조</dd>
+                </a>
+              </dl>
+            </li>
+          </ul>
+        </div>
+      </div>
+      <div class="cont">
+        <!-- 모바일 사이드 메뉴 -->
+        <div class="m-sideWrap2" onclick="mSideClose()">
+          <ul class="m-side-menu2">
+            <li class='submenuham'>
+              <a class="closeSub" >
+                <img src="../images/path-2@2x.png" alt="닫기아이콘">
+              </a>
+            </li>
+            <li class="active">
+              <div class="item">
+                <a href="./document box_approve.html">
+                  <div>개인</div>
+                </a>
+              </div>
+              <dl>
+                <a href="./document box_approve.html">
+                  <dd class="active">승인완료된 문서</dd>
+                </a>
+                <a href="./document box_return.html">
+                  <dd>반려된 문서</dd>
+                </a>
+                <a href="./document box_draft.html">
+                  <dd>기안한 문서</dd>
+                </a>
+                <a href="./document box_Save.html">
+                  <dd>저장한 문서</dd>
+                </a>
+                <a href="./Circulated document.html">
+                  <dd>회람받은 문서</dd>
+                </a>
+              </dl>
+            </li>
+            <li>
+              <div class="item">
+                <a href="./document box_tim.html">
+                  <div>팀</div>
+                </a>
+              </div>
+            </li>
+            <li>
+              <div class="item">
+                <a >
+                  <div>참조</div>
+                </a>
+              </div>
+            </li>
+            <li>
+              <div class="item">
+                <a href="./document box_Review.html">
+                  <div>검토</div>
+                </a>
+              </div>
+            </li>
+          </ul>
+        </div>
+        <!-- innercontant -->
+        <div class="innercontant">
+          <!-- cont_approve -->
+          <div class="cont_approve">
+            <div class="inputWrap">
+              <div>
+                <a  class="nav-hamburg1">
+                  <span></span>
+                  <span></span>
+                  <span></span>
+                </a>
+              </div>
+              <input type="text " placeholder="검색어를 입력하세요.">
+              <i>
+                <img src="../images/icon-user-round-copy-3@2x.png" alt="검색버튼">
+              </i>
+            </div>
+            <!-- 검토함 필터 -->
+            <div class="searchfilter container">
+              <ul>
+                <li>
+                  <div>
+                    양식명
+                  </div>
+                  <input style="height:28px" type="text">
+                </li>
+                <li>
+                  <div>
+                    문서번호
+                  </div>
+                  <input style="height:28px" type="text">
+                </li>
+                <li>
+                  <div>
+                    기안자
+                  </div>
+                  <input style="height:28px" type="text">
+                </li>
+                <li>
+                  <div>
+                    기안부서
+                  </div>
+                  <input style="height:28px" type="text">
+                </li>
+                <li>
+                  <div>
+                    기안일자
+                  </div>
+                  <input style="height:28px" type="text">~<input style="height:28px" type="text">
+                </li>
+                <li>
+                  <div >
+                    제목
+                  </div>
+                  <input style="height:28px" type="text">
+                </li>
+                <li>
+                  <button>
+                    <i>
+                      <img src="../images/icon-user-round-copy-3@2x.png" alt="검색아이콘">
+                    </i>
+                    <a >
+                      검색
+                    </a>
+                  </button>
+                </li>
+                <li>
+                  <button>
+                    <i>
+                      <img src="../images/group-7@2x.webp" alt="비우기아이콘">
+                    </i>
+                    <a >
+                      비우기
+                    </a>
+                  </button>
+                </li>
+              </ul>
+            </div>
+            <div class="searchicon">
+              <a >
+                <img class="webimg" src="../images/group-5@2x.png" alt="웹이미지">
+                <img class="mobileimg" style="display: none;" src="../images/group-4@2x.png" alt="모바일이미지">
+              </a>
+            </div>
+          </div>
+          <div class="container mbgnb mbgnb2">
+            <ul>
+              <li class="active">
+                <a >
+                  전체
+                </a>
+              </li>
+              <li>
+                <a >
+                  승인완료
+                </a>
+              </li>
+              <li>
+                <a >
+                  반려
+                </a>
+              </li>
+              <li>
+                <a >
+                  기안
+                </a>
+              </li>
+              <li>
+                <a >
+                  저장
+                </a>
+              </li>
+            </ul>
+          </div>
+          <div class="container innerlist">
+            <ul class='innerlistTit'>
+              <li class="Tittitle">문서제목</li>
+              <li>문서번호</li>
+              <li>기안날짜
+                <a >
+                  <i>
+                    <img src="../images/group-copy.svg" alt=아이콘">
+                  </i>
+                </a>
+              </li>
+              <li>양식명</li>
+              <li>기안부서</li>
+              <li>기안자</li>
+              <li>진행상태</li>
+            </ul>
+            <ul>
+              <li class="Tittitle">
+                기안 제목 리스트 입니다. 결제요청 제목 미리보기
+                <i style="vertical-align: middle">
+                  <svg width="16" height="16" xmlns="http://www.w3.org/2000/svg">
+                    <g fill="#b8b8b8" fill-rule="evenodd">
+                      <path
+                        d="M14 14H2.08V2.08h5.29v1.199H3.279v9.522h9.522V8.71H14zM14 6.7h-1.199V3.28H9.38v-1.2H14z" />
+                      <path d="m6.454 10.474-.848-.848 7.37-7.37.848.848z" />
+                    </g>
+                  </svg>
+                </i>
+              </li>
+              <li class="Tittitle2">TJ-2103-0001</li>
+              <li class="Tittitle3">2021.02.25</li>
+              <li class="Tittitle4">휴가신청서</li>
+              <li class="Tittitle5">영업팀</li>
+              <li class="Tittitle6">김문서</li>
+              <li>
+                <button class="b1">
+                  <a >완료</a>
+                </button>
+              </li>
+            </ul>
+            <ul>
+              <li class="Tittitle">
+                기안 제목 리스트 입니다. 결제요청 제목 미리보기
+                <i style="vertical-align: middle">
+                  <svg width="16" height="16" xmlns="http://www.w3.org/2000/svg">
+                    <g fill="#b8b8b8" fill-rule="evenodd">
+                      <path
+                        d="M14 14H2.08V2.08h5.29v1.199H3.279v9.522h9.522V8.71H14zM14 6.7h-1.199V3.28H9.38v-1.2H14z" />
+                      <path d="m6.454 10.474-.848-.848 7.37-7.37.848.848z" />
+                    </g>
+                  </svg>
+                </i>
+              </li>
+              <li class="Tittitle2">TJ-2103-0001</li>
+              <li class="Tittitle3">2021.02.25</li>
+              <li class="Tittitle4">휴가신청서</li>
+              <li class="Tittitle5">영업팀</li>
+              <li class="Tittitle6">김문서</li>
+              <li>
+                <button class="b1">
+                  <a >완료</a>
+                </button>
+              </li>
+            </ul>
+            <ul>
+              <li class="Tittitle">
+                기안 제목 리스트 입니다. 결제요청 제목 미리보기
+                <i style="vertical-align: middle">
+                  <svg width="16" height="16" xmlns="http://www.w3.org/2000/svg">
+                    <g fill="#b8b8b8" fill-rule="evenodd">
+                      <path
+                        d="M14 14H2.08V2.08h5.29v1.199H3.279v9.522h9.522V8.71H14zM14 6.7h-1.199V3.28H9.38v-1.2H14z" />
+                      <path d="m6.454 10.474-.848-.848 7.37-7.37.848.848z" />
+                    </g>
+                  </svg>
+                </i>
+              </li>
+              <li class="Tittitle2">TJ-2103-0001</li>
+              <li class="Tittitle3">2021.02.25</li>
+              <li class="Tittitle4">휴가신청서</li>
+              <li class="Tittitle5">영업팀</li>
+              <li class="Tittitle6">김문서</li>
+              <li>
+                <button class="b1">
+                  <a >완료</a>
+                </button>
+              </li>
+            </ul>
+            <ul>
+              <li class="Tittitle">
+                기안 제목 리스트 입니다. 결제요청 제목 미리보기
+                <i style="vertical-align: middle">
+                  <svg width="16" height="16" xmlns="http://www.w3.org/2000/svg">
+                    <g fill="#b8b8b8" fill-rule="evenodd">
+                      <path
+                        d="M14 14H2.08V2.08h5.29v1.199H3.279v9.522h9.522V8.71H14zM14 6.7h-1.199V3.28H9.38v-1.2H14z" />
+                      <path d="m6.454 10.474-.848-.848 7.37-7.37.848.848z" />
+                    </g>
+                  </svg>
+                </i>
+              </li>
+              <li class="Tittitle2">TJ-2103-0001</li>
+              <li class="Tittitle3">2021.02.25</li>
+              <li class="Tittitle4">휴가신청서</li>
+              <li class="Tittitle5">영업팀</li>
+              <li class="Tittitle6">김문서</li>
+              <li>
+                <button class="b1">
+                  <a >완료</a>
+                </button>
+              </li>
+            </ul>
+            <ul>
+              <li class="Tittitle">
+                기안 제목 리스트 입니다. 결제요청 제목 미리보기
+                <i style="vertical-align: middle">
+                  <svg width="16" height="16" xmlns="http://www.w3.org/2000/svg">
+                    <g fill="#b8b8b8" fill-rule="evenodd">
+                      <path
+                        d="M14 14H2.08V2.08h5.29v1.199H3.279v9.522h9.522V8.71H14zM14 6.7h-1.199V3.28H9.38v-1.2H14z" />
+                      <path d="m6.454 10.474-.848-.848 7.37-7.37.848.848z" />
+                    </g>
+                  </svg>
+                </i>
+              </li>
+              <li class="Tittitle2">TJ-2103-0001</li>
+              <li class="Tittitle3">2021.02.25</li>
+              <li class="Tittitle4">휴가신청서</li>
+              <li class="Tittitle5">영업팀</li>
+              <li class="Tittitle6">김문서</li>
+              <li>
+                <button class="b1">
+                  <a >완료</a>
+                </button>
+              </li>
+            </ul>
+            <ul>
+              <li class="Tittitle">
+                기안 제목 리스트 입니다. 결제요청 제목 미리보기
+                <i style="vertical-align: middle">
+                  <svg width="16" height="16" xmlns="http://www.w3.org/2000/svg">
+                    <g fill="#b8b8b8" fill-rule="evenodd">
+                      <path
+                        d="M14 14H2.08V2.08h5.29v1.199H3.279v9.522h9.522V8.71H14zM14 6.7h-1.199V3.28H9.38v-1.2H14z" />
+                      <path d="m6.454 10.474-.848-.848 7.37-7.37.848.848z" />
+                    </g>
+                  </svg>
+                </i>
+              </li>
+              <li class="Tittitle2">TJ-2103-0001</li>
+              <li class="Tittitle3">2021.02.25</li>
+              <li class="Tittitle4">휴가신청서</li>
+              <li class="Tittitle5">영업팀</li>
+              <li class="Tittitle6">김문서</li>
+              <li>
+                <button class="b1">
+                  <a >완료</a>
+                </button>
+              </li>
+            </ul>
+            <ul>
+              <li class="Tittitle">
+                기안 제목 리스트 입니다. 결제요청 제목 미리보기
+                <i style="vertical-align: middle">
+                  <svg width="16" height="16" xmlns="http://www.w3.org/2000/svg">
+                    <g fill="#b8b8b8" fill-rule="evenodd">
+                      <path
+                        d="M14 14H2.08V2.08h5.29v1.199H3.279v9.522h9.522V8.71H14zM14 6.7h-1.199V3.28H9.38v-1.2H14z" />
+                      <path d="m6.454 10.474-.848-.848 7.37-7.37.848.848z" />
+                    </g>
+                  </svg>
+                </i>
+              </li>
+              <li class="Tittitle2">TJ-2103-0001</li>
+              <li class="Tittitle3">2021.02.25</li>
+              <li class="Tittitle4">휴가신청서</li>
+              <li class="Tittitle5">영업팀</li>
+              <li class="Tittitle6">김문서</li>
+              <li>
+                <button class="b1">
+                  <a >완료</a>
+                </button>
+              </li>
+            </ul>
+            <ul>
+              <li class="Tittitle">
+                기안 제목 리스트 입니다. 결제요청 제목 미리보기
+                <i style="vertical-align: middle">
+                  <svg width="16" height="16" xmlns="http://www.w3.org/2000/svg">
+                    <g fill="#b8b8b8" fill-rule="evenodd">
+                      <path
+                        d="M14 14H2.08V2.08h5.29v1.199H3.279v9.522h9.522V8.71H14zM14 6.7h-1.199V3.28H9.38v-1.2H14z" />
+                      <path d="m6.454 10.474-.848-.848 7.37-7.37.848.848z" />
+                    </g>
+                  </svg>
+                </i>
+              </li>
+              <li class="Tittitle2">TJ-2103-0001</li>
+              <li class="Tittitle3">2021.02.25</li>
+              <li class="Tittitle4">휴가신청서</li>
+              <li class="Tittitle5">영업팀</li>
+              <li class="Tittitle6">김문서</li>
+              <li>
+                <button class="b1">
+                  <a >완료</a>
+                </button>
+              </li>
+            </ul>
+            <ul>
+              <li class="Tittitle">
+                기안 제목 리스트 입니다. 결제요청 제목 미리보기
+                <i style="vertical-align: middle">
+                  <svg width="16" height="16" xmlns="http://www.w3.org/2000/svg">
+                    <g fill="#b8b8b8" fill-rule="evenodd">
+                      <path
+                        d="M14 14H2.08V2.08h5.29v1.199H3.279v9.522h9.522V8.71H14zM14 6.7h-1.199V3.28H9.38v-1.2H14z" />
+                      <path d="m6.454 10.474-.848-.848 7.37-7.37.848.848z" />
+                    </g>
+                  </svg>
+                </i>
+              </li>
+              <li class="Tittitle2">TJ-2103-0001</li>
+              <li class="Tittitle3">2021.02.25</li>
+              <li class="Tittitle4">휴가신청서</li>
+              <li class="Tittitle5">영업팀</li>
+              <li class="Tittitle6">김문서</li>
+              <li>
+                <button class="b1">
+                  <a >완료</a>
+                </button>
+              </li>
+            </ul>
+            <ul>
+              <li class="Tittitle">
+                기안 제목 리스트 입니다. 결제요청 제목 미리보기
+                <i style="vertical-align: middle">
+                  <svg width="16" height="16" xmlns="http://www.w3.org/2000/svg">
+                    <g fill="#b8b8b8" fill-rule="evenodd">
+                      <path
+                        d="M14 14H2.08V2.08h5.29v1.199H3.279v9.522h9.522V8.71H14zM14 6.7h-1.199V3.28H9.38v-1.2H14z" />
+                      <path d="m6.454 10.474-.848-.848 7.37-7.37.848.848z" />
+                    </g>
+                  </svg>
+                </i>
+              </li>
+              <li class="Tittitle2">TJ-2103-0001</li>
+              <li class="Tittitle3">2021.02.25</li>
+              <li class="Tittitle4">휴가신청서</li>
+              <li class="Tittitle5">영업팀</li>
+              <li class="Tittitle6">김문서</li>
+              <li>
+                <button class="b1">
+                  <a >완료</a>
+                </button>
+              </li>
+            </ul>
+            <ul>
+              <li class="Tittitle">
+                기안 제목 리스트 입니다. 결제요청 제목 미리보기
+                <i style="vertical-align: middle">
+                  <svg width="16" height="16" xmlns="http://www.w3.org/2000/svg">
+                    <g fill="#b8b8b8" fill-rule="evenodd">
+                      <path
+                        d="M14 14H2.08V2.08h5.29v1.199H3.279v9.522h9.522V8.71H14zM14 6.7h-1.199V3.28H9.38v-1.2H14z" />
+                      <path d="m6.454 10.474-.848-.848 7.37-7.37.848.848z" />
+                    </g>
+                  </svg>
+                </i>
+              </li>
+              <li class="Tittitle2">TJ-2103-0001</li>
+              <li class="Tittitle3">2021.02.25</li>
+              <li class="Tittitle4">휴가신청서</li>
+              <li class="Tittitle5">영업팀</li>
+              <li class="Tittitle6">김문서</li>
+              <li>
+                <button class="b1">
+                  <a >완료</a>
+                </button>
+              </li>
+            </ul>
+            <ul>
+              <li class="Tittitle">
+                기안 제목 리스트 입니다. 결제요청 제목 미리보기
+                <i style="vertical-align: middle">
+                  <svg width="16" height="16" xmlns="http://www.w3.org/2000/svg">
+                    <g fill="#b8b8b8" fill-rule="evenodd">
+                      <path
+                        d="M14 14H2.08V2.08h5.29v1.199H3.279v9.522h9.522V8.71H14zM14 6.7h-1.199V3.28H9.38v-1.2H14z" />
+                      <path d="m6.454 10.474-.848-.848 7.37-7.37.848.848z" />
+                    </g>
+                  </svg>
+                </i>
+              </li>
+              <li class="Tittitle2">TJ-2103-0001</li>
+              <li class="Tittitle3">2021.02.25</li>
+              <li class="Tittitle4">휴가신청서</li>
+              <li class="Tittitle5">영업팀</li>
+              <li class="Tittitle6">김문서</li>
+              <li>
+                <button class="b1">
+                  <a >완료</a>
+                </button>
+              </li>
+            </ul>
+            <ul>
+              <li class="Tittitle">
+                기안 제목 리스트 입니다. 결제요청 제목 미리보기
+                <i style="vertical-align: middle">
+                  <svg width="16" height="16" xmlns="http://www.w3.org/2000/svg">
+                    <g fill="#b8b8b8" fill-rule="evenodd">
+                      <path
+                        d="M14 14H2.08V2.08h5.29v1.199H3.279v9.522h9.522V8.71H14zM14 6.7h-1.199V3.28H9.38v-1.2H14z" />
+                      <path d="m6.454 10.474-.848-.848 7.37-7.37.848.848z" />
+                    </g>
+                  </svg>
+                </i>
+              </li>
+              <li class="Tittitle2">TJ-2103-0001</li>
+              <li class="Tittitle3">2021.02.25</li>
+              <li class="Tittitle4">휴가신청서</li>
+              <li class="Tittitle5">영업팀</li>
+              <li class="Tittitle6">김문서</li>
+              <li>
+                <button class="b1">
+                  <a >완료</a>
+                </button>
+              </li>
+            </ul>
+            <ul>
+              <li class="Tittitle">
+                기안 제목 리스트 입니다. 결제요청 제목 미리보기
+                <i style="vertical-align: middle">
+                  <svg width="16" height="16" xmlns="http://www.w3.org/2000/svg">
+                    <g fill="#b8b8b8" fill-rule="evenodd">
+                      <path
+                        d="M14 14H2.08V2.08h5.29v1.199H3.279v9.522h9.522V8.71H14zM14 6.7h-1.199V3.28H9.38v-1.2H14z" />
+                      <path d="m6.454 10.474-.848-.848 7.37-7.37.848.848z" />
+                    </g>
+                  </svg>
+                </i>
+              </li>
+              <li class="Tittitle2">TJ-2103-0001</li>
+              <li class="Tittitle3">2021.02.25</li>
+              <li class="Tittitle4">휴가신청서</li>
+              <li class="Tittitle5">영업팀</li>
+              <li class="Tittitle6">김문서</li>
+              <li>
+                <button class="b1">
+                  <a >완료</a>
+                </button>
+              </li>
+            </ul>
+            <ul>
+              <li class="Tittitle">
+                기안 제목 리스트 입니다. 결제요청 제목 미리보기
+                <i style="vertical-align: middle">
+                  <svg width="16" height="16" xmlns="http://www.w3.org/2000/svg">
+                    <g fill="#b8b8b8" fill-rule="evenodd">
+                      <path
+                        d="M14 14H2.08V2.08h5.29v1.199H3.279v9.522h9.522V8.71H14zM14 6.7h-1.199V3.28H9.38v-1.2H14z" />
+                      <path d="m6.454 10.474-.848-.848 7.37-7.37.848.848z" />
+                    </g>
+                  </svg>
+                </i>
+              </li>
+              <li class="Tittitle2">TJ-2103-0001</li>
+              <li class="Tittitle3">2021.02.25</li>
+              <li class="Tittitle4">휴가신청서</li>
+              <li class="Tittitle5">영업팀</li>
+              <li class="Tittitle6">김문서</li>
+              <li>
+                <button class="b1">
+                  <a >완료</a>
+                </button>
+              </li>
+            </ul>
+          </div>
+          <div class="listnum container">
+            <ul>
+              <li class="active">
+                <a >1</a>
+              </li>
+              <li>
+                <a >2</a>
+              </li>
+              <li>
+                <a >3</a>
+              </li>
+              <li>
+                <a >4</a>
+              </li>
+            </ul>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- 모바일 사이드 햄버거 메뉴 Open&Close -->
+    <script src="../js/mSide.js"></script>
+    <script src="../js/mSide2.js"></script>
+  </div>
+
+</body>
+
+</html>

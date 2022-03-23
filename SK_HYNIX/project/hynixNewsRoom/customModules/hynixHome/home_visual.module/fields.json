@@ -1,0 +1,58 @@
+[ {
+  "id" : "f50e57c9-1c46-45b8-880e-a4a3ff569be7",
+  "name" : "text_field_1",
+  "label" : "POST ID 1",
+  "required" : false,
+  "locked" : false,
+  "validation_regex" : "",
+  "allow_new_line" : false,
+  "show_emoji_picker" : false,
+  "type" : "text"
+}, {
+  "id" : "ec2b2f3c-96be-3134-4eda-fd722f035e6a",
+  "name" : "choice_field",
+  "label" : "POST 카테고리 선택1",
+  "required" : false,
+  "locked" : false,
+  "display" : "select",
+  "choices" : [ [ "기술", "기술" ], [ "사람&문화", "사람&문화" ], [ "지속가능경영", "지속가능경영" ] ],
+  "type" : "choice"
+}, {
+  "id" : "c6a21c20-381e-f3f3-e50d-e6e8b64649dc",
+  "name" : "post_id_2",
+  "label" : "POST ID 2",
+  "required" : false,
+  "locked" : false,
+  "validation_regex" : "",
+  "allow_new_line" : false,
+  "show_emoji_picker" : false,
+  "type" : "text"
+}, {
+  "id" : "7a5be245-9c6f-f613-6f62-f7913228e3e8",
+  "name" : "post_2",
+  "label" : "POST 카테고리 선택2",
+  "required" : false,
+  "locked" : false,
+  "display" : "select",
+  "choices" : [ [ "기술", "기술" ], [ "사람&문화", "사람&문화" ], [ "지속가능경영", "지속가능경영" ] ],
+  "type" : "choice"
+}, {
+  "id" : "44a9eb84-1675-2cd9-ac96-ef47cb6090dc",
+  "name" : "post_id_3",
+  "label" : "POST ID 3",
+  "required" : false,
+  "locked" : false,
+  "validation_regex" : "",
+  "allow_new_line" : false,
+  "show_emoji_picker" : false,
+  "type" : "text"
+}, {
+  "id" : "d8580668-d1e2-8898-c0b1-4da9db455858",
+  "name" : "post_3",
+  "label" : "POST 카테고리 선택3",
+  "required" : false,
+  "locked" : false,
+  "display" : "select",
+  "choices" : [ [ "기술", "기술" ], [ "사람&문화", "사람&문화" ], [ "지속가능경영", "지속가능경영" ] ],
+  "type" : "choice"
+} ]

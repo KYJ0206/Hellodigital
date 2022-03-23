@@ -1,0 +1,8 @@
+.imgWrap {
+	padding-top: 0 !important;
+}
+.imgWrap img {
+/*   object-fit : contain; */
+	position: static !important;
+}
+

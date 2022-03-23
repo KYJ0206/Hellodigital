@@ -1,0 +1,74 @@
+<!doctype html>
+<html>
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Untitled Document</title>
+<script src="/static/js/jquery/jquery-2.1.4.min.js" type="text/javascript"></script>
+</head>
+<script>
+
+
+
+function logIn(){
+ var formName = document.frm;
+ var str = $(formName).serialize();
+ $.ajax({
+  type: "POST",
+  dataType : "json",
+  crossDomain: true,
+  url: "https://sample.test.com:80/api/test",
+  data: str,
+  form : formName
+
+ });
+}
+
+function logIn2(){
+    var xhttp = new XMLHttpRequest();
+ xhttp.open("POST", "https://sample.test.com:80/api/test", true);
+    xhttp.setRequestHeader("Content-type", "application/x-www-form-urlencoded");
+    xhttp.send("inputa=1&inputb=2");
+}
+
+
+function Question(){
+ var frm    = document.frm;
+ var access_token = "aaabbbccc";
+
+ $.ajax({
+  type: "GET",
+  dataType : "json", 
+  crossDomain: true,
+  headers  : { 
+       "Authorization":"Bearer "+access_token
+  },
+  url: "http://sample.test.com:80/api/test/questions?inputa=1&inputb=2"
+
+ });
+
+}
+
+function Question2(){
+    var access_token = "aaabbbccc";
+    var xhttp = new XMLHttpRequest();
+ xhttp.open("GET", "http://sample.test.com:80/api/test/questions?inputa=1&inputb=2", true);
+    xhttp.setRequestHeader("Content-type", "application/x-www-form-urlencoded");
+    xhttp.setRequestHeader("Authorization", "Bearer " + access_token);
+    xhttp.send();
+}
+
+
+
+</script>
+<body>
+<form name='frm' method='post'>
+</form>
+ <div class="form-area">
+  <a href="javascript:logIn2()">(POST)Login</a><br>
+        <a href="javascript:Question2()">(GET)Question</a><br>
+ </div>
+</body>
+</html>
+[출처] Javascript 에서 외부 URL 호출 하기.|작성자 tius1234
+

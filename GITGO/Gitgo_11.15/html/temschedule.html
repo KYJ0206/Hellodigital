@@ -1,0 +1,675 @@
+<!DOCTYPE html>
+<html lang="ko">
+
+<head>
+  <meta charset="UTF-8" />
+  <title>Gitgo</title>
+  <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0, user-scalable=no" />
+
+  <link rel="stylesheet" href="../css/tempusdominus-bootstrap-4.min.css">
+  <link rel="stylesheet" href="../css/hello-ui/import.css" />
+  <link rel="stylesheet" href="../css/jquery-ui.min.css" />
+  <link rel="stylesheet" href="../css/style.min.css" />
+  <link rel="stylesheet" href="../css/bootstrap.css" />
+  <link rel="stylesheet" href="../css/home.css">
+  <link rel="stylesheet" href="../css/teamschedule.css">
+  <link rel="stylesheet" href="../css/teamschedule-m.css">
+  <link rel="stylesheet" href="../css/font-awesome.css">
+
+  <!-- <script src="../js/jquery-3.4.1.min.js"></script>
+  <script src="../js/ui.js"></script>
+  <script src="../dist/jstree.js"></script>
+  <script src="../js/jstree-custom-module.js"></script>
+  <script src="../js/moment.js"></script>
+  <script src="../js/bootstrap.min.js"></script>
+  <script src="../js/tempusdominus-bootstrap-4.min.js"></script>
+  <script src="../js/bootstrap.bundle.min.js"></script>
+  <script src="../js/new-popover.js"></script> -->
+
+  <script src="../js/jquery-3.4.1.min.js"></script>
+  <script src="../js/moment.js"></script>
+  <script src="../js/popper.min.js"></script>
+  <script src="../js/bootstrap.bundle.min.js"></script>
+  <script src="../js/tempusdominus-bootstrap-4.min.js"></script>
+  <script src="../js/new-popover.js"></script>
+
+
+</head>
+
+<body style="background-color: #f4f2f1;">
+  <div class="wrap h-100">
+
+    <div class="section-teamschedule h-100">
+      <!-- 공통 Nav tab -->
+      <div class="container py-3 container-mobile-tab">
+        <ul class="nav nav-tabs new-nav-tabs">
+          <a href="#" class="nav-hamburg" onclick="mSideToggle()">
+            <span></span>
+            <span></span>
+            <span></span>
+
+            <!-- <script>
+              function mSideToggle(){
+                if($('.container-mobile-tab').hasClass('m-side-on')) {
+                  $('.container-mobile-tab').removeClass('m-side-on')
+                  $('body').removeAttr("style")
+                } else {
+                  $('.container-mobile-tab').addClass('m-side-on')
+                  $('body').css("overflow","hidden")
+                }
+              }
+            </script> -->
+          </a>
+          
+          <li class="nav-item">
+            <a class="nav-link " href="./home.html">HOME</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link " href="./myschedule.html">나의 근태일정</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link active" href="./temschedule.html">부서 근태일정</a>
+          </li>
+          <a class="nav-setting" href="#" role="button" id="nav-setting" onclick="setting()">
+            Setting Btn
+            <script>
+              function setting() {
+                if($('.command-r').hasClass('active')) {
+                  $('.command-r').removeClass('active')
+                } else {
+                  $('.command-r').addClass('active')
+                }
+              }
+            </script>
+          </a>
+          <!-- <a class="nav-more-btn" href="#" role="button">...
+            <span></span>
+            <span></span>
+            <span></span>
+          </a> -->
+        </ul>
+
+        <!-- 모바일 사이드 메뉴 -->
+        <div class="m-sideWrap">
+          <ul class="m-side-menu">
+            <li>
+              <div class="item">
+                <a href="./home.html">
+                  <div>HOME</div>
+                </a>
+              </div>
+            </li>
+            <li>
+              <div class="item">
+                <a href="./myschedule.html">
+                  <div>나의 근태일정</div>
+                </a>
+              </div>
+            </li>
+            <li class="active">
+              <div class="item">
+                <a href="./temschedule.html">
+                  <div>부서 근태일정</div>
+                </a>
+              </div>
+              <dl>
+                <a href="./temschedule.html">
+                  <dd class="active">업무조회</dd>
+                </a>
+                <a href="./temschedule_2.html">
+                  <dd>연차조회</dd>
+                </a>
+              </dl>
+            </li>
+          </ul>
+        </div>
+
+      </div>
+
+      <section class="container container-schedule d-flex" style="height:100%">
+        <!-- 사이드 메뉴 -->
+        <aside class="sub-sideWrap active">
+          <ul class="sub-side-menu">
+            <li class="sub-side-nav">
+              <a href="#" onclick="subSideOff()">
+                <i></i>
+              </a>
+            </li>
+            <li class="active">
+              <div class="item">
+                <a href="./temschedule.html">
+                  <div>업무조회</div>
+                </a>
+              </div>
+            </li>
+            <li>
+              <div class="item">
+                <a href="./temschedule_2.html">
+                  <div>연차조회</div>
+                </a>
+              </div>
+            </li>
+          </ul>
+          <script>
+            function subSideOff() {
+              $('.sub-sideWrap').removeClass('active')
+              $('.sub-menu').removeAttr("style")
+            }
+          </script>
+        </aside>
+
+        <!-- 컨텐츠 영역 -->
+        <div class="w-100 h-100 minWidthWrap">
+          <!-- 부서 근태설정 커맨드 -->
+          <div class="container team-command team-command02 d-flex align-items-center">
+            <!-- 0811 삭제 -->
+            <!-- <a href="#" class="sub-menuWrap">
+              <div class="sub-menu" onclick="subSideOn()">
+                <span></span>
+                <span></span>
+                <span></span>
+                <script>
+                  function subSideOn() {
+                    $('.sub-sideWrap').addClass('active')
+                      $('.sub-menu').css("display","none")
+                  }
+                </script>
+              </div>
+            </a> -->
+
+            <div class="dropdown newDropdown">
+              <button class="btn btn-secondary dropdown-toggle" type="button" id="dropdownMenuButton" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                컨설팅팀
+              </button>
+              <div class="dropdown-menu" aria-labelledby="dropdownMenuButton">
+                <a class="dropdown-item" href="#">컨설팅팀</a>
+                <a class="dropdown-item" href="#">컨설팅팀2</a>
+                <a class="dropdown-item" href="#">컨설팅팀3</a>
+              </div>
+            </div>
+
+            <div class="date-calendar02 d-flex align-items-center">
+              <input type="text" class="form-control datetimepicker-input" id="datetimepicker7" data-toggle="datetimepicker" data-target="#datetimepicker7" style="width: 170px;">
+              <i></i>
+              <script>
+                $(function () {
+                    $('#datetimepicker7').datetimepicker({
+                        format: 'YYYY-MM-DD',
+                        defaultDate: "2021-06-01"
+                    });
+                });
+              </script>
+            </div>
+          </div>
+          <!-- 부서 근태설정 -->
+          <section class="container teamschedule-cal" id="teamSchedule-cal">
+            <div class="teamscheduleWrap">
+              <div class="tableWrap">
+                <table class="table table-bordered">
+                  <thead>
+                    <tr>
+                      <th scope="col">
+                        <div>컨설팅팀</div>
+                      </th>
+                      <th scope="col">
+                        <div>주간 업무 현황</div>
+                      </th>
+                      <th scope="col">
+                        <div>6.2 (월)</div>
+                      </th>
+                      <th scope="col">
+                        <div>6.3 (화)</div>
+                      </th>
+                      <th scope="col">
+                        <div>6.4 (수)</div>
+                      </th>
+                      <th scope="col">
+                        <div>6.5 (목)</div>
+                      </th>
+                      <th scope="col">
+                        <div>6.6 (금)</div>
+                      </th>
+                      <th scope="col">
+                        <div>6.7 (토)</div>
+                      </th>
+                      <th scope="col">
+                        <div>6.8 (일)</div>
+                      </th>
+                    </tr>
+                  </thead>
+                  <tbody>
+                    <tr>
+                      <th scope="row">
+                        <div class="cell">
+                          <h5>권희재</h5>
+                          <span>부장</span>
+                        </div>
+                      </th>
+                      <td class="graph">
+                        <div class="cell">
+                          <div class="graphCon">
+                            <div class="d-flex justify-content-between">
+                              <div class="tit">
+                                정규근로
+                              </div>
+                              <div>
+                                35h
+                                <em>/40h</em>
+                              </div>
+                            </div>
+                            <div class="progress">
+                              <div class="progress-bar" role="progressbar" style="width: 50%" aria-valuenow="15" aria-valuemin="0" aria-valuemax="100"></div>
+                            </div>
+                            <div class="d-flex justify-content-between con02">
+                              <div>
+                                연장근로
+                              </div>
+                              <div>
+                                2.5h
+                                <span>/12h</span>
+                              </div>
+                            </div>
+                            <div class="progress">
+                              <div class="progress-bar progress-bar02" role="progressbar" style="width: 50%" aria-valuenow="15" aria-valuemin="0" aria-valuemax="100"></div>
+                            </div>
+                          </div>
+                        </div>
+                      </td>
+                      <!-- 0804 -->
+                      <!-- 부서원 일정 상세 모달 샘플 -->
+                      <td>
+                        <div class="cell" data-toggle="modal" data-target="#schedule-detail">
+                          <div class="schedule active">
+                            <i></i>
+                            <span class="time">AM 09:00~PM 06:00</span>
+                            <span class="date work-type-b">6.1</span>
+                            <div class="d-flex align-items-center justify-content-center work-typeWrap">
+                              <span class="work-type work-type-b">야근</span>
+                            </div>
+                          </div>
+                        </div>
+                      </td>
+                      <td>
+                        <div class="cell">
+                          <div class="schedule">
+                            <i></i>
+                            <span class="time">AM 09:00~PM 06:00</span>
+                            <span class="date work-type-e">6.2</span>
+                            <div class="d-flex align-items-center justify-content-center work-typeWrap">
+                              <span class="work-type work-type-e">출장</span>
+                            </div>
+                          </div>
+                        </div>
+                      </td>
+                      <td>
+                        <div class="cell">
+                          <div class="schedule">
+                            <i></i>
+                            <span class="time">AM 09:00~PM 06:00</span>
+                            <span class="date work-type-d">6.3</span> 
+                            <div class="d-flex align-items-center justify-content-center work-typeWrap">
+                              <span class="work-type work-type-d">연차</span>
+                            </div>
+                          </div>
+                        </div>
+                      </td>
+                      <td>
+                        <div class="cell">
+                          <div class="schedule">
+                            <i></i>
+                            <span class="time">AM 09:00~PM 06:00</span>
+                            <span class="date work-type-a">6.4</span>
+                            <div class="d-flex align-items-center justify-content-center work-typeWrap">
+                              <span class="work-type work-type-a">근무</span>
+                            </div>
+                          </div>
+                        </div>
+                      </td>
+                      <td>
+                        <div class="cell">
+                          <div class="schedule">
+                            <i></i>
+                            <span class="time">AM 09:00~PM 06:00</span>
+                            <span class="date work-type-black">6.5</span>
+                            <div class="d-flex align-items-center justify-content-center work-typeWrap">
+                              <span class="work-type work-type-a">근무</span>
+                              <span class="work-type work-type-c">외근</span>
+                              <span class="work-type work-type-d">연차</span>
+                              <span class="work-type work-type-b">야근</span>
+                            </div>
+                          </div>
+                        </div>
+                      </td>
+                      <td>
+                        <div class="cell">
+                          <div class="schedule">
+                            <span class="date">6.6</span>
+                          </div>
+                        </div>
+                      </td>
+                      <td>
+                        <div class="cell">
+                          <div class="schedule">
+                            <span class="date">6.7</span>
+                          </div>
+                        </div>
+                      </td>
+                    </tr>
+                    <tr>
+                      <th scope="row">
+                        <div class="cell">
+                          <h5>권희재</h5>
+                          <span>부장</span>
+                        </div>
+                      </th>
+                      <td class="graph">
+                        <div class="cell">
+                          <div class="graphCon">
+                            <div class="d-flex justify-content-between">
+                              <div class="tit">
+                                정규근로
+                              </div>
+                              <div>
+                                35h
+                                <em>/40h</em>
+                              </div>
+                            </div>
+                            <div class="progress">
+                              <div class="progress-bar" role="progressbar" style="width: 50%" aria-valuenow="15" aria-valuemin="0" aria-valuemax="100"></div>
+                            </div>
+                            <div class="d-flex justify-content-between con02">
+                              <div>
+                                연장근로
+                              </div>
+                              <div>
+                                2.5h
+                                <span>/12h</span>
+                              </div>
+                            </div>
+                            <div class="progress">
+                              <div class="progress-bar progress-bar02" role="progressbar" style="width: 50%" aria-valuenow="15" aria-valuemin="0" aria-valuemax="100"></div>
+                            </div>
+                          </div>
+                        </div>
+                      </td>
+                      <td>
+                        <div class="cell">
+                          <div class="schedule active">
+                            <i></i>
+                            <span class="time">AM 09:00~PM 06:00</span>
+                            <span class="date work-type-b">6.1</span>
+                            <div class="d-flex align-items-center justify-content-center work-typeWrap">
+                              <span class="work-type work-type-b">야근</span>
+                            </div>
+                          </div>
+                        </div>
+                      </td>
+                      <td>
+                        <!--08/20 inline-->
+                        <div class="cell" style="cursor:pointer">
+                          <div class="schedule type-date" data-toggle="popover" data-content="*" data-placement="bottom">
+                            <i></i>
+                            <span class="time">AM 09:00~PM 06:00</span>
+                            <span class="date work-type-e">6.2</span>
+                            <div class="d-flex align-items-center justify-content-center kkk work-typeWrap">
+                              <span class="work-type work-type-e">출장</span>
+                            </div>
+
+                          </div>
+
+                        </div>
+                      </td>
+                      <td>
+                        <div class="cell">
+                          <div class="schedule">
+                            <i></i>
+                            <span class="time">AM 09:00~PM 06:00</span>
+                            <span class="date work-type-d">6.3</span>
+                            <div class="d-flex align-items-center justify-content-center work-typeWrap">
+                              <span class="work-type work-type-d">연차</span>
+                            </div>
+                          </div>
+                        </div>
+                      </td>
+                      <td>
+                        <div class="cell">
+                          <div class="schedule">
+                            <i></i>
+                            <span class="time">AM 09:00~PM 06:00</span>
+                            <span class="date work-type-black">6.4</span>
+                            <div class="d-flex align-items-center justify-content-center work-typeWrap">
+                              <span class="work-type work-type-a">근무</span>
+                              <span class="work-type work-type-c">외근</span>
+                              <span class="work-type work-type-d">연차</span>
+                              <span class="work-type work-type-b">야근</span>
+                              <span class="work-type work-type-a">근무</span>
+                              <span class="work-type work-type-c">외근</span>
+                              <span class="work-type work-type-d">연차</span>
+                              <span class="work-type work-type-b">야근</span>
+                            </div>
+                          </div>
+                        </div>
+                      </td>
+                      <td>
+                        <div class="cell" style="cursor:pointer">
+                          <div class="schedule type-time" data-toggle="popover" data-content="*" data-placement="bottom">
+                            <i></i>
+                            <span class="time">AM 09:00~PM 06:00</span>
+                            <span class="date work-type-black">6.5</span>
+                            <div class="d-flex align-items-center justify-content-center work-typeWrap">
+                              <span class="work-type work-type-a">근무</span>
+                              <span class="work-type work-type-c">외근</span>
+                            </div>
+
+
+                          </div>
+                        </div>
+                      </td>
+                      <td>
+                        <div class="cell">
+                          <div class="schedule">
+                            <span class="date">6.6</span>
+                          </div>
+                        </div>
+                      </td>
+                      <td>
+                        <div class="cell">
+                          <div class="schedule">
+                            <span class="date">6.7</span>
+                          </div>
+                        </div>
+                      </td>
+                    </tr>
+                    
+                  </tbody>
+                </table>
+              </div>
+            </div>
+          </section>
+        </div>
+
+      </section>
+
+
+      
+      
+    </div>
+
+
+    <!-- Modal : 부서원 일정상세 -->
+    <div class="modal newModal fade" id="schedule-detail" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+      <div class="modal-dialog modal-dialog-centered" style="max-width: 335px;">
+        <div class="modal-content">
+          <div class="modal-header flex-row-reverse">
+            <button type="button" class="close justify-self-" data-dismiss="modal" aria-label="Close">
+              <span aria-hidden="true"></span>
+            </button>
+          </div>
+          <div class="modal-body modal-schedule case02">
+            <!-- 모달 내용 -->
+
+            <div class="schedule-name">
+              <h5>김개발</h5>
+              <span>부장</span>
+            </div>
+
+            <div class="schedule-thumb">
+              <dl>
+                <dt>
+                  <span class="work-type work-type-a">근무</span>
+                </dt>
+                <dd><b>AM 09:00 ~ PM 02:00</b></dd>
+              </dl>
+
+              <dl>
+                <dt>
+                  <span class="work-type work-type-c">외근</span>
+                </dt>
+                <dd><b>AM 09:00 ~ PM 02:00</b></dd>
+              </dl>
+            </div>
+
+            <!-- 스케줄 리스트 -->
+            <div class="schedule-list">
+              <dl>
+                <dt>분류</dt>
+                <dd>
+                  <span class="work-type work-type-a">근무</span>
+                </dd>
+              </dl>
+              
+              <dl>
+                <dt>시간</dt>
+                <dd><b>AM 09:00 ~ PM 02:00</b></dd>
+              </dl>
+
+              <dl>
+                <dt>장소</dt>
+                <dd>
+                  HelloDigital - 디지털에이전시 헬로디지털, 대한민국 서울특별시 성동구 성수동2가 280-9 생각공장 12층
+                </dd>
+              </dl>
+
+              <dl>
+                <dt>비고</dt>
+                <dd></dd>
+              </dl>
+            </div>
+
+            <!-- 스케줄 리스트 -->
+            <div class="schedule-list">
+              <dl>
+                <dt>분류</dt>
+                <dd>
+                  <span class="work-type work-type-c">외근</span>
+                </dd>
+              </dl>
+              
+              <dl>
+                <dt>시간</dt>
+                <dd><b>AM 09:00 ~ PM 02:00</b></dd>
+              </dl>
+
+              <dl>
+                <dt>장소</dt>
+                <dd>
+                  HelloDigital - 디지털에이전시 헬로디지털, 대한민국 서울특별시 성동구 성수동2가 280-9 생각공장 12층
+                </dd>
+              </dl>
+
+              <dl>
+                <dt>비고</dt>
+                <dd></dd>
+              </dl>
+            </div>
+            <!-- 0812 스케줄 추가 -->
+            <!-- 스케줄 리스트 -->
+            <div class="schedule-list">
+              <dl>
+                <dt>분류</dt>
+                <dd>
+                  <span class="work-type work-type-c">외근</span>
+                </dd>
+              </dl>
+              
+              <dl>
+                <dt>시간</dt>
+                <dd><b>AM 09:00 ~ PM 02:00</b></dd>
+              </dl>
+
+              <dl>
+                <dt>장소</dt>
+                <dd>
+                  HelloDigital - 디지털에이전시 헬로디지털, 대한민국 서울특별시 성동구 성수동2가 280-9 생각공장 12층
+                </dd>
+              </dl>
+
+              <dl>
+                <dt>비고</dt>
+                <dd></dd>
+              </dl>
+            </div>
+            <!-- 0812 스케줄 추가 -->
+            <!-- 스케줄 리스트 -->
+            <div class="schedule-list">
+              <dl>
+                <dt>분류</dt>
+                <dd>
+                  <span class="work-type work-type-c">외근</span>
+                </dd>
+              </dl>
+              
+              <dl>
+                <dt>시간</dt>
+                <dd><b>AM 09:00 ~ PM 02:00</b></dd>
+              </dl>
+
+              <dl>
+                <dt>장소</dt>
+                <dd>
+                  HelloDigital - 디지털에이전시 헬로디지털, 대한민국 서울특별시 성동구 성수동2가 280-9 생각공장 12층
+                </dd>
+              </dl>
+
+              <dl>
+                <dt>비고</dt>
+                <dd></dd>
+              </dl>
+            </div>
+
+          </div>
+        </div>
+      </div>
+
+      <!-- <script>
+        var myInput = document.getElementById('schedule-detail')
+        const newModal = $('#teamSchedule-cal td')
+  
+        newModal.addEventListener('shown.bs.modal', function () {
+          myInput.focus()
+        })
+      </script> -->
+    </div>
+
+    
+
+    <!-- calendar -->
+    <script type="text/javascript">
+      $(function () {
+          $('#datetimepicker5', '#datetimepicker7').datetimepicker({
+              format: 'YYYY-MM-DD',
+              defaultDate: "2021-06-01"
+          });
+      });
+    </script>
+
+    <!-- 모바일 사이드 햄버거 메뉴 Open&Close -->
+    <script src="../js/mSide.js"></script>
+
+  </div>
+  
+
+</body>
+
+</html>

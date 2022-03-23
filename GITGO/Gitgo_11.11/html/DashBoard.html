@@ -1,0 +1,1156 @@
+<!DOCTYPE html>
+<html lang="ko">
+
+<head>
+  <meta charset="UTF-8" />
+  <title>Gitgo</title>
+  <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+  <meta name="viewport"
+    content="width=device-width, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0, user-scalable=no" />
+
+  <link rel="stylesheet" href="../css/tempusdominus-bootstrap-4.min.css">
+  <link rel="stylesheet" href="../css/hello-ui/import.css" />
+  <link rel="stylesheet" href="../css/jquery-ui.min.css" />
+  <link rel="stylesheet" href="../css/style.min.css" />
+  <link rel="stylesheet" href="../css/bootstrap1.css" />
+  <link rel="stylesheet" type="text/css" href="gridforms.css">
+  <link rel="stylesheet" href="../css/DashBoard.css">
+  <link rel="stylesheet" href="../css/font-awesome.css">
+
+  
+  <script src="../js/jquery-3.4.1.min.js"></script>
+  <script src="../js/ui.js"></script>
+  <script src="../dist/jstree.js"></script>
+  <script src="../js/jstree-custom-module.js"></script>
+  <script src="../js/moment.js"></script>
+  <script src="../js/bootstrap.min.js"></script>
+  <script src="../js/tempusdominus-bootstrap-4.min.js"></script>
+  <script src="../js/bootstrap.bundle.min.js"></script>
+  <script src="../js/new-popover.js"></script>
+
+
+
+    
+    <!-- <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj" crossorigin="anonymous"></script> -->
+    <!-- <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.6.0/dist/css/bootstrap.min.css"integrity="sha384-B0vP5xmATw1+K9KRQjQERJvTumQW0nPEzvF6L/Z6nronJ3oUOFUFpCjEUQouq2+l" crossorigin="anonymous"> -->
+    <!-- <script src="https://cdn.jsdelivr.net/npm/bootstrap@4.6.0/dist/js/bootstrap.bundle.min.js"integrity="sha384-Piv4xVNRyMGpqkS2by6br4gNJ7DXjqk09RmUpJ8jgGtD7zP9yug3goQfGII0yAns" crossorigin="anonymous"></script> -->
+
+    
+    <!-- <script src="https://cdnjs.cloudflare.com/ajax/libs/tempusdominus-bootstrap-4/5.39.0/js/tempusdominus-bootstrap-4.min.js" integrity="sha512-k6/Bkb8Fxf/c1Tkyl39yJwcOZ1P4cRrJu77p83zJjN2Z55prbFHxPs9vN7q3l3+tSMGPDdoH51AEU8Vgo1cgAA==" crossorigin="anonymous"></script> -->
+    <!-- <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.6.0/dist/css/bootstrap.min.css" integrity="sha384-B0vP5xmATw1+K9KRQjQERJvTumQW0nPEzvF6L/Z6nronJ3oUOFUFpCjEUQouq2+l" crossorigin="anonymous"> -->
+    <!-- <script src="https://cdnjs.cloudflare.com/ajax/libs/tempusdominus-bootstrap-4/5.38.0/js/tempusdominus-bootstrap-4.min.js" crossorigin="anonymous"></script> -->
+    <!-- <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/tempusdominus-bootstrap-4/5.38.0/css/tempusdominus-bootstrap-4.min.css" crossorigin="anonymous" /> -->
+    <!-- 달력 -->
+    <!-- <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/moment.js/2.29.0/moment.min.js"></script> -->
+    <!-- <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/tempusdominus-bootstrap-4/5.39.0/css/tempusdominus-bootstrap-4.min.css" integrity="sha512-3JRrEUwaCkFUBLK1N8HehwQgu8e23jTH4np5NHOmQOobuC4ROQxFwFgBLTnhcnQRMs84muMh0PnnwXlPq5MGjg==" crossorigin="anonymous" /> -->
+
+    
+
+</head>
+
+<body style="background-color: #f4f2f1;">
+  <div class="wrap">
+    <div class="section-home">
+      <!-- 공통 Nav tab -->
+      <div class="container py-3 container-mobile-tab">
+        <ul class="nav nav-tabs new-nav-tabs">
+          <a  class="nav-hamburg" onclick="mSideToggle()">
+            <span></span>
+            <span></span>
+            <span></span>
+          </a>
+          
+          <li class="nav-item">
+            <a class="nav-link active" href="./DashBoard.html">메인</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link " href="./electronicpayment_HOME.html">전자결재</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="./temschedule.html">근태관리</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="./temschedule.html">조직도</a>
+          </li>
+          <a class="nav-setting"  role="button" id="nav-setting" onclick="setting()">
+            Setting Btn
+            <script>
+              function setting() {
+                if($('.command-r').hasClass('active')) {
+                  $('.command-r').removeClass('active')
+                } else {
+                  $('.command-r').addClass('active')
+                }
+              }
+            </script>
+          </a>
+          <!-- <a class="nav-more-btn"  role="button">...
+            <span></span>
+            <span></span>
+            <span></span>
+          </a> -->
+        </ul>
+
+        <!-- 모바일 사이드 메뉴 -->
+        <div class="m-sideWrap" onclick="mSideClose()">
+          <ul class="m-side-menu">
+            <li class="active">
+              <div class="item">
+                <a href="./DashBoard.html">
+                  <div>메인</div>
+                </a>
+              </div>
+            </li>
+            <li>
+              <div class="item">
+                <a href="./electronicpayment_HOME.html">
+                  <div>전자결재</div>
+                </a>
+              </div>
+            </li>
+            <li>
+              <div class="item">
+                <a href="./temschedule.html">
+                  <div>근태관리</div>
+                </a>
+              </div>
+              <dl>
+                <a href="./temschedule.html">
+                  <dd>조직도</dd>
+                </a>
+                <a href="./temschedule_2.html">
+                  <dd>연차조회</dd>
+                </a>
+              </dl>
+            </li>
+          </ul>
+        </div>
+
+      </div>
+
+      <!-- cont -->
+      <div class="container container-mobile-con">
+        <div class="row">
+          <!-- 왼쪽 섹션 -->
+          <div class="col-md-4 home-card">
+            <div class="card">
+              <div class="card-body">
+                <div class="card-body1-1">
+                  <img src="../images/group-26@2x.png" alt="회사 CI이미지">
+                  <ul class="card-body1-1-1">
+                    <li>
+                      <div>
+                        홍길동
+                      </div>
+                      <div>
+                        <p>
+                          개발팀
+                        </p> 
+                        <p>
+                          | 
+                        </p> 
+                        <p>
+                          차장
+                        </p> 
+                      </div>
+                    </li>
+                    <li>
+                      <img src="../images/thumb-icon-normal@2x.png" alt="아이콘">
+                    </li>
+                  </ul>
+                </div>
+              </div>
+            </div>
+            <div class="card">
+              <div class="card-body">
+                <div class="card-body1-2">
+                  <b>출근등록</b>
+                </div>
+                <div class="d-flex justify-content-between">
+                  <div class="titlegroup">
+                    <p class="card-name2">2021-06-02(수)</p>
+                    <h5 class="card-title">AM </h5>
+                    <h5 class="card-title2">08:55:55</h5>
+                  </div>
+                  <div>
+                    <table class="table homeCardTable">
+                      <tbody>
+                        <tr>
+                          <th class="tr1" style="padding-top: 10px;" scope="row">출근시간</th>
+                          <td class="tr1 on" style="padding-top: 10px;" >AM 08:55:55</td>
+                        </tr>
+                        <tr>
+                          <th scope="row">퇴근시간</th>
+                          <td class="on">AM 08:55:55</td>
+                        </tr>
+                      </tbody>
+                    </table>
+                  </div>
+                </div>
+                <a  class="btn btn-workOn w-100">출근하기</a>
+<!--                 <a  class="btn btn-workOff w-100">퇴근하기</a>
+                <a  class="btn w-100 disabled">출근하기</a> -->
+              </div>
+            </div>
+            <div class="card">
+              <div class="card-body">
+                <!-- Tit & Date input -->
+                <ul class="d-flex justify-content-between align-items-center">
+                  <li class="card-name mb-0">
+                    주간 근무 현황
+                  </li>
+                  <li class="date-calendar02 d-flex align-items-center">
+                      <input type="text" class="form-control datetimepicker-input" id="datetimepicker5" data-toggle="datetimepicker" data-target="#datetimepicker5" style="width: 65px;"/>
+                      <i style="margin-right: 5px;">~</i>
+                      <input type="text" class="form-control datetimepicker-input" id="datetimepicker5_1" data-toggle="datetimepicker" data-target="#datetimepicker5_1" style="width: 65px;"/>
+                      <i></i>
+                      <!-- 0729 -->
+                      <!-- input 에 defaultDate 는 개발 지원 필요 -->
+                      <script>
+                        $(function () {
+                          $('#datetimepicker5').datetimepicker({
+                            format: 'YYYY.MM.DD',
+                            defaultDate: "2021.06.01"
+                          });
+                          $('#datetimepicker5_1').datetimepicker({
+                            format: 'YYYY.MM.DD',
+                            defaultDate: "2021.06.01"
+                          });
+                        });
+                      </script>
+                  </li>
+                </ul>
+
+                <div class="progressBx">
+                  <h5>
+                    38h 54m
+                  </h5>
+                  <div class="progress">
+                    <div class="progress-bar" role="progressbar" style="width: 50%" aria-valuenow="15" aria-valuemin="0" aria-valuemax="100"></div>
+                    <div class="progress-bar progress-bar02" role="progressbar" style="width: 65%" aria-valuenow="30" aria-valuemin="0" aria-valuemax="100"></div>
+                    <div class="hour hour40">
+                      <p>
+                        40h
+                      </p>
+                    </div>
+                    <div class="hour hour50">
+                      52h
+                    </div>
+                  </div>
+                </div>
+                <div class="remaining">
+                  남은 근무시간 : 최소 11h 5m ~ 최대 16h 15m
+                </div>
+                <div>
+                  <ul class="progressBottomInfo">
+                    <li>
+                      <span>정규 근로</span>
+                      <span>35h 47m</span>
+                    </li>
+                    <li>
+                      <span>연장 근로</span>
+                      <span>3h 7m</span>
+                    </li>
+                    <li>
+                      <span>남은 근무 시간</span>
+                      <span>최소</span>
+                      <span>11h 5m</span>
+                      <span>~</span>
+                      <span>최대</span>
+                      <span>16h 15m</span>
+                    </li>
+                  </ul>
+      
+                </div>
+              </div>
+            </div>
+          </div>
+
+
+          <!-- 우측 섹션 -->
+          <div class="col-md-8 home-card-right">
+            <div class="card-right1">
+              <!-- 왼쪽박스 -->
+              <div>
+                <ul class="inner_right1_l_1">
+                  <li>공지사항</li>
+                  <li>
+                    <button>
+                      <a >
+                        더보기
+                      </a>
+                    </button>
+                  </li>
+                </ul>
+                <ul class="inner_right1_l_2">
+                  <li>
+                    <ul>
+                      <li>
+                        <a href="#">
+                          뉴스 및 소식 리스트
+                        </a>
+                      </li>
+                      <li>
+                        <a href="#">
+                          카테고리
+                        </a>
+                      </li>
+                      <li>
+                        <a href="#">
+                          2021.02.25
+                        </a>
+                      </li>
+                      <li>
+                        <a href="#">
+                          작성자
+                        </a>
+                      </li>
+                    </ul>
+                  </li>
+                  <li>
+                    <ul>
+                      <li>
+                        <a href="#">
+                          뉴스 및 소식 리스트
+                        </a>
+                      </li>
+                      <li>
+                        <a href="#">
+                          카테고리
+                        </a>
+                      </li>
+                      <li>
+                        <a href="#">
+                          2021.02.25
+                        </a>
+                      </li>
+                      <li>
+                        <a href="#">
+                          작성자
+                        </a>
+                      </li>
+                    </ul>
+                  </li>
+                  <li>
+                    <ul>
+                      <li>
+                        <a href="#">
+                          뉴스 및 소식 리스트
+                        </a>
+                      </li>
+                      <li>
+                        <a href="#">
+                          카테고리
+                        </a>
+                      </li>
+                      <li>
+                        <a href="#">
+                          2021.02.25
+                        </a>
+                      </li>
+                      <li>
+                        <a href="#">
+                          작성자
+                        </a>
+                      </li>
+                    </ul>
+                  </li>
+                  <li>
+                    <ul>
+                      <li>
+                        <a href="#">
+                          뉴스 및 소식 리스트
+                        </a>
+                      </li>
+                      <li>
+                        <a href="#">
+                          카테고리
+                        </a>
+                      </li>
+                      <li>
+                        <a href="#">
+                          2021.02.25
+                        </a>
+                      </li>
+                      <li>
+                        <a href="#">
+                          작성자
+                        </a>
+                      </li>
+                    </ul>
+                  </li>
+                  <li>
+                    <ul>
+                      <li>
+                        <a href="#">
+                          뉴스 및 소식 리스트
+                        </a>
+                      </li>
+                      <li>
+                        <a href="#">
+                          카테고리
+                        </a>
+                      </li>
+                      <li>
+                        <a href="#">
+                          2021.02.25
+                        </a>
+                      </li>
+                      <li>
+                        <a href="#">
+                          작성자
+                        </a>
+                      </li>
+                    </ul>
+                  </li>
+                </ul>
+              </div>
+              <!-- 오른쪽박스 -->
+              <div>
+                <ul class="inner_right1_r_1">
+                  <li>최근 게시물</li>
+                  <li>
+                    <button>
+                      <a >
+                        더보기
+                      </a>
+                    </button>
+                  </li>
+                </ul>
+                <ul class="inner_right1_r_2">
+                  <li>
+                    <ul>
+                      <li>
+                        <a href="#">
+                          뉴스 및 소식 리스트
+                        </a>
+                      </li>
+                      <li>
+                        <a href="#">
+                          카테고리
+                        </a>
+                      </li>
+                      <li>
+                        <a href="#">
+                          2021.02.25
+                        </a>
+                      </li>
+                      <li>
+                        <a href="#">
+                          작성자
+                        </a>
+                      </li>
+                    </ul>
+                  </li>
+                  <li>
+                    <ul>
+                      <li>
+                        <a href="#">
+                          뉴스 및 소식 리스트
+                        </a>
+                      </li>
+                      <li>
+                        <a href="#">
+                          카테고리
+                        </a>
+                      </li>
+                      <li>
+                        <a href="#">
+                          2021.02.25
+                        </a>
+                      </li>
+                      <li>
+                        <a href="#">
+                          작성자
+                        </a>
+                      </li>
+                    </ul>
+                  </li>
+                  <li>
+                    <ul>
+                      <li>
+                        <a href="#">
+                          뉴스 및 소식 리스트
+                        </a>
+                      </li>
+                      <li>
+                        <a href="#">
+                          카테고리
+                        </a>
+                      </li>
+                      <li>
+                        <a href="#">
+                          2021.02.25
+                        </a>
+                      </li>
+                      <li>
+                        <a href="#">
+                          작성자
+                        </a>
+                      </li>
+                    </ul>
+                  </li>
+                  <li>
+                    <ul>
+                      <li>
+                        <a href="#">
+                          뉴스 및 소식 리스트
+                        </a>
+                      </li>
+                      <li>
+                        <a href="#">
+                          카테고리
+                        </a>
+                      </li>
+                      <li>
+                        <a href="#">
+                          2021.02.25
+                        </a>
+                      </li>
+                      <li>
+                        <a href="#">
+                          작성자
+                        </a>
+                      </li>
+                    </ul>
+                  </li>
+                  <li>
+                    <ul>
+                      <li>
+                        <a href="#">
+                          뉴스 및 소식 리스트
+                        </a>
+                      </li>
+                      <li>
+                        <a href="#">
+                          카테고리
+                        </a>
+                      </li>
+                      <li>
+                        <a href="#">
+                          2021.02.25
+                        </a>
+                      </li>
+                      <li>
+                        <a href="#">
+                          작성자
+                        </a>
+                      </li>
+                    </ul>
+                  </li>
+                </ul>
+              </div>
+            </div>
+            <div class="card-right2">
+              <div class="mbmb1">
+                <ul class="d-flex justify-content-between conHeadWrap py-3">
+                  <li class="card-name">
+                    결제할 문서
+                  </li>
+                  <p>7</p>
+                  <li class="d-flex align-items-center">
+                    <button>
+                      <a >
+                        더보기
+                      </a>
+                    </button>
+                  </li>
+                </ul>
+                <ul class='secinner1'>
+                  <li>
+                      <ul class="innertitle">
+                          <li>
+                              <a >3월 3째주차 업무보고서 
+                              </a>                             
+                          </li>
+                          <li>
+                              <button> <a >진행</a> </button>
+                              <i style="vertical-align: middle">
+                                <svg width="16" height="16" xmlns="http://www.w3.org/2000/svg">
+                                  <g fill="#b8b8b8" fill-rule="evenodd">
+                                    <path d="M14 14H2.08V2.08h5.29v1.199H3.279v9.522h9.522V8.71H14zM14 6.7h-1.199V3.28H9.38v-1.2H14z"/>
+                                    <path d="m6.454 10.474-.848-.848 7.37-7.37.848.848z"/>
+                                  </g>
+                                </svg>
+                            </i>
+                          </li>
+                      </ul>
+                      <div class='innerfirst'>
+                        <p>
+                            2021.02.25<span class="bar">｜</span>PM 4:30
+                        </p>
+                        <div class="firstinner">
+                          <div class="innerfirstin">
+                            <p>
+                              인사부
+                            </p>
+                            <p class="bar">｜</p>
+                            <p>
+                              김문서
+                            </p>
+                          </div>
+                          <div class='innerlast'>
+                            <a >TJ-2103-0001</a>
+                          </div>
+                        </div>
+                        
+                      </div>
+
+                  </li>
+                  <li>
+                      <ul class="innertitle">
+                          <li>
+                              <a >3월 3째주차 업무보고서 
+                              </a>
+                          </li>
+                          <li>
+                              <button> <a >진행</a> </button>
+                              <i style="vertical-align: middle">
+                                <svg width="16" height="16" xmlns="http://www.w3.org/2000/svg">
+                                  <g fill="#b8b8b8" fill-rule="evenodd">
+                                    <path d="M14 14H2.08V2.08h5.29v1.199H3.279v9.522h9.522V8.71H14zM14 6.7h-1.199V3.28H9.38v-1.2H14z"/>
+                                    <path d="m6.454 10.474-.848-.848 7.37-7.37.848.848z"/>
+                                  </g>
+                                </svg>
+                            </i>
+                          </li>
+                      </ul>
+                      <div class='innerfirst'>
+                        <p>
+                            2021.02.25<span class="bar">｜</span>PM 4:30
+                        </p>
+                        <div class="firstinner">
+                          <div class="innerfirstin">
+                            <p>
+                              인사부
+                            </p>
+                            <p class="bar">｜</p>
+                            <p>
+                              김문서
+                            </p>
+                          </div>
+                          <div class='innerlast'>
+                            <a >TJ-2103-0001</a>
+                          </div>
+                        </div>
+                        
+                      </div>
+
+                  </li>
+                  <li>
+                      <ul class="innertitle">
+                          <li>
+                              <a >3월 3째주차 업무보고서 
+                              </a>
+                          </li>
+                          <li>
+                              <button> <a >진행</a> </button>
+                              <i style="vertical-align: middle">
+                                <svg width="16" height="16" xmlns="http://www.w3.org/2000/svg">
+                                  <g fill="#b8b8b8" fill-rule="evenodd">
+                                    <path d="M14 14H2.08V2.08h5.29v1.199H3.279v9.522h9.522V8.71H14zM14 6.7h-1.199V3.28H9.38v-1.2H14z"/>
+                                    <path d="m6.454 10.474-.848-.848 7.37-7.37.848.848z"/>
+                                  </g>
+                                </svg>
+                            </i>
+                          </li>
+                      </ul>
+                      <div class='innerfirst'>
+                        <p>
+                            2021.02.25<span class="bar">｜</span>PM 4:30
+                        </p>
+                        <div class="firstinner">
+                          <div class="innerfirstin">
+                            <p>
+                              인사부
+                            </p>
+                            <p class="bar">｜</p>
+                            <p>
+                              김문서
+                            </p>
+                          </div>
+                          <div class='innerlast'>
+                            <a >TJ-2103-0001</a>
+                          </div>
+                        </div>
+                        
+                      </div>
+
+                  </li>
+                </ul>
+              </div>
+              <div class="mbmb2">
+                <ul class="d-flex justify-content-between conHeadWrap py-3">
+                  <li class="card-name">
+                    진행중 문서 
+                  </li>
+                  <p>11</p>
+                  <li class="d-flex align-items-center">
+                    <button>
+                      <a >
+                        더보기
+                      </a>
+                    </button>
+                  </li>
+                </ul>
+                <ul class='secinner1'>
+                  <li>
+                      <ul class="innertitle">
+                          <li>
+                              <a >3월 3째주차 업무보고서 
+                              </a>                             
+                          </li>
+                          <li>
+                              <button> <a >진행</a> </button>
+                              <i style="vertical-align: middle">
+                                <svg width="16" height="16" xmlns="http://www.w3.org/2000/svg">
+                                  <g fill="#b8b8b8" fill-rule="evenodd">
+                                    <path d="M14 14H2.08V2.08h5.29v1.199H3.279v9.522h9.522V8.71H14zM14 6.7h-1.199V3.28H9.38v-1.2H14z"/>
+                                    <path d="m6.454 10.474-.848-.848 7.37-7.37.848.848z"/>
+                                  </g>
+                                </svg>
+                            </i>
+                          </li>
+                      </ul>
+                      <div class='innerfirst'>
+                          <p>
+                              2021.02.25<span class="bar">｜</span>PM 4:30
+                          </p>
+                          <div class="firstinner">
+                            <div class="innerfirstin">
+                              <p>
+                                인사부
+                              </p>
+                              <p class="bar">｜</p>
+                              <p>
+                                김문서
+                              </p>
+                            </div>
+                            <div class='innerlast'>
+                              <a >TJ-2103-0001</a>
+                            </div>
+                          </div>
+                          
+                      </div>
+
+                  </li>
+                  <li>
+                      <ul class="innertitle">
+                          <li>
+                              <a >3월 3째주차 업무보고서 
+                              </a>
+                          </li>
+                          <li>
+                              <button> <a >진행</a> </button>
+                              <i style="vertical-align: middle">
+                                <svg width="16" height="16" xmlns="http://www.w3.org/2000/svg">
+                                  <g fill="#b8b8b8" fill-rule="evenodd">
+                                    <path d="M14 14H2.08V2.08h5.29v1.199H3.279v9.522h9.522V8.71H14zM14 6.7h-1.199V3.28H9.38v-1.2H14z"/>
+                                    <path d="m6.454 10.474-.848-.848 7.37-7.37.848.848z"/>
+                                  </g>
+                                </svg>
+                            </i>
+                          </li>
+                      </ul>
+                      <div class='innerfirst'>
+                        <p>
+                            2021.02.25<span class="bar">｜</span>PM 4:30
+                        </p>
+                        <div class="firstinner">
+                          <div class="innerfirstin">
+                            <p>
+                              인사부
+                            </p>
+                            <p class="bar">｜</p>
+                            <p>
+                              김문서
+                            </p>
+                          </div>
+                          <div class='innerlast'>
+                            <a >TJ-2103-0001</a>
+                          </div>
+                        </div>
+                        
+                      </div>
+
+                  </li>
+                  <li>
+                      <ul class="innertitle">
+                          <li>
+                              <a >3월 3째주차 업무보고서 
+                              </a>
+                          </li>
+                          <li>
+                              <button> <a >진행</a> </button>
+                              <i style="vertical-align: middle">
+                                <svg width="16" height="16" xmlns="http://www.w3.org/2000/svg">
+                                  <g fill="#b8b8b8" fill-rule="evenodd">
+                                    <path d="M14 14H2.08V2.08h5.29v1.199H3.279v9.522h9.522V8.71H14zM14 6.7h-1.199V3.28H9.38v-1.2H14z"/>
+                                    <path d="m6.454 10.474-.848-.848 7.37-7.37.848.848z"/>
+                                  </g>
+                                </svg>
+                            </i>
+                          </li>
+                      </ul>
+                      <div class='innerfirst'>
+                        <p>
+                            2021.02.25<span class="bar">｜</span>PM 4:30
+                        </p>
+                        <div class="firstinner">
+                          <div class="innerfirstin">
+                            <p>
+                              인사부
+                            </p>
+                            <p class="bar">｜</p>
+                            <p>
+                              김문서
+                            </p>
+                          </div>
+                          <div class='innerlast'>
+                            <a >TJ-2103-0001</a>
+                          </div>
+                        </div>
+                        
+                      </div>
+
+                  </li>
+                </ul>
+              </div>
+              <div>
+                <!-- Tit & Date input -->
+                <ul class="d-flex justify-content-between conHeadWrap py-3 nana1">
+                  <li class="card-name">
+                    이번주 부서 현황
+                  </li>
+                  <li class="d-flex align-items-center">
+                    <button>
+                      <a >
+                        더보기
+                      </a>
+                    </button>
+                  </li>
+                </ul>
+
+                <!-- PC 리스트 : 리스트&팝오버 -->
+                <div class="d-none d-md-block">
+                  <div class="d-flex card-work work-pop01" data-toggle="popover" data-content="1" data-placement="bottom">
+                    <div class="dateBx">
+                    <span class="date">6.1</span>
+                    <span class="day">(월)</span>
+                    </div>
+                  </div>
+
+                  <div class="d-flex card-work today work-pop01" data-toggle="popover" data-content="1" data-placement="bottom">
+                    <div class="dateBx">
+                      <span class="date">6.2</span>
+                      <span class="day">(화)</span>
+                    </div>
+                    <div class="d-flex flex-grow-1 justify-content-between">
+                      <div class="d-flex align-items-center justify-content-end work-typeWrap">
+                        <div>
+                          <span class="work-type work-type-d order-3">연차</span>
+                          <a>
+                            홍길동
+                          </a>
+                        </div>
+                        <div>
+                          <span class="work-type work-type-c order-3">외근</span>
+                          <a>
+                            정영업
+                          </a>
+                        </div>
+                        <div class="order-3-1">
+                          <span class="work-type work-type-e order-3">출장</span>
+                          <a>
+                            정영업
+                          </a>
+                        </div>
+                        <div class="order-3-1">
+                          <span class="work-type work-type-f order-3">교육</span>
+                          <a>
+                            정영업
+                          </a>
+                        </div>
+                        <div class="order-3-1">
+                          <span class="work-type work-type-a order-3">근무</span>
+                          <a>
+                            정영업
+                          </a>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+
+                  <div class="d-flex card-work work-pop01" data-toggle="popover" data-content="1" data-placement="bottom">
+                    <div class="dateBx">
+                      <span class="date">6.3</span>
+                      <span class="day">(수)</span>
+                    </div>
+                  </div>
+
+                  <div class="d-flex card-work work-pop02" data-toggle="popover" data-content="1" data-placement="bottom">
+                    <div class="dateBx">
+                      <span class="date">6.4</span>
+                      <span class="day">(목)</span>
+                    </div>
+                    <div class="d-flex flex-grow-1 justify-content-between">
+                      <div class="d-flex align-items-center justify-content-end work-typeWrap">
+                        <div>
+                          <span class="work-type work-type-e order-3">출장</span>
+                          <a>
+                            홍길동
+                          </a>
+                        </div>
+                        <div>
+                          <span class="work-type work-type-f order-3">교육</span>
+                          <a>
+                            정영업
+                          </a>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+
+                  <div class="d-flex card-work work-pop01" data-toggle="popover" data-content="1" data-placement="bottom">
+                    <div class="dateBx">
+                      <span class="date">6.5</span>
+                      <span class="day">(금)</span>
+                    </div>
+                  </div>
+
+                  <div class="d-flex card-work work-pop01" data-toggle="popover" data-content="1" data-placement="bottom">
+                    <div class="dateBx">
+                      <span class="date">6.6</span>
+                      <span class="day">(토)</span>
+                    </div>
+                  </div>
+                  
+                  <div class="d-flex card-work work-pop01" data-toggle="popover" data-content="1" data-placement="bottom">
+                    <div class="dateBx">
+                      <span class="date">6.7</span>
+                      <span class="day">(일)</span>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+            
+            
+
+
+
+          </div>
+        </div>
+      </div>
+
+    </div>
+
+    <!-- Modal : 출근시간변경 -->
+    <div class="modal newModal fade" id="exampleModal3" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+      <div class="modal-dialog modal-dialog-centered" style="max-width: 335px;">
+        <div class="modal-content">
+          <div class="modal-header flex-row-reverse">
+            <button type="button" class="close justify-self-" data-dismiss="modal" aria-label="Close">
+              <span aria-hidden="true"></span>
+            </button>
+          </div>
+          <div class="modal-body">
+            <div class="input-section">
+              <h5>출근시간변경</h5>
+              <div class="input-time d-flex align-items-center">
+                <!-- 인풋 타임 캘린더 -->
+                <div class="date-calendar04 d-inline-flex align-items-center">
+                  <input type='text' class="form-control datetimepicker-input" id="datetimepickera" data-toggle="datetimepicker" data-target="#datetimepickera"/>
+                  <script type="text/javascript">
+                      $(function () {
+                          $('#datetimepickera').datetimepicker({
+                            format: 'LT'
+                          });
+                      });
+                  </script>
+                
+                  </script>
+                </div>
+              </div>
+            </div>
+            <div class="input-section">
+              <h5>사유</h5>
+              <div class="form-group">
+                <textarea class="form-control" id="exampleFormControlTextarea1" rows="3" placeholder="사유를 입력하세요."></textarea>
+              </div>
+            </div>
+          </div>
+          <div class="modal-footer">
+            <button type="button" class="btn btn-primary">신청하기</button>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- Modal : 소명하기 -->
+    <div class="modal newModal fade" id="exampleModal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+      <div class="modal-dialog modal-dialog-centered" style="max-width: 335px;">
+        <div class="modal-content">
+          <div class="modal-header flex-row-reverse">
+            <button type="button" class="close justify-self-" data-dismiss="modal" aria-label="Close">
+              <span aria-hidden="true"></span>
+            </button>
+          </div>
+          <div class="modal-body">
+            <div class="input-section">
+              <h5>소명하기</h5>
+              <div class="input-time">
+                <span>2021-07-26(월) AM09:00 출근</span>
+              </div>
+            </div>
+            <div class="input-section">
+              <h5>사유</h5>
+              <div class="form-group">
+                <textarea class="form-control" id="exampleFormControlTextarea1" rows="3" placeholder="사유를 입력하세요."></textarea>
+              </div>
+            </div>
+          </div>
+          <div class="modal-footer">
+            <button type="button" class="btn btn-primary">신청하기</button>
+          </div>
+        </div>
+      </div>
+    </div>
+
+
+    <!-- Modal : 근로유형변경 -->
+    <div class="modal newModal fade" id="exampleModal2" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+      <div class="modal-dialog modal-dialog-centered" style="max-width: 447px;">
+        <div class="modal-content">
+          <div class="modal-header flex-row-reverse">
+            <button type="button" class="close justify-self-" data-dismiss="modal" aria-label="Close">
+              <span aria-hidden="true"></span>
+            </button>
+          </div>
+          <div class="modal-body">
+            <div class="input-section">
+              <div class="d-flex align-items-start">
+                <div class="col-4">
+                  <h5 class="mb-0 py-2">근로유형변경</h5>
+                </div>
+                <div class="col-8">
+                  <div class="form-group mb-2">
+                    <div class="selectIcon">
+                      <select class="form-control select02" id="exampleFormControlSelect1">
+                        <option>기본근로</option>
+                        <option>기본근로</option>
+                        <option>기본근로</option>
+                        <option>기본근로</option>
+                      </select>
+                    </div>
+                  </div>
+                  <div class="form-group mb-1">
+                    <div class="selectIcon">
+                      <select class="form-control select02" id="exampleFormControlSelect1">
+                        <option>기본근로</option>
+                        <option>기본근로</option>
+                        <option>기본근로</option>
+                        <option>기본근로</option>
+                      </select>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <div class="input-section">
+              <div class="d-flex align-items-center">
+                <div class="col-4">
+                  <h5 class="mb-0">적용기간</h5>
+                </div>
+                <div class="col-8">
+                  <div class="date-calendar d-flex align-items-center date-calendar03">
+                    <input type="text" class="form-control datetimepicker-input" id="datetimepicker9" data-toggle="datetimepicker" data-target="#datetimepicker9">
+                    <span class="mx-2">~</span>
+                    <input type="text" class="form-control datetimepicker-input" id="datetimepicker10" data-toggle="datetimepicker" data-target="#datetimepicker10">
+                    <i></i>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="modal-footer">
+            <button type="button" class="btn btn-primary">신청하기</button>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- calendar -->
+    <script type="text/javascript">
+      
+      $(function () {
+          $('#datetimepicker6').datetimepicker({
+            format: 'YYYY-MM-DD',
+            defaultDate: "2021-06-01"
+          });
+      });
+      
+      $(function () {
+          $('#datetimepicker8').datetimepicker({
+            format: 'YYYY-MM-DD',
+            defaultDate: "2021-06-05"
+          });
+      });
+      $(function () {
+          $('#datetimepicker9').datetimepicker({
+            format: 'YYYY-MM-DD',
+            defaultDate: "2021-06-01"
+          });
+      });
+
+      $(function () {
+          $('#datetimepicker10').datetimepicker({
+            format: 'YYYY-MM-DD',
+            defaultDate: "2021-06-05"
+          });
+      });
+    </script>
+
+
+    <!-- 모바일 사이드 햄버거 메뉴 Open&Close -->
+    <script src="../js/mSide.js"></script>
+
+
+    <!-- footer -->
+    <div class="footer">
+      <div class="footerinner">
+        <div>
+          <a>
+            Gitgo Selection
+          </a>
+          <a href="#">
+            <img src="../images/bitmap@2x.jpg" alt="푸터로고">
+          </a>
+
+          <!-- 추가이미지 삽입 구역 -->
+          <a href="#">
+            <img src="../images/bitmap@2x.jpg" alt="푸터로고">
+          </a>
+          <a href="#">
+            <img src="../images/bitmap@2x.jpg" alt="푸터로고">
+          </a>
+        </div>
+        <div class="innerselect">
+            Quick Link :
+          <form>
+            <select id="qickqick" name="QuickLink">
+              <option value="SCK 웹사이트" selected>SCK 웹사이트</option>
+              <option value="SCK 웹사이트">SCK 웹사이트</option>
+              <option value="SCK 웹사이트">SCK 웹사이트</option>
+              <option value="SCK 웹사이트">SCK 웹사이트</option>
+            </select>
+          </form>
+        </div>
+      </div>
+    </div>
+  </div>
+</body>
+
+</html>
+
+

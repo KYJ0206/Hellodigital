@@ -1,0 +1,73 @@
+.section-myschedule { background-color: #f4f2f1; } 
+.section-myschedule .container.container-mobile-tab { margin-bottom: 0; padding-bottom: 0 !important; } 
+.section-myschedule .container.container-command { /* margin-top: -1rem; */ } 
+.section-myschedule .command { padding-left: 20px; padding-right: 10px; height: 35px; position: relative; background-color: #fff; } 
+.section-myschedule .command .command-l { width: 300px; } 
+.section-myschedule .command .command-l li:last-child { text-align: right; } 
+.section-myschedule .command .command-l li+li { border-left: 1px solid #9797976b; } 
+.section-myschedule .command .command-l span { font-size: 12px; font-weight: 600; font-stretch: normal; font-style: normal; line-height: 18px; letter-spacing: -0.4px; color: #5d5d5d; } 
+.section-myschedule .command .command-l span.date { color: #acacac; } 
+
+
+.section-myschedule .command .command-r span { font-size: 12px; font-weight: 600; font-stretch: normal; font-style: normal; line-height: 18px; letter-spacing: -0.4px; color: #696969; display: block; border-right: 1px solid #9797976b; padding-right: 12px; white-space: nowrap; } 
+.section-myschedule .command .command-r .selectIcon::after { content: ''; border-width: 8px 4px 0 4px; border-style: solid; border-color: transparent; border-top-color: #868686; margin-top: 0; top: 10px; right: 0; } 
+.section-myschedule .command .command-r select { font-family: 'GothicA1', 'sans-serif', '돋움'; border: 0; font-size: 12px; font-weight: 600; font-stretch: normal; font-style: normal; line-height: 18px; letter-spacing: -0.4px; color: #696969; width: 60px; padding: 5px 8px 5px 5px; margin-left: 11px; text-overflow: ellipsis; } 
+.section-myschedule .command .command-r .date-calendar02 { margin-left: 20px; margin-right: 4px; } 
+.section-myschedule .command .command-r .date-calendar02::after { display: none; } 
+.section-myschedule .command .command-r .date-calendar02 .form-control { display: block; width: 91px; text-align: left; padding: 0; padding-left: 10px; height: 21px; font-size: 12px; font-weight: 600; font-stretch: normal; font-style: normal; line-height: normal; letter-spacing: -0.4px; color: #696969; border-radius: 4px; border: solid 1px #eae8e7; background-color: #ffffff; -webkit-appearance: none; -moz-appearance: none; appearance: none; transition: border-color 0.15s ease-in-out, box-shadow 0.15s ease-in-out; } 
+.section-myschedule .command .command-r .date-calendar02 .calendar02-span { padding: 4px; border: 0; } 
+
+.section-myschedule .command .command-r .btn { min-width: 43px; height: 21px; border-radius: 4px; border: solid 1px #979797; background-color: #ffffff; font-size: 10px; font-weight: 600; font-stretch: normal; font-style: normal; line-height: normal; letter-spacing: normal; text-align: center; color: #535353; margin-left: 8px; } 
+.section-myschedule .command .command-r .btn.btn-primary { border: solid 1px #c4c4c4; background-color: #d8d8d8; color: #535353; } 
+
+/* myschedule 컨텐츠 영역 */
+.container-myschedule .list div { overflow: hidden; } 
+.container-myschedule .list div span { text-overflow: ellipsis; white-space: nowrap; display: inline; overflow: hidden; } 
+.container-myschedule .list .list-l div:nth-child(1) { flex: 1 0 20%; } 
+.container-myschedule .list .list-l div:nth-child(2) { flex: 1 0 40%; } 
+.container-myschedule .list .list-l div:nth-child(3) { flex: 1 0 40%; } 
+
+.container-myschedule .list .list-r div:nth-child(1) { flex: 1 0 35%; } 
+.container-myschedule .list .list-r div:nth-child(2) { flex: 1 0 35%; } 
+.container-myschedule .list .list-r div:nth-child(3) { flex: 1 0 30%; } 
+.container-myschedule .list .list-l em { padding: 0 1px; } 
+
+.container-myschedule .list-l { max-width: 600px; width: 50%; } 
+.container-myschedule .list-r { max-width: 670px; width: 50%; color: #777777; } 
+.container-myschedule .list-head { border-bottom: solid 1px rgba(151, 151, 151, 0.4); } 
+.container-myschedule .list-head div { font-size: 10px; font-weight: 600; font-stretch: normal; font-style: normal; line-height: 1.8; letter-spacing: normal; text-align: center; color: #747474; line-height: 37px; display: flex; flex: 1 0 auto; justify-content: center; } 
+.container-myschedule .list-body { margin-bottom: 16px; } 
+.container-myschedule .list-body div { display: flex; flex: 1 0 auto; justify-content: center; } 
+.container-myschedule .list-body .work-badge { width: 44px; height: 20px; line-height: 20px; font-size: 8px; font-weight: 600; font-stretch: normal; font-style: normal; letter-spacing: -0.16px; text-align: center; color: #ffffff; display: block; border-radius: 4px; } 
+.container-myschedule .list-body .badge-a { background-color: #605e7f; } 
+.container-myschedule .list-body .badge-b { background-color: #c5b75d; } 
+.container-myschedule .list-body .badge-c { background-color: #ad7777; } 
+.container-myschedule .list-body .badge-d { background-color: #7ea8aa; } 
+
+.container-myschedule .list-body .appr { display: flex; align-items: center; justify-content: center; width: 44px; height: 20px; line-height: 20px; border-radius: 4px; font-size: 8px; font-weight: 600; font-stretch: normal; font-style: normal; letter-spacing: -1.5px; text-align: center; color: #ffffff; } 
+.container-myschedule .list-body .appr + .appr { margin-left: 5px; } 
+.container-myschedule .list-body .appr-a { background-color: #d7d7d7; } 
+.container-myschedule .list-body .appr-b { background-color: #c69e9e; } 
+.container-myschedule .list-body .appr-c { background-color: #a7a7a7; } 
+
+
+
+
+/* 0802 */
+.container-myschedule .list-head div { font-size: 12px; font-weight: 600; font-stretch: normal; font-style: normal; line-height: 1.8; letter-spacing: normal; text-align: center; color: #747474; line-height: 37px; display: flex; flex: 1 0 auto; justify-content: center; } 
+.container-myschedule .list div span { text-overflow: ellipsis; white-space: nowrap; display: inline; overflow: hidden; font-size: 14px; } 
+
+
+
+/* 0804 */
+.container-myschedule .list-body .work-badge { width: 44px; height: 20px; line-height: 20px; font-size: 8px; font-weight: 600; font-stretch: normal; font-style: normal; letter-spacing: -0.16px; text-align: center; color: #ffffff; display: block; border-radius: 4px; padding-top: 1px; } 
+.container-myschedule .list-body .appr { display: flex; align-items: center; justify-content: center; width: 44px; height: 20px; line-height: 20px; border-radius: 4px; font-size: 8px; font-weight: 600; font-stretch: normal; font-style: normal; letter-spacing: -1.5px; text-align: center; color: #ffffff; padding-top: 2px; } 
+.container-myschedule .list div span { text-overflow: ellipsis; white-space: nowrap; display: inline; overflow: hidden; font-size: 14px; line-height: 1.2; } 
+
+/* 0809 */
+.section-myschedule .command .command-r { display: flex; } 
+
+/* 0811 */
+.container-myschedule .list-body .work-badge { min-width: 44px; width: auto; height: 20px; line-height: 20px; font-size: 12px; font-weight: 600; font-stretch: normal; font-style: normal; letter-spacing: -0.16px; text-align: center; color: #ffffff; display: block; border-radius: 4px; } 
+.container-myschedule .list-body .appr { display: flex; align-items: center; justify-content: center; min-width: 48px; width: auto; height: 20px; line-height: 20px; border-radius: 4px; font-size: 12px; font-weight: 600; font-stretch: normal; font-style: normal; letter-spacing: -1.5px; text-align: center; color: #ffffff; padding-top: 2px; } 
+

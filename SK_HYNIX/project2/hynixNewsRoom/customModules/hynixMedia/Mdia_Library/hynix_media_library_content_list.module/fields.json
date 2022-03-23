@@ -1,0 +1,9 @@
+[ {
+  "id" : "c40d9b6f-e318-3f98-07ae-46845a0a5ace",
+  "name" : "media_blog_field",
+  "label" : "미디어라이브러리_블로그",
+  "required" : false,
+  "locked" : false,
+  "type" : "blog",
+  "default" : 54935499546
+} ]

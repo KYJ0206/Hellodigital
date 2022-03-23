@@ -1,0 +1,56 @@
+{% set path = request.path|split('/', 2)|last %}
+
+{# {% set show = path == 'technology' || path == 'culture' || path == 'sustainability' ? true : flase %} #}
+
+
+<!-- SUB-HEADER -->
+<section class="container sub-header">
+    <article id="content">
+        <div class="inner2">
+            <div class="hgroup">
+<!--                 <div class="clear-fix">
+                    <nav class="breadcrumb">
+                        <a href="#">사람&문화</a>
+                        <a href="#">초미세 영역의 회…</a>
+                    </nav>
+                </div> -->
+                <h1>{{ content.name }}</h1>
+                <div class="tagbox">
+                    <ul>
+                        <li>
+													{% for topic in content.topic_list %}
+														{% if topic != '' %}
+														<a class='topicText' rel='tag'>{{topic.name}}</a>
+														{% else %}
+														{% endif%}
+													{% endfor %}
+                        </li>
+                    </ul>
+                </div>                        
+            </div>
+        </div>
+  <div class="inner">
+    <div class="inner2 hgroup-bottom">
+        <div class="post-meta">
+            <span class="date">{{content.publish_date | datetimeformat ('%Y-%m-%d')}}</span>
+            <span class="author"><a href="">{{content.blog_post_author}}</a></span>
+        </div>
+
+        <hr class="d-mobile">
+
+        <aside class="share-area">
+            <div class="share-list">
+                <ul class="sns">
+                    <li class="fb"><a href="javascript:snsShare('facebook')" title="Facebook">Facebook</a></li>
+                    <li class="tw"><a href="javascript:snsShare('twitter')" title="Twitter">Twitter</a></li>
+                    <li class="nv"><a href="#" title="Naver">Naver</a></li>
+                    <li class="more"><a href="#" title="More">More</a></li>
+                </ul>
+            </div>
+        </aside>
+    </div>
+    <hr>
+  </div>
+</article>
+</section>
+

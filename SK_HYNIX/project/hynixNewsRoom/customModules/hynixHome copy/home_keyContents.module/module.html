@@ -1,0 +1,139 @@
+{% set tech_recent_blog = module.tech_blog  %}
+{% set tech_posts = blog_recent_posts(tech_recent_blog, 1) %}
+
+{% set culture_recent_blog = module.culture_blog  %}
+{% set culture_posts = blog_recent_posts(culture_recent_blog, 1) %}
+
+{% set sustainability_recent_blog = module.sustainability_blog  %}
+{% set sustainability_posts = blog_recent_posts(sustainability_recent_blog, 1) %}
+
+
+<section class="home-keyContents keyCon-t">
+        <div class="inner">
+            <div class="slideWrap">
+              <div class="bxslider">
+								
+								{% for post in tech_posts %}
+                <div class="conWrap keyCon-t">
+                    <div class="col-l">
+                        <div class="imgWrap">
+                            <img class="lazyload" src="{{post.featured_image ? post.featured_image : get_asset_url("/hynixNewsRoom/codeFiles/images/contentImage/img_view-3-03O2x.png")}}" alt="홈슬라이드이미지">
+                        </div>
+                    </div>
+                    <div class="col-r">
+                        <div>
+                            <a href="#">
+                                <div class="progress">
+                                    <em>기술</em>
+                                    <i class="arrow"></i>
+                                  <span class="progressBar pro-ani" style="width: 0%;"> <!-- 0913 span class style="width: 0%;" 수정--> </span>
+                                </div>
+                            </a>
+                            <h1>
+                                {{post.name}}
+                            </h1>
+													  <div class='removeTech'>{{post.post_body}}</div>
+                            <p class='showTech'></p>
+                        </div>
+                        <a class="btn-detail" href="{{post.absolute_url}}">
+                            <i></i>
+                            자세히 읽기
+                        </a>
+                    </div>
+                </div>
+								{% endfor %}
+								
+								{% for post in culture_posts %}
+                <div class="conWrap keyCon-s">
+                    <div class="col-l">
+                        <div class="imgWrap">
+                            <img class="lazyload" src="{{post.featured_image ? post.featured_image : get_asset_url("/hynixNewsRoom/codeFiles/images/contentImage/img_view-3-03O2x.png")}}" alt="홈슬라이드이미지">
+                        </div>
+                    </div>
+                    <div class="col-r">
+                        <div>
+                            <a href="#">
+                                <div class="progress">
+                                    <em>기술</em>
+                                    <i class="arrow"></i>
+                                  <span class="progressBar pro-ani" style="width: 0%;"> <!-- 0913 span class style="width: 0%;" 수정--> </span>
+                                </div>
+                            </a>
+                            <h1>
+                                {{post.name}}
+                            </h1>
+													  <div class='removeCulture'>{{post.post_body}}</div>
+                            <p class='showCulture'></p>
+                        </div>
+                        <a class="btn-detail" href="{{post.absolute_url}}">
+                            <i></i>
+                            자세히 읽기
+                        </a>
+                    </div>
+                </div>
+								{% endfor %}
+								
+								{% for post in sustainability_posts %}
+                <div class="conWrap  keyCon-c">
+                    <div class="col-l">
+                        <div class="imgWrap">
+                            <img class="lazyload" src="{{post.featured_image ? post.featured_image : get_asset_url("/hynixNewsRoom/codeFiles/images/contentImage/img_view-3-03O2x.png")}}" alt="홈슬라이드이미지">
+                        </div>
+                    </div>
+                    <div class="col-r">
+                        <div>
+                            <a href="#">
+                                <div class="progress">
+                                    <em>기술</em>
+                                    <i class="arrow"></i>
+                                  <span class="progressBar pro-ani" style="width: 0%;"> <!-- 0913 span class style="width: 0%;" 수정--> </span>
+                                </div>
+                            </a>
+                            <h1>
+                                {{post.name}}
+                            </h1>
+													  <div class='removeTech'>{{post.post_body}}</div>
+                            <p class='showTech'></p>
+                        </div>
+                        <a class="btn-detail" href="{{post.absolute_url}}">
+                            <i></i>
+                            자세히 읽기
+                        </a>
+                    </div>
+                </div>
+								{% endfor %}
+								
+                
+                
+              </div>
+              <a class="btn-slide-l" href="#">left</a>
+              <a class="btn-slide-r" href="#">right</a>
+            </div>
+        </div>
+</section>
+
+
+{% require_js %}
+<script>
+  var current = 0;
+  var slider= $(function(){
+    $(".bxslider").bxSlider({  
+       infinite: true , 
+       slidesToShow: 1, 
+       slidesToScroll: 1,
+       auto: true, 
+       arrows:false,
+       dots:true, 
+       autoplaySpeed:3000,
+       speed:1000 , 
+       pauseOnHover:true,
+       onSlideBefore : function(){
+         $(".progressBar").removeClass('pro-ani');
+       },
+       onSlideAfter : function(){
+         $(".progressBar").addClass('pro-ani');
+       }
+    }); 
+  });
+</script>
+{% end_require_js %}

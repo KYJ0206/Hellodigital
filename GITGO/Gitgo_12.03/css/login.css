@@ -1,0 +1,156 @@
+.box {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 100%;
+  height: 100%;
+}
+.loginContainer{
+  background-color: white;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin: 0 20px;
+}
+.loginContent{
+  width: 100%;
+  padding: 3em;
+  /* width: 305px;
+  height: 43px;
+
+  object-fit: contain;
+  font-family: GothicA1;
+  font-size: 18px;
+  font-weight: bold;
+  font-stretch: normal;
+  font-style: normal;
+  line-height: 2;
+  letter-spacing: -0.51px;
+  text-align: center;
+  color: #252525; */
+}
+
+.loginTitle {
+  
+  margin: 0 124px 10px 1px;
+  object-fit: contain;
+  font-family: GothicA1;
+  font-size: 25px;
+  font-weight: bold;
+  letter-spacing: -1.01px;
+  color: #252525;
+  margin-bottom: 10px;
+}
+
+.loginInnerContent{
+  height: 18px;
+  object-fit: contain;
+  font-family: GothicA1;
+  font-size: 18px;
+  letter-spacing: -0.7px;
+  color: #252525;
+}
+
+.dangerMsg {
+  height: 14px;
+  margin: 30px 12px 10px 0;
+  object-fit: contain;
+  font-family: GothicA1;
+  font-size: 14px;
+  font-weight: normal;
+  font-stretch: normal;
+  font-style: normal;
+  line-height: normal;
+  letter-spacing: -1px;
+  visibility: hidden;
+  color: #de0000;
+}
+
+.inputBox{
+  margin-bottom: 40px;
+  display: flex;
+    flex-direction: column;
+}
+.inputBox input {
+  width: 257px;
+  padding: 10px;
+  border: 1px solid rgba(150, 150, 150, 1);
+  border-radius: 5px;
+}
+
+.inputBox input:first-child {
+  margin-bottom: 10px;
+}
+.buttonBox {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.buttonBox button {
+  background: #2E7000;
+  width: 59px;
+  height: 33px;
+  object-fit: contain;
+  color: #fff;
+  border-radius: 4px;
+  font-weight: bold;
+}
+
+.buttonBox img {
+  width: 59px;
+  height: 33px;
+}
+
+.buttonBox div {
+  display: flex;
+  align-items: center;
+}
+
+.buttonBox div span {
+  margin-right: 10px;
+  font-size:14px;
+  color:#252525
+}
+
+.buttonBox div input {
+  border : #979797;
+  width: 19px;
+  height: 19px;
+}
+
+.idText{
+  width: 94px;
+  /* height: 10px; */
+  margin: 0px 94px 10px 0;
+  object-fit: contain;
+  font-family: GothicA1;
+  font-size: 10px;
+  font-weight: 500;
+  font-stretch: normal;
+  font-style: normal;
+  line-height: normal;
+  letter-spacing: -0.71px;
+  color: #b5b5b5;
+}
+.pwText {
+  width: 103px;
+  height: 10px;
+  margin: 10px 85px 23px 0;
+  object-fit: contain;
+  font-family: GothicA1;
+  font-size: 10px;
+  font-weight: 500;
+  font-stretch: normal;
+  font-style: normal;
+  line-height: normal;
+  letter-spacing: -0.71px;
+  color: #b5b5b5;
+}
+
+
+@media screen and (max-width:380px){
+  .inputBox input{
+    width: 200px;
+  }
+}

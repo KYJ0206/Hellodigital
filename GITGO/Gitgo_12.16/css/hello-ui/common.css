@@ -1,0 +1,777 @@
+@charset 'utf-8';
+
+.pc-only {
+    display: block;
+}
+
+.mobile-only {
+    display: none;
+}
+
+.flex {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+}
+
+.flex_center {
+    -webkit-box-align: center;
+    -webkit-align-items: center;
+    -ms-flex-align: center;
+    align-items: center;
+}
+
+.flex_right {
+    -webkit-box-align: right;
+    -webkit-align-items: right;
+    -ms-flex-align: right;
+    align-items: right;
+}
+
+.space_btw {
+    -webkit-justify-content: space-between;
+    justify-content: space-between;
+}
+
+/* FONT SMOOTHING */
+body {
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+}
+
+svg {
+    cursor: pointer;
+}
+
+label {
+    cursor: pointer;
+}
+
+.sub-tabs ul li a:hover {
+    color: #000;
+    font-weight: bold;
+}
+
+.m-side-menu li:hover .item>a>div>div {
+    font-weight: bold;
+}
+
+.mbgnb ul li a:hover {
+    font-weight: bold;
+    color: #000;
+}
+
+.listnum li a {
+    font-size: 14px;
+}
+
+.listnum li a:hover {
+    font-weight: bold;
+}
+
+.cont2 ol li:nth-child(2) a:hover,
+.cont2 ol li:nth-child(3) a:hover {
+    color: #414141;
+    font-weight: bold;
+}
+
+
+.c-white {
+    color: #fff;
+}
+
+i.icon {
+    display: inline-block;
+}
+
+.fz15 {
+    font-size: 1.5rem;
+}
+
+.fz16 {
+    font-size: 1.6rem;
+}
+
+.fz20 {
+    font-size: 2.0rem;
+}
+
+.pz28 {
+    font-size: 2.8rem;
+}
+
+.fz30 {
+    font-size: 3.0rem;
+}
+
+.fz34 {
+    font-size: 3.4rem;
+}
+
+.Light {
+    font-weight: 200;
+}
+
+.Regular {
+    font-weight: 400;
+}
+
+.Medium {
+    font-weight: 500;
+}
+
+.Bold {
+    font-weight: 700;
+}
+
+.button {
+    display: inline-block;
+}
+
+.button_green {
+    position: relative;
+    min-width: 94px;
+    height: 34px;
+    line-height: 34px;
+    padding-left: 34px;
+    background: #2d6b00;
+    color: #fff;
+    font-size: 12px;
+    color: #fff;
+    font-weight: 700;
+    border-radius: 4px;
+}
+
+.button i {
+    display: inline-block;
+    width: 34px;
+    height: 34px;
+    position: absolute;
+    top: 0;
+    left: 0;
+}
+
+i.chat {
+    background: url(../../images/i_chat.svg) no-repeat;
+    background-position: center center;
+}
+
+i.email {
+    background: url(../../images/i_email.svg) no-repeat;
+    background-position: center center;
+}
+
+i.date {
+    background: url(../../images/i_date.svg) no-repeat;
+    background-position: center center;
+}
+
+.inputCheck {
+    display: inline-block;
+    width: 17px;
+    height: 17px;
+}
+
+.inputCheck input[type="checkbox"] {
+    display: none;
+}
+
+.inputCheck input[type="checkbox"]+label {
+    /* display:inline-block;position:relative; */
+    line-height: 17px;
+}
+
+.inputCheck input[type="checkbox"]+label:after {
+    content: '';
+    display: inline-block;
+    width: 17px;
+    height: 17px;
+    position: absolute;
+    top: 0;
+    left: 0;
+    background: url(../../images/i_gnb_back.png) no-repeat;
+}
+
+.inputCheck input[type="checkbox"]:checked+label:after {
+    background: url(../../images/ui-select-ui-select-gitgo.png) no-repeat;
+}
+
+
+.groupCheckIcon {
+    width: 75px;
+    min-width: 75px;
+    height: auto;
+    margin-top: -17px;
+}
+
+.tree_text1 {
+    font-size: 12px;
+    color: #636c5c;
+    font-weight: 700;
+    display: inline-block;
+    white-space: nowrap;
+    text-overflow: ellipsis;
+    overflow: hidden;
+}
+
+.tree_text {
+    font-size: 10px;
+    color: rgba(128, 128, 128, 0.89);
+    font-weight: 700;
+    display: inline-block;
+    white-space: nowrap;
+    text-overflow: ellipsis;
+    overflow: hidden;
+}
+
+
+
+/* 0802 수정 */
+i.chat {
+    background: url(../../images/i_chat.png) no-repeat;
+    background-position: center center;
+}
+
+i.email {
+    background: url(../../images/i_email.png) no-repeat;
+    background-position: center center;
+}
+
+i.date {
+    background: url(../../images/i_date.png) no-repeat;
+    background-position: center center;
+}
+
+.button_green i.chat {
+    background: url(../../images/i_chat_on.svg) no-repeat;
+    background-position: center center;
+}
+
+.button_green i.email {
+    background: url(../../images/i_email_on.svg) no-repeat;
+    background-position: center center;
+}
+
+.button_green i.date {
+    background: url(../../images/i_date_on.svg) no-repeat;
+    background-position: center center;
+}
+
+
+/* 0803 수정 */
+
+.bootstrap-datetimepicker-widget {
+    border: 0 !important;
+    background-color: transparent !important;
+    width: auto !important;
+    margin: 0 !important;
+}
+
+.datepicker {
+    position: relative;
+    width: 200px;
+    height: auto;
+    padding: 10px;
+    padding-top: 0;
+    border: solid 1px #d4d4d4;
+    box-shadow: 0 2px 5px 0 rgba(0, 0, 0, 0.25);
+    border: solid 1px #d4d4d4;
+    background: #fff;
+    z-index: 0;
+}
+
+.datepicker::before {
+    content: '';
+    position: absolute;
+    display: block;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 35px;
+    background-color: #dde5da;
+    z-index: -1;
+}
+
+/* 년,달 */
+.datepicker thead tr:first-child th {
+    background-color: #dde5da;
+    border-radius: 0;
+    height: 35px;
+    max-height: 35px;
+    border: 0;
+}
+
+.datepicker thead .picker-switch {
+    font-size: 16px;
+    font-weight: bold;
+    font-stretch: normal;
+    font-style: normal;
+    line-height: normal;
+    letter-spacing: normal;
+    text-align: center;
+    color: #747474;
+}
+
+.datepicker thead .picker-switch:hover {
+    background-color: #dde5da !important;
+}
+
+/* 이전 달 */
+.datepicker thead tr:first-child th:first-child {
+    content: '';
+    width: 10px;
+    height: 10px;
+    background: url(../../images/cal_prev.svg) center no-repeat !important;
+    margin-left: 0;
+}
+
+.datepicker thead tr:first-child th:first-child span {
+    display: none;
+}
+
+/* 다음 달 */
+.datepicker thead tr:first-child th:last-child {
+    content: '';
+    width: 10px;
+    height: 10px;
+    background: url(../../images/cal_next.svg) center no-repeat !important;
+    margin-right: 0;
+}
+
+.datepicker thead tr:first-child th:last-child span {
+    display: none;
+}
+
+.bootstrap-datetimepicker-widget table td.day {
+    height: 24px;
+    border: 0;
+}
+
+.datepicker thead .dow {
+    padding-top: 17px;
+    padding-bottom: 13px;
+    border: 0;
+}
+
+.datepicker tbody .day:first-child,
+.datepicker thead .dow:first-child {
+    color: #bb4a4a;
+}
+
+.datepicker tbody .day:last-child,
+.datepicker thead .dow:last-child {
+    color: #214bda;
+}
+
+.datepicker tbody .day,
+.datepicker thead .dow {
+    font-size: 10px;
+    font-weight: 500;
+    font-stretch: normal;
+    font-style: normal;
+    line-height: normal;
+    letter-spacing: -0.33px;
+    text-align: center;
+    color: #666666;
+}
+
+.datepicker tbody .day {
+    color: #aaa;
+}
+
+.bootstrap-datetimepicker-widget table td.active,
+.bootstrap-datetimepicker-widget table td.active:hover {
+    color: #6c6c6c;
+    background-color: #c5e0bb;
+    border-radius: 20px;
+}
+
+.bootstrap-datetimepicker-widget table td.active.today:before {
+    display: none;
+}
+
+.bootstrap-datetimepicker-widget table td.active,
+.bootstrap-datetimepicker-widget table td.active:hover {
+    text-shadow: none;
+}
+
+.timepicker {
+    background: #fff;
+
+}
+
+.bootstrap-datetimepicker-widget .timepicker .timepicker-picker a.btn {
+    color: #007bff;
+    color: var(--blue, #007bff)
+}
+
+.timepicker .btn.btn-primary {}
+
+.bootstrap-datetimepicker-widget table td span {
+    height: 40px !important;
+    line-height: 40px !important;
+}
+
+input[type=text]::-ms-clear {
+    display: none;
+}
+
+/* 1214 */
+/* 텍스트 말줄임 */
+.titnumber {
+    min-width: 45px;
+}
+
+.titname {
+    display: block;
+    width: 100%;
+    overflow: hidden;
+    white-space: nowrap;
+    text-overflow: ellipsis;
+}
+
+/* .Tittitle i{
+    line-height: 0;
+} */
+
+.inner1-2 ul li a,
+.inner2-2 ul li a,
+.inner3-2 ul li a {
+    font-size: 14px;
+    font-weight: bold;
+    color: #666;
+    height: 20px;
+    line-height: 20px;
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    display: inline-block;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    display: block;
+}
+
+.inner1-2flex {
+    display: flex;
+}
+
+.inner1-2flex i {
+    padding: 2px 15px 0 5px;
+}
+
+.inner1-2 p,
+.inner2-2 p,
+.inner3-2 p {
+    text-overflow: ellipsis;
+    overflow: hidden;
+    white-space: nowrap;
+}
+
+.inner1-1 a,
+.inner2-1 a,
+.inner3-1 a {
+    max-width: 500px;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    white-space: nowrap;
+}
+
+.searchfilter ul li div {
+    overflow: hidden;
+    text-overflow: ellipsis;
+    white-space: nowrap;
+}
+
+.searchfilter ul li button a {
+    overflow: hidden;
+    white-space: nowrap;
+    text-overflow: ellipsis;
+    width: 35px;
+}
+
+.removebtn button a {
+    color: #fff;
+    font-size: 13px;
+    font-weight: 500;
+    line-height: normal;
+    overflow: hidden;
+    white-space: nowrap;
+    text-overflow: ellipsis;
+    width: 53px;
+    display: inline-block;
+}
+
+.removebtn .button1 {
+    right: 140px !important;
+}
+
+.removebtn button {
+    width: 95px !important;
+}
+
+.removebtn .button2,
+.removebtn .button1 {
+    width: 95px !important;
+}
+
+.innerlist .Tittitle {
+    display: flex;
+}
+
+.innerlist .Tittitle i {
+    padding: 0 20px 0 5px;
+}
+
+.innerlist .Tittitle div {
+    text-align: left !important;
+    font-size: 12px;
+    font-weight: 600;
+    letter-spacing: normal;
+    font-style: normal;
+    font-stretch: normal;
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+}
+
+.innerlist .Tittitle {
+    overflow: hidden;
+}
+
+.innerlist ul>li.Tittitle2,
+.innerlist ul>li.Tittitle3,
+.innerlist ul>li.Tittitle4,
+.innerlist ul>li.Tittitle5,
+.innerlist ul>li.Tittitle6,
+.innerlist ul>li:last-child {
+    max-width: 150px;
+    font-size: 10px;
+    font-weight: 600;
+    letter-spacing: normal;
+    font-style: normal;
+    font-stretch: normal;
+    letter-spacing: -0.2px;
+    color: #838383;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    white-space: nowrap;
+}
+
+/* .innerlist .Tittitle {
+    max-width:400px;
+    width: 400px;
+} */
+
+/* .innerlistTit>.Tittitle{
+    padding: 0 45px 0 0px;
+} */
+
+/* @media screen and (max-width: 1160px) {
+    .innerlist li.Tittitle2, .innerlist li.Tittitle3, .innerlist li.Tittitle4, .innerlist li.Tittitle5, .innerlist li.Tittitle6 {
+        max-width: 85px;
+    }
+} */
+
+.body-content p {
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+}
+
+.poptitle span {
+    font-family: GothicA1;
+    font-size: 14px;
+    font-weight: bold;
+    font-stretch: normal;
+    font-style: normal;
+    line-height: normal;
+    letter-spacing: -0.5px;
+    color: rgba(0, 0, 0, 0.89);
+    height: 25px;
+    line-height: 25px;
+    max-width: 500px;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    white-space: nowrap;
+}
+
+.popup-foot button span {
+    font-family: GothicA1;
+    font-size: 12px;
+    font-weight: bold;
+    color: #fff;
+    display: block;
+    height: 30px;
+    line-height: 30px;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    white-space: nowrap;
+}
+
+.draggable .popnav .name {
+    overflow: hidden;
+    text-overflow: ellipsis;
+    white-space: nowrap;
+    max-width: 75px;
+}
+
+.wrap4btngroup div:first-child {
+    width: 100%;
+    overflow: hidden;
+    white-space: nowrap;
+    text-overflow: ellipsis;
+    padding-right: 10px;
+}
+
+.wrap3btngroup1 div:first-child {
+    width: 100%;
+    overflow: hidden;
+    white-space: nowrap;
+    text-overflow: ellipsis;
+    padding-right: 10px;
+}
+
+.wrap3cont .wrap3sub1 {
+    max-width: 188px;
+}
+
+.wrap3conttit div>p {
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+}
+
+.wrap3contbutton button a {
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    max-width: 35px;
+}
+
+.wrap3contparment button,
+.wrap3contreview button {
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    padding: 0 5px;
+}
+
+.wrap3contparment .wrap3sub1 p,
+.wrap3contreview .wrap3sub1 p {
+    overflow: hidden;
+    white-space: nowrap;
+    text-overflow: ellipsis;
+    max-width: 70px;
+}
+
+
+.select1 {
+    outline: none;
+    border: none;
+    border-radius: 0;
+    -webkit-appearance: none;
+    -moz-appearance: none;
+    appearance: none;
+    font-size: 12px;
+    font-weight: bold;
+    font-stretch: normal;
+    font-style: normal;
+    line-height: 1;
+    letter-spacing: normal;
+    width: 100%;
+    color: #383b41;
+    cursor: pointer;
+}
+
+@media screen and (max-width: 980px) {
+    .innerlist .Tittitle {
+        min-width: auto !important;
+    }
+}
+
+@media screen and (max-width: 760px) {
+    .draggable .popnav .name {
+        max-width: 75px;
+    }
+
+    .wrap3conttit .sec1 .wrap3sub1 p,
+    .wrap3conttit .sec2 .wrap3sub1_1 p,
+    .wrap3contbutton .sec1 .wrap3sub1 p,
+    .wrap3contbutton .sec2 .wrap3sub1_1 p {
+        padding: 20px;
+        overflow: hidden;
+        white-space: nowrap;
+        text-overflow: ellipsis;
+    }
+
+    .wrap3cont .wrap3sub1 {
+        max-width: none;
+    }
+
+    .wrap3contreview .sec1 .wrap3sub1 div>p:last-child::before,
+    .wrap3contreview .sec2 .wrap3sub1 div>p:last-child::before,
+    .wrap3contparment .sec1 .wrap3sub1 div>p:last-child::before,
+    .wrap3contparment .sec2 .wrap3sub1 div>p:last-child::before{
+        display: none;
+    }
+
+    .select1 {
+        width: 45px;
+        height: 20px;
+    }
+}
+
+
+@media screen and (max-width: 680px) {
+    .innerlist .Tittitle i {
+        padding: 0;
+    }
+
+    .Tittitle6::before {
+        content: '|';
+        padding-right: 5px;
+    }
+
+    .Tittitle6 {
+        padding-left: 2px !important;
+    }
+
+    .Tittitle5,
+    .Tittitle6 {
+        display: inline-block;
+        max-width: 65px !important;
+        overflow: hidden;
+        text-overflow: ellipsis;
+        white-space: nowrap;
+        padding-left: 0 !important;
+
+    }
+
+    .Tittitle5 {
+        margin-left: 35px !important;
+    }
+
+    .Tittitle4 {
+        max-width: 61px !important;
+        overflow: hidden;
+        text-overflow: ellipsis;
+        white-space: nowrap;
+        padding-left: 0 !important;
+    }
+
+    .innerlist ul>li:last-child {
+        height: 21px;
+    }
+}
+
+@media screen and (max-width: 680px) {
+    .innerlist .Tittitle {
+        padding-right: 40px !important;
+    }
+}
+
+@media screen and (max-width: 460px) {
+    .Tittitle {
+        max-width: none !important;
+    }
+}

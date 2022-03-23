@@ -1,0 +1,27 @@
+{% set path = request.path|split('/', 2)|last %}
+{% set type = request.query_dict.type %}
+{% set text = request.query_dict.text %}
+{% set subCategory = type == 'blog' ? '블로그' : (type == 'category' ? '카테고리' : (type == 'tag' ? '태그' : (type == 'author' ? '작성자' : ''))) %}
+
+{% set show = type == 'blog' ? false : true %}
+
+{% if show %}
+<section class="media-instruction" style="margin-bottom:20px;">
+	<div class="inner">
+		<div class="inner2">
+			<div class="list-head-titWrap">
+				<h1>{{text}}</h1>
+				<div class="list-head-bottom">
+					<nav class="breadcrumb">
+						<a href="/"><span>NEWSROOM</span></a>
+						<a class='secondCrumb'><span></span></a>
+						<a class='lastCrumb'><span></span></a>
+					</nav>
+					<span class="subTit">{{subCategory}}</span>
+				</div>
+			</div>
+
+		</div>
+	</div>
+</section>
+{% endif %}

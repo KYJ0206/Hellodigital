@@ -1,0 +1,143 @@
+.conWrap-body-popularity {
+	display: none;
+}
+
+.listItem a {
+	cursor: pointer;
+}
+/*         <div class='progressper'>0%</div> */
+.popular-blog {
+	display: none;
+}
+
+.conWrap-body .inner2 .listItem.blog-hidden{
+  display: none; 
+};
+
+.loading-container {
+	width: 100%;
+	display: flex;
+  justify-content:center;
+	flex-direction: column;
+	align-items: center;
+}
+.loading-gif {
+	width: 88px;
+  height: 76px;
+}
+.searching {
+	width: 98px;
+  height: 27px;
+	font-family: NotoSansCJKkr;
+  font-size: 16px;
+  font-weight: normal;
+  font-stretch: normal;
+  font-style: normal;
+  line-height: 1.69;
+  letter-spacing: normal;
+  color: #8f9094;
+	text-align: center;
+  margin-left: 11px;
+}
+
+.noSearchContainer {
+	width: 100%;
+	display: none;
+	flex-direction: column;
+	justify-content: center;
+	align-items: center;
+}
+.noSearchImg {
+	display: inline-block;
+	width: 85.9px;
+/*   height: 96.2px; */
+}
+.noSearchTitle {
+  margin-top: 45.8px;
+  font-family: NotoSansCJKkr;
+  font-size: 34px;
+  font-weight: bold;
+  font-stretch: normal;
+  font-style: normal;
+  line-height: 1.5;
+  letter-spacing: normal;
+  text-align: center;
+  color: #000;
+}
+.noSearchDesc {
+  margin: 10px 0 0;
+  font-family: NotoSansCJKkr;
+  font-size: 20px;
+  font-weight: normal;
+  font-stretch: normal;
+  font-style: normal;
+  line-height: 1.5;
+  letter-spacing: normal;
+  text-align: center;
+  color: rgba(0, 0, 0, 0.87);
+}
+.noSearchBtn {
+	width: 163px;
+  height: 58px;
+  margin-top: 47px;
+/*   padding: 18px 10.3px 18px 8.7px; */
+  background-color: #2f3034;
+  display: flex;
+	justify-content: center;
+	align-items: center;
+	font-size: 20px;
+  font-weight: bold;
+  font-stretch: normal;
+  font-style: normal;
+  line-height: 1.1;
+  letter-spacing: normal;
+  text-align: center;
+  color: #fff;
+	outline: none;
+	cursor: pointer;
+	text-decoration: none;
+}
+
+
+
+
+
+
+section.media-list-contents .listWrap div.listItem {
+	width:calc((100% - 89px)/3);
+}
+
+section.media-list-contents .listWrap div.listItem:nth-child(1) {
+	margin-right: 44px;	
+}
+
+section.media-list-contents .listWrap div:nth-child(3n) {
+  margin-right: 0px;	
+}
+
+section.media-list-contents .listWrap div+div{
+  margin-right: 44px;	
+  margin-bottom: 30px;
+}
+
+
+@media screen and (max-width: 1023px) {
+	section.media-list-contents .listWrap div:nth-child(2n) {
+		margin-right: 0px!important;
+	}
+	section.media-list-contents .listWrap div.listItem {
+		margin-right: 44px;	
+    margin-bottom: 30px;
+	}
+	section.media-list-contents .listWrap div.listItem {
+		width: calc(50% - 22px);
+	}
+}
+
+@media screen and (max-width: 767px) {
+	 section.media-list-contents .listWrap div.listItem {
+    width: 100%;
+    margin-right: 0 !important;
+    margin-bottom: 30px;
+  }
+}

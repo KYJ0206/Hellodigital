@@ -1,0 +1,229 @@
+html,
+body,
+a,
+p,
+span,
+ul,
+ol,
+li,
+dl,
+dt,
+dd {
+  margin: 0;
+  padding: 0;
+  list-style: none;
+  text-decoration: none;
+  float: none;
+  color: #000;
+  font-size: 10px;
+}
+
+* {
+  box-sizing: border-box;
+}
+
+.hide {
+  display: none;
+}
+
+.active {
+  color: #f9e000;
+  text-shadow: 0px 0px 5px #000;
+}
+
+header {
+  padding: 10px;
+  text-align: center;
+  background: #fff;
+}
+header h1 {
+  font-size: 4rem;
+  padding: 12px;
+}
+header p {
+  font-size: 1.6rem;
+  padding: 12px;
+}
+
+nav {
+  overflow: hidden;
+  background: #b70202;
+  display: flex;
+}
+nav div {
+  padding: 12px;
+  flex: 1;
+  text-align: center;
+  border: 1px solid #000;
+}
+nav div a {
+  color: #fff;
+  font-size: 1.6rem;
+  transition: 0.5s;
+  margin-bottom: 10px;
+}
+nav div a:hover {
+  color: #f9e000;
+  text-shadow: 0px 0px 5px #000;
+}
+
+dl {
+  width: 100%;
+  height: 100%;
+}
+dl dd {
+  cursor: pointer;
+  color: #ccc;
+  font-size: 1.4rem;
+  padding: 10px 0;
+}
+dl dd:hover {
+  color: #f9e000;
+  text-shadow: 0px 0px 5px #000;
+}
+dl dd:nth-child(1) {
+  padding-top: 20px;
+}
+
+ol {
+  width: 100%;
+  padding: 20px 0 0;
+}
+ol li {
+  padding: 5px 0;
+}
+
+.contents {
+  font-size: 1.6rem;
+  width: 100%;
+  display: flex;
+}
+.contents .card {
+  margin: 17px 0;
+}
+.contents .fakeimg {
+  background-color: #aaa;
+  height: auto;
+}
+.contents img {
+  border-radius: 4px;
+  border: 1px solid #000;
+  box-shadow: 1px 1px 5px #777;
+  display: block;
+  margin: 0 auto;
+  cursor: pointer;
+}
+.contents section {
+  flex: 7.5;
+  padding: 0 20px 20px;
+  text-align: center;
+}
+.contents section h2 {
+  font-size: 4rem;
+}
+.contents section .card a {
+  display: block;
+  font-size: 1.6rem;
+  transition: 0.5s;
+}
+.contents section .card a:last-child {
+  padding: 15px 0px;
+}
+.contents section .card a:hover {
+  color: #b70202;
+  text-decoration: underline;
+  text-underline-position: under;
+}
+.contents section .card p {
+  font-size: 1.2rem;
+}
+.contents aside {
+  flex: 2.5;
+  background-color: #eee;
+  padding: 0 20px;
+  white-space: normal;
+  box-shadow: -1px 0px 1px #000;
+}
+.contents aside h2 {
+  white-space: nowrap;
+  text-align: center;
+}
+.contents aside img {
+  width: 155px;
+  cursor: pointer;
+}
+.contents aside .giftwrap {
+  text-align: center;
+  font-size: 1.6rem;
+  margin-top: 15px;
+}
+.contents aside .gift {
+  display: flex;
+  justify-content: space-evenly;
+  margin-top: 20px;
+}
+.contents aside .gift a {
+  padding: 0 !important;
+}
+.contents aside .gift img {
+  cursor: pointer;
+  margin: 10px;
+  width: 50px;
+}
+.contents aside .card p a {
+  display: block;
+  font-size: 1.6rem;
+  text-align: center;
+  padding: 15px 10px;
+  transition: 0.5s;
+}
+.contents aside .card p a:hover {
+  color: #b70202;
+  text-decoration: underline;
+  text-underline-position: under;
+}
+
+footer {
+  padding: 50px 10px;
+  text-align: center;
+  background: white;
+  border-top: 1px solid #000;
+  font-size: 1.6rem;
+  display: flex;
+  justify-content: space-between;
+}
+footer p,
+footer a {
+  font-size: 1.6rem;
+  font-weight: bold;
+  padding: 5px;
+}
+footer p .link,
+footer a .link {
+  transition: 0.5s;
+  color: #999;
+  text-decoration: underline;
+  text-underline-position: under;
+}
+footer p .link:hover,
+footer a .link:hover {
+  color: #b70202;
+  font-weight: bold;
+}
+
+figure {
+  margin: 0;
+  display: flex;
+}
+figure figcaption {
+  cursor: pointer;
+  padding: 5px;
+  font-size: 1.4rem;
+  transition: 0.5s;
+}
+figure figcaption:hover {
+  color: #b70202;
+  font-weight: bold;
+}
+
+/*# sourceMappingURL=scss_2.css.map */

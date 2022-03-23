@@ -1,0 +1,212 @@
+@charset 'utf-8';
+
+.pc-only{display:block;}
+.mobile-only{display:none;}
+
+.flex{display:-webkit-box;display:-ms-flexbox;display:flex;}
+.flex_center{-webkit-box-align: center;-webkit-align-items: center;-ms-flex-align: center;align-items: center;}
+.flex_right{-webkit-box-align: right;-webkit-align-items: right;-ms-flex-align: right;align-items: right;}
+.space_btw{-webkit-justify-content:space-between;justify-content: space-between;}
+
+.c-white{color:#fff;}
+
+i.icon{display:inline-block;}
+
+.fz15{font-size:1.5rem;}
+.fz16{font-size:1.6rem;}
+.fz20{font-size:2.0rem;}
+.pz28{font-size:2.8rem;}
+.fz30{font-size:3.0rem;}
+.fz34{font-size:3.4rem;}
+
+.Light{font-weight: 200;}
+.Regular{font-weight: 400;}
+.Medium{font-weight: 500;}
+.Bold{font-weight:700;}
+
+.button{display:inline-block;}
+.button_green{position:relative;min-width:94px;height:34px;line-height:34px;padding-left:34px;background:#2d6b00;color:#fff;font-size:12px;color:#fff;font-weight:700;border-radius:4px;}
+.button i{display:inline-block;width:34px;height:34px;position:absolute;top:0;left:0;}
+i.chat{background:url(../../images/i_chat.svg) no-repeat;background-position: center center;}
+i.email{background:url(../../images/i_email.svg) no-repeat;background-position: center center;}
+i.date{background:url(../../images/i_date.svg) no-repeat; background-position: center center;}
+
+.inputCheck{display:inline-block;width:17px;height:17px;}
+.inputCheck input[type="checkbox"]{display:none;}
+.inputCheck input[type="checkbox"] + label{/* display:inline-block;position:relative; */line-height:17px;}
+.inputCheck input[type="checkbox"] + label:after{content:'';display:inline-block;width:17px;height:17px;position:absolute;top:0;left:0;background:url(../../images/i_gnb_back.png) no-repeat;}
+.inputCheck input[type="checkbox"]:checked + label:after{background:url(../../images/ui-select-ui-select-gitgo.png) no-repeat;}
+
+
+.groupCheckIcon{width: 75px;min-width: 75px;height: auto;margin-top: -17px;}
+
+.tree_text1{
+    font-size: 12px;
+    color: #636c5c;
+    font-weight: 700;
+    display: inline-block;
+    white-space: nowrap;
+    text-overflow: ellipsis;
+    overflow: hidden;
+}
+.tree_text{
+    font-size: 10px;
+    color: rgba(128, 128, 128, 0.89);
+    font-weight: 700;
+    display: inline-block;
+    white-space: nowrap;
+    text-overflow: ellipsis;
+    overflow: hidden;
+}
+
+
+
+/* 0802 수정 */
+i.chat{background:url(../../images/i_chat.png) no-repeat;background-position: center center;}
+i.email{background:url(../../images/i_email.png) no-repeat;background-position: center center;}
+i.date{background:url(../../images/i_date.png) no-repeat; background-position: center center;}
+
+.button_green i.chat{background:url(../../images/i_chat_on.svg) no-repeat;background-position: center center;}
+.button_green i.email{background:url(../../images/i_email_on.svg) no-repeat;background-position: center center;}
+.button_green i.date{background:url(../../images/i_date_on.svg) no-repeat; background-position: center center;}
+
+
+/* 0803 수정 */
+
+.bootstrap-datetimepicker-widget {
+    border: 0 !important;
+    background-color: transparent !important;
+    width: auto !important;
+    margin: 0 !important;
+}
+.datepicker {
+    position: relative;
+    width: 186px;
+    height: auto;
+    padding: 10px;
+    padding-top:0;
+    border: solid 1px #d4d4d4;
+    box-shadow: 0 2px 5px 0 rgba(0, 0, 0, 0.25);
+    border: solid 1px #d4d4d4;
+    background: #fff;
+    z-index: 0;
+}
+.datepicker::before {
+    content: '';
+    position: absolute;
+    display: block;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 35px;
+    background-color: #dde5da;
+    z-index: -1;
+}
+
+.datepicker-days {
+    
+}
+/* 년,달 */
+.datepicker thead tr:first-child th{
+  background-color: #dde5da;
+  border-radius: 0;
+  height: 35px;
+  max-height: 35px;
+  border: 0;
+}
+
+.datepicker thead .picker-switch {
+    font-size: 16px;
+    font-weight: bold;
+    font-stretch: normal;
+    font-style: normal;
+    line-height: normal;
+    letter-spacing: normal;
+    text-align: center;
+    color: #747474;
+}
+.datepicker thead .picker-switch:hover {
+    background-color: #dde5da !important;
+}
+/* 이전 달 */
+.datepicker thead tr:first-child th:first-child {
+    content: '';
+    width: 10px;
+    height: 10px;
+    background: url(../../images/cal_prev.svg) center no-repeat !important;
+    margin-left: 0;
+}
+.datepicker thead tr:first-child th:first-child span {
+    display: none;
+}
+/* 다음 달 */
+.datepicker thead tr:first-child th:last-child {
+    content: '';
+    width: 10px;
+    height: 10px;
+    background: url(../../images/cal_next.svg) center no-repeat !important;
+    margin-right: 0;
+}
+.datepicker thead tr:first-child th:last-child span {
+    display: none;
+}
+.bootstrap-datetimepicker-widget table td.day {
+    height: 24px;
+    border: 0;
+}
+.datepicker thead .dow {
+    padding-top: 17px;
+    padding-bottom: 13px;
+    border: 0;
+}
+.datepicker tbody .day:first-child,
+.datepicker thead .dow:first-child {
+    color: #bb4a4a;
+}
+.datepicker tbody .day:last-child,
+.datepicker thead .dow:last-child {
+    color: #214bda;
+}
+.datepicker tbody .day,
+.datepicker thead .dow {
+  font-size: 10px;
+  font-weight: 500;
+  font-stretch: normal;
+  font-style: normal;
+  line-height: normal;
+  letter-spacing: -0.33px;
+  text-align: center;
+  color: #666666;
+}
+.datepicker tbody .day {
+    color: #aaa;
+}
+
+.bootstrap-datetimepicker-widget table td.active, 
+.bootstrap-datetimepicker-widget table td.active:hover {
+    color: #6c6c6c;
+    background-color: #c5e0bb;
+    border-radius: 20px;
+}
+.bootstrap-datetimepicker-widget table td.active.today:before {
+    display: none;
+}
+.bootstrap-datetimepicker-widget table td.active, .bootstrap-datetimepicker-widget table td.active:hover {
+    text-shadow: none;
+}
+
+.timepicker {
+    background: #fff;
+
+}
+.bootstrap-datetimepicker-widget .timepicker .timepicker-picker a.btn {
+    color: #007bff;
+    color: var(--blue, #007bff)
+}
+.timepicker .btn.btn-primary {
+
+}
+.bootstrap-datetimepicker-widget table td span {
+    height: 40px !important;
+    line-height: 40px !important;
+}

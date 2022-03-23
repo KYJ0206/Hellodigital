@@ -1,0 +1,27 @@
+[ {
+  "id" : "f91592ce-7151-5eb5-acf5-a7b2f72dd2b5",
+  "name" : "related_article_yn",
+  "label" : "관련기사 적용",
+  "required" : false,
+  "locked" : false,
+  "display" : "checkbox",
+  "type" : "boolean",
+  "default" : false
+}, {
+  "id" : "98b7c1da-7539-87f9-5407-b2cc030b0bfe",
+  "name" : "text_field",
+  "label" : "관련기사 게시글 ID",
+  "required" : false,
+  "locked" : false,
+  "occurrence" : {
+    "min" : 1,
+    "max" : 100,
+    "sorting_label_field" : null,
+    "default" : 1
+  },
+  "validation_regex" : "",
+  "allow_new_line" : false,
+  "show_emoji_picker" : false,
+  "type" : "text",
+  "default" : [ "" ]
+} ]

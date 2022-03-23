@@ -1,0 +1,14 @@
+html, body {
+    width:100%;
+    height:100%;
+    overflow-x:hidden;
+    background:#f2efe9;
+  }
+  
+  div, svg, img {
+    position:absolute;
+  }
+  
+  #container {
+    opacity:0
+  }

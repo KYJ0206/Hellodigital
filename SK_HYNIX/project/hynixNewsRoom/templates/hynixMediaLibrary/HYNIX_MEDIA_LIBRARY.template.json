@@ -1,0 +1,309 @@
+{
+  "isAvailableForNewContent" : true,
+  "templateType" : 6,
+  "attachedStylesheets" : [ {
+    "path" : "/hynixNewsRoom/codeFiles/css/HynixMediaLibrary/hynix_mediaLibraryWrap.css",
+    "type" : "cos_extension_resource"
+  }, {
+    "path" : "/hynixNewsRoom/codeFiles/css/HeaderFooter/header_footer.css",
+    "type" : "cos_extension_resource"
+  }, {
+    "path" : "/hynixNewsRoom/codeFiles/css/Blog/hynix_blogDetail.css",
+    "type" : "cos_extension_resource"
+  } ],
+  "attachedJs" : [ {
+    "path" : "/hynixNewsRoom/codeFiles/jsFile/lazysize.min.js",
+    "type" : "cos_extension_resource"
+  }, {
+    "path" : "/hynixNewsRoom/codeFiles/jsFile/multi.js",
+    "type" : "cos_extension_resource"
+  }, {
+    "type" : "cos_extension_resource",
+    "path" : "/hynixNewsRoom/codeFiles/jsFile/jszipUtils.js"
+  }, {
+    "type" : "cos_extension_resource",
+    "path" : "/hynixNewsRoom/codeFiles/jsFile/core.js"
+  } ],
+  "customHead" : "",
+  "customFooter" : "",
+  "bodyClass" : "",
+  "bodyCss" : "",
+  "bodyEditable" : false,
+  "layoutData" : {
+    "x" : 0,
+    "w" : 12,
+    "name" : "",
+    "label" : "",
+    "type" : "cell",
+    "params" : { },
+    "rows" : [ {
+      "0" : {
+        "x" : 0,
+        "w" : 12,
+        "name" : "module_1631843536656104",
+        "label" : "hynix_Header",
+        "type" : "custom_widget",
+        "params" : {
+          "css_class" : "hs-search-hidden",
+          "css_id" : "",
+          "css_id_str" : "",
+          "css_style" : "",
+          "overrideable" : true,
+          "path" : "/hynixNewsRoom/customModules/hynixHeader_Footer/hynix_Header",
+          "per_widget_wrapper_html" : "",
+          "schema_version" : 2,
+          "widget_name" : "hynix_Header",
+          "wrapping_html" : ""
+        },
+        "rows" : [ ],
+        "rowMetaData" : [ ],
+        "cells" : [ ],
+        "cssId" : "",
+        "cssClass" : "hs-search-hidden",
+        "cssStyle" : "",
+        "styles" : null,
+        "widgets" : [ ]
+      }
+    }, {
+      "0" : {
+        "x" : 0,
+        "w" : 12,
+        "name" : "",
+        "label" : "",
+        "type" : "section_delimiter",
+        "params" : { },
+        "rows" : [ ],
+        "rowMetaData" : [ ],
+        "cells" : [ ],
+        "cssId" : "",
+        "cssClass" : "",
+        "cssStyle" : "",
+        "styles" : null,
+        "widgets" : [ ]
+      }
+    }, {
+      "0" : {
+        "x" : 0,
+        "w" : 12,
+        "name" : "module_163090988986321",
+        "label" : "hynix_media_library_sub_header",
+        "type" : "custom_widget",
+        "params" : {
+          "css_class" : "",
+          "css_id" : "",
+          "css_id_str" : "",
+          "css_style" : "",
+          "overrideable" : true,
+          "path" : "/hynixNewsRoom/customModules/hynixMedia/Mdia_Library/hynix_media_library_sub_header",
+          "per_widget_wrapper_html" : "",
+          "schema_version" : 2,
+          "widget_name" : "hynix_media_library_sub_header",
+          "wrapping_html" : ""
+        },
+        "rows" : [ ],
+        "rowMetaData" : [ ],
+        "cells" : [ ],
+        "cssId" : "",
+        "cssClass" : "",
+        "cssStyle" : "",
+        "styles" : null,
+        "widgets" : [ ]
+      }
+    }, {
+      "0" : {
+        "x" : 0,
+        "w" : 12,
+        "name" : "module_1631532455283101",
+        "label" : "hynix_media_library_contents",
+        "type" : "custom_widget",
+        "params" : {
+          "css_class" : "",
+          "css_id" : "",
+          "css_id_str" : "",
+          "css_style" : "",
+          "overrideable" : true,
+          "path" : "/hynixNewsRoom/customModules/hynixMedia/Mdia_Library/hynix_media_library_contents",
+          "per_widget_wrapper_html" : "",
+          "schema_version" : 2,
+          "widget_name" : "hynix_media_library_contents",
+          "wrapping_html" : ""
+        },
+        "rows" : [ ],
+        "rowMetaData" : [ ],
+        "cells" : [ ],
+        "cssId" : "",
+        "cssClass" : "",
+        "cssStyle" : "",
+        "styles" : null,
+        "widgets" : [ ]
+      }
+    }, {
+      "0" : {
+        "x" : 0,
+        "w" : 12,
+        "name" : "module_1633004121611103",
+        "label" : "Blog Content",
+        "type" : "custom_widget",
+        "params" : {
+          "blog_listing_source" : "<div class=\"blog-section\">\n    <div class=\"blog-listing-wrapper cell-wrapper\">\n        <div class=\"blog-section\">\n            <div class=\"blog-listing-wrapper cell-wrapper\">\n        {# simple_list_page indicates the \"blog/all\" page, which is a list of links to every blog post #}\n                <div class=\"post-listing{% if simple_list_page %}-simple{% endif %}\">\n                    {% if blog_author %}\n                        <div class=\"hs-author-profile\">\n                            <h2 class=\"hs-author-name\">{{ blog_author.display_name }}</h2>\n                            {% if blog_author.avatar %} <div class=\"hs-author-avatar\"> <img src=\"{{ blog_author.avatar }}\" alt=\"{{ blog_author.display_name }}\"> </div> {% endif %}\n                            <div class=\"hs-author-bio\">{{ blog_author.bio }}</div>\n                            {% if blog_author.has_social_profiles %}\n                                <div class=\"hs-author-social-section\">\n                                    <span class=\"hs-author-social-label\">Find me on:</span>\n                                    <div class=\"hs-author-social-links\">\n                                        {% if blog_author.facebook %}\n                                            <a href=\"{{ blog_author.facebook }}\" target=\"_blank\" class=\"hs-author-social-link hs-social-facebook\">&nbsp;</a>\n                                        {% endif %}\n                                        {% if blog_author.linkedin %}\n                                            <a href=\"{{ blog_author.linkedin }}\" target=\"_blank\" class=\"hs-author-social-link hs-social-linkedin\">&nbsp;</a>\n                                        {% endif %}\n                                        {% if blog_author.twitter %}\n                                            <a href=\"{{ blog_author.twitter }}\" target=\"_blank\" class=\"hs-author-social-link hs-social-twitter\">&nbsp;</a>\n                                        {% endif %}\n                                        {% if blog_author.google_plus %}\n                                            <a href=\"{{ blog_author.google_plus }}?rel=author\" target=\"_blank\" class=\"hs-author-social-link hs-social-google-plus\">&nbsp;</a>\n                                        {% endif %}\n                                    </div>\n                                </div>\n                            {% endif %}\n                        </div>\n                        <h3 class=\"hs-author-listing-header\">Recent Posts</h3>\n                    {% endif %}\n                    {% for content in contents %}\n                        <div class=\"post-item\">\n                            {% if not simple_list_page %}\n                                <div class=\"post-header\">\n                                    <h2><a href=\"{{content.absolute_url}}\">{{ content.name }}</a></h2>\n                                    <div id=\"hubspot-author_data\" class=\"hubspot-editable\" data-hubspot-form-id=\"author_data\" data-hubspot-name=\"Blog Author\">\n                                        Posted by\n                                        {%if content.blog_post_author %}\n                                            <a class=\"author-link\" href=\"{{ blog_author_url(group.id, content.blog_post_author.slug) }}\">{{ content.blog_post_author.display_name }}</a> on {{ content.publish_date_localized }}\n                                        {% endif %}\n                                    </div>\n                                    {% blog_social_sharing \"blog_social_sharing\" overrideable=False, label='Blog Social Sharing' %}\n                                </div>\n                                <div class=\"post-body clearfix\">\n                                    <!--post summary-->\n                                    {% if content.post_list_summary_featured_image %}\n                                        <div class=\"hs-featured-image-wrapper\">\n                                            <a href=\"{{content.absolute_url}}\" title=\"\" class=\"hs-featured-image-link\">\n                                                <img src=\"{{ content.post_list_summary_featured_image }}\" class=\"hs-featured-image\" alt=\"{{ content.featured_image_alt_text | escape }}\">\n                                            </a>\n                                        </div>\n                                    {% endif %}\n                                    {{ content.post_list_content|safe }}\n                                </div>\n                                {% if content_group.show_summary_in_listing %}\n                                    <a class=\"more-link\" href=\"{{ content.absolute_url }}\">Read More</a>\n                                {% endif %}\n                                <div class=\"custom_listing_comments\">\n                                    {% set comments_number =  content.comment_list|length %}\n                                    {% set comments_label = \"Comment\" if comments_number == 1 else \"Comments\" %}\n                                    {{ comments_number }} {{ comments_label }} <a href=\"{{content.absolute_url}}#comments-listing\">Click here to read/write comments</a>\n                                </div>\n                                {% if content.topic_list %}\n                                     <p id=\"hubspot-topic_data\"> Topics:\n                                        {% for topic in content.topic_list %}\n                                            <a class=\"topic-link\" href=\"{{ blog_tag_url(group.id, topic.slug) }}\">{{ topic.name }}</a>{% if not loop.last %},{% endif %}\n                                        {% endfor %}\n                                     </p>\n                                {% endif %}\n                            {% else %}\n                                <h2 class=\"post-listing-simple\"><a href=\"{{content.absolute_url}}\">{{ content.name }}</a></h2>\n                            {% endif %}\n                        </div>\n                    {% endfor %}\n                </div>\n                {% if not simple_list_page %}\n                <div class=\"blog-pagination\">\n                    {% if last_page_num %}\n                        <a class=\"previous-posts-link\" href=\"{{ blog_page_link(last_page_num) }}\">Previous</a>\n                    {% endif %}\n                        <a class=\"all-posts-link\" href=\"{{ blog_all_posts_url(group.id) }}\">All posts</a>\n                    {% if next_page_num %}\n                        <a class=\"next-posts-link\" href=\"{{ blog_page_link(next_page_num) }}\">Next</a>\n                    {% endif %}\n                </div>\n                {% endif %}\n            </div>\n        </div>\n    </div>\n</div>\n",
+          "blog_post_source" : "{% image \"custom_background_image\" label='Select Custom Image(Post Banner)', \nsrc=\"{{get_asset_url('/hynixNewsRoom/codeFiles/images/contentImage/groupO2x.png')}}\", \nexport_to_template_context=True %} ",
+          "css_class" : "",
+          "css_id" : "",
+          "css_id_str" : "",
+          "css_style" : "",
+          "overrideable" : false,
+          "path" : "@hubspot/blog_content",
+          "per_widget_wrapper_html" : "",
+          "schema_version" : 2,
+          "template_to_edit" : "post",
+          "widget_name" : "Blog Content",
+          "wrapping_html" : ""
+        },
+        "rows" : [ ],
+        "rowMetaData" : [ ],
+        "cells" : [ ],
+        "cssId" : "",
+        "cssClass" : "",
+        "cssStyle" : "",
+        "styles" : null,
+        "widgets" : [ ]
+      }
+    }, {
+      "0" : {
+        "x" : 0,
+        "w" : 12,
+        "name" : "module_1633275130954992",
+        "label" : "hynix_media_bottomContent",
+        "type" : "custom_widget",
+        "params" : {
+          "css_class" : "hs-search-hidden",
+          "css_id" : "",
+          "css_id_str" : "",
+          "css_style" : "",
+          "overrideable" : true,
+          "path" : "/hynixNewsRoom/customModules/hynixMedia/Mdia_Library/hynix_media_bottomContent",
+          "per_widget_wrapper_html" : "",
+          "schema_version" : 2,
+          "widget_name" : "hynix_media_bottomContent",
+          "wrapping_html" : ""
+        },
+        "rows" : [ ],
+        "rowMetaData" : [ ],
+        "cells" : [ ],
+        "cssId" : "",
+        "cssClass" : "hs-search-hidden",
+        "cssStyle" : "",
+        "styles" : null,
+        "widgets" : [ ]
+      }
+    }, {
+      "0" : {
+        "x" : 0,
+        "w" : 12,
+        "name" : "module_1633236468073149",
+        "label" : "hynix_preListNextList",
+        "type" : "custom_widget",
+        "params" : {
+          "css_class" : "hs-search-hidden media-only",
+          "css_id" : "",
+          "css_id_str" : "",
+          "css_style" : "",
+          "overrideable" : true,
+          "path" : "/hynixNewsRoom/customModules/localModule/module/hynix_preListNextList",
+          "per_widget_wrapper_html" : "",
+          "schema_version" : 2,
+          "widget_name" : "hynix_preListNextList",
+          "wrapping_html" : ""
+        },
+        "rows" : [ ],
+        "rowMetaData" : [ ],
+        "cells" : [ ],
+        "cssId" : "",
+        "cssClass" : "hs-search-hidden media-only",
+        "cssStyle" : "",
+        "styles" : null,
+        "widgets" : [ ]
+      }
+    }, {
+      "0" : {
+        "x" : 0,
+        "w" : 12,
+        "name" : "module_1633003150243172",
+        "label" : "btn_pageTop",
+        "type" : "custom_widget",
+        "params" : {
+          "css_class" : "hs-search-hidden",
+          "css_id" : "",
+          "css_id_str" : "",
+          "css_style" : "",
+          "overrideable" : true,
+          "path" : "/hynixNewsRoom/customModules/localModule/btn_pageTop",
+          "per_widget_wrapper_html" : "",
+          "schema_version" : 2,
+          "widget_name" : "btn_pageTop",
+          "wrapping_html" : ""
+        },
+        "rows" : [ ],
+        "rowMetaData" : [ ],
+        "cells" : [ ],
+        "cssId" : "",
+        "cssClass" : "hs-search-hidden",
+        "cssStyle" : "",
+        "styles" : null,
+        "widgets" : [ ]
+      }
+    }, {
+      "0" : {
+        "x" : 0,
+        "w" : 12,
+        "name" : "",
+        "label" : "",
+        "type" : "section_delimiter",
+        "params" : { },
+        "rows" : [ ],
+        "rowMetaData" : [ ],
+        "cells" : [ ],
+        "cssId" : "",
+        "cssClass" : "",
+        "cssStyle" : "",
+        "styles" : null,
+        "widgets" : [ ]
+      }
+    }, {
+      "0" : {
+        "x" : 0,
+        "w" : 12,
+        "name" : "module_1631843538593106",
+        "label" : "hynix_Footer",
+        "type" : "custom_widget",
+        "params" : {
+          "css_class" : "hs-search-hidden",
+          "css_id" : "",
+          "css_id_str" : "",
+          "css_style" : "",
+          "overrideable" : true,
+          "path" : "/hynixNewsRoom/customModules/hynixHeader_Footer/hynix_Footer",
+          "per_widget_wrapper_html" : "",
+          "schema_version" : 2,
+          "widget_name" : "hynix_Footer",
+          "wrapping_html" : ""
+        },
+        "rows" : [ ],
+        "rowMetaData" : [ ],
+        "cells" : [ ],
+        "cssId" : "",
+        "cssClass" : "hs-search-hidden",
+        "cssStyle" : "",
+        "styles" : null,
+        "widgets" : [ ]
+      }
+    } ],
+    "rowMetaData" : [ ],
+    "cells" : [ ],
+    "cssId" : "",
+    "cssClass" : "",
+    "cssStyle" : "",
+    "styles" : null,
+    "widgets" : [ ]
+  }
+}

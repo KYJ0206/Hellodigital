@@ -1,0 +1,11 @@
+[ {
+  "id" : "86be948c-a89f-de0f-b6f4-085d791d3fe3",
+  "name" : "show_module",
+  "label" : "글쓴이 모듈 적용여부",
+  "required" : false,
+  "locked" : false,
+  "display" : "select",
+  "choices" : [ [ "yes", "yes" ], [ "no", "no" ] ],
+  "type" : "choice",
+  "default" : "no"
+} ]

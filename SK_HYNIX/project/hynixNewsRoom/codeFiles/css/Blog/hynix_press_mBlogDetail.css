@@ -1,0 +1,199 @@
+{% include "/hynixNewsRoom/codeFiles/css/blog/hynix_mblogDetail.css" %}
+
+@media screen and (max-width:1440px) {
+  section.blog-instruction{
+    margin-top: 0px;
+  }
+}
+@media screen and (max-width:1024px) {
+    section.contents-press .inner2 {
+        flex-direction: column;
+    }
+
+    section.contents-press .inner2 aside {
+        max-width: unset;
+        display: flex;
+        width: 100%;
+        margin-right: 0;
+        margin-bottom: 50px;
+        flex-basis: auto;
+    }
+
+    section.contents-press .inner2 aside .press-alramWrap {
+        display: none;
+    }
+
+    section.contents-press .inner2 aside .aside-thumbWrap {
+        width: 66%;
+        border-bottom: 0;
+        margin-bottom: 0;
+        padding-bottom: 0;
+    }
+
+    section.contents-press .inner2 aside .aside-thumbWrap h3 {
+        font-size: 20px;
+        margin-bottom: 22px;
+    }
+
+    section.contents-press .inner2 aside .aside-thumbWrap ul {
+        display: flex;
+    }
+
+    section.contents-press .inner2 aside .aside-thumb {
+        margin-top: 0;
+        width: 50%;
+    }
+
+    section.contents-press .inner2 aside .aside-thumb:last-child {
+        margin-left: 24px;
+    }
+
+    section.contents-press .inner2 aside .linkEtcWrap {
+        width: 33%;
+        margin-left: 24px;
+        margin-top: 24px;
+    }
+
+    section.contents-press .inner2 aside .etcWrap {
+        margin-top: 20px;
+    }
+
+    section.contents-press .inner2 aside .etcWrap ul {
+        display: flex;
+        /* 0927 EBOKE UPDATE */
+        gap:13px 20px;
+    }
+
+    section.contents-press .inner2 aside .etcWrap li {
+        margin-bottom: 0;
+    }
+
+    section.contents-press .inner2 aside .aside-thumb p {
+        font-size: 14px;
+    }
+
+    /* BOTTOM SNS FULL AREA */
+    .bottom_module .toList {
+        margin-left: 0;
+    }
+
+    /* 0909 UPDATE - View-B에서 모듈그룹 레이아웃 커스텀 CSS */
+    /* pressBlog-wrapper 클래스 상위에 적용시 적용됨 */
+    /* 0924 EBOKE 수정 - Aside 가 컨텐츠 하단으로 내려가도록 flex-direction 수정   */
+    .pressBlog-wrapper .row-fluid {
+        display: flex;
+        flex-direction: column-reverse;
+    }
+
+    .pressBlog-wrapper .row-fluid [class*="span"] {
+        width: 100%;
+        margin: 0;
+    }
+
+    .pressBlog-wrapper .row-fluid .pressBlog-wrapper-col-r {
+        padding: 0;
+    }
+
+}
+
+@media screen and (max-width:768px) {
+    section.contents-press .inner2 aside {
+        flex-direction: column;
+    }
+
+    section.contents-press .inner2 aside .aside-thumbWrap ul {
+        flex-direction: column;
+    }
+
+    section.contents-press .inner2 aside .aside-thumbWrap {
+        width: 100%;
+    }
+
+    section.contents-press .inner2 aside .aside-thumb {
+        width: 100%;
+    }
+
+    section.contents-press .inner2 aside .aside-thumb:last-child {
+        margin-left: 0;
+        margin-top: 26px;
+    }
+
+    section.contents-press .inner2 aside .linkEtcWrap {
+        width: 100%;
+        margin: 0;
+        margin-top: 50px;
+    }
+
+    section.contents-press .inner2 aside .etcWrap {
+        margin-top: 50px;
+    }
+
+    section.contents-press .inner2 aside .etcWrap ul {
+        flex-direction: column;
+    }
+}
+
+/* 0912 UPDATE */
+@media screen and (max-width:768px) {
+ 
+    section.search-full {
+        margin-top: 0;
+        margin-bottom: 40px;
+    }
+
+    section.search-full .input-searchWrap {
+        margin-bottom: 4px;
+        max-width: unset;
+    }
+
+    section.search-full .input-searchWrap input {
+        border-radius: 14px;
+        padding: 0 20px;
+    }
+
+    section.search-full .input-searchWrap .input-search {
+        right: 16px;
+    }
+
+    section.search-full .tagWrap2 {
+        margin-bottom: 38px;
+        justify-content: center;
+        padding-left: 7px;
+    }
+  
+
+
+    section.search-full .ckWrap {
+        float: right;
+        margin-bottom: 23px;
+    }
+
+    section.search-full hr {
+        width: 100%;
+        height: 1px;
+        background-color: #d0d1d6;
+        border: 0;
+        margin: 0;
+    }
+
+
+    section.search-full .ckWrap {
+        margin-bottom: 38px;
+    }
+
+}
+
+@media screen and (max-width:425px) {
+  section.search-full .input-searchWrap input {
+        border-radius: 14px;
+        padding: 0 20px;
+    }
+}
+
+@media screen and (max-width:280px) {
+  section.search-full .input-searchWrap input {
+        border-radius: 14px;
+        padding: 0 20px;
+    }
+}
+

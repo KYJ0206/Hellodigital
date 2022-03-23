@@ -1,0 +1,124 @@
+* {
+    margin: 0;
+    padding: 0;
+    font-family: sans-serif;
+    box-sizing: border-box;
+}
+    
+body {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  min-height: 100vh;
+}
+
+.calendar {
+    width: 600px;
+    margin: 50px;
+}
+
+.header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.year-month {
+  font-size: 35px;
+}
+
+.nav {
+  display: flex;
+  border: 1px solid #333;
+  border-radius: 5px;
+}
+
+.nav-btn {
+  width: 28px;
+  height: 30px;
+  border: none;
+  font-size: 16px;
+  line-height: 34px;
+  background-color: transparent;
+  cursor: pointer;
+}
+
+.go-today {
+  width: 75px;
+  border-left: 1px solid #333;
+  border-right: 1px solid #333;
+}
+
+.days {
+    display: flex;
+    margin: 25px 0 10px;
+}
+
+.day {
+  width: calc(100% / 7);
+  text-align: center;
+}
+
+.dates {
+  display: flex;
+  flex-flow: row wrap;
+  height: 500px;
+  border-top: 2px solid #333;
+  border-right: 2px solid #333;
+}
+
+.date {
+  width: calc(100% / 7);
+  padding: 15px;
+  text-align: right;
+  border-bottom: 2px solid #333;
+  border-left: 2px solid #333;
+}
+
+.day:nth-child(7n + 1),
+.date:nth-child(7n + 1) {
+  color: #D13E3E;
+}
+
+.day:nth-child(7n),
+.date:nth-child(7n) {
+  color: #396EE2;
+}
+
+h1{
+    padding: 10px 0 30px 0;
+}
+h1 a {
+    border-bottom: 5px solid;
+}
+
+.other {
+    opacity: .3;
+}
+
+/* 오늘 날짜 */
+.today {
+    position: relative;
+    color: #FFFFFF;
+}
+
+.today::before {
+  content: '';
+  position: absolute;
+  top: 49%;
+  left: 50%;
+  z-index: -1;
+  display: block;
+  width: 30px;
+  height: 30px;
+  background-color: #FF0000;
+  border: 2px solid #333;
+  border-radius: 50%;
+  transform: translate(-50%, -50%);
+}
+
+.nav-btn.go-next:hover,
+.nav-btn.go-prev:hover{
+  color: #fff;
+  background-color: #FF0000;
+}

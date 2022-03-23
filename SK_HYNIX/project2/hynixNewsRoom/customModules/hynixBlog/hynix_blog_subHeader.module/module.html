@@ -1,0 +1,135 @@
+{% set path = request.path|split('/', 2)|last %}
+
+{# {% set show = path == 'technology' || path == 'culture' || path == 'sustainability' ? true : flase %} #}
+<!-- SUB-HEADER -->
+<section class="container sub-header">
+    <article id="content">
+        <div class="inner2">
+            <div class="hgroup">
+                <h1>{{ content.name }}</h1>
+                <div class="tagbox" style='display: none;'>
+                    <ul>
+                        <li>
+													{% for topic in content.topic_list %}
+														{% if topic != '' && topic != 'blog-기술' && topic != 'blog-사람-문화' && topic != 'blog-지속가능경영'%}
+														<a href='/post/tag/{{topic.name}}/page/1?type=tag&text={{topic.name}}' class='topicText topicText{{loop.index}}' rel='tag'>{{topic.name}}</a>
+														{% else %}
+														{% endif%}
+													{% endfor %}
+                        </li>
+                    </ul>
+                </div>                        
+            </div>
+        </div>
+  <div class="inner">
+    <div class="inner2 hgroup-bottom">
+        <div class="post-meta">
+            <span class="date">{{content.publish_date | datetimeformat ('%Y-%m-%d')}}</span>
+            <span class="author"><a href='/post/author/{{content.blog_post_author.slug}}/page/1?type=author&text={{content.blog_post_author}}' id='viewAuthor' data-text="{{content.blog_post_author.name}}" data-author="{{content.blog_post_author.slug}}">{{content.blog_post_author}}</a></span>
+        </div>
+
+        <hr class="d-mobile">
+
+        <aside class="share-area">
+            <div class="share-list">
+               <div class="Rectangle-Copy">
+                  <ul class="sns">
+                      <li class="snsin"><a target='_blank' title="snsin">linkedin</a></li>
+                      <li class="snsmail"><a title="snsmail">Mail</a></li>
+                      <li class="snsclose"><a title="snsclose">snsclose</a></li>
+                  </ul>
+               </div>
+               <ul class="sns">
+                   <li class="url"><a title="url">url</a></li>
+                 <li class="fb"><a target='_blank' href="https://www.facebook.com/sharer/sharer.php?u={{ content.absolute_url|urlencode }}" title="facebook">Facebook</a></li>
+                 
+                   <li class="tw"><a target='_blank' title="Twitter">Twitter</a></li>
+                   <li class="nv"><a target='_blank' title="Naver">Naver</a></li>
+                   <li class="more"><a title="more">more</a></li>
+               </ul>
+            </div>
+        </aside>
+    </div>
+    <hr>
+  </div>
+</article>
+</section>
+
+<!--  -->
+<script type='text/babel' >
+
+$(document).ready(function(){
+
+  // 링크드인
+  $('.sns .snsin a').attr('href', `http://www.linkedin.com/shareArticle?mini=true&url=${encodeURIComponent(window.location.href)}&title=${encodeURIComponent($('.hgroup h1').text())}`)
+  
+  // 트위터 
+  $('.sns .tw a').attr('href', `https://twitter.com/intent/tweet?text=${encodeURIComponent($('.hgroup h1').text())}&url=${encodeURIComponent(window.location.href)}`);
+  
+  // 네이버
+    $('.sns .nv a').attr('href', `https://share.naver.com/web/shareView?url=${encodeURIComponent(window.location.href)}&title=${encodeURIComponent($('.hgroup h1').text())}`)
+ 
+ // 메알
+   $('.sns .snsmail a').attr('href',`mailto:?Mailto&body=${encodeURIComponent($('.hgroup h1').text())}%0D%0A${encodeURIComponent(window.location.href)}`);
+	
+	const URL = window.location.href;
+	
+// 	$('.topicText').click((e) => {
+// 		console.log($(e.target).text())
+// 		if(URL.includes('technology')) {
+// 			$('.tagbox .topicText').attr('href', `/technology/tag/${$(e.target).text()}/page/1?type=tag&text=${$(e.target).text()}`)
+// 		}
+// 		if(URL.includes('culture')) {
+//       $('.tagbox .topicText').attr('href', `/culture/tag/${$(e.target).text()}/page/1?type=tag&text=${$(e.target).text()}`)
+// 		}
+// 		if(URL.includes('sustainability')) {
+//       $('.tagbox .topicText').attr('href', `/sustainability/tag/${$(e.target).text()}/page/1?type=tag&text=${$(e.target).text()}`)
+// 		}
+// 	})
+  // url주소 복사
+  $('ul.sns .url').click((e)=>{
+    console.log('유알엘 복사')
+    let url = '';
+    let textarea = document.createElement("textarea");
+    document.body.appendChild(textarea);
+    url = window.document.location.href;
+    textarea.value = url;
+    textarea.select();
+    document.execCommand("copy");
+    document.body.removeChild(textarea);
+    alert("url이 복사되었습니다.(Ctrl+c를 눌러 주소창에 붙여넣어 주세요)")
+  })
+  
+
+  
+  
+  
+	const tagLength = $('.tagbox ul li').children('a.topicText').length;
+	console.log(tagLength,'!!!')
+	for(let i = 1; i <= tagLength; i++) {
+		const text = $(`.topicText${i}`).text()
+		if(text.includes('카테고리-')) {
+			$(`.topicText${i}`).remove()
+		}
+	}
+	$('.tagbox').css('display', 'flex')
+
+	
+})
+//   const URL = window.location.href;
+// 	$('.tagbox .topicText').click((e) => {
+// 		console.log($(e.target).text())
+// 	})
+
+$(".more a").click(function(){
+  console.log('상단클릭!@')
+  $(".Rectangle-Copy").show();
+});
+
+$(".snsclose a").click(function(){
+  $(".Rectangle-Copy").hide();
+});
+
+
+
+</script>

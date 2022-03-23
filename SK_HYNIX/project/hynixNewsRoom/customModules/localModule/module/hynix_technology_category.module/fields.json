@@ -1,0 +1,10 @@
+[ {
+  "id" : "b92457ef-5561-2d17-219c-05a95511308f",
+  "name" : "category_field",
+  "label" : "카테고리",
+  "required" : false,
+  "locked" : false,
+  "display" : "select",
+  "choices" : [ [ "반도체", "반도체" ], [ "비즈니스", "비즈니스" ], [ "트렌드", "트렌드" ] ],
+  "type" : "choice"
+} ]

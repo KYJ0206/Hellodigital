@@ -1,0 +1,537 @@
+<!DOCTYPE html>
+<html lang="ko">
+
+<head>
+  <meta charset="UTF-8" />
+  <title>Gitgo</title>
+  <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0, user-scalable=no" />
+  
+  <link rel="stylesheet" href="../css/tempusdominus-bootstrap-4.min.css">
+  <link rel="stylesheet" href="../css/hello-ui/import.css" />
+  <link rel="stylesheet" href="../css/jquery-ui.min.css" />
+  <link rel="stylesheet" href="../css/style.min.css" />
+  <link rel="stylesheet" href="../css/bootstrap.css" />
+  <link rel="stylesheet" type="text/css" href="gridforms.css">
+  <link rel="stylesheet" href="../css/home.css">
+  <link rel="stylesheet" href="../css/myschedule.css">
+  <link rel="stylesheet" href="../css/myschedule-m.css">
+  <link rel="stylesheet" href="../css/font-awesome.css">
+  
+  <script src="../js/jquery-3.4.1.min.js"></script>
+  <script src="../js/ui.js"></script>
+  <script src="../dist/jstree.js"></script>
+  <script src="../js/jstree-custom-module.js"></script>
+  <script src="../js/moment.js"></script>
+  <script src="../js/bootstrap.bundle.min.js"></script>
+  <script src="../js/bootstrap.min.js"></script>
+  <script src="../js/tempusdominus-bootstrap-4.min.js"></script>
+  
+
+</head>
+
+<body style="background-color: #f4f2f1;">
+  <div class="wrap">
+    
+
+    <div class="section-myschedule">
+      <!-- 공통 Nav tab -->
+      <div class="container py-3 container-mobile-tab">
+        <ul class="nav nav-tabs new-nav-tabs">
+          <a href="#" class="nav-hamburg" onclick="mSideToggle()">
+            <img style="display: none;" src="../images/main-sub1129.png" alt="메인닫기이미지">
+            <span></span>
+            <span></span>
+            <span></span>
+
+            <!-- <script>
+              function mSideToggle(){
+                if($('.container-mobile-tab').hasClass('m-side-on')) {
+                  $('.container-mobile-tab').removeClass('m-side-on')
+                  $('body').removeAttr("style")
+                } else {
+                  $('.container-mobile-tab').addClass('m-side-on')
+                  $('body').css("overflow","hidden")
+                }
+              }
+            </script> -->
+          </a>
+          
+          <li class="nav-item">
+            <a class="nav-link " href="./home.html">HOME</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link active" href="./myschedule.html">나의 근태일정</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="./temschedule.html">부서 근태일정</a>
+          </li>
+          <a class="nav-setting" href="#" role="button" id="nav-setting" onclick="setting()">
+            Setting Btn
+            <script>
+              function setting() {
+                if($('.command-r').hasClass('active')) {
+                  $('.command-r').removeClass('active')
+                } else {
+                  $('.command-r').addClass('active')
+                }
+              }
+            </script>
+          </a>
+          <!-- <a class="nav-more-btn" href="#" role="button">...
+            <span></span>
+            <span></span>
+            <span></span>
+          </a> -->
+        </ul>
+
+        <!-- 모바일 사이드 메뉴 -->
+        <div class="m-sideWrap">
+          <ul class="m-side-menu">
+            <li>
+              <div class="item">
+                <a href="./home.html">
+                  <div>HOME</div>
+                </a>
+              </div>
+            </li>
+            <li class="active">
+              <div class="item">
+                <a href="./myschedule.html">
+                  <div>나의 근태일정</div>
+                </a>
+              </div>
+            </li>
+            <li>
+              <div class="item">
+                <a href="./temschedule.html">
+                  <div>부서 근태일정</div>
+                </a>
+              </div>
+              <dl>
+                <a href="./temschedule.html">
+                  <dd>업무조회</dd>
+                </a>
+                <a href="./temschedule_2.html">
+                  <dd class="active">연차조회</dd>
+                </a>
+              </dl>
+            </li>
+          </ul>
+        </div>
+
+      </div>
+
+      <div class="container container-command px-0">
+        <!-- 서브 command -->
+        <div class="command d-md-flex justify-content-between flex-column flex-md-row align-items-center">
+          <!-- 좌측 command -->
+          <ul class="command-l d-flex align-items-center mb-0">
+            <li class="d-flex align-items-center col-4 text-left">
+              <span class="flex-fill">발생연차</span>
+              <span class="date flex-fill">15일</span>
+            </li>
+            <li class="d-flex align-items-center col-4 text-center">
+              <span class="flex-fill">사용일</span>
+              <span class="date flex-fill">6일</span>
+            </li>
+            <li class="d-flex align-items-center col-4 text-right">
+              <span class="flex-fill">잔여일</span>
+              <span class="date flex-fill">9일</span>
+            </li>
+          </ul>
+
+          <!-- 우측 command -->
+          <ul class="command-r align-items-center mb-0">
+            <li class="d-flex align-items-center justify-content-start flex-row-reverse flex-md-row">
+              <!-- 분류 -->
+              <div class="d-flex align-items-center">
+                <span class="d-none d-md-block pl-1">분류</span>
+                <div class="selectIcon">
+                  <select class="form-control" id="exampleFormControlSelect1">
+                    <option>전체</option>
+                    <option>**</option>
+                    <option>**</option>
+                  </select>
+                </div>
+              </div>
+
+              <!-- 달력  -->
+              <div>
+                <div class="date-calendar02 d-flex align-items-center">
+                  <input type="text" class="form-control datetimepicker-input" id="datetimepicker5" data-toggle="datetimepicker" data-target="#datetimepicker5"/>
+                  <span class="calendar02-span">~</span>
+                  <input type="text" class="form-control datetimepicker-input" id="datetimepicker6" data-toggle="datetimepicker" data-target="#datetimepicker6"/>
+                </div>
+              </div>
+            </li>
+
+            <li class="d-flex flex-row-reverse flex-md-row">
+              <!-- 버튼 -->
+              <button class="btn btn-primary btn-search" type="submit">검색</button>
+              <button class="btn" type="submit" data-toggle="modal" data-target="#exampleModal">신청</button>
+            </li>
+          </ul>
+        </div>
+      </div>
+
+
+      <section class="container container-myschedule px-0">
+        <!-- 리스트 헤드 -->
+        <ul class="d-flex list list-head justify-content-between">
+          <li class="list-l ">
+            <div>분류</div>
+            <div>시작</div>
+            <div>종료</div>
+          </li>
+          <li class="list-r ">
+            <div>장소</div>
+            <div>비고</div>
+            <div>승인상태</div>
+          </li>
+        </ul>
+
+        <!-- 리스트 바디 -->
+        <ul class="d-flex list list-body justify-content-between">
+          <li class="list-l ">
+            <div class="tool">
+              <span class="work-badge badge-a">
+                <img src="../images/icon-night-1123.png" alt="야근아이콘">
+              </span>
+              <span class="tooltip-text wtn">야근</span>
+            </div>
+            <div><span>2021.06.01  <em>PM 06:00</em></span></div>
+            <div><span>2021.06.01  <em>AM 09:00</em></span></div>
+          </li>
+          <li class="list-r ">
+            <div><span>서울시 성동구서울시 성동구서울시 성동구서울시 성동구</span></div>
+            <div><span>111.222.298</span></div>
+            <div>
+              <span class="appr appr-a">승인완료</span>
+              <span class="appr appr-b">일정취소</span>
+            </div>
+          </li>
+        </ul>
+
+        <ul class="d-flex list list-body justify-content-between">
+          <li class="list-l ">
+            <div class="tool">
+              <span class="work-badge badge-b">
+                <img src="../images/icon-paper-1123.png" alt="근무아이콘">
+              </span>
+              <span class="tooltip-text wta">근무 </span>
+            </div>
+            <div><span>2021.06.01  <em>AM 09:00</em></span></div>
+            <div><span>2021.06.01  <em>PM 06:00</em></span></div>
+          </li>
+          <li class="list-r ">
+            <div><span>서울시 성동구</span></div>
+            <div><span>111.222.298</span></div>
+            <div>
+              <span class="appr appr-c">승인중</span>
+            </div>
+          </li>
+        </ul>
+
+        <ul class="d-flex list list-body justify-content-between">
+          <li class="list-l ">
+            <div class="tool">
+              <span class="work-badge badge-c">
+                <img src="../images/icon-bag-1123.png" alt="외근아이콘">
+              </span>
+              <span class="tooltip-text wtc">외근</span>
+            </div>
+            <div><span>2021.06.01  <em>PM 06:00</em></span></div>
+            <div><span>2021.06.01  <em>AM 09:00</em></span></div>
+          </li>
+          <li class="list-r ">
+            <div><span>서울시 성동구</span></div>
+            <div><span>111.222.298</span></div>
+            <div>
+              <span class="appr appr-a">승인완료</span>
+              <span class="appr appr-b">일정취소</span>
+            </div>
+          </li>
+        </ul>
+
+        <ul class="d-flex list list-body justify-content-between">
+          <li class="list-l ">
+            <div class="tool">
+              <span class="work-badge badge-d">
+                <img src="../images/icon-chair-1123.png" alt="연차아이콘">
+              </span>
+              <span class="tooltip-text wte">연차</span>
+            </div>
+            <div><span>2021.06.01  <em>PM 06:00</em></span></div>
+            <div><span>2021.06.01  <em>AM 09:00</em></span></div>
+          </li>
+          <li class="list-r ">
+            <div><span>서울시 성동구</span></div>
+            <div><span>111.222.298</span></div>
+            <div>
+              <span class="appr appr-a">승인완료</span>
+              <span class="appr appr-b">일정취소</span>
+            </div>
+          </li>
+        </ul>
+
+        <ul class="d-flex list list-body justify-content-between">
+          <li class="list-l ">
+            <div class="tool">
+              <span class="work-badge badge-c">
+                <img src="../images/icon-bag-1123.png" alt="외근아이콘">
+              </span>
+              <span class="tooltip-text wtc">외근</span>
+            </div>
+            <div><span>2021.06.01  <em>PM 06:00</em></span></div>
+            <div><span>2021.06.01  <em>AM 09:00</em></span></div>
+          </li>
+          <li class="list-r ">
+            <div><span>서울시 성동구</span></div>
+            <div><span>111.222.298</span></div>
+            <div>
+              <span class="appr appr-a">승인완료</span>
+              <span class="appr appr-b">일정취소</span>
+            </div>
+          </li>
+        </ul>
+
+        <ul class="d-flex list list-body justify-content-between">
+          <li class="list-l ">
+            <div class="tool">
+              <span class="work-badge badge-c">
+                <img src="../images/icon-bag-1123.png" alt="외근아이콘">
+              </span>
+              <span class="tooltip-text wtc">외근</span>
+            </div>
+            <div><span>2021.06.01  <em>PM 06:00</em></span></div>
+            <div><span>2021.06.01  <em>AM 09:00</em></span></div>
+          </li>
+          <li class="list-r ">
+            <div><span>서울시 성동구</span></div>
+            <div><span>111.222.298</span></div>
+            <div>
+              <span class="appr appr-a">승인완료</span>
+              <span class="appr appr-b">일정취소</span>
+            </div>
+          </li>
+        </ul>
+
+        <ul class="d-flex list list-body justify-content-between">
+          <li class="list-l ">
+            <div class="tool">
+              <span class="work-badge badge-c">
+                <img src="../images/icon-bag-1123.png" alt="외근아이콘">
+              </span>
+              <span class="tooltip-text wtc">외근</span>
+            </div>
+            <div><span>2021.06.01  <em>PM 06:00</em></span></div>
+            <div><span>2021.06.01  <em>AM 09:00</em></span></div>
+          </li>
+          <li class="list-r ">
+            <div><span>서울시 성동구</span></div>
+            <div><span>111.222.298</span></div>
+            <div>
+              <span class="appr appr-a">승인완료</span>
+              <span class="appr appr-b">일정취소</span>
+            </div>
+          </li>
+        </ul>
+
+        <ul class="d-flex list list-body justify-content-between">
+          <li class="list-l ">
+            <div class="tool">
+              <span class="work-badge badge-c">
+                <img src="../images/icon-bag-1123.png" alt="외근아이콘">
+              </span>
+              <span class="tooltip-text wtc">외근</span>
+            </div>
+            <div><span>2021.06.01  <em>PM 06:00</em></span></div>
+            <div><span>2021.06.01  <em>AM 09:00</em></span></div>
+          </li>
+          <li class="list-r ">
+            <div><span>서울시 성동구</span></div>
+            <div><span>111.222.298</span></div>
+            <div>
+              <span class="appr appr-a">승인완료</span>
+              <span class="appr appr-b">일정취소</span>
+            </div>
+          </li>
+        </ul>
+
+        <ul class="d-flex list list-body justify-content-between">
+          <li class="list-l ">
+            <div class="tool">
+              <span class="work-badge badge-c">
+                <img src="../images/icon-bag-1123.png" alt="외근아이콘">
+              </span>
+              <span class="tooltip-text wtc">외근</span>
+            </div>
+            <div><span>2021.06.01  <em>PM 06:00</em></span></div>
+            <div><span>2021.06.01  <em>AM 09:00</em></span></div>
+          </li>
+          <li class="list-r ">
+            <div><span>서울시 성동구</span></div>
+            <div><span>111.222.298</span></div>
+            <div>
+              <span class="appr appr-a">승인완료</span>
+              <span class="appr appr-b">일정취소</span>
+            </div>
+          </li>
+        </ul>
+
+        <ul class="d-flex list list-body justify-content-between">
+          <li class="list-l ">
+            <div class="tool">
+              <span class="work-badge badge-c">
+                <img src="../images/icon-bag-1123.png" alt="외근아이콘">
+              </span>
+              <span class="tooltip-text wtc">외근</span>
+            </div>
+            <div><span>2021.06.01  <em>PM 06:00</em></span></div>
+            <div><span>2021.06.01  <em>AM 09:00</em></span></div>
+          </li>
+          <li class="list-r ">
+            <div><span>서울시 성동구</span></div>
+            <div><span>111.222.298</span></div>
+            <div>
+              <span class="appr appr-a">승인완료</span>
+              <span class="appr appr-b">일정취소</span>
+            </div>
+          </li>
+        </ul>
+
+        <ul class="d-flex list list-body justify-content-between">
+          <li class="list-l ">
+            <div class="tool">
+              <span class="work-badge badge-c">
+                <img src="../images/icon-bag-1123.png" alt="외근아이콘">
+              </span>
+              <span class="tooltip-text wtc">외근</span>
+            </div>
+            <div><span>2021.06.01  <em>PM 06:00</em></span></div>
+            <div><span>2021.06.01  <em>AM 09:00</em></span></div>
+          </li>
+          <li class="list-r ">
+            <div><span>서울시 성동구</span></div>
+            <div><span>111.222.298</span></div>
+            <div>
+              <span class="appr appr-a">승인완료</span>
+              <span class="appr appr-b">일정취소</span>
+            </div>
+          </li>
+        </ul>
+
+
+      </section>
+      
+    </div>
+
+    <!-- Modal : 일정신청 -->
+    <!-- 0726 작성 중 -->
+    <div class="modal newModal fade" id="exampleModal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+      <div class="modal-dialog modal-dialog-centered" style="max-width: 335px;">
+        <div class="modal-content">
+          <div class="modal-header flex-row-reverse">
+            <button type="button" class="close justify-self-" data-dismiss="modal" aria-label="Close">
+              <span aria-hidden="true"></span>
+            </button>
+          </div>
+          <div class="modal-body modal-schedule">
+            <div class="modal-schedule-head">
+              <h4>일정신청</h4>
+            </div>
+
+            <div class="input-group new-raido">
+              <div class="input-group-prepend">
+                <div class="input-group-text">
+                  <label>외근
+                    <input type="radio" aria-label="Radio button for following text input" name="radio" checked>
+                    <i></i>
+                  </label>
+                </div>
+                <div class="input-group-text">
+                  <label>연차
+                    <input type="radio" aria-label="Radio button for following text input" name="radio">
+                    <i></i>
+                  </label>
+                </div>
+                <div class="input-group-text">
+                  <label>교육
+                    <input type="radio" aria-label="Radio button for following text input" name="radio">
+                    <i></i>
+                  </label>
+                </div>
+                <div class="input-group-text">
+                  <label>야근
+                    <input type="radio" aria-label="Radio button for following text input" name="radio">
+                    <i></i>
+                  </label>
+                </div>
+                <div class="input-group-text">
+                  <label>출장
+                    <input type="radio" aria-label="Radio button for following text input" name="radio">
+                    <i></i>
+                  </label>
+                </div>
+              </div>
+            </div>
+
+          </div>
+          <div class="modal-footer">
+            <button type="button" class="btn btn-primary">신청하기</button>
+          </div>
+        </div>
+      </div>
+      <script type="text/javascript">
+        $(function () {
+            $('#datetimepicker3').datetimepicker({
+                format: 'LT'
+            });
+        });
+      </script>
+    </div>
+
+    <!-- calendar -->
+    <script type="text/javascript">
+      $(function () {
+          $('#datetimepicker5').datetimepicker({
+              format: "yyyy.MM.DD"
+          });
+      });
+      $(function () {
+          $('#datetimepicker6').datetimepicker({
+            format: "yyyy.MM.DD"
+          });
+      });
+      $(function () {
+          $('#datetimepicker7').datetimepicker({
+            format: "yyyy.MM.DD"
+          });
+      });
+      $(function () {
+          $('#datetimepicker8').datetimepicker({
+            format: "yyyy.MM.DD"
+          });
+      });
+      $(function () {
+          $('#datetimepicker9').datetimepicker({
+            format: "yyyy.MM.DD"
+          });
+      });
+
+      $(function () {
+          $('#datetimepicker10').datetimepicker({
+            format: "yyyy.MM.DD"
+          });
+      });
+    </script>
+    <!-- 모바일 사이드 햄버거 메뉴 Open&Close -->
+    <script src="../js/mSide.js"></script>
+
+  </div>
+  
+
+</body>
+
+</html>

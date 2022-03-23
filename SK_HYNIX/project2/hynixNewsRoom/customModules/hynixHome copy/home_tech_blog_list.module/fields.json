@@ -1,0 +1,9 @@
+[ {
+  "id" : "a8ba981b-6568-6730-a40e-252410433be2",
+  "name" : "tech_blog",
+  "label" : "기술 블로그",
+  "required" : false,
+  "locked" : false,
+  "type" : "blog",
+  "default" : 54615482386
+} ]

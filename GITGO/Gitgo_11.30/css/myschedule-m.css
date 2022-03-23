@@ -1,0 +1,99 @@
+@media screen and (max-width:768px) { /* 0726 추가 */
+ .new-nav-tabs .nav-setting { display: block !important; } 
+
+ .section-myschedule .container.container-command { padding: 0; } 
+ .section-myschedule .command { border-top: 1px solid #62765380; } 
+ .section-myschedule .command .command-l { width: 100%; height: 34px; } 
+ .section-myschedule .command .command-r.active { display: block; } 
+ .section-myschedule .command .command-r { display: none; position: absolute; top: 34px; border-top: 1px solid #62765380; width: 100vw; left: 0; padding: 12px 20px; box-shadow: 0 6px 10px 0 rgba(0, 0, 0, 0.15); background-color: #ffffff; } 
+ .section-myschedule .command .command-r li:first-child { margin-bottom: 11px; } 
+ .section-myschedule .command .command-r .date-calendar02 { margin-left: 0; } 
+ .section-myschedule .command .command-r .date-calendar02::before { content: '날짜선택'; font-size: 12px; font-weight: bold; font-stretch: normal; font-style: normal; line-height: 1.17; letter-spacing: -0.4px; text-align: right; color: #666666; margin-right: 1.5vw; white-space: nowrap; } 
+ .section-myschedule .command .command-r .date-calendar02 .form-control { height: 28px; width: 10%; max-width: 85px; flex: 1 0 20%; padding: 0; text-align: center; } 
+ .section-myschedule .command .command-r .date-calendar02 .calendar02-span { padding-left: 1vw; padding-right: 1vw; } 
+ .section-myschedule .command .command-r select { border-radius: 4px; border: solid 1px #c4c4c4; background-color: #f6f6f6; padding: 4px; text-align-last: center; text-align: center; -ms-text-align-last: center; -moz-text-align-last: center; margin-left: 4px; width: 70px; } 
+ .section-myschedule .command .command-r .selectIcon::after { display: none; } 
+ .section-myschedule .command .command-r .btn { width: 70px; height: 28px; font-size: 12px; font-weight: bold; font-stretch: normal; font-style: normal; line-height: normal; letter-spacing: -0.4px; color: #666666; display: flex; justify-content: center; align-items: center; } 
+ .section-myschedule .command .command-r .btn.btn-search::before { content: ''; width: 13px; height: 12px; background: url(../images/btn_search02.svg) center/contain no-repeat; margin-right: 4px; } 
+
+
+.container-myschedule { padding: 0 20px; padding-top: 12px; } 
+ .container-myschedule .list-head { display: none !important; } 
+ .container-myschedule .list div { margin-bottom: 9px; } 
+ .container-myschedule .list div span { font-size: 10px; font-weight: 600; font-stretch: normal; font-style: normal; line-height: normal; letter-spacing: -0.4px; text-align: center;  } 
+ .container-myschedule .list .list-l div:nth-child(2) span::before { content: '출근 : '; color: #595959; } 
+ .container-myschedule .list .list-l div:nth-child(3) span::before { content: '퇴근 : '; color: #595959; } 
+ .container-myschedule .list .list-l em { color: #747474; } 
+ .container-myschedule .list .list-l em::before { content: 'I'; margin: 0 5px 0 3px; } 
+ .container-myschedule .list .list-r div:nth-child(3),
+ .container-myschedule .list .list-l div:nth-child(1) { margin-bottom: 14px; } 
+ .container-myschedule .list-r { overflow: hidden; } 
+ .container-myschedule .list-r > div:last-child { order: -1; } 
+ .container-myschedule .list .list-r div:nth-child(3) { flex-direction: row-reverse; } 
+ .container-myschedule .list-body .appr + .appr { margin-right: 4px; } 
+ .container-myschedule .list-body { padding: 12px 14px 3px; border-radius: 4px; border: solid 1px #cccccc; background-color: #ffffff; margin-bottom: 6px; } 
+ .tooltip-text {left: 50px;}
+}
+
+
+/* 0802 추가 */
+@media screen and (max-width:768px){
+ .container-myschedule .list div span { font-size: 12px; font-weight: 600; font-stretch: normal; font-style: normal; line-height: normal; letter-spacing: -0.4px; text-align: center;  } 
+ }
+
+
+
+/* 0804 수정 */
+
+@media screen and (max-width:768px){
+ .container-myschedule { padding: 12px 20px !important; } 
+ .container-myschedule .list .list-l div:nth-child(1) { margin-bottom: 14px; } 
+ .container-myschedule .list .list-r div:nth-child(1),
+ .container-myschedule .list .list-r div:nth-child(2),
+ .container-myschedule .list .list-r div:nth-child(3),
+ .container-myschedule .list .list-l div:nth-child(1),
+ .container-myschedule .list .list-l div:nth-child(2),
+ .container-myschedule .list .list-l div:nth-child(3) { flex: 1 0 auto; } 
+ }
+
+
+.container-myschedule .list .list-l,
+.container-myschedule .list .list-r { display: flex; } 
+
+@media screen and (max-width:768px){
+ .container-myschedule .list .list-l,
+ .container-myschedule .list .list-r { flex-direction: column; } 
+ .container-myschedule .list .list-l { align-items: flex-start; } 
+ .container-myschedule .list .list-r { align-items: flex-end; } 
+
+ .section-myschedule .command .command-r li { flex-direction: row-reverse !important; } 
+ .section-myschedule .command .command-r li .d-none { display: none !important; } 
+ }
+
+ 
+
+/* 0811 */
+@media screen and (max-width:768px){
+ .container-myschedule .list .list-l > div:nth-child(2),
+ .container-myschedule .list .list-l > div:nth-child(3) { width: 98%; justify-content: flex-start; } 
+ .container-myschedule .list .list-r > div:nth-child(1),
+ .container-myschedule .list .list-r > div:nth-child(2) { width: 98%; justify-content: flex-end; } 
+ .container-myschedule .list .list-l div:nth-child(3) span::before { content: '종료 : '; color: #595959; } 
+ .section-myschedule .command .command-l span { font-size: 14px; font-weight: 600; font-stretch: normal; font-style: normal; line-height: 18px; letter-spacing: -0.4px; color: #5d5d5d; } 
+ .section-myschedule .command .command-r .btn.btn-primary { order: 1; } 
+ }
+
+
+/* 0812 */
+@media screen and (max-width:768px) { 
+ .section-myschedule .command .command-r select { border-radius: 4px; border: solid 1px #c4c4c4; background-color: #f6f6f6; padding: 4px; text-align-last: center; text-align: center; -ms-text-align-last: center; -moz-text-align-last: center; margin-left: 8px; width: 70px; } 
+ .section-myschedule .command .command-r .date-calendar02 { justify-content: flex-end; margin-left: 0; } 
+ .section-myschedule .command .command-r .date-calendar02 .form-control { height: 28px; width: 10%; max-width: 85px; width: 100% !important; flex: initial; padding: 0; text-align: center; } 
+ .container-myschedule .list-l div span { font-size: 12px; font-weight: 600; font-stretch: normal; font-style: normal; line-height: normal; letter-spacing: -0.4px; text-align: center;  flex-wrap: wrap; } 
+ .container-myschedule .list .list-l div:nth-child(2) span::before { content: '시작:'; color: #595959; } 
+ .container-myschedule .list .list-l div:nth-child(3) span::before { content: '종료:'; color: #595959; } 
+ .container-myschedule .list .list-r div:nth-child(3) { flex-direction: row; } 
+}
+
+ 
+ 

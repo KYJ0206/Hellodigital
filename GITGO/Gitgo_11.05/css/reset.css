@@ -1,0 +1,752 @@
+﻿@charset 'utf-8';
+
+* {
+  margin: 0;
+  padding: 0;
+  vertical-align: middle;
+  font-family: 'GothicA1', 'sans-serif', '돋움';
+  font-weight:400;
+}
+html,
+body {
+  width: 100%;
+  height: 100%;
+}
+body {
+  font-weight: normal;
+  color: #333;
+}
+html,
+body,
+div,
+span,
+applet,
+object,
+iframe,
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+p,
+blockquote,
+pre,
+a,
+abbr,
+acronym,
+address,
+big,
+cite,
+code,
+del,
+dfn,
+em,
+img,
+ins,
+kbd,
+q,
+s,
+samp,
+small,
+strike,
+strong,
+sub,
+sup,
+tt,
+var,
+b,
+u,
+i,
+center,
+dl,
+dt,
+dd,
+ol,
+ul,
+li,
+fieldset,
+form,
+label,
+legend,
+table,
+caption,
+tbody,
+tfoot,
+thead,
+tr,
+th,
+td,
+article,
+aside,
+canvas,
+details,
+embed,
+figure,
+figcaption,
+footer,
+header,
+hgroup,
+menu,
+nav,
+output,
+ruby,
+section,
+summary,
+time,
+mark,
+audio,
+video,
+input,
+span,
+em,
+textarea {
+  margin: 0;
+  padding: 0;
+  border: 0;
+  /* font: inherit; 2021-02-06 */
+  vertical-align: baseline;
+  font-weight: normal;
+  font-size: 14px;
+  -webkit-font-smoothing: antialiased;
+  line-height: 1;
+  color: #231815;
+  letter-spacing: -1px;
+  font-size: 14px;
+  -webkit-box-sizing: border-box;
+  -moz-box-sizing: border-box;
+  box-sizing: border-box;
+}
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  font-weight: normal;
+}
+hr,
+legend,
+caption {
+  overflow: hidden;
+  visibility: hidden;
+  position: absolute;
+  left: -9999px;
+  width: 0;
+  height: 0;
+  font-size: 0;
+  line-height: 0;
+}
+em,
+address {
+  font-weight: normal;
+  font-style: normal;
+}
+ol,
+ul,
+li {
+  list-style: none;
+}
+li,
+p,
+dt,
+dd,
+div,
+span,
+td,
+th {
+  word-break: break-all;
+  word-wrap: break-word;
+}
+blockquote,
+q {
+  quotes: none;
+}
+blockquote:before,
+blockquote:after,
+q:before,
+q:after {
+  content: '';
+  content: none;
+}
+table {
+  width: 100%; /* border-collapse:collapse; */
+  border: 0;
+  border-spacing: 0;
+}
+th,
+td,
+fieldset,
+a,
+div {
+  font-weight: normal;
+  vertical-align: middle;
+}
+a {
+  text-decoration: none;
+  color: inherit;
+  cursor: pointer;
+}
+a:hover {
+  /* text-decoration: none; */
+}
+img {
+  vertical-align: top;
+  border: none;
+  outline: none;
+  display: inline-block;
+}
+textarea {
+  resize: none;
+  overflow: auto;
+  -webkit-appearance: none !important;
+  border-radius: 0;
+  border-radius: 0;
+}
+button {
+  background: none;
+  border: 0;
+  cursor: pointer;
+}
+picture {
+  display: block;
+}
+.hidden {
+  display: none !important;
+}
+div,
+p,
+span,
+em,
+strong,
+a,
+i,
+pre {
+  font-family: inherit;
+  font-size: inherit;
+  font-weight: inherit;
+  color: inherit;
+  line-height: inherit;
+}
+
+/* HTML5 display-role reset for older browsers */
+article,
+aside,
+details,
+figcaption,
+figure,
+footer,
+header,
+hgroup,
+menu,
+nav,
+section {
+  display: block;
+}
+
+/* safari */
+input,
+textarea {
+  vertical-align: middle; /* -webkit-appearance:none;-webkit-border-radius:0; */
+}
+/* input[type='checkbox']{vertical-align:middle;-webkit-appearance:checkbox} 
+ */
+input[type='radio'] {
+  vertical-align: middle;
+  -webkit-appearance: radio;
+}
+label {
+  vertical-align: middle;
+}
+
+select {
+  -webkit-appearance: none;
+  -moz-appearance: none;
+  appearance: none;
+  border: 0;
+  width: 100%;
+}
+select::-ms-expand {
+  display: none;
+}
+
+/*  placeholder
+input::-webkit-input-placeholder {color: #ddd; opacity:1; }
+input::-moz-placeholder {color: #ddd; opacity:1; }	
+*/
+select {
+  appearance: none;
+  -webkit-appearance: none;
+  -moz-appearance: none;
+  background: #fff url(../images/sel_arr.png) no-repeat 95% center;
+}
+input[type='text'],
+input[type='password'],
+input[type='number'],
+input[type='email'] {
+  /* width:158px; height:30px; border:1px solid #ddd; */
+}
+input::placeholder,
+textarea::placeholder {
+  color: #999;
+}
+input:-ms-input-placeholder,
+textarea:-ms-input-placeholder {
+  color: #999;
+}
+
+/**** margin ****/
+.mt0 {
+  margin-top: 0px !important;
+}
+.mt5 {
+  margin-top: 5px;
+}
+.mt10 {
+  margin-top: 10px;
+}
+.mt15 {
+  margin-top: 15px;
+}
+.mt20 {
+  margin-top: 20px;
+}
+.mt25 {
+  margin-top: 25px;
+}
+.mt30 {
+  margin-top: 30px;
+}
+.mt35 {
+  margin-top: 35px;
+}
+.mt40 {
+  margin-top: 40px;
+}
+.mt45 {
+  margin-top: 45px;
+}
+.mt50 {
+  margin-top: 50px;
+}
+.mt60 {
+  margin-top: 60px;
+}
+
+.mr0 {
+  margin-right: 0px;
+}
+.mr5 {
+  margin-right: 5px;
+}
+.mr10 {
+  margin-right: 10px;
+}
+.mr15 {
+  margin-right: 15px;
+}
+.mr20 {
+  margin-right: 20px;
+}
+.mr25 {
+  margin-right: 25px;
+}
+.mr30 {
+  margin-right: 30px;
+}
+.mr35 {
+  margin-right: 35px;
+}
+.mr40 {
+  margin-right: 40px;
+}
+.mr45 {
+  margin-right: 45px;
+}
+.mr50 {
+  margin-right: 50px;
+}
+
+.mb0 {
+  margin-bottom: 0;
+}
+.mb5 {
+  margin-bottom: 5px;
+}
+.mb10 {
+  margin-bottom: 10px;
+}
+.mb15 {
+  margin-bottom: 15px;
+}
+.mb20 {
+  margin-bottom: 20px;
+}
+.mb25 {
+  margin-bottom: 25px;
+}
+.mb30 {
+  margin-bottom: 30px;
+}
+.mb35 {
+  margin-bottom: 35px;
+}
+.mb40 {
+  margin-bottom: 40px;
+}
+.mb45 {
+  margin-bottom: 45px;
+}
+.mb50 {
+  margin-bottom: 50px;
+}
+
+.ml0 {
+  margin-left: 0px !important;
+}
+.ml5 {
+  margin-left: 5px;
+}
+.ml10 {
+  margin-left: 10px;
+}
+.ml15 {
+  margin-left: 15px;
+}
+.ml20 {
+  margin-left: 20px;
+}
+.ml25 {
+  margin-left: 25px;
+}
+.ml30 {
+  margin-left: 30px !important;
+}
+.ml35 {
+  margin-left: 35px;
+}
+.ml40 {
+  margin-left: 40px;
+}
+.ml45 {
+  margin-left: 45px;
+}
+.ml50 {
+  margin-left: 50px;
+}
+
+/**** padding ****/
+.pt0 {
+  padding-top: 0 !important;
+}
+.pt5 {
+  padding-top: 5px;
+}
+.pt10 {
+  padding-top: 10px;
+}
+.pt15 {
+  padding-top: 15px;
+}
+.pt20 {
+  padding-top: 20px;
+}
+.pt25 {
+  padding-top: 25px;
+}
+.pt30 {
+  padding-top: 30px;
+}
+.pt35 {
+  padding-top: 35px;
+}
+.pt40 {
+  padding-top: 40px;
+}
+.pt45 {
+  padding-top: 45px;
+}
+.pt50 {
+  padding-top: 50px;
+}
+
+.pr0 {
+  padding-right: 0px;
+}
+.pr5 {
+  padding-right: 5px;
+}
+.pr10 {
+  padding-right: 10px;
+}
+.pr15 {
+  padding-right: 15px;
+}
+.pr20 {
+  padding-right: 20px;
+}
+.pr25 {
+  padding-right: 25px;
+}
+.pr30 {
+  padding-right: 30px;
+}
+.pr35 {
+  padding-right: 35px;
+}
+.pr40 {
+  padding-right: 40px;
+}
+.pr45 {
+  padding-right: 45px;
+}
+.pr50 {
+  padding-right: 50px;
+}
+
+.pb0 {
+  padding-bottom: 0;
+}
+.pb5 {
+  padding-bottom: 5px;
+}
+.pb10 {
+  padding-bottom: 10px;
+}
+.pb15 {
+  padding-bottom: 15px;
+}
+.pb20 {
+  padding-bottom: 20px;
+}
+.pb25 {
+  padding-bottom: 25px;
+}
+.pb30 {
+  padding-bottom: 30px;
+}
+.pb35 {
+  padding-bottom: 35px;
+}
+.pb40 {
+  padding-bottom: 40px;
+}
+.pb45 {
+  padding-bottom: 45px;
+}
+.pb50 {
+  padding-bottom: 50px;
+}
+
+.pl0 {
+  padding-left: 0px;
+}
+.pl5 {
+  padding-left: 5px;
+}
+.pl10 {
+  padding-left: 10px;
+}
+.pl15 {
+  padding-left: 15px;
+}
+.pl20 {
+  padding-left: 20px;
+}
+.pl25 {
+  padding-left: 25px;
+}
+.pl30 {
+  padding-left: 30px;
+}
+.pl35 {
+  padding-left: 35px;
+}
+.pl40 {
+  padding-left: 40px;
+}
+.pl45 {
+  padding-left: 45px;
+}
+.pl50 {
+  padding-left: 50px;
+}
+
+/**** display ****/
+.block {
+  display: block;
+}
+.inline {
+  display: inline;
+}
+.inline_b {
+  display: inline-block;
+}
+
+.d_table {
+  display: table;
+  table-layout: fixed;
+  width: 100%;
+  height: 100%;
+}
+ul.d_table > li,
+.t_cell {
+  display: table-cell;
+  vertical-align: middle;
+}
+
+.inline_ul,
+ul.inline_ul li {
+  display: inline-block;
+}
+
+/**** align ****/
+.tac {
+  text-align: center;
+}
+.tal {
+  text-align: left;
+}
+.tar {
+  text-align: right;
+}
+
+/**** v-align ****/
+.vat {
+  vertical-align: top;
+}
+.vam {
+  vertical-align: middle;
+}
+.vab {
+  vertical-align: bottom;
+}
+
+/**** position ****/
+.fixed {
+  position: fixed;
+  top: 0;
+  left: 0;
+  bottom: 0;
+  right: 0;
+}
+.rel {
+  position: relative;
+}
+.abs {
+  position: absolute;
+}
+
+/**** float ****/
+.fl {
+  float: left;
+}
+.fr {
+  float: right;
+}
+.f_none {
+  float: none;
+}
+
+/**** etc ****/
+.w100 {
+  width: 100%;
+}
+.clear {
+  display: block;
+  position: relative;
+}
+.clear:after {
+  content: '';
+  display: block;
+  clear: both;
+  overflow: hidden;
+}
+.i_err {
+  font-size: 0;
+}
+.tbl_fixed {
+  table-layout: fixed;
+}
+
+/**** skipnav ****/
+.skipnav {
+  position: relative;
+}
+.skipnav a {
+  display: block;
+  position: absolute;
+  z-index: 9999;
+  top: 0;
+  left: -9999px;
+  width: 100%;
+  padding: 10px 0;
+  font-size: 13px;
+  background-color: rgba(0, 0, 0, 0.8);
+  text-align: center;
+  color: #fff;
+}
+.skipnav a:focus,
+.skipnav li a:active {
+  left: 0;
+}
+
+/**** 말줄임 ****/
+.ellipsis {
+  display: block;
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+}
+.ellipsis_2 {
+  display: -webkit-box;
+  -webkit-line-clamp: 2;
+  -webkit-box-orient: vertical;
+  overflow: hidden;
+  text-overflow: ellipsis; /* word-wrap:break-word; */
+  white-space: normal;
+}
+
+/****  텍스트 가운데 정렬 ****/
+.justify {
+  display: inline-block;
+  text-align: justify;
+}
+.justify:after {
+  content: '';
+  display: inline-block;
+  width: 100%;
+}
+
+/**** box-sizing ****/
+.box_s {
+  -webkit-box-sizing: border-box;
+  -moz-box-sizing: border-box;
+  box-sizing: border-box;
+}
+
+/*** input file **
+.filebox input[type="file"]{display:none;} 
+.filebox label{display:inline-block;padding:.5em .75em;color:#999;line-height:normal;vertical-align:middle;background:#fdfdfd;cursor:pointer;border:1px solid #ebebeb;border-radius: .25em;}
+.filebox .upload-name{display:inline-block;padding:.5em .75em;vertical-align:middle;background-color:#fdfdfd;border:1px solid #ebebeb;border-radius:.25em;-webkit-appearance:none;-moz-appearance:none;appearance:none;}
+*/
+
+/** input checkbox / radio **/
+
+/* 
+input[type="checkbox"],
+input[type="radio"]{display:none;}
+input[type="checkbox"] + label,
+input[type="radio"] + label{display:inline-block;position:relative;padding-left:30px;line-height:25px;font-size:17px;font-family:'NotoKrM';}
+
+input[type="checkbox"] + label:after{content:'';display:inline-block;position:absolute;top:0;left:0;background:url(../images/icon/check.png) no-repeat;}
+input[type="checkbox"]:checked + label:after{background:url(../images/icon/checked.png) no-repeat;}
+
+input[type="radio"] + label:after{display:inline-block;background:url(../images/icon/checked.png) no-repeat;}
+input[type="radio"]:checked + label:after{background:url(../images/icon/checked.png) no-repeat;}
+
+input[type="checkbox"] + label:after,
+input[type="checkbox"]:checked + label:after,
+input[type="radio"] + label:after,
+input[type="radio"]:checked + label:after{width:25px;height:25px;background-size:100%;cursor:pointer;}
+ */

@@ -1,0 +1,178 @@
+{% set path = request.path|split('/', 2)|last %}
+{% set query = request.query_dict.text %}
+
+{% set blogId = module.blog_field %}
+{% set recent_posts = blog_recent_posts(blogId, 200) %}
+{% set className = query == '기술' ? 'cate_module cate-s' : (query == '지속가능경영' ? 'cate_module cate-t' : 'cate_module cate-c')%}
+
+
+
+{% set tech = [] %}
+
+{% for item in recent_posts %}
+  {% for topic in item.topic_list %}
+    {% if topic == 'blog-기술' %}
+      {% do tech.append(item) %}
+    {% endif %}
+  {% endfor %}
+{% endfor %}
+<!-- -------------------------------------------------- -->
+{% set s_blog = [] %}
+
+{% for item in recent_posts %}
+  {% for topic in item.topic_list %}
+    {% if topic == 'blog-지속가능경영' %}
+      {% do s_blog.append(item) %}
+    {% endif %}
+  {% endfor %}
+{% endfor %}
+<!-- -------------------------------------------------- -->
+{% set culture = [] %}
+
+{% for item in recent_posts %}
+  {% for topic in item.topic_list %}
+    {% if topic == 'blog-사람-문화' %}
+      {% do culture.append(item) %}
+    {% endif %}
+  {% endfor %}
+{% endfor %}
+
+
+{% if query == '기획기사' %} 
+<section style='display: none'></section>
+{% else %}
+<section class="{{className}}">
+	<div class="inner2">
+		<div class="cate-top">
+			{% if query == '기술' %}
+			<a href="/post/tag/blog-사람-문화/page/1?type=blog&text=사람&문화">
+				사람&문화 소식
+				<i></i>
+			</a>
+			{% elif query == '지속가능경영'%}
+			<a href="/post/tag/blog-기술/page/1?type=blog&text=기술">
+				기술 소식
+				<i></i>
+			</a>
+			{% else %}
+			<a href="/post/tag/blog-지속가능경영/page/1?type=blog&text=지속가능경영">
+				지속가능경영 소식
+				<i></i>
+			</a>
+			{% endif %}
+		</div>
+		
+		<div class="cate-bottom">
+			<ul>
+				<li>
+					{% if query == '기술' %}
+						{% for post in culture %}
+						{% if loop.index < 5 %}
+						<a href="{{post.absolute_url}}">
+							<div class="conItem">
+								<div class="imgWrap">
+									<img src="{{post.featured_image ? post.featured_image : get_asset_url("/hynixNewsRoom/codeFiles/images/defaultImage/cnoimg.png")}}" alt="blog image">
+								</div>
+								<div class="tagWrap">
+									{% for topic in post.topic_list %}
+									{% if topic == 'blog-기술' %}
+										<div class="cate-tag-t cate-tag">기술</div>
+									{% endif %}
+									{% endfor %}
+									
+									{% for topic in post.topic_list %}
+									{% if topic == 'blog-사람-문화' %}
+									  <div class="cate-tag-c cate-tag">사람&문화</div>
+									{% endif %}
+									{% endfor %}
+									
+									{% for topic in post.topic_list %}
+									{% if topic == 'blog-지속가능경영'%}
+									  <div class="cate-tag-s cate-tag">지속가능경영</div>
+									{% endif %}			
+									{% endfor %}
+								</div>
+								<p>{{post.name}}</p>
+							</div>
+						</a>
+						{% endif %}
+						{% endfor %}
+					
+					{% elif query == '지속가능경영' %}
+						{% for post in tech %}
+						{% if loop.index < 5 %}
+						<a href="{{post.absolute_url}}">
+							<div class="conItem">
+								<div class="imgWrap">
+									<img src="{{post.featured_image ? post.featured_image : get_asset_url("/hynixNewsRoom/codeFiles/images/defaultImage/cnoimg.png")}}" alt="blog image">
+								</div>
+								<div class="tagWrap">
+									{% for topic in post.topic_list %}
+									{% if topic == 'blog-기술' %}
+										<div class="cate-tag-t cate-tag">기술</div>
+									{% endif %}
+									{% endfor %}
+									
+									{% for topic in post.topic_list %}
+									{% if topic == 'blog-사람-문화' %}
+									  <div class="cate-tag-c cate-tag">사람&문화</div>
+									{% endif %}
+									{% endfor %}
+									
+									{% for topic in post.topic_list %}
+									{% if topic == 'blog-지속가능경영'%}
+									  <div class="cate-tag-s cate-tag">지속가능경영</div>
+									{% endif %}			
+									{% endfor %}
+								</div>
+								<p>{{post.name}}</p>
+							</div>
+						</a>
+						{% endif %}
+						{% endfor %}
+					
+					{% else %}
+						{% for post in s_blog %}
+						{% if loop.index < 5 %}
+						<a href="{{post.absolute_url}}">
+							<div class="conItem">
+								<div class="imgWrap">
+									<img src="{{post.featured_image ? post.featured_image : get_asset_url("/hynixNewsRoom/codeFiles/images/defaultImage/cnoimg.png")}}" alt="blog image">
+								</div>
+								<div class="tagWrap">
+									{% for topic in post.topic_list %}
+									{% if topic == 'blog-기술' %}
+										<div class="cate-tag-t cate-tag">기술</div>
+									{% endif %}
+									{% endfor %}
+									
+									{% for topic in post.topic_list %}
+									{% if topic == 'blog-사람-문화' %}
+									  <div class="cate-tag-c cate-tag">사람&문화</div>
+									{% endif %}
+									{% endfor %}
+									
+									{% for topic in post.topic_list %}
+									{% if topic == 'blog-지속가능경영'%}
+									  <div class="cate-tag-s cate-tag">지속가능경영</div>
+									{% endif %}			
+									{% endfor %}
+								</div>
+								<p>{{post.name}}</p>
+							</div>
+						</a>
+						{% endif %}
+						{% endfor %}
+					
+					
+					{% endif %}
+					
+					
+				</li>
+			</ul>
+		</div>
+		
+		
+	</div>
+</section>
+{% endif %}

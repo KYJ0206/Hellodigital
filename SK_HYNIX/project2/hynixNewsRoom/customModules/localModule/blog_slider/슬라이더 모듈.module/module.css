@@ -1,0 +1,20 @@
+.imageContainer {
+	border: 1px solid red;
+	width: 100%;
+	margin: 0 auto;
+	max-width: 945px;
+	display: flex;
+	flex-wrap: wrap;
+	align-items: center;
+	justify-content: flex-start;
+}
+.sliderImage {
+	width: 18%;
+	margin: 5px;
+}
+.codeContainer {
+	width: 100%;
+	max-width: 945px;
+	overflow:hidden; 
+	word-wrap:break-word;
+}

@@ -1,0 +1,57 @@
+* {
+    box-sizing: border-box;
+}
+
+h1{
+    display: flex;
+    justify-content: center;
+}
+
+.clock {
+    width: 300px;
+    height: 300px;
+    margin: auto;
+    padding-top: 75px;
+    background: #000;
+    text-align: center;
+}
+
+.clock .time_box {
+    width: 100%;
+    padding-left: 10px;
+}
+
+.clock span {
+    color: #fff;
+}
+
+.txt_lg {
+    font-size: 75px;
+}
+
+.txt_sm {
+    font-size: 20px;
+}
+
+.date_box {
+    font-size: 15px;
+}
+
+#day {
+    display: block;
+    margin-top: 5px;
+}
+
+.mark {
+    display: inline-block;
+    vertical-align: top;
+    height: 100px;
+    margin-left: 1px;
+    line-height: 94px;
+    font-size: 55px;
+}
+
+.mark02 {
+    display: inline-block;
+    margin-left: -3px;
+}

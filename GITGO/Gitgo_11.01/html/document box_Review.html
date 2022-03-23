@@ -1,0 +1,1226 @@
+<!DOCTYPE html>
+<html lang="ko">
+
+<head>
+  <meta charset="UTF-8" />
+  <title>Gitgo</title>
+  <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+  <meta name="viewport"
+    content="width=device-width, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0, user-scalable=no" />
+
+  <link rel="stylesheet" href="../css/tempusdominus-bootstrap-4.min.css">
+  <link rel="stylesheet" href="../css/hello-ui/import.css" />
+  <link rel="stylesheet" href="../css/jquery-ui.min.css" />
+  <link rel="stylesheet" href="../css/style.min.css" />
+  <link rel="stylesheet" href="../css/bootstrap.css" />
+  <link rel="stylesheet" type="text/css" href="gridforms.css">
+  <link rel="stylesheet" href="../css/document box Review.css">
+  <link rel="stylesheet" href="../css/font-awesome.css">
+  
+  <script src="../js/jquery-3.4.1.min.js"></script>
+  <script src="../js/ui.js"></script>
+  <script src="../dist/jstree.js"></script>
+  <script src="../js/jstree-custom-module.js"></script>
+  <script src="../js/moment.js"></script>
+  <script src="../js/bootstrap.min.js"></script>
+  <script src="../js/tempusdominus-bootstrap-4.min.js"></script>
+  <script src="../js/bootstrap.bundle.min.js"></script>
+  <script src="../js/new-popover.js"></script>
+  <script src="../js/document box review.js"></script>
+
+    
+
+
+
+    
+    <!-- <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj" crossorigin="anonymous"></script> -->
+    <!-- <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.6.0/dist/css/bootstrap.min.css"integrity="sha384-B0vP5xmATw1+K9KRQjQERJvTumQW0nPEzvF6L/Z6nronJ3oUOFUFpCjEUQouq2+l" crossorigin="anonymous"> -->
+    <!-- <script src="https://cdn.jsdelivr.net/npm/bootstrap@4.6.0/dist/js/bootstrap.bundle.min.js"integrity="sha384-Piv4xVNRyMGpqkS2by6br4gNJ7DXjqk09RmUpJ8jgGtD7zP9yug3goQfGII0yAns" crossorigin="anonymous"></script> -->
+
+    
+    <!-- <script src="https://cdnjs.cloudflare.com/ajax/libs/tempusdominus-bootstrap-4/5.39.0/js/tempusdominus-bootstrap-4.min.js" integrity="sha512-k6/Bkb8Fxf/c1Tkyl39yJwcOZ1P4cRrJu77p83zJjN2Z55prbFHxPs9vN7q3l3+tSMGPDdoH51AEU8Vgo1cgAA==" crossorigin="anonymous"></script> -->
+    <!-- <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.6.0/dist/css/bootstrap.min.css" integrity="sha384-B0vP5xmATw1+K9KRQjQERJvTumQW0nPEzvF6L/Z6nronJ3oUOFUFpCjEUQouq2+l" crossorigin="anonymous"> -->
+    <!-- <script src="https://cdnjs.cloudflare.com/ajax/libs/tempusdominus-bootstrap-4/5.38.0/js/tempusdominus-bootstrap-4.min.js" crossorigin="anonymous"></script> -->
+    <!-- <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/tempusdominus-bootstrap-4/5.38.0/css/tempusdominus-bootstrap-4.min.css" crossorigin="anonymous" /> -->
+    <!-- 달력 -->
+    <!-- <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/moment.js/2.29.0/moment.min.js"></script> -->
+    <!-- <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/tempusdominus-bootstrap-4/5.39.0/css/tempusdominus-bootstrap-4.min.css" integrity="sha512-3JRrEUwaCkFUBLK1N8HehwQgu8e23jTH4np5NHOmQOobuC4ROQxFwFgBLTnhcnQRMs84muMh0PnnwXlPq5MGjg==" crossorigin="anonymous" /> -->
+
+    
+
+</head>
+
+<body style="background-color: #f4f2f1; height:100%">
+  <div class="wrap">
+    <div class="section-home">
+      <!-- 공통 Nav tab -->
+      <div class="container py-3 container-mobile-tab">
+        <ul class="nav nav-tabs new-nav-tabs">
+          <a href="#" class="nav-hamburg" onclick="mSideToggle()">
+            <span></span>
+            <span></span>
+            <span></span>
+          </a>
+          
+          <li class="nav-item">
+            <a class="nav-link" href="./electronicpayment_HOME.html">HOME</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link " href="./electronicpayment_Drafting_ver1.html">기안하기</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="./Approval document.html">결제할 문서</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="./electronicpayment_HOME.html">잔행중 문서</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="./electronicpayment_HOME.html">회람받은 문서</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="./electronicpayment_HOME.html">접수할 문서</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link active" href="./document box_approve.html">나의 문서함</a>
+            <ul class="documentboxsub">
+              <li>개인 문서함</li>
+              <li>팀 문서함</li>
+              <li>참조함</li>
+            </ul>
+          </li>
+
+        
+          <div class='navBTN'>
+            <a href="#">
+              <img src="../images/group-6@2x.png" alt="서브메뉴">
+            </a>
+          </div>
+
+          <a class="nav-setting" href="#" role="button" id="nav-setting" onclick="setting()">
+            Setting Btn
+            <script>
+              function setting() {
+                if($('.command-r').hasClass('active')) {
+                  $('.command-r').removeClass('active')
+                } else {
+                  $('.command-r').addClass('active')
+                }
+              }
+            </script>
+          </a>
+          <!-- <a class="nav-more-btn" href="#" role="button">...
+            <span></span>
+            <span></span>
+            <span></span>
+          </a> -->
+        </ul>
+        <div class="sub-tabs">
+          <ul>
+            <li>
+              <a href="#">
+                개인설정
+              </a>
+            </li>
+            <li>
+              <a href="#">
+                결제 문서 관리
+              </a>
+            </li>
+            <li>
+              <a href="#">
+                인터페이스 관리
+              </a>
+            </li>
+            <li>
+              <a href="#">
+                양식 작성기
+              </a>
+            </li>
+          </ul>
+        </div>
+        <!-- 모바일 사이드 메뉴 -->
+        <div class="m-sideWrap" onclick="mSideClose()">
+          <ul class="m-side-menu">
+            <li>
+              <div class="item">
+                <a href="./document box_approve.html">
+                  <div>개인</div>
+                </a>
+              </div>
+              <dl>
+                <a href="./document box_approve.html">
+                  <dd>승인완료된 문서</dd>
+                </a>
+                <a href="./document box_return.html">
+                  <dd>반려된 문서</dd>
+                </a>
+                <a href="./document box_draft.html">
+                  <dd>기안한 문서</dd>
+                </a>
+                <a href="./document box_Save.html">
+                  <dd>저장한 문서</dd>
+                </a>
+                <a href="./document box_circulation.html">
+                  <dd>회람받은 문서</dd>
+                </a>
+              </dl>
+            </li>
+            <li>
+              <div class="item">
+                <a href="./electronicpayment_HOME.html">
+                  <div>팀</div>
+                </a>
+              </div>
+            </li>
+            <li>
+              <div class="item">
+                <a href="./electronicpayment_HOME.html">
+                  <div>참조</div>
+                </a>
+              </div>
+            </li>
+            <li class="active">
+              <div class="item">
+                <a href="./document box_Review.html">
+                  <div>검토</div>
+                </a>
+              </div>
+            </li>
+          </ul>
+        </div>
+      </div>
+      <div class="cont">
+        <!-- 모바일 사이드 메뉴 -->
+        <div class="m-sideWrap2" onclick="mSideClose()">
+        <ul class="m-side-menu2">
+          <li class='submenuham'>
+            <a class="closeSub" href="#">
+              <img src="../images/path-2@2x.png" alt="닫기아이콘">
+            </a>
+          </li>
+          <li>
+            <div class="item">
+              <a href="./document box_approve.html">
+                <div>개인</div>
+              </a>
+            </div>
+            <dl>
+              <a href="./document box_approve.html">
+                <dd>승인완료된 문서</dd>
+              </a>
+              <a href="./document box_return.html">
+                <dd>반려된 문서</dd>
+              </a>
+              <a href="./document box_draft.html">
+                <dd>기안한 문서</dd>
+              </a>
+              <a href="./document box_Save.html">
+                <dd>저장한 문서</dd>
+              </a>
+              <a href="./document box_circulation.html">
+                <dd>회람받은 문서</dd>
+              </a>
+                 </dl>
+          </li>
+          <li>
+            <div class="item">
+              <a href="./electronicpayment_HOME.html">
+                <div>팀</div>
+              </a>
+            </div>
+          </li>
+          <li>
+            <div class="item">
+              <a href="./electronicpayment_HOME.html">
+                <div>참조</div>
+              </a>
+            </div>
+          </li>
+          <li class="active">
+            <div class="item">
+              <a href="./document box_Review.html">
+                <div>검토</div>
+              </a>
+            </div>
+          </li>
+        </ul>
+        </div>
+        <!-- innercontant -->
+        <div class="innercontant">
+          <!-- cont_approve -->
+          <div class="cont_approve">
+            <div class="inputWrap">
+              <div>
+                <a href="#" class="nav-hamburg1">
+                  <span></span>
+                  <span></span>
+                  <span></span>
+                </a>
+              </div>
+              <input type="text " placeholder="검색어를 입력하세요." >
+              <i>
+                <img src="../images/icon-user-round-copy-3@2x.png" alt="검색버튼">
+              </i>
+            </div>
+            <!-- 검토함 필터 -->
+            <div class="searchfilter container">
+              <ul>
+                <li>
+                  <div>
+                    양식명
+                  </div>
+                  <input style="height:28px" type="text">
+                </li>
+                <li>
+                  <div>
+                    문서번호                    
+                  </div>
+                  <input style="height:28px" type="text">
+                </li>
+                <li>
+                  <div>
+                    기안자                    
+                  </div>
+                  <input style="height:28px" type="text">
+                </li>
+                <li>
+                  <div>
+                    기안부서                    
+                  </div>
+                  <input style="height:28px" type="text">
+                </li>
+                <li>
+                  <div>
+                    기안일자                    
+                  </div>
+                  <input style="height:28px" type="text">~<input style="height:28px" type="text">
+                </li>
+                <li>
+                  <div href="#">
+                    제목
+                  </div>
+                  <input style="height:28px" type="text">
+                </li>
+                <li>
+                  <button>
+                    <i>
+                      <img src="../images/icon-user-round-copy-3@2x.png" alt="검색아이콘">
+                    </i>
+                    <a href="#">
+                      검색
+                    </a>
+                  </button>
+                </li>
+                <li>
+                  <button>
+                    <i>
+                      <img src="../images/group-7@2x.webp" alt="비우기아이콘">
+                    </i>
+                    <a href="#">
+                      비우기
+                    </a>
+                  </button>
+                </li>
+              </ul>
+            </div>
+            <div class="searchicon">
+              <a href="#">
+                <img class="webimg" src="../images/group-5@2x.png" alt="웹이미지">
+                <img class="mobileimg" style="display: none;" src="../images/group-4@2x.png" alt="모바일이미지">
+              </a>
+            </div>
+          </div>
+          <div class="container allall" style="width: 100%; height: 55px;">
+            <li class="checkbox allcheck2" style="display: none;">
+              <input id="checkbox000" name='alltypecheck' type="checkbox">
+              <label for="checkbox000"></label>
+              <a href="#">
+                전체선택
+              </a>
+            </li>
+          </div>
+          <div class="container innerlist">
+            <ul class='innerlistTit'>
+              <li class="Tittitle">문서제목</li>
+              <li>문서번호</li>
+              <li>기안날짜
+                <a href="#">
+                  <i>
+                    <img src="../images/group-copy.svg" alt=아이콘">
+                  </i>
+                </a>
+              </li>
+              <li>양식명</li>
+              <li>기안부서</li>
+              <li>기안자</li>
+              <li>진행상태</li>
+              <li class="checkbox">
+                <a href="#">
+                  <input id="checkbox1" name='Review' type="checkbox">
+                  <label for="checkbox1"></label>
+                </a>
+                검토
+              </li>
+              <li class="checkbox">
+                <a href="#">
+                  <input id="checkbox2" name='process' type="checkbox">
+                  <label for="checkbox2"></label>
+                </a>
+                처리
+              </li>
+              <li class="checkbox allcheck2">
+                <a href="#">
+                  <input id="checkbox100" name='alltypecheck' type="checkbox">
+                  <label for="checkbox100"></label>
+                </a>
+                전체선택
+              </li>    
+            </ul>
+            <ul>
+              <li class="Tittitle">
+                기안 제목 리스트 입니다. 결제요청 제목 미리보기
+                <i style="vertical-align: middle">
+                  <svg width="16" height="16" xmlns="http://www.w3.org/2000/svg">
+                    <g fill="#b8b8b8" fill-rule="evenodd">
+                      <path d="M14 14H2.08V2.08h5.29v1.199H3.279v9.522h9.522V8.71H14zM14 6.7h-1.199V3.28H9.38v-1.2H14z"/>
+                      <path d="m6.454 10.474-.848-.848 7.37-7.37.848.848z"/>
+                    </g>
+                  </svg>
+                </i>
+              </li>
+              <li class="Tittitle2">TJ-2103-0001</li>
+              <!-- 이미지 아이콘 (모바일 전용) -->
+              <div class="imgmbicon">
+                <div class="reviewmbicon" style="position: absolute;right: 15px;top: 50px;">
+                  <div class="mobileiconimg1">
+                    <img src="../images/icon-storage-white-write@22x.png" alt="검토 모바일">
+                  </div>
+                  <div class="mobileiconimg2">
+                    <img src="../images/icon-storage-white-write1@2x.png" alt="처리 모바일">
+                  </div>
+                </div>
+              </div>
+              
+              <li class="Tittitle3">2021.02.25</li>
+              <li class="Tittitle4">휴가신청서</li>
+              <li class="Tittitle5">영업팀</li>
+              <li class="Tittitle6">김문서</li>
+              <li class="titbtn">
+                <button class="b1">
+                  <a href="#">완료</a>
+                </button>
+              </li>
+              <li class="checkbox check12">
+                <a href="#">
+                  <input id="checkbox3" name='Review' type="checkbox">
+                  <label for="checkbox3"></label>
+                </a>
+              </li>
+              <li class="checkbox check22">
+                <a href="#">
+                  <input id="checkbox4" name='process' type="checkbox">
+                  <label for="checkbox4"></label>
+                </a>
+              </li>
+              <li class="checkbox check11">
+                <a href="#">
+                  <input id="checkbox47" name='alltypecheck' type="checkbox">
+                  <label for="checkbox47"></label>
+                </a>
+              </li> 
+            </ul>
+            <ul>
+              <li class="Tittitle">
+                기안 제목 리스트 입니다. 결제요청 제목 미리보기
+                <i style="vertical-align: middle">
+                  <svg width="16" height="16" xmlns="http://www.w3.org/2000/svg">
+                    <g fill="#b8b8b8" fill-rule="evenodd">
+                      <path d="M14 14H2.08V2.08h5.29v1.199H3.279v9.522h9.522V8.71H14zM14 6.7h-1.199V3.28H9.38v-1.2H14z"/>
+                      <path d="m6.454 10.474-.848-.848 7.37-7.37.848.848z"/>
+                    </g>
+                  </svg>
+                </i>
+              </li>
+              <li class="Tittitle2">TJ-2103-0001</li>
+              <!-- 이미지 아이콘 (모바일 전용) -->
+              <div class="imgmbicon">
+                <div class="reviewmbicon" style="position: absolute;right: 15px;top: 50px;">
+                  <div class="mobileiconimg1">
+                    <img src="../images/icon-storage-white-write@22x.png" alt="검토 모바일">
+                  </div>
+                  <div class="mobileiconimg2">
+                    <img src="../images/icon-storage-white-write1@2x.png" alt="처리 모바일">
+                  </div>
+                </div>
+              </div>
+              
+              <li class="Tittitle3">2021.02.25</li>
+              <li class="Tittitle4">휴가신청서</li>
+              <li class="Tittitle5">영업팀</li>
+              <li class="Tittitle6">김문서</li>
+              <li class="titbtn">
+                <button class="b1">
+                  <a href="#">완료</a>
+                </button>
+              </li>
+              <li class="checkbox check12">
+                <a href="#">
+                  <input id="checkbox5"  name='Review' type="checkbox">
+                  <label for="checkbox5"></label>
+                </a>
+              </li>
+              <li class="checkbox check22">
+                <a href="#">
+                  <input id="checkbox6" name='process' type="checkbox">
+                  <label for="checkbox6"></label>
+                </a>
+              </li>
+              <li class="checkbox check11">
+                <a href="#">
+                  <input id="checkbox46" name='alltypecheck' type="checkbox">
+                  <label for="checkbox46"></label>
+                </a>
+              </li> 
+            </ul>
+            <ul>
+              <li class="Tittitle">
+                기안 제목 리스트 입니다. 결제요청 제목 미리보기
+                <i style="vertical-align: middle">
+                  <svg width="16" height="16" xmlns="http://www.w3.org/2000/svg">
+                    <g fill="#b8b8b8" fill-rule="evenodd">
+                      <path d="M14 14H2.08V2.08h5.29v1.199H3.279v9.522h9.522V8.71H14zM14 6.7h-1.199V3.28H9.38v-1.2H14z"/>
+                      <path d="m6.454 10.474-.848-.848 7.37-7.37.848.848z"/>
+                    </g>
+                  </svg>
+                </i>
+              </li>
+              <li class="Tittitle2">TJ-2103-0001</li>
+              <!-- 이미지 아이콘 (모바일 전용) -->
+              <div class="imgmbicon">
+                <div class="reviewmbicon" style="position: absolute;right: 15px;top: 50px;">
+                  <div class="mobileiconimg1">
+                    <img src="../images/icon-storage-white-write@22x.png" alt="검토 모바일">
+                  </div>
+                  <div class="mobileiconimg2">
+                    <img src="../images/icon-storage-white-write1@2x.png" alt="처리 모바일">
+                  </div>
+                </div>
+              </div>
+              
+              <li class="Tittitle3">2021.02.25</li>
+              <li class="Tittitle4">휴가신청서</li>
+              <li class="Tittitle5">영업팀</li>
+              <li class="Tittitle6">김문서</li>
+              <li class="titbtn">
+                <button class="b2">
+                  <a href="#">진행</a>
+                </button>
+              </li>
+              <li class="checkbox check12">
+                <a href="#">
+                  <input id="checkbox7" name='Review' type="checkbox">
+                  <label for="checkbox7"></label>
+                </a>
+              </li>              
+              <li class="checkbox check22">
+                <a href="#">
+                  <input id="checkbox8" name='process' type="checkbox">
+                  <label for="checkbox8"></label>
+                </a>
+              </li>
+              <li class="checkbox check11">
+                <a href="#">
+                  <input id="checkbox45" name='alltypecheck' type="checkbox">
+                  <label for="checkbox45"></label>
+                </a>
+              </li> 
+            </ul>
+            <ul>
+              <li class="Tittitle">
+                기안 제목 리스트 입니다. 결제요청 제목 미리보기
+                <i style="vertical-align: middle">
+                  <svg width="16" height="16" xmlns="http://www.w3.org/2000/svg">
+                    <g fill="#b8b8b8" fill-rule="evenodd">
+                      <path d="M14 14H2.08V2.08h5.29v1.199H3.279v9.522h9.522V8.71H14zM14 6.7h-1.199V3.28H9.38v-1.2H14z"/>
+                      <path d="m6.454 10.474-.848-.848 7.37-7.37.848.848z"/>
+                    </g>
+                  </svg>
+                </i>
+              </li>
+              <li class="Tittitle2">TJ-2103-0001</li>
+              <!-- 이미지 아이콘 (모바일 전용) -->
+              <div class="imgmbicon">
+                <div class="reviewmbicon" style="position: absolute;right: 15px;top: 50px;">
+                  <div class="mobileiconimg1">
+                    <img src="../images/icon-storage-white-write@22x.png" alt="검토 모바일">
+                  </div>
+                  <div class="mobileiconimg2">
+                    <img src="../images/icon-storage-white-write1@2x.png" alt="처리 모바일">
+                  </div>
+                </div>
+              </div>
+              
+              <li class="Tittitle3">2021.02.25</li>
+              <li class="Tittitle4">휴가신청서</li>
+              <li class="Tittitle5">영업팀</li>
+              <li class="Tittitle6">김문서</li>
+              <li class="titbtn">
+                <button class="b1">
+                  <a href="#">완료</a>
+                </button>
+              </li>
+              <li class="checkbox check12">
+                <a href="#">
+                  <input id="checkbox9" name='Review' type="checkbox">
+                  <label for="checkbox9"></label>
+                </a>
+              </li>
+              <li class="checkbox check22">
+                <a href="#">
+                  <input id="checkbox10" name='process' type="checkbox">
+                  <label for="checkbox10"></label>
+                </a>
+              </li>
+              <li class="checkbox check11">
+                <a href="#">
+                  <input id="checkbox44" name='alltypecheck' type="checkbox">
+                  <label for="checkbox44"></label>
+                </a>
+              </li> 
+            </ul>
+            <ul>
+              <li class="Tittitle">
+                기안 제목 리스트 입니다. 결제요청 제목 미리보기
+                <i style="vertical-align: middle">
+                  <svg width="16" height="16" xmlns="http://www.w3.org/2000/svg">
+                    <g fill="#b8b8b8" fill-rule="evenodd">
+                      <path d="M14 14H2.08V2.08h5.29v1.199H3.279v9.522h9.522V8.71H14zM14 6.7h-1.199V3.28H9.38v-1.2H14z"/>
+                      <path d="m6.454 10.474-.848-.848 7.37-7.37.848.848z"/>
+                    </g>
+                  </svg>
+                </i>
+              </li>
+              <li class="Tittitle2">TJ-2103-0001</li>
+              <!-- 이미지 아이콘 (모바일 전용) -->
+              <div class="imgmbicon">
+                <div class="reviewmbicon" style="position: absolute;right: 15px;top: 50px;">
+                  <div class="mobileiconimg1">
+                    <img src="../images/icon-storage-white-write@22x.png" alt="검토 모바일">
+                  </div>
+                  <div class="mobileiconimg2">
+                    <img src="../images/icon-storage-white-write1@2x.png" alt="처리 모바일">
+                  </div>
+                </div>
+              </div>
+              
+              <li class="Tittitle3">2021.02.25</li>
+              <li class="Tittitle4">휴가신청서</li>
+              <li class="Tittitle5">영업팀</li>
+              <li class="Tittitle6">김문서</li>
+              <li class="titbtn">
+                <button class="b2">
+                  <a href="#">진행</a>
+                </button>
+              </li>
+              <li class="checkbox check12">
+                <a href="#">
+                  <input id="checkbox11" name='Review' type="checkbox">
+                  <label for="checkbox11"></label>
+                </a>
+              </li>              
+              <li class="checkbox check22">
+                <a href="#">
+                  <input id="checkbox12" name='process' type="checkbox">
+                  <label for="checkbox12"></label>
+                </a>
+              </li>
+              <li class="checkbox check11">
+                <a href="#">
+                  <input id="checkbox43" name='alltypecheck' type="checkbox">
+                  <label for="checkbox43"></label>
+                </a>
+              </li> 
+            </ul>
+            <ul>
+              <li class="Tittitle">
+                기안 제목 리스트 입니다. 결제요청 제목 미리보기
+                <i style="vertical-align: middle">
+                  <svg width="16" height="16" xmlns="http://www.w3.org/2000/svg">
+                    <g fill="#b8b8b8" fill-rule="evenodd">
+                      <path d="M14 14H2.08V2.08h5.29v1.199H3.279v9.522h9.522V8.71H14zM14 6.7h-1.199V3.28H9.38v-1.2H14z"/>
+                      <path d="m6.454 10.474-.848-.848 7.37-7.37.848.848z"/>
+                    </g>
+                  </svg>
+                </i>
+              </li>
+              <li class="Tittitle2">TJ-2103-0001</li>
+              <!-- 이미지 아이콘 (모바일 전용) -->
+              <div class="imgmbicon">
+                <div class="reviewmbicon" style="position: absolute;right: 15px;top: 50px;">
+                  <div class="mobileiconimg1">
+                    <img src="../images/icon-storage-white-write@22x.png" alt="검토 모바일">
+                  </div>
+                  <div class="mobileiconimg2">
+                    <img src="../images/icon-storage-white-write1@2x.png" alt="처리 모바일">
+                  </div>
+                </div>
+              </div>
+              
+              <li class="Tittitle3">2021.02.25</li>
+              <li class="Tittitle4">휴가신청서</li>
+              <li class="Tittitle5">영업팀</li>
+              <li class="Tittitle6">김문서</li>
+              <li class="titbtn">
+                <button class="b2">
+                  <a href="#">진행</a>
+                </button>
+              </li>
+              <li class="checkbox check12">
+                <a href="#">
+                  <input id="checkbox13" name='Review' type="checkbox">
+                  <label for="checkbox13"></label>
+                </a>
+              </li>              
+              <li class="checkbox check22">
+                <a href="#">
+                  <input id="checkbox14" name='process' type="checkbox">
+                  <label for="checkbox14"></label>
+                </a>
+              </li>
+              <li class="checkbox check11"
+                <a href="#">
+                  <input id="checkbox42" name='alltypecheck' type="checkbox">
+                  <label for="checkbox42"></label>
+                </a>
+              </li> 
+            </ul>
+            <ul>
+              <li class="Tittitle">
+                기안 제목 리스트 입니다. 결제요청 제목 미리보기
+                <i style="vertical-align: middle">
+                  <svg width="16" height="16" xmlns="http://www.w3.org/2000/svg">
+                    <g fill="#b8b8b8" fill-rule="evenodd">
+                      <path d="M14 14H2.08V2.08h5.29v1.199H3.279v9.522h9.522V8.71H14zM14 6.7h-1.199V3.28H9.38v-1.2H14z"/>
+                      <path d="m6.454 10.474-.848-.848 7.37-7.37.848.848z"/>
+                    </g>
+                  </svg>
+                </i>
+              </li>
+              <li class="Tittitle2">TJ-2103-0001</li>
+              <!-- 이미지 아이콘 (모바일 전용) -->
+              <div class="imgmbicon">
+                <div class="reviewmbicon" style="position: absolute;right: 15px;top: 50px;">
+                  <div class="mobileiconimg1">
+                    <img src="../images/icon-storage-white-write@22x.png" alt="검토 모바일">
+                  </div>
+                  <div class="mobileiconimg2">
+                    <img src="../images/icon-storage-white-write1@2x.png" alt="처리 모바일">
+                  </div>
+                </div>
+              </div>
+              
+              <li class="Tittitle3">2021.02.25</li>
+              <li class="Tittitle4">휴가신청서</li>
+              <li class="Tittitle5">영업팀</li>
+              <li class="Tittitle6">김문서</li>
+              <li class="titbtn">
+                <button class="b2">
+                  <a href="#">진행</a>
+                </button>
+              </li>
+              <li class="checkbox check12">
+                <a href="#">
+                  <input id="checkbox15" name='Review' type="checkbox">
+                  <label for="checkbox15"></label>
+                </a>
+              </li>              
+              <li class="checkbox check22">
+                <a href="#">
+                  <input id="checkbox16" name='process' type="checkbox">
+                  <label for="checkbox16"></label>
+                </a>
+              </li>
+              <li class="checkbox check11">
+                <a href="#">
+                  <input id="checkbox41" name='alltypecheck' type="checkbox">
+                  <label for="checkbox41"></label>
+                </a>
+              </li> 
+            </ul>
+            <ul>
+              <li class="Tittitle">
+                기안 제목 리스트 입니다. 결제요청 제목 미리보기
+                <i style="vertical-align: middle">
+                  <svg width="16" height="16" xmlns="http://www.w3.org/2000/svg">
+                    <g fill="#b8b8b8" fill-rule="evenodd">
+                      <path d="M14 14H2.08V2.08h5.29v1.199H3.279v9.522h9.522V8.71H14zM14 6.7h-1.199V3.28H9.38v-1.2H14z"/>
+                      <path d="m6.454 10.474-.848-.848 7.37-7.37.848.848z"/>
+                    </g>
+                  </svg>
+                </i>
+              </li>
+              <li class="Tittitle2">TJ-2103-0001</li>
+              <!-- 이미지 아이콘 (모바일 전용) -->
+              <div class="imgmbicon">
+                <div class="reviewmbicon" style="position: absolute;right: 15px;top: 50px;">
+                  <div class="mobileiconimg1">
+                    <img src="../images/icon-storage-white-write@22x.png" alt="검토 모바일">
+                  </div>
+                  <div class="mobileiconimg2">
+                    <img src="../images/icon-storage-white-write1@2x.png" alt="처리 모바일">
+                  </div>
+                </div>
+              </div>
+              
+              <li class="Tittitle3">2021.02.25</li>
+              <li class="Tittitle4">휴가신청서</li>
+              <li class="Tittitle5">영업팀</li>
+              <li class="Tittitle6">김문서</li>
+              <li class="titbtn">
+                <button class="b2">
+                  <a href="#">진행</a>
+                </button>
+              </li>
+              <li class="checkbox check12">
+                <a href="#">
+                  <input id="checkbox17" name='Review' type="checkbox">
+                  <label for="checkbox17"></label>
+                </a>
+              </li>              
+              <li class="checkbox check22">
+                <a href="#">
+                  <input id="checkbox18" name='process' type="checkbox">
+                  <label for="checkbox18"></label>
+                </a>
+              </li>
+              <li class="checkbox check11">
+                <a href="#">
+                  <input id="checkbox40" name='alltypecheck' type="checkbox">
+                  <label for="checkbox40"></label>
+                </a>
+              </li> 
+            </ul>
+            <ul>
+              <li class="Tittitle">
+                기안 제목 리스트 입니다. 결제요청 제목 미리보기
+                <i style="vertical-align: middle">
+                  <svg width="16" height="16" xmlns="http://www.w3.org/2000/svg">
+                    <g fill="#b8b8b8" fill-rule="evenodd">
+                      <path d="M14 14H2.08V2.08h5.29v1.199H3.279v9.522h9.522V8.71H14zM14 6.7h-1.199V3.28H9.38v-1.2H14z"/>
+                      <path d="m6.454 10.474-.848-.848 7.37-7.37.848.848z"/>
+                    </g>
+                  </svg>
+                </i>
+              </li>
+              <li class="Tittitle2">TJ-2103-0001</li>
+              <!-- 이미지 아이콘 (모바일 전용) -->
+              <div class="imgmbicon">
+                <div class="reviewmbicon" style="position: absolute;right: 15px;top: 50px;">
+                  <div class="mobileiconimg1">
+                    <img src="../images/icon-storage-white-write@22x.png" alt="검토 모바일">
+                  </div>
+                  <div class="mobileiconimg2">
+                    <img src="../images/icon-storage-white-write1@2x.png" alt="처리 모바일">
+                  </div>
+                </div>
+              </div>
+              
+              <li class="Tittitle3">2021.02.25</li>
+              <li class="Tittitle4">휴가신청서</li>
+              <li class="Tittitle5">영업팀</li>
+              <li class="Tittitle6">김문서</li>
+              <li class="titbtn">
+                <button class="b2">
+                  <a href="#">진행</a>
+                </button>
+              </li>
+              <li class="checkbox check12">
+                <a href="#">
+                  <input id="checkbox19" name='Review' type="checkbox">
+                  <label for="checkbox19"></label>
+                </a>
+              </li>              
+              <li class="checkbox check22">
+                <a href="#">
+                  <input id="checkbox20" name='process' type="checkbox">
+                  <label for="checkbox20"></label>
+                </a>
+              </li>
+              <li class="checkbox check11">
+                <a href="#">
+                  <input id="checkbox39" name='alltypecheck' type="checkbox">
+                  <label for="checkbox39"></label>
+                </a>
+              </li> 
+            </ul>
+            <ul>
+              <li class="Tittitle">
+                기안 제목 리스트 입니다. 결제요청 제목 미리보기
+                <i style="vertical-align: middle">
+                  <svg width="16" height="16" xmlns="http://www.w3.org/2000/svg">
+                    <g fill="#b8b8b8" fill-rule="evenodd">
+                      <path d="M14 14H2.08V2.08h5.29v1.199H3.279v9.522h9.522V8.71H14zM14 6.7h-1.199V3.28H9.38v-1.2H14z"/>
+                      <path d="m6.454 10.474-.848-.848 7.37-7.37.848.848z"/>
+                    </g>
+                  </svg>
+                </i>
+              </li>
+              <li class="Tittitle2">TJ-2103-0001</li>
+              <!-- 이미지 아이콘 (모바일 전용) -->
+              <div class="imgmbicon">
+                <div class="reviewmbicon" style="position: absolute;right: 15px;top: 50px;">
+                  <div class="mobileiconimg1">
+                    <img src="../images/icon-storage-white-write@22x.png" alt="검토 모바일">
+                  </div>
+                  <div class="mobileiconimg2">
+                    <img src="../images/icon-storage-white-write1@2x.png" alt="처리 모바일">
+                  </div>
+                </div>
+              </div>
+              
+              <li class="Tittitle3">2021.02.25</li>
+              <li class="Tittitle4">휴가신청서</li>
+              <li class="Tittitle5">영업팀</li>
+              <li class="Tittitle6">김문서</li>
+              <li class="titbtn">
+                <button class="b1">
+                  <a href="#">완료</a>
+                </button>
+              </li>
+              <li class="checkbox check12">
+                <a href="#">
+                  <input id="checkbox21" name='Review' type="checkbox">
+                  <label for="checkbox21"></label>
+                </a>
+              </li>              
+              <li class="checkbox check22">
+                <a href="#">
+                  <input id="checkbox22" name='process' type="checkbox">
+                  <label for="checkbox22"></label>
+                </a>
+              </li>
+              <li class="checkbox check11">
+                <a href="#">
+                  <input id="checkbox38" name='alltypecheck' type="checkbox">
+                  <label for="checkbox38"></label>
+                </a>
+              </li> 
+            </ul>
+            <ul>
+              <li class="Tittitle">
+                기안 제목 리스트 입니다. 결제요청 제목 미리보기
+                <i style="vertical-align: middle">
+                  <svg width="16" height="16" xmlns="http://www.w3.org/2000/svg">
+                    <g fill="#b8b8b8" fill-rule="evenodd">
+                      <path d="M14 14H2.08V2.08h5.29v1.199H3.279v9.522h9.522V8.71H14zM14 6.7h-1.199V3.28H9.38v-1.2H14z"/>
+                      <path d="m6.454 10.474-.848-.848 7.37-7.37.848.848z"/>
+                    </g>
+                  </svg>
+                </i>
+              </li>
+              <li class="Tittitle2">TJ-2103-0001</li>
+              <!-- 이미지 아이콘 (모바일 전용) -->
+              <div class="imgmbicon">
+                <div class="reviewmbicon" style="position: absolute;right: 15px;top: 50px;">
+                  <div class="mobileiconimg1">
+                    <img src="../images/icon-storage-white-write@22x.png" alt="검토 모바일">
+                  </div>
+                  <div class="mobileiconimg2">
+                    <img src="../images/icon-storage-white-write1@2x.png" alt="처리 모바일">
+                  </div>
+                </div>
+              </div>
+              
+              <li class="Tittitle3">2021.02.25</li>
+              <li class="Tittitle4">휴가신청서</li>
+              <li class="Tittitle5">영업팀</li>
+              <li class="Tittitle6">김문서</li>
+              <li class="titbtn">
+                <button class="b1">
+                  <a href="#">완료</a>
+                </button>
+              </li>
+              <li class="checkbox check12">
+                <a href="#">
+                  <input id="checkbox23" name='Review' type="checkbox">
+                  <label for="checkbox23"></label>
+                </a>
+              </li>              
+              <li class="checkbox check22">
+                <a href="#">
+                  <input id="checkbox24" name='process' type="checkbox">
+                  <label for="checkbox24"></label>
+                </a>
+              </li>
+              <li class="checkbox check11">
+                <a href="#">
+                  <input id="checkbox37" name='alltypecheck' type="checkbox">
+                  <label for="checkbox37"></label>
+                </a>
+              </li> 
+            </ul>
+            <ul>
+              <li class="Tittitle">
+                기안 제목 리스트 입니다. 결제요청 제목 미리보기
+                <i style="vertical-align: middle">
+                  <svg width="16" height="16" xmlns="http://www.w3.org/2000/svg">
+                    <g fill="#b8b8b8" fill-rule="evenodd">
+                      <path d="M14 14H2.08V2.08h5.29v1.199H3.279v9.522h9.522V8.71H14zM14 6.7h-1.199V3.28H9.38v-1.2H14z"/>
+                      <path d="m6.454 10.474-.848-.848 7.37-7.37.848.848z"/>
+                    </g>
+                  </svg>
+                </i>
+              </li>
+              <li class="Tittitle2">TJ-2103-0001</li>
+              <!-- 이미지 아이콘 (모바일 전용) -->
+              <div class="imgmbicon">
+                <div class="reviewmbicon" style="position: absolute;right: 15px;top: 50px;">
+                  <div class="mobileiconimg1">
+                    <img src="../images/icon-storage-white-write@22x.png" alt="검토 모바일">
+                  </div>
+                  <div class="mobileiconimg2">
+                    <img src="../images/icon-storage-white-write1@2x.png" alt="처리 모바일">
+                  </div>
+                </div>
+              </div>
+              
+              <li class="Tittitle3">2021.02.25</li>
+              <li class="Tittitle4">휴가신청서</li>
+              <li class="Tittitle5">영업팀</li>
+              <li class="Tittitle6">김문서</li>
+              <li class="titbtn">
+                <button class="b2">
+                  <a href="#">진행</a>
+                </button>
+              </li>
+              <li class="checkbox check12">
+                <a href="#">
+                  <input id="checkbox25" name='Review' type="checkbox">
+                  <label for="checkbox25"></label>
+                </a>
+              </li>              
+              <li class="checkbox check22">
+                <a href="#">
+                  <input id="checkbox26" name='process' type="checkbox">
+                  <label for="checkbox26"></label>
+                </a>
+              </li>
+              <li class="checkbox check11">
+                <a href="#">
+                  <input id="checkbox36" name='alltypecheck' type="checkbox">
+                  <label for="checkbox36"></label>
+                </a>
+              </li> 
+            </ul>
+            <ul>
+              <li class="Tittitle">
+                기안 제목 리스트 입니다. 결제요청 제목 미리보기
+                <i style="vertical-align: middle">
+                  <svg width="16" height="16" xmlns="http://www.w3.org/2000/svg">
+                    <g fill="#b8b8b8" fill-rule="evenodd">
+                      <path d="M14 14H2.08V2.08h5.29v1.199H3.279v9.522h9.522V8.71H14zM14 6.7h-1.199V3.28H9.38v-1.2H14z"/>
+                      <path d="m6.454 10.474-.848-.848 7.37-7.37.848.848z"/>
+                    </g>
+                  </svg>
+                </i>
+              </li>
+              <li class="Tittitle2">TJ-2103-0001</li>
+              <!-- 이미지 아이콘 (모바일 전용) -->
+              <div class="imgmbicon">
+                <div class="reviewmbicon" style="position: absolute;right: 15px;top: 50px;">
+                  <div class="mobileiconimg1">
+                    <img src="../images/icon-storage-white-write@22x.png" alt="검토 모바일">
+                  </div>
+                  <div class="mobileiconimg2">
+                    <img src="../images/icon-storage-white-write1@2x.png" alt="처리 모바일">
+                  </div>
+                </div>
+              </div>
+              
+              <li class="Tittitle3">2021.02.25</li>
+              <li class="Tittitle4">휴가신청서</li>
+              <li class="Tittitle5">영업팀</li>
+              <li class="Tittitle6">김문서</li>
+              <li class="titbtn">
+                <button class="b2">
+                  <a href="#">진행</a>
+                </button>
+              </li>
+              <li class="checkbox check12">
+                <a href="#">
+                  <input id="checkbox27" name='Review' type="checkbox">
+                  <label for="checkbox27"></label>
+                </a>
+              </li>              
+              <li class="checkbox check22">
+                <a href="#">
+                  <input id="checkbox28" name='process' type="checkbox">
+                  <label for="checkbox28"></label>
+                </a>
+              </li>
+              <li class="checkbox check11">
+                <a href="#">
+                  <input id="checkbox35" name='alltypecheck' type="checkbox">
+                  <label for="checkbox35"></label>
+                </a>
+              </li> 
+            </ul>
+            <ul>
+              <li class="Tittitle">
+                기안 제목 리스트 입니다. 결제요청 제목 미리보기
+                <i style="vertical-align: middle">
+                  <svg width="16" height="16" xmlns="http://www.w3.org/2000/svg">
+                    <g fill="#b8b8b8" fill-rule="evenodd">
+                      <path d="M14 14H2.08V2.08h5.29v1.199H3.279v9.522h9.522V8.71H14zM14 6.7h-1.199V3.28H9.38v-1.2H14z"/>
+                      <path d="m6.454 10.474-.848-.848 7.37-7.37.848.848z"/>
+                    </g>
+                  </svg>
+                </i>
+              </li>
+              <li class="Tittitle2">TJ-2103-0001</li>
+              <!-- 이미지 아이콘 (모바일 전용) -->
+              <div class="imgmbicon">
+                <div class="reviewmbicon" style="position: absolute;right: 15px;top: 50px;">
+                  <div class="mobileiconimg1">
+                    <img src="../images/icon-storage-white-write@22x.png" alt="검토 모바일">
+                  </div>
+                  <div class="mobileiconimg2">
+                    <img src="../images/icon-storage-white-write1@2x.png" alt="처리 모바일">
+                  </div>
+                </div>
+              </div>
+              
+              <li class="Tittitle3">2021.02.25</li>
+              <li class="Tittitle4">휴가신청서</li>
+              <li class="Tittitle5">영업팀</li>
+              <li class="Tittitle6">김문서</li>
+              <li class="titbtn">
+                <button class="b2">
+                  <a href="#">진행</a>
+                </button>
+              </li>
+              <li class="checkbox check12">
+                <a href="#">
+                  <input id="checkbox29" name='Review' type="checkbox">
+                  <label for="checkbox29"></label>
+                </a>
+              </li>              
+              <li class="checkbox check22">
+                <a href="#">
+                  <input id="checkbox30" name='process' type="checkbox">
+                  <label for="checkbox30"></label>
+                </a>
+              </li>
+              <li class="checkbox check11">
+                <a href="#">
+                  <input id="checkbox34" name='alltypecheck' type="checkbox">
+                  <label for="checkbox34"></label>
+                </a>
+              </li> 
+            </ul>
+            <ul>
+              <li class="Tittitle">
+                기안 제목 리스트 입니다. 결제요청 제목 미리보기
+                <i style="vertical-align: middle">
+                  <svg width="16" height="16" xmlns="http://www.w3.org/2000/svg">
+                    <g fill="#b8b8b8" fill-rule="evenodd">
+                      <path d="M14 14H2.08V2.08h5.29v1.199H3.279v9.522h9.522V8.71H14zM14 6.7h-1.199V3.28H9.38v-1.2H14z"/>
+                      <path d="m6.454 10.474-.848-.848 7.37-7.37.848.848z"/>
+                    </g>
+                  </svg>
+                </i>
+              </li>
+              <li class="Tittitle2">TJ-2103-0001</li>
+              <!-- 이미지 아이콘 (모바일 전용) -->
+              <div class="imgmbicon">
+                <div class="reviewmbicon" style="position: absolute;right: 15px;top: 50px;">
+                  <div class="mobileiconimg1">
+                    <img src="../images/icon-storage-white-write@22x.png" alt="검토 모바일">
+                  </div>
+                  <div class="mobileiconimg2">
+                    <img src="../images/icon-storage-white-write1@2x.png" alt="처리 모바일">
+                  </div>
+                </div>
+              </div>
+              
+              <li class="Tittitle3">2021.02.25</li>
+              <li class="Tittitle4">휴가신청서</li>
+              <li class="Tittitle5">영업팀</li>
+              <li class="Tittitle6">김문서</li>
+              <li class="titbtn">
+                <button class="b2">
+                  <a href="#">진행</a>
+                </button>
+              </li>
+              <li class="checkbox check12">
+                <a href="#">
+                  <input id="checkbox31" name='Review' type="checkbox">
+                  <label for="checkbox31"></label>
+                </a>
+              </li>              
+              <li class="checkbox check22">
+                <a href="#">
+                  <input id="checkbox32" name='process' type="checkbox">
+                  <label for="checkbox32"></label>
+                </a>
+              </li>
+              <li class="checkbox check11">
+                <a href="#">
+                  <input id="checkbox33" name='alltypecheck' type="checkbox">
+                  <label for="checkbox33"></label>
+                </a>
+              </li> 
+            </ul>
+
+          </div>
+          <div class="listnum container">
+            <ul>
+              <li class="active">
+                <a href="#">1</a>
+              </li>
+              <li>
+                <a href="#">2</a>
+              </li>
+              <li>
+                <a href="#">3</a>
+              </li>
+              <li>
+                <a href="#">4</a>
+              </li>
+            </ul>
+          </div>
+          <div>
+            <!-- 삭제창 -->
+            <div class="removebtn">
+              <button class="button1">
+                <i>
+                  <img src="../images/icon-storage-white-writeO21x.png" alt="검토 이미지">
+                </i>
+                <a href="#">
+                  검토
+                </a>
+              </button>
+              <button class="button2">
+                <i>
+                  <img src="../images/icon-storage-white-write@2x.png" alt="처리 이미지">
+                </i>
+                <a href="#">
+                  처리
+                </a>
+              </button>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- 모바일 사이드 햄버거 메뉴 Open&Close -->
+    <script src="../js/mSide.js"></script>
+    <script src="../js/mSide2.js"></script>
+  </div>
+  
+</body>
+
+</html>
+
+

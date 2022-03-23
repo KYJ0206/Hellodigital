@@ -1,0 +1,20 @@
+.imgWrap video {
+  position: absolute;
+    width: 100%;
+    height: auto;
+    top: 0;
+}
+
+.imgWrap img {
+  object-fit : contain;
+}
+
+.imgWrap iframe {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    top: 0;
+}
+#download_all {
+	cursor: pointer;
+}
