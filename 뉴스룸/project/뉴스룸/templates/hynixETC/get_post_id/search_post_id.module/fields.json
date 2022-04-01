@@ -1,9 +1,0 @@
-[ {
-  "id" : "8cb9cbe5-c6b7-a371-a9e8-5fa55d2cda0c",
-  "name" : "blog_id",
-  "label" : "블로그 선택",
-  "required" : false,
-  "locked" : false,
-  "type" : "blog",
-  "default" : 54615482386
-} ]

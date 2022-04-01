@@ -1,8 +1,0 @@
-[ {
-  "id" : "81a28037-2305-bb3c-57ce-86e3b0b01efb",
-  "name" : "richtext_field",
-  "label" : "Rich text",
-  "required" : false,
-  "locked" : false,
-  "type" : "richtext"
-} ]

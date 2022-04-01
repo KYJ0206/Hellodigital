@@ -1,9 +1,0 @@
-[ {
-  "id" : "93800442-76b0-da35-597a-0e33e6e40ec8",
-  "name" : "blog_recent_posts",
-  "label" : "프레스센터_블로그",
-  "required" : false,
-  "locked" : false,
-  "type" : "blog",
-  "default" : 54775817801
-} ]
