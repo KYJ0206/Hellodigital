@@ -1,8 +1,0 @@
-{
-  "global" : true,
-  "smart_type" : "NOT_SMART",
-  "host_template_types" : [ "ANY" ],
-  "module_id" : 54786025734,
-  "label" : "hynix_blog_sub_header",
-  "is_available_for_new_content" : true
-}

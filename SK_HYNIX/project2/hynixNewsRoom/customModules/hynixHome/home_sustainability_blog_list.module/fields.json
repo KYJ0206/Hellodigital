@@ -1,9 +1,0 @@
-[ {
-  "id" : "da0fd9cf-c00b-d1bb-2ea7-d5eda97aeecb",
-  "name" : "sustainability_blog",
-  "label" : "지속가능경영 블로그",
-  "required" : false,
-  "locked" : false,
-  "type" : "blog",
-  "default" : 54775817801
-} ]
